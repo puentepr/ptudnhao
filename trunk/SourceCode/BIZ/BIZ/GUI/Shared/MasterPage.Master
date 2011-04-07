@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BIZ.GUI.Shared.MasterPage" %>
+
+<%@ Register src="../UserControls/Menu.ascx" tagname="Menu" tagprefix="uc1" %>
+
+<%@ Register src="../UserControls/Textrun.ascx" tagname="Textrun" tagprefix="uc2" %>
+
+<%@ Register src="../UserControls/FastSearch.ascx" tagname="FastSearch" tagprefix="uc3" %>
+
+<%@ Register src="../UserControls/Logo.ascx" tagname="Logo" tagprefix="uc4" %>
+
+<%@ Register src="../UserControls/Footer.ascx" tagname="Footer" tagprefix="uc5" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="include" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <!-- bengin header -->
+        <div class="header">
+            <div class="logo-banner">
+                <uc4:Logo ID="Logo1" runat="server" />
+            </div>
+            <div class="basket">
+            </div>
+            
+            <div class="menu">
+                <uc1:Menu ID="Menu1" runat="server" /> 
+                
+            </div>
+            <div class="text-run">
+                
+                <uc2:Textrun ID="Textrun1" runat="server" />
+                <uc3:FastSearch ID="FastSearch1" runat="server" />
+                
+            </div>
+        </div>
+        <!-- end header -->
+       
+        <!-- begin content -->
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- end content -->
+        
+        <!-- begin footer -->
+        <div class="footer">
+            
+            <uc5:Footer ID="Footer1" runat="server" />
+            
+        </div>
+        <!-- end footer -->
+    </div>
+    </form>
+</body>
+</html>

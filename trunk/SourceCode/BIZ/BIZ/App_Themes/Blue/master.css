@@ -1,0 +1,225 @@
+﻿body
+{
+	background-color:#f9f9f9;
+}
+.wrapper
+{
+	width:1000px;
+	
+}
+img
+{
+	border:none;
+}
+.logo-banner
+{
+	height:100px;
+	padding-bottom:14px;
+}
+.logo
+{
+	float:left;
+}
+.banner
+{
+	float:right;
+}
+.menu
+{
+	background:url("../../Content/images/menu_bg.jpg") scroll repeat-x 0px -6px;
+	height:40px;
+	margin-left:auto 0px;
+	/*background-color:Fuchsia;*/
+	text-align:center;
+	padding-left:200px;
+}
+.menu ul
+{
+	text-align:center;
+}
+.menu ul li.first-li
+{
+	float:left;
+	display:block;
+}
+.menu .pmenuL
+{
+	float:left;
+	height:40px;
+	width:4px;
+	margin-left:10px;
+	
+}
+.menu ul li
+{
+	position:relative !important;
+}
+.menu ul li.first-li
+{
+	text-decoration:none;
+	font-family:Arial Times New Roman Tahoma;
+	font-size:16px;
+	font-weight:bold;
+	
+}
+.menu .pmenuR
+{
+	float:left;
+	height:40px;
+	width:5px;
+	margin-right:10px;
+}
+.menu .pmenuM
+{
+	float:left;
+	height:30px;
+	padding-top:10px;
+	padding-bottom:0px;
+}
+
+.menu ul li:hover a .pmenuL
+{
+	background:url("../../App_Themes/Blue/left-hover.jpg") scroll repeat-x 0px 0px;
+}
+.menu ul li:hover a .pmenuR
+{
+	background:url("../../App_Themes/Blue/right-hover.jpg") scroll repeat-x 0px 0px;
+}
+.menu ul li:hover a .pmenuM
+{
+	background:url("../../App_Themes/Blue/menu-hover-bg.jpg") scroll repeat-x 0px 0px;
+}
+.menu ul li:hover a.first-a:hover,
+.menu ul li:hover a.first-a
+{
+	color:White;
+}
+
+div.sub 
+{
+	display: none;
+	position: absolute !important;
+	background: url(../../App_Themes/Blue/submenu_top.png) no-repeat;
+	width: 224px;
+	top:40px;
+	padding-top: 9px;
+	margin-left:6px;
+}
+.menu ul li ul
+{
+	/*position: absolute !important;*//*BI SAI CHO NAY*/
+    text-align:left;
+    padding-left:4px;
+    list-style:none;
+    height:auto;
+}
+div.sub-bottom
+{
+	background: url(../../App_Themes/Blue/submenu_bottom.jpg) no-repeat;
+	width: 230px;
+	height: 9px;
+	overflow: hidden;
+	clear:both;
+	margin-left:4px;
+}
+.menu li:hover .sub
+{
+	display:block !important;
+	
+}
+.menu ul li:hover ul
+{
+	visibility:visible;
+}
+.submenu li
+{
+	display:block;
+	/*float:none;*/
+	height:25px;
+	padding:4px 0px;
+	width: 210px;
+	background-color:#17a6ff;
+	margin-left:0px;
+	padding-left:10px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+
+.submenu li a
+{
+	text-decoration:none;
+	padding-left:8px;
+}
+.submenu li a:hover,
+.submenu li:hover a
+{
+	color:White;
+	font:16px;
+}
+.submenu li:hover
+{
+	background-color:#095966;
+}
+/*css for text run */
+.text-run
+{
+	padding-top:4px;
+	width:1000px;
+	height:25px;
+	background:url("../../App_Themes/Blue/run-bg.jpg") scroll repeat-x;
+}
+.text
+{
+	float:left;
+	width:68%;
+	padding-right:6px;
+}
+.search
+{
+	float:right;
+	width:30%;
+}
+.content
+{
+	/*background-color:Aqua;*/
+	padding-top:10px;
+	overflow:hidden;
+}
+title
+{
+	
+}
+/*begin css for footer */
+.footer
+{
+	width:1000px;
+	background-color:#e7e4e4;
+	/*clear:both;*/
+}
+.f-menu
+{
+	height:30px;
+	background:url("../../Content/images/f-menubg.jpg") scroll repeat-x #e7e4e4;
+	text-align:center;
+	padding-top:4px;
+}
+.f-menu a
+{
+	/*float:left;*/
+	text-decoration:none;
+	font-size:16px;
+	font-weight:bold;
+}
+.f-menu a:hover
+{
+	text-decoration:underline;
+	color:#f5261c;
+}
+.copyright
+{
+	font-family:Arial Times New Roman Tahoma;
+	text-align:center;
+	padding-bottom:8px;
+}
+/* end css for footer */

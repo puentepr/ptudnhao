@@ -1,0 +1,255 @@
+﻿body
+{
+}
+/* begin css for frame */
+.first-secondary
+{
+	float:left;
+	width:190px;
+	/*height:500px;
+	background-color:Aqua;*/
+}
+.primary
+{
+	float:left;
+	width:612px;
+	/*height:800px;
+	background-color:Yellow;*/
+	padding-left:2px;
+	padding-right:0px;
+	
+}
+.second-secondary
+{
+	float:right;
+	width:190px;
+	/*height:200px;
+	background-color:Green;*/
+}
+
+/* end css for frame */
+
+/* begin css for first-secondary */
+.box
+{
+	padding-left:2px;
+	background-color:White;
+	width:186px;
+}
+
+/* end css for first-secondary */
+.catalogs a
+{
+	padding-left:1px;
+	text-decoration:none;
+	margin-bottom:0px;
+	padding-bottom:2px;
+}
+.catalogs a:hover
+{
+	color:#f91a0f;
+}
+.catalogs .parent
+{
+	color:#069b5a;
+	font-weight:bold;
+}
+.catalogs ul
+{
+	margin-top:0px;
+	margin-left:12px;
+	padding-left:0px;
+}
+.catalogs ul li
+{
+	display:block;
+	padding:2px 0px;
+	
+}
+.catalogs ul li a
+{
+	margin-left:0px;
+	padding-left:0px;
+}
+.top-box
+{
+	padding-top:0px;
+	margin-bottom:0px;
+	background:url("../../App_Themes/Blue/box_top.png") scroll no-repeat;
+	height:30px;
+}
+
+.top-box img
+{
+	padding:6px 2px 0px 4px;
+}
+.top-box label
+{
+	/*margin-bottom:6px;*/
+	font-size:18px;
+	font-weight:bold;
+	color:White;
+}
+.content-box
+{
+	padding-top:0px;
+	border-left: 1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	padding-bottom:4px;
+	margin-right:1px;
+	width:178px;
+}
+.adv .content-box img
+{
+	width:178px;
+}
+.bottom-box
+{
+	background:url("../../App_Themes/Blue/box_bottom.png") scroll no-repeat;
+	height:10px;
+
+}
+
+
+/* css for second-secondary */
+.logintop-box
+{
+	padding-top:4px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	background:url("../../App_Themes/Blue/loginbox_top.png") scroll no-repeat;
+
+	text-align:center;
+	font-size:18px;
+}
+
+.title
+{
+	font:20px;
+	font-weight:bold;
+	color:#14a8e6;
+	/*padding-top:0px;*/
+}
+.content-box div
+{
+	text-align:center;
+	margin-top:0px;
+	padding-top:0px;
+}
+.box-right
+{
+	padding-left:4px;
+	background-color:White;
+	width:186px;
+}
+.box-right ul
+{
+	margin-top:0px;
+	margin-left:0px;
+	padding-left:10px;
+	padding-bottom:0px;
+}
+.box-right ul li
+{
+	display:block;
+}
+li label.title-box
+{
+	color:#094f6c;
+}
+.newpr .content-box
+{
+	text-align:center;
+}
+.newpr .content-box div
+{
+	padding-bottom:10px;
+}
+.newpr .content-box img
+{
+	width:172px;
+	height:160px;
+	/*margin-left:2px;*/
+}
+.newpr .content-box a
+{
+	text-decoration:none;
+	color:Red;
+}
+
+/* begin css for content */
+.left
+{
+	float:left;
+	background:url("../../App_Themes/Blue/content_top_left.png") no-repeat;
+	width:8px;
+	height:30px;
+}
+.right
+{
+	float:right;
+	background:url("../../App_Themes/Blue/content_top_right.png") no-repeat;
+	width:8px;
+	height:30px;
+}
+.center
+{
+	float:left;
+	background:url("../../App_Themes/Blue/content_top_center.png")scroll repeat-x;
+	height:26px;
+	width:596px;
+	margin-right:0px;
+	padding-right:0px;
+	padding-top:4px;
+}
+.middle-box
+{
+	padding-bottom:10px;
+}
+.middle-top-box
+{
+	height:30px;
+	width:612px;
+	
+}
+.center label
+{
+	/*margin-bottom:6px;*/
+	font-size:20px;
+	font-weight:bold;
+	color:White;
+}
+.middle-content-box
+{
+	border-left: 1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	background-color:White;
+}
+.middle-bottom-box
+{
+	background:url("../../App_Themes/Blue/middle_box_bottom.png")no-repeat;
+	height:10px;
+	width:612px;
+}
+
+
+.produce
+{
+	text-align:center;
+}
+.produce .label
+{
+	color:Red;
+	font-weight:bold;
+}
+.produce .lbname
+{
+	color:Green;
+	font-weight:bold;
+}
+.tbproduct tr td
+{
+	padding-top:8px;
+	padding-bottom:10px;
+}
+/* end css for content */
