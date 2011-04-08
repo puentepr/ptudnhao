@@ -5,3 +5,10 @@ D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DAO\bin\Debu
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DAO\obj\Debug\ResolveAssemblyReference.cache
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DAO\obj\Debug\DAO.dll
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DAO\obj\Debug\DAO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\bin\Debug\DAO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\bin\Debug\DAO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\bin\Debug\DTO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\bin\Debug\DTO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\obj\Debug\DAO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DAO\obj\Debug\DAO.pdb

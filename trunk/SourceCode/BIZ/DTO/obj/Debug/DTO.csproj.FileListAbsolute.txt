@@ -3,3 +3,8 @@ D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DTO\bin\Debu
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DTO\obj\Debug\ResolveAssemblyReference.cache
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DTO\obj\Debug\DTO.dll
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\DTO\obj\Debug\DTO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DTO\bin\Debug\DTO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DTO\bin\Debug\DTO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DTO\obj\Debug\DTO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\DTO\obj\Debug\DTO.pdb
