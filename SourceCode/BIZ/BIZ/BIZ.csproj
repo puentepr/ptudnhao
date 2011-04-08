@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MSCaptcha, Version=1.0.2832.11804, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core">
@@ -69,6 +70,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\Active.aspx.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\Active.aspx.designer.cs">
+      <DependentUpon>Active.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consumers\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Shared\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,6 +118,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\Catalogs.ascx.designer.cs">
       <DependentUpon>Catalogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ConsumerRegister.ascx.cs">
+      <DependentUpon>ConsumerRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ConsumerRegister.ascx.designer.cs">
+      <DependentUpon>ConsumerRegister.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\FastSearch.ascx.cs">
       <DependentUpon>FastSearch.ascx</DependentUpon>
@@ -189,11 +211,14 @@
     <Content Include="Content\images\banner.gif" />
     <Content Include="Content\images\logo.gif" />
     <Content Include="Global.asax" />
+    <Content Include="GUI\Consumers\Active.aspx" />
+    <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
+    <Content Include="GUI\UserControls\ConsumerRegister.ascx" />
     <Content Include="GUI\UserControls\FastSearch.ascx" />
     <Content Include="GUI\UserControls\Footer.ascx" />
     <Content Include="GUI\UserControls\Login.ascx" />
@@ -220,8 +245,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\banks\" />
     <Folder Include="Content\images\products\" />
+    <Folder Include="dll\" />
     <Folder Include="GUI\Admin\" />
-    <Folder Include="GUI\Consumers\" />
     <Folder Include="GUI\Manager\" />
     <Folder Include="js\" />
   </ItemGroup>

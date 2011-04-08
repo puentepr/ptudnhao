@@ -7,3 +7,12 @@ D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\BUS\bin\Debu
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\BUS\obj\Debug\ResolveAssemblyReference.cache
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\BUS\obj\Debug\BUS.dll
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\BIZ\BUS\obj\Debug\BUS.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\BUS.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\BUS.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\DAO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\DTO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\DAO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\bin\Debug\DTO.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\obj\Debug\BUS.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BUS\obj\Debug\BUS.pdb

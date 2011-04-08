@@ -18,7 +18,7 @@
             <li style="padding-bottom:2px;"><asp:TextBox ID="txtPassWord" TextMode="Password" runat="server"></asp:TextBox></li>							
             <li><asp:Button ID="btnDangNhap" runat="server" Text="Đăng Nhập" CssClass="button" 
                     onclick="btnDangNhap_Click" style="height: 26px"/>
-                <asp:LinkButton ID="lbDangKi" runat="server" onclick="lbtDangKi_Click">Đăng Kí</asp:LinkButton></li>                            
+                <a href="../Consumers/Register.aspx" >Đăng Kí</a></li>                            
                                    
    
         </ul>
