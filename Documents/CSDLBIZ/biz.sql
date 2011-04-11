@@ -55,15 +55,15 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('GOMSP') and o.name = 'FK_GOMSP_GOMSP_DONHANG')
-alter table GOMSP
+   where r.fkeyid = object_id('CHITIETDONHANG') and o.name = 'FK_GOMSP_GOMSP_DONHANG')
+alter table CHITIETDONHANG
    drop constraint FK_GOMSP_GOMSP_DONHANG
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('GOMSP') and o.name = 'FK_GOMSP_GOMSP2_SANPHAM')
-alter table GOMSP
+   where r.fkeyid = object_id('CHITIETDONHANG') and o.name = 'FK_GOMSP_GOMSP2_SANPHAM')
+alter table CHITIETDONHANG
    drop constraint FK_GOMSP_GOMSP2_SANPHAM
 go
 
@@ -118,8 +118,8 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('"USER"') and o.name = 'FK_USER_GOM_LOAIUSER')
-alter table "USER"
+   where r.fkeyid = object_id('USERS') and o.name = 'FK_USER_GOM_LOAIUSER')
+alter table USERS
    drop constraint FK_USER_GOM_LOAIUSER
 go
 
@@ -223,27 +223,27 @@ go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('GOMSP')
+           where  id    = object_id('CHITIETDONHANG')
             and   name  = 'GOMSP2_FK'
             and   indid > 0
             and   indid < 255)
-   drop index GOMSP.GOMSP2_FK
+   drop index CHITIETDONHANG.GOMSP2_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('GOMSP')
+           where  id    = object_id('CHITIETDONHANG')
             and   name  = 'GOMSP_FK'
             and   indid > 0
             and   indid < 255)
-   drop index GOMSP.GOMSP_FK
+   drop index CHITIETDONHANG.GOMSP_FK
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('GOMSP')
+           where  id = object_id('CHITIETDONHANG')
             and   type = 'U')
-   drop table GOMSP
+   drop table CHITIETDONHANG
 go
 
 if exists (select 1
@@ -370,18 +370,18 @@ go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('"USER"')
+           where  id    = object_id('USERS')
             and   name  = 'GOM_FK'
             and   indid > 0
             and   indid < 255)
-   drop index "USER".GOM_FK
+   drop index USERS.GOM_FK
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('"USER"')
+           where  id = object_id('USERS')
             and   type = 'U')
-   drop table "USER"
+   drop table USERS
 go
 
 if exists (select 1
@@ -396,9 +396,9 @@ go
 /*==============================================================*/
 create table BTS_BIZ (
    MATS                 int                  not null,
-   TENTS                varchar(50)          null,
-   KIEUDL               varchar(20)          null,
-   GIATRI               varchar(200)         null,
+   TENTS                nvarchar(50)          null,
+   KIEUDL               nvarchar(20)          null,
+   GIATRI               nvarchar(200)         null,
    TINHTRANGTS          int                  null,
    constraint PK_BTS_BIZ primary key nonclustered (MATS)
 )
@@ -409,16 +409,16 @@ go
 /*==============================================================*/
 create table COUPON (
    MACP                 varchar(20)          not null,
-   MASP                 char(10)             not null,
+   MASP                 varchar(10)             not null,
    GIASGIAM             float                null,
    THOIGIANBD           datetime             null,
    THOIGIANKT           datetime             null,
    SLSPMIN              float                null,
-   TINHTRANGCP          varchar(20)          null,
-   DIEUKIENSD           varchar(500)         null,
+   TINHTRANGCP          nvarchar(20)          null,
+   DIEUKIENSD           nvarchar(500)         null,
    GIAGOC               float                null,
-   DVTIENTE             varchar(10)          null,
-   LINKHINHANH          varchar(300)         null,
+   DVTIENTE             nvarchar(10)          null,
+   LINKHINHANH          nvarchar(300)         null,
    SLCPMINGIAMGIA       int                  null,
    constraint PK_COUPON primary key nonclustered (MACP)
 )
@@ -438,14 +438,14 @@ go
 create table DONHANG (
    MADH                 int                  not null,
    MAPK                 int                  null,
-   USERNAME             char(30)             not null,
+   USERNAME             varchar(30)             not null,
    NGAYDAT              datetime             null,
    NGAYGIAO             datetime             null,
    TONGTIEN             float                null,
-   TINHTRANGDH          varchar(20)          null,
-   DIACHINHAN           varchar(200)         null,
-   DVTIENTE             varchar(10)          null,
-   MAXN                 varchar(100)         null,
+   TINHTRANGDH          nvarchar(20)          null,
+   DIACHINHAN           nvarchar(200)         null,
+   DVTIENTE             nvarchar(10)          null,
+   MAXN                 nvarchar(100)         null,
    NGAYHETHAN           datetime             null,
    constraint PK_DONHANG primary key nonclustered (MADH)
 )
@@ -471,18 +471,18 @@ go
 /* Table: DONHANGCOUPON                                         */
 /*==============================================================*/
 create table DONHANGCOUPON (
-   MA                   smallint             not null,
+   MA_WS                smallint             not null,
    MACP                 varchar(20)          not null,
    MAPK                 int                  null,
-   SID                  varchar(100)         not null,
+   S_ID                 varchar(100)         not null,
    MADHCP               int                  not null,
    NGAYDAT              datetime             null,
    NGAYGIAO             datetime             null,
    TONGTIEN             float                null,
-   TINHTRANGDH          varchar(20)          null,
-   DIACHINHAN           varchar(200)         null,
-   DVTIENTE             varchar(10)          null,
-   VALIDATECODE         varchar(100)         null,
+   TINHTRANGDH          nvarchar(20)          null,
+   DIACHINHAN           nvarchar(200)         null,
+   DVTIENTE             nvarchar(10)          null,
+   VALIDATECODE         nvarchar(100)         null,
    SOLUONGCP            int                  null,
    constraint PK_DONHANGCOUPON primary key (MADHCP)
 )
@@ -500,7 +500,7 @@ go
 /* Index: ASSOCIATION_13_FK                                     */
 /*==============================================================*/
 create index ASSOCIATION_13_FK on DONHANGCOUPON (
-MA ASC
+MA_WS ASC
 )
 go
 
@@ -508,7 +508,7 @@ go
 /* Index: ASSOCIATION_15_FK                                     */
 /*==============================================================*/
 create index ASSOCIATION_15_FK on DONHANGCOUPON (
-SID ASC
+S_ID ASC
 )
 go
 
@@ -523,12 +523,12 @@ go
 /*==============================================================*/
 /* Table: GOMSP                                                 */
 /*==============================================================*/
-create table GOMSP (
+create table CHITIETDONHANG (
    MADH                 int                  not null,
-   MASP                 char(10)             not null,
+   MASP                 varchar(10)             not null,
    SOLUONG              float                null,
    DONGIA               float                null,
-   DVTINH               varchar(10)          null,
+   DVTINH               nvarchar(10)          null,
    constraint PK_GOMSP primary key (MADH, MASP)
 )
 go
@@ -536,7 +536,7 @@ go
 /*==============================================================*/
 /* Index: GOMSP_FK                                              */
 /*==============================================================*/
-create index GOMSP_FK on GOMSP (
+create index GOMSP_FK on CHITIETDONHANG (
 MADH ASC
 )
 go
@@ -544,7 +544,7 @@ go
 /*==============================================================*/
 /* Index: GOMSP2_FK                                             */
 /*==============================================================*/
-create index GOMSP2_FK on GOMSP (
+create index GOMSP2_FK on CHITIETDONHANG (
 MASP ASC
 )
 go
@@ -553,17 +553,12 @@ go
 /* Table: KHACHHANG                                             */
 /*==============================================================*/
 create table KHACHHANG (
-   USERNAME             char(30)             not null,
-   MALOAI               int                  null,
-   PASSWORD             char(30)             null,
-   EMAIL                varchar(50)          null,
-   TRANGTHAI            int                  null,
-   TENDN                char(200)            null,
-   DIACHI               char(80)             null,
-   TINHTRANGDH          varchar(20)          null,
-   SDT                  char(15)             null,
-   TENNDAIDIEN          char(30)             null,
-   WEBSITE              char(100)            null,
+   USERNAME             varchar(30)             not null,
+   TENDN                nvarchar(200)            null,
+   DIACHI               nvarchar(80)             null,
+   SDT                  varchar(15)             null,
+   TENNDAIDIEN          nvarchar(30)             null,
+   WEBSITE              varchar(100)            null,
    constraint PK_KHACHHANG primary key (USERNAME)
 )
 go
@@ -574,7 +569,7 @@ go
 create table LOAISP (
    MALSP                smallint             not null,
    MANHOM               int                  not null,
-   TENLSP               varchar(50)          null,
+   TENLSP               nvarchar(50)          null,
    constraint PK_LOAISP primary key nonclustered (MALSP)
 )
 go
@@ -592,7 +587,7 @@ go
 /*==============================================================*/
 create table LOAIUSER (
    MALOAI               int                  not null,
-   TENLOAI              char(20)             null,
+   TENLOAI              nvarchar(20)             null,
    constraint PK_LOAIUSER primary key nonclustered (MALOAI)
 )
 go
@@ -602,7 +597,7 @@ go
 /*==============================================================*/
 create table NHOMLOAISP (
    MANHOM               int                  not null,
-   TENNHOM              varchar(30)          null,
+   TENNHOM              nvarchar(30)          null,
    constraint PK_NHOMLOAISP primary key nonclustered (MANHOM)
 )
 go
@@ -613,7 +608,7 @@ go
 create table PACKAGEINFO (
    MAPK                 int                  not null,
    MADV                 int                  not null,
-   PACINFO              varchar(100)         null,
+   PACINFO              nvarchar(100)         null,
    URL                  varchar(300)         null,
    constraint PK_PACKAGEINFO primary key nonclustered (MAPK)
 )
@@ -631,14 +626,10 @@ go
 /* Table: QUANTRI                                               */
 /*==============================================================*/
 create table QUANTRI (
-   USERNAME             char(30)             not null,
-   MALOAI               int                  null,
-   PASSWORD             char(30)             null,
-   EMAIL                varchar(50)          null,
-   TRANGTHAI            int                  null,
-   HOTEN                char(10)             null,
-   DIACHI               char(80)             null,
-   SDT                  char(15)             null,
+   USERNAME             varchar(30)             not null,
+   HOTEN                nvarchar(10)             null,
+   DIACHI               nvarchar(80)             null,
+   SDT                  varchar(15)             null,
    constraint PK_QUANTRI primary key (USERNAME)
 )
 go
@@ -647,18 +638,18 @@ go
 /* Table: SANPHAM                                               */
 /*==============================================================*/
 create table SANPHAM (
-   MASP                 char(10)             not null,
+   MASP                 varchar(10)             not null,
    MALSP                smallint             not null,
-   TENSP                varchar(50)          null,
+   TENSP                nvarchar(50)          null,
    HINHANH              varchar(100)         null,
-   CHATLUONG            varchar(30)          null,
+   CHATLUONG            nvarchar(30)          null,
    GIA                  float                null,
    SOLUONG              float                null,
-   DVTINH               varchar(10)          null,
+   DVTINH               nvarchar(10)          null,
    SLCONLAI             float                null,
    NGAYDSP              datetime             null,
    NGAYSD               datetime             null,
-   TINHTRANGDH          varchar(20)          null,
+   TINHTRANGSP          nvarchar(20)          null,
    NGAYXOA              datetime             null,
    constraint PK_SANPHAM primary key nonclustered (MASP)
 )
@@ -677,7 +668,7 @@ go
 /*==============================================================*/
 create table SERVICEBANK (
    MABANK               varchar(50)          not null,
-   TENBANK              varchar(80)          null,
+   TENBANK              nvarchar(80)          null,
    USERNAMEB            varchar(30)          null,
    PASSWORDB            varchar(30)          null,
    LINKWS               varchar(200)         null,
@@ -692,10 +683,10 @@ go
 /*==============================================================*/
 create table SERVICETRANS (
    MADV                 int                  not null,
-   TENCTY               varchar(300)         null,
+   TENCTY               nvarchar(300)         null,
    LINKWS               varchar(200)         null,
-   "USER"               varchar(30)          null,
-   PASS                 varchar(30)          null,
+   USERNAME             varchar(30)          null,
+   PASS_WORD            varchar(30)          null,
    constraint PK_SERVICETRANS primary key nonclustered (MADV)
 )
 go
@@ -704,12 +695,12 @@ go
 /* Table: SID                                                   */
 /*==============================================================*/
 create table SID (
-   SID                  varchar(100)         not null,
-   MA                   smallint             not null,
+   S_ID                 varchar(100)         not null,
+   MA_WS                smallint             not null,
    TINHTRANGID          int                  null,
    NGAYCAP              datetime             null,
    NGAYHETHIEULUC       datetime             null,
-   constraint PK_SID primary key nonclustered (SID)
+   constraint PK_SID primary key nonclustered (S_ID)
 )
 go
 
@@ -717,7 +708,7 @@ go
 /* Index: ASSOCIATION_16_FK                                     */
 /*==============================================================*/
 create index ASSOCIATION_16_FK on SID (
-MA ASC
+MA_WS ASC
 )
 go
 
@@ -742,10 +733,10 @@ go
 /*==============================================================*/
 /* Table: "USER"                                                */
 /*==============================================================*/
-create table "USER" (
-   USERNAME             char(30)             not null,
+create table USERS (
+   USERNAME             varchar(30)             not null,
    MALOAI               int                  not null,
-   PASSWORD             char(30)             null,
+   PASS_WORD            varchar(30)             null,
    EMAIL                varchar(50)          null,
    TRANGTHAI            int                  null,
    constraint PK_USER primary key nonclustered (USERNAME)
@@ -755,7 +746,7 @@ go
 /*==============================================================*/
 /* Index: GOM_FK                                                */
 /*==============================================================*/
-create index GOM_FK on "USER" (
+create index GOM_FK on USERS (
 MALOAI ASC
 )
 go
@@ -765,7 +756,7 @@ go
 /*==============================================================*/
 create table YCWEBSERVICE (
    MA                   smallint             not null,
-   USERNAME             char(30)             null,
+   USERNAME             varchar(30)             null,
    LINK                 varchar(200)         null,
    EMAIL                varchar(50)          null,
    TINHTRANGYC          int                  null,
@@ -796,13 +787,13 @@ alter table DONHANGCOUPON
 go
 
 alter table DONHANGCOUPON
-   add constraint FK_DONHANGC_ASSOCIATI_YCWEBSER foreign key (MA)
+   add constraint FK_DONHANGC_ASSOCIATI_YCWEBSER foreign key (MA_WS)
       references YCWEBSERVICE (MA)
 go
 
 alter table DONHANGCOUPON
-   add constraint FK_DONHANGC_ASSOCIATI_SID foreign key (SID)
-      references SID (SID)
+   add constraint FK_DONHANGC_ASSOCIATI_SID foreign key (S_ID)
+      references SID (S_ID)
 go
 
 alter table DONHANGCOUPON
@@ -810,19 +801,19 @@ alter table DONHANGCOUPON
       references PACKAGEINFO (MAPK)
 go
 
-alter table GOMSP
+alter table CHITIETDONHANG
    add constraint FK_GOMSP_GOMSP_DONHANG foreign key (MADH)
       references DONHANG (MADH)
 go
 
-alter table GOMSP
+alter table CHITIETDONHANG
    add constraint FK_GOMSP_GOMSP2_SANPHAM foreign key (MASP)
       references SANPHAM (MASP)
 go
 
 alter table KHACHHANG
    add constraint FK_KHACHHAN_INHERITAN_USER foreign key (USERNAME)
-      references "USER" (USERNAME)
+      references USERS (USERNAME)
 go
 
 alter table LOAISP
@@ -837,7 +828,7 @@ go
 
 alter table QUANTRI
    add constraint FK_QUANTRI_INHERITAN_USER foreign key (USERNAME)
-      references "USER" (USERNAME)
+      references USERS (USERNAME)
 go
 
 alter table SANPHAM
@@ -846,7 +837,7 @@ alter table SANPHAM
 go
 
 alter table SID
-   add constraint FK_SID_ASSOCIATI_YCWEBSER foreign key (MA)
+   add constraint FK_SID_ASSOCIATI_YCWEBSER foreign key (MA_WS)
       references YCWEBSERVICE (MA)
 go
 
@@ -855,7 +846,7 @@ alter table TKBANK
       references SERVICEBANK (MABANK)
 go
 
-alter table "USER"
+alter table USERS
    add constraint FK_USER_GOM_LOAIUSER foreign key (MALOAI)
       references LOAIUSER (MALOAI)
 go
