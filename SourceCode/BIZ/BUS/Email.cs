@@ -33,11 +33,10 @@ namespace BUS
             string _mailServer = "smtp.gmail.com";
             int _mailPort = 587; // Work well, 465 Timeout,587
 
-            string _user = "";//dien gmail cho nayf
-            string _pass = "";//dien mat khau cua gmail
+            string _user = "beatifulhouseGroup@gmail.com";//dien gmail cho nayf
+            string _pass = "khtn1234";//dien mat khau cua gmail
 
-            string _mailFrom = "ptukhicon@gmail.com";
-            // string _mailTo = "nhieunguyenkhtn@gmail.com";
+            string _mailFrom = "beatifulhouseGroup@gmail.com";
             MailMessage mailMessage = new MailMessage();
             SmtpClient mailClient = new SmtpClient(_mailServer, _mailPort);
             mailClient.Timeout = 10000;

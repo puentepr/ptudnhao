@@ -43,7 +43,6 @@ namespace BIZ.GUI.UserControls
                 fullpath= fullpath.Remove(index);
                 body+="<b>"+fullpath+"/Active.aspx"+"</b>";//chỗ này khi code sẽ kèm tham số là username+ băm gì đó
                 string subject="Kich hoat tai khoan";
-                Email.sendMail("nhieunguyenkhtn@gmail.com", body,subject);
                 bool test = Email.sendMail("forgetforgive1986@gmail.com", body,subject);
                 lbCaptcha.Text = test.ToString();
                 lbCaptcha.Visible = true;
@@ -52,7 +51,6 @@ namespace BIZ.GUI.UserControls
             else
             {
                 lbCaptcha.Text = "Mã an toàn không đúng !";
-                txtCaptcha.Text = "true";
                 lbCaptcha.Visible = true;
                 return;
             }
