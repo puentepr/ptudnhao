@@ -859,3 +859,84 @@ alter table YCWEBSERVICE
       references KHACHHANG (USERNAME)
 go
 
+
+
+
+
+Insert into LOAIUSER values(1,'Admin')
+Insert into LOAIUSER values(2,'Manager')
+Insert into LOAIUSER values(3,'Consumer')
+if exists(Select * From sysobjects Where name='sp_InsertConsumer' and type='p')
+drop proc sp_InsertConsumer
+go
+Create procedure sp_InsertConsumer
+@username varchar(30),@password varchar(30),@email varchar(50),@tendn nvarchar(200),
+@diachi nvarchar(80),@sdt varchar(15),@tendaidien nvarchar(30),@website varchar(100)
+As
+	begin tran
+		Insert into USERS values(@username,3,@password,@email,0);
+		if @@error<>0
+		begin
+			rollback tran
+			return -1
+		end
+		Insert into KHACHHANG values(@username,@tendn,@diachi,@sdt,@tendaidien,@website)
+		if @@error<>0
+		begin
+			rollback tran
+			return -1
+		end
+	commit tran
+	return 1
+Go
+
+
+--exec sp_InsertConsumer 'nam', 'nam','nam@gmail.com',N'beatifulhouseGroup',N'4-NCV-HCM','0128912890',
+--'Nhân Tông','http://beatifulhouseGroup.com'
+
+if exists(Select * From sysobjects Where name='sp_UpdateStatusUser' and type='p')
+drop proc sp_UpdateStatusUser
+go
+Create procedure sp_UpdateStatusUser
+@username varchar(30),@trangthai int
+As
+	Update USERS set TRANGTHAI=@trangthai Where USERNAME=@username;
+	if @@error<>0
+		return -1
+	else
+		return 0
+Go
+
+--exec sp_UpdateStatusUser 'nam',1
+
+-- kiem tra tai khoan co ton tai, tra ra -1=khong ton tai, 0=ton tai chua active
+--  1= ton tai& da active, output la loai user
+if exists(Select * From sysobjects where name='sp_CheckAccountIsAvaliable' and type='p' )
+drop proc sp_CheckAccountIsAvaliable
+go
+create procedure sp_CheckAccountIsAvaliable
+@username varchar(30),@password varchar(30),@loaiuser int output
+As
+	Declare @status int
+	set @loaiuser=0
+	set @status=-1
+	Select @status=TRANGTHAI,@loaiuser=MALOAI From USERS Where USERNAME=@username and PASS_WORD=@password;
+	return @status
+Go
+
+/*Declare @loaiuser int,@status int
+exec sp_CheckAccountIsAvaliable 'nam1','nam',@loaiuser output
+print @loaiuser*/
+
+--kiem tra username da ton tai chua, dung luc validate username khi dang ky
+if exists(Select * From sysobjects Where name='sp_ValidateUsername' and type='p')
+drop proc sp_ValidateUsername
+go
+create procedure sp_ValidateUsername @username varchar(30)
+as
+	Declare @count int
+	Select @count=count(*) From USERS Where USERNAME=@username;
+	return @count
+go
+
+--exec sp_ValidateUsername 'name'
