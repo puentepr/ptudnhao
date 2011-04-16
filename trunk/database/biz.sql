@@ -940,3 +940,139 @@ as
 go
 
 --exec sp_ValidateUsername 'name'
+
+
+--Cac Procedure Cua Phong
+If Exists(Select * From sysobjects where name='sp_ThemNhomLoaiSanPham' and type='p' )
+Drop Procedure sp_ThemNhomLoaiSanPham
+Go
+Create Procedure sp_ThemNhomLoaiSanPham
+	@tenNhom nvarchar(30)
+AS
+	Begin Tran
+		Declare @maNhom int;
+		Set @maNhom = 1;
+		While Exists(Select * From NHOMLOAISP Where MANHOM = @maNhom)
+		Begin
+			Set @maNhom = @maNhom + 1;
+		End
+		If Not Exists(Select * From NHOMLOAISP Where TENNHOM = @tenNhom)
+		Begin
+			Insert Into NHOMLOAISP Values(@maNhom, @tenNhom);
+			Commit Tran;
+		End
+		Else
+			Rollback Tran;
+			Return;
+GO
+/*
+Exec sp_ThemNhomLoaiSanPham 'G?ch'
+Select * From NHOMLOAISP
+*/
+
+If Exists(Select * From sysobjects where name='sp_ThemLoaiSanPham' and type='p' )
+Drop Procedure sp_ThemLoaiSanPham
+Go
+Create Procedure sp_ThemLoaiSanPham
+	@maNhom int,
+	@tenLSP nvarchar(50)
+AS
+	Begin
+		Declare @maLSP smallint;
+		Set @maLSP = 1;
+		While Exists(Select * From LOAISP lsp Where lsp.MALSP = @maLSP)
+		Begin
+			Set @maLSP = @maLSP + 1;
+		End
+		If @maNhom In (Select MaNHOM From NHOMLOAISP)
+			If Not Exists(Select * From LOAISP Where TENLSP = @tenLSP)
+			Begin
+				Insert Into LOAISP Values(@maLSP, @maNhom, @tenLSP);
+				Commit Tran;
+			End
+			Else
+				Rollback Tran;
+				Return;
+	End
+GO
+/*
+Exec sp_ThemLoaiSanPham 1, 'Sat 8'
+Select * From LOAISP
+*/
+
+If Exists(Select * From sysobjects where name='sp_ThemSanPham' and type='p' )
+Drop Procedure sp_ThemSanPham
+Go
+Create Procedure sp_ThemSanPham
+	@maSanPham varchar(10),
+	@maLoaiSanPham smallint,
+	@tenSanPham nvarchar(50),
+	@linkHinhAnh varchar(100),
+	@chatLuong nvarchar(30),
+	@giaGoc float,
+	@soLuong float,
+	@donViTinh nvarchar(10),
+	@soLuongConLai float,
+	@ngayDangSanPham datetime,
+	@ngaySuaDoi datetime,
+	@tinhTrangSanPham nvarchar(20),
+	@ngayXoa datetime
+AS
+	Begin Tran
+		If(Exists(Select * From SANPHAM sp Where sp.MASP = @maSanPham))
+		Begin
+			Rollback Tran;
+			--print N'Du Lieu Da Co';
+			Return;
+		End
+		Else
+			If(@maLoaiSanPham In (Select MALSP From LOAISP))
+			Begin
+				Insert Into SANPHAM Values(@maSanPham, @maLoaiSanPham, @tenSanPham, @linkHinhAnh, @chatLuong, @giaGoc, @soLuong, @donViTinh, @soLuongConLai, @ngayDangSanPham, @ngaySuaDoi, @tinhTrangSanPham, @ngayXoa);
+				Commit Tran;
+				Return;
+			End
+			Else
+				Rollback Tran;
+				--print N'Chua Co Loai San Pham';
+				return;
+	--End
+Go
+/*
+Exec sp_ThemSanPham 'SP2',7,'San Pham 1','SPImage.png','Tot',100,120,'bao',100,'2011-4-15','2011-4-15','da thanh toan','2011-4-15'
+Select * From SANPHAM
+*/
+
+If Exists(Select * From sysobjects where name='sp_TaoCoupon' and type='p' )
+Drop Procedure sp_TaoCoupon
+Go
+Create Procedure sp_TaoCoupon
+	@maCoupon varchar(20),
+	@maSanPham varchar(10),
+	@giaSeGiam float,
+	@thoiGianBatDau datetime,
+	@thoiGianKetThuc datetime,
+	@soLuongSanPhamMin float,
+	@tinhTrangCoupon nvarchar(200),
+	@dieuKienSuDung nvarchar(500),
+	@giaGoc float,
+	@donViTienTe nvarchar(10),
+	@photoHinhAnh nvarchar(300),
+	@soLuongCouponMinGiamGia int
+AS
+	Begin Tran
+		If(Exists(Select * From COUPON cp Where cp.MACP = @maCoupon) or (Not Exists(Select * From SANPHAM sp Where sp.MASP = @maSanPham)))
+		Begin
+			Rollback Tran;
+			--print N'Du Lieu Da Co';
+			Return;
+		End
+		Else
+			Insert Into COUPON Values(@maCoupon, @maSanPham, @giaSeGiam, @thoiGianBatDau, @thoiGianKetThuc, @soLuongSanPhamMin, @tinhTrangCoupon, @dieuKienSuDung, @giaGoc, @donViTienTe, @photoHinhAnh, @soLuongCouponMinGiamGia)
+			Commit Tran;
+			Return;
+GO
+/*
+Exec sp_TaoCoupon 'CP01','SP1',120,'2011-4-25','2011-4-22',12,'active','dksd',200,'USD','MyIamge.png',10
+Select * From COUPON
+*/
