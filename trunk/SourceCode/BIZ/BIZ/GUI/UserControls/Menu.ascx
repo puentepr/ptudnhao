@@ -62,6 +62,13 @@
     <li class="first-li">
         <a class="first-a" href="../Shared/Default.aspx">
             <span class="pmenuL"></span>
+            <span class="pmenuM">Mua chung</span>
+            <span class="pmenuR"></span>
+        </a>
+    </li>
+    <li class="first-li">
+        <a class="first-a" href="../Shared/Default.aspx">
+            <span class="pmenuL"></span>
             <span class="pmenuM">Liên hệ</span>
             <span class="pmenuR"></span>
         </a>
