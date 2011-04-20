@@ -77,6 +77,13 @@
     <Compile Include="GUI\Consumers\Active.aspx.designer.cs">
       <DependentUpon>Active.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\CheckAccount.aspx.cs">
+      <DependentUpon>CheckAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\CheckAccount.aspx.designer.cs">
+      <DependentUpon>CheckAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,6 +104,13 @@
     </Compile>
     <Compile Include="GUI\Shared\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ActiveAcount.ascx.cs">
+      <DependentUpon>ActiveAcount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ActiveAcount.ascx.designer.cs">
+      <DependentUpon>ActiveAcount.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\AdvertisementLeft.ascx.cs">
       <DependentUpon>AdvertisementLeft.ascx</DependentUpon>
@@ -206,15 +220,54 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Blue\bestsellers.png" />
+    <Content Include="App_Themes\Blue\bottom.jpg" />
+    <Content Include="App_Themes\Blue\box_bottom.png" />
+    <Content Include="App_Themes\Blue\box_top.png" />
+    <Content Include="App_Themes\Blue\cart.gif" />
+    <Content Include="App_Themes\Blue\category.png" />
     <Content Include="App_Themes\Blue\content.css" />
+    <Content Include="App_Themes\Blue\content_top_center.png" />
+    <Content Include="App_Themes\Blue\content_top_left.png" />
+    <Content Include="App_Themes\Blue\content_top_right.png" />
+    <Content Include="App_Themes\Blue\dotlist.gif" />
+    <Content Include="App_Themes\Blue\information.png" />
+    <Content Include="App_Themes\Blue\left-hover.jpg" />
+    <Content Include="App_Themes\Blue\loginbox_top.png" />
     <Content Include="App_Themes\Blue\master.css" />
+    <Content Include="App_Themes\Blue\menu-hover-bg.jpg" />
+    <Content Include="App_Themes\Blue\middle_box_bottom.png" />
+    <Content Include="App_Themes\Blue\right-hover.jpg" />
+    <Content Include="App_Themes\Blue\run-bg.jpg" />
+    <Content Include="App_Themes\Blue\submenu_bg.png" />
+    <Content Include="App_Themes\Blue\submenu_bottom.jpg" />
+    <Content Include="App_Themes\Blue\submenu_bottom1.png" />
+    <Content Include="App_Themes\Blue\submenu_top.png" />
+    <Content Include="Content\images\banks\acb.png" />
+    <Content Include="Content\images\banks\agribank.png" />
+    <Content Include="Content\images\banks\dongabank.png" />
+    <Content Include="Content\images\banks\vietcombank.png" />
     <Content Include="Content\images\banner.gif" />
+    <Content Include="Content\images\bep-karador.jpg" />
+    <Content Include="Content\images\binh-nuoc-nong-olympic-sieu-toc.jpeg" />
+    <Content Include="Content\images\f-menubg.jpg" />
+    <Content Include="Content\images\giay-dan-tuong.jpeg" />
+    <Content Include="Content\images\giay-dan-tuong2.jpeg" />
+    <Content Include="Content\images\list_remove_btn.gif" />
     <Content Include="Content\images\logo.gif" />
+    <Content Include="Content\images\menu_bg.jpg" />
+    <Content Include="Content\images\menu_bg1.jpg" />
+    <Content Include="Content\images\new.gif" />
+    <Content Include="Content\images\new_red.gif" />
+    <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
+    <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />
     <Content Include="GUI\Consumers\Active.aspx" />
+    <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
+    <Content Include="GUI\UserControls\ActiveAcount.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
@@ -243,7 +296,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\banks\" />
     <Folder Include="Content\images\products\" />
     <Folder Include="dll\" />
     <Folder Include="GUI\Admin\" />

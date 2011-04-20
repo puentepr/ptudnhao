@@ -41,13 +41,13 @@ namespace BIZ.GUI.Consumers {
         protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
         
         /// <summary>
-        /// ConsumerRegister1 control.
+        /// ActiveAcount1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BIZ.GUI.UserControls.ConsumerRegister ConsumerRegister1;
+        protected global::BIZ.GUI.UserControls.ActiveAcount ActiveAcount1;
         
         /// <summary>
         /// Login1 control.

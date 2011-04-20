@@ -25,3 +25,5 @@ D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\bin\DT
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\obj\Debug\ResolveAssemblyReference.cache
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\obj\Debug\BizWebservice.dll
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\obj\Debug\BizWebservice.pdb
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BizWebservice\bin\DAO.dll
+D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BizWebservice\bin\DAO.pdb

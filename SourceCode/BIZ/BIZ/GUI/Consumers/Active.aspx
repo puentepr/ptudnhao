@@ -6,6 +6,7 @@
 <%@ Register src="../UserControls/Payment.ascx" tagname="Payment" tagprefix="uc8" %>
 <%@ Register src="../UserControls/ConsumerRegister.ascx" tagname="ConsumerRegister" tagprefix="uc2" %>
 <%@ Register src="../UserControls/Login.ascx" tagname="Login" tagprefix="uc6" %>
+<%@ Register src="../UserControls/ActiveAcount.ascx" tagname="ActiveAcount" tagprefix="uc7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Kích hoạt tài khoản
 </asp:Content>
@@ -29,9 +30,9 @@ Kích hoạt tài khoản
     
     <!-- begin primary -->
     <div class="primary">
-        
-        <uc2:ConsumerRegister ID="ConsumerRegister1" runat="server" />
-        
+ 
+        <uc7:ActiveAcount ID="ActiveAcount1" runat="server" />
+
     </div>
     <!-- end primary -->
     
