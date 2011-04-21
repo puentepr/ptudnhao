@@ -112,6 +112,13 @@
     <Compile Include="GUI\UserControls\ActiveAcount.ascx.designer.cs">
       <DependentUpon>ActiveAcount.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\AddProduct.ascx.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\AddProduct.ascx.designer.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\AdvertisementLeft.ascx.cs">
       <DependentUpon>AdvertisementLeft.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -268,6 +275,7 @@
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
+    <Content Include="GUI\UserControls\AddProduct.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />

@@ -27,3 +27,5 @@ D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BIZ\obj\Debug\BIZ.dl
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BIZ\obj\Debug\BIZ.pdb
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BIZ\bin\DAO.dll
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BIZ\bin\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BIZ\bin\DAO.dll
+D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BIZ\bin\DAO.pdb

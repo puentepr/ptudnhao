@@ -42,13 +42,14 @@ namespace DTO
             get { return _thoiGianKT; }
             set { _thoiGianKT = value; }
         }
-        private float _soLuongSanPhamMin;
+        private int _soLuongSanPhamMin;
 
-        public float SoLuongSanPhamMin
+        public int SoLuongSanPhamMin
         {
             get { return _soLuongSanPhamMin; }
             set { _soLuongSanPhamMin = value; }
         }
+
         private string _tinhTrangCoupon;
 
         public string TinhTrangCoupon
@@ -107,7 +108,7 @@ namespace DTO
             this._linkHinhAnh = "";
             this._soLuongCouponMin = 0; 
         }
-        public COUPON_DTO(string maCP, string maSP, float giaSG, DateTime thoiGianBD, DateTime thoiGianKT, float soLuongSPMin, string tinhTrangCP, string dieuKienSD, float giaGoc, string donViTT, string linkHA, int soLuongCPMin)
+        public COUPON_DTO(string maCP, string maSP, float giaSG, DateTime thoiGianBD, DateTime thoiGianKT, int soLuongSPMin, string tinhTrangCP, string dieuKienSD, float giaGoc, string donViTT, string linkHA, int soLuongCPMin)
         {
             this._maCoupon = maCP;
             this._maSanPham = maSP;
