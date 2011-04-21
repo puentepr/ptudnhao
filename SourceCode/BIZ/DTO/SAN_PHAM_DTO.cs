@@ -28,6 +28,14 @@ namespace DTO
             get { return _tenSanPham; }
             set { _tenSanPham = value; }
         }
+        private string _moTaSanPham;
+
+        public string MoTaSanPham
+        {
+            get { return _moTaSanPham; }
+            set { _moTaSanPham = value; }
+        }
+
         private string _hinhAnh;
 
         public string HinhAnh
@@ -104,6 +112,7 @@ namespace DTO
             this._maSanPham = "";
             this._maLoaiSanPham = 0;
             this._tenSanPham = "";
+            this._moTaSanPham = "";
             this._hinhAnh = "";
             this._chatLuong = "";
             this._gia = 0;
@@ -115,11 +124,12 @@ namespace DTO
             this._tinhTrangSanPham = "";
             this._ngayXoa = DateTime.MaxValue;
         }
-        public SAN_PHAM_DTO(string maSP, int maLSP, string tenSP, string hinhAnh, string chatLuong, float gia, float soLuong, string donVT, float soLuongCL, DateTime ngayDangSP, DateTime ngaySD, string tinhTrangSP, DateTime ngayXoa)
+        public SAN_PHAM_DTO(string maSP, int maLSP, string tenSP, string moTaSP, string hinhAnh, string chatLuong, float gia, float soLuong, string donVT, float soLuongCL, DateTime ngayDangSP, DateTime ngaySD, string tinhTrangSP, DateTime ngayXoa)
         {
             this._maSanPham = maSP;
             this._maLoaiSanPham = maLSP;
             this._tenSanPham = tenSP;
+            this._moTaSanPham = moTaSP;
             this._hinhAnh = hinhAnh;
             this._chatLuong = chatLuong;
             this._gia = gia;
