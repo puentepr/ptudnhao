@@ -91,6 +91,13 @@
     <Compile Include="GUI\Consumers\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\YCWebService.aspx.cs">
+      <DependentUpon>YCWebService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\YCWebService.aspx.designer.cs">
+      <DependentUpon>YCWebService.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Shared\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +231,13 @@
     <Compile Include="GUI\UserControls\Themes.ascx.designer.cs">
       <DependentUpon>Themes.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\YeuCauSuDungWebService.ascx.cs">
+      <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\YeuCauSuDungWebService.ascx.designer.cs">
+      <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -266,12 +280,14 @@
     <Content Include="Content\images\menu_bg1.jpg" />
     <Content Include="Content\images\new.gif" />
     <Content Include="Content\images\new_red.gif" />
+    <Content Include="Content\images\products\bep-karador.jpg" />
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
+    <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
@@ -291,6 +307,7 @@
     <Content Include="GUI\UserControls\TenNewProduce.ascx" />
     <Content Include="GUI\UserControls\Textrun.ascx" />
     <Content Include="GUI\UserControls\Themes.ascx" />
+    <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
@@ -304,7 +321,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\products\" />
     <Folder Include="dll\" />
     <Folder Include="GUI\Admin\" />
     <Folder Include="GUI\Manager\" />

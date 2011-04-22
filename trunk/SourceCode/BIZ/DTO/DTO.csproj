@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BTS_BIZ_DTO.cs" />
     <Compile Include="CHI_TIET_DON_HANG_DTO.cs" />
+    <Compile Include="Coupon.cs" />
     <Compile Include="COUPON_DTO.cs" />
     <Compile Include="DON_HANG_COUPON_DTO.cs" />
     <Compile Include="DON_HANG_DTO.cs" />
