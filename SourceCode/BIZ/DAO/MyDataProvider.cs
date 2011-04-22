@@ -5,7 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using System.Xml;
 
 namespace DAO
 {
@@ -18,14 +18,13 @@ namespace DAO
         
         /*This is connection string of Nhieu*/
         //protected string _connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Biztmdt;Integrated Security=SSPI;";
-        
+        protected string _connectionString = "workstation id=Biztmdt.mssql.somee.com;packet size=4096;user id=khtn;pwd=khtn2011;data source=Biztmdt.mssql.somee.com;persist security info=False;initial catalog=Biztmdt";
         /*This is connection string of Phong*/
-        protected string _connectionString = @"Data Source=PHONGVU;Initial Catalog=Biztmdt;Integrated Security=True";
+       // protected string _connectionString = @"Data Source=PHONGVU;Initial Catalog=Biztmdt;Integrated Security=True";
         
         protected SqlConnection _connection;
         protected SqlDataAdapter _adapter;
         protected SqlCommand _command;
-
         //public static string ConnectionString
         //{
         //    get
@@ -39,6 +38,10 @@ namespace DAO
         //}
         public MyDataProvider()
         {
+           // XmlDocument doc = new XmlDocument();
+           // doc.Load("../BIZ/BIZ/connectionstring.xml");
+           // _connectionString=doc.GetElementsByTagName("connectionstring").Item(0).InnerXml;
+            
             this._connection = new SqlConnection(_connectionString);
         }
       

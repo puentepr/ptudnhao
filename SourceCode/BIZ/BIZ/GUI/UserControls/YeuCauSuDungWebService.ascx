@@ -80,7 +80,8 @@
         </tr>
         <tr>
             <td class="style2" colspan="3">
-                <asp:Button ID="Button1" runat="server" Text="Yêu cầu" />
+                <asp:Button ID="Button1" runat="server" Text="Yêu cầu" 
+                    onclick="Button1_Click" />
             </td>
         </tr>
     </table>

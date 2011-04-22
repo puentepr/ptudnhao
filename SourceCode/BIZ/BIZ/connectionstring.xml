@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<web>
+  <connectionstring id="conection">Data Source=.\SQLEXPRESS;Initial Catalog=Biztmdt;Integrated Security=SSPI;</connectionstring>
+  <imgstring id="img">http://www.beatifulhouse.somee.com/Content/images/products/</imgstring>
+  <!--
+          //protected string _connectionString =  @"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\test2011.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+       // protected string _connectionString = "workstation id=test2011.mssql.somee.com;packet size=4096;user id=khtn;pwd=khtn2011;data source=test2011.mssql.somee.com;persist security info=False;initial catalog=test2011";
+        // ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        //protected string _connectionString = @"Data Source=.\SQLExpress;Persist Security Info=True;Integrated Security=SSPI;Initial Catalog=tmdt2011_test2011";
+        
+        /*This is connection string of Nhieu*/
+        protected string _connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Biztmdt;Integrated Security=SSPI;";
+        
+        /*This is connection string of Phong*/
+       // protected string _connectionString = @"Data Source=PHONGVU;Initial Catalog=Biztmdt;Integrated Security=True";
+  -->
+</web>
