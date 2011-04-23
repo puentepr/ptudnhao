@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using BUS;
-using DTO;
+using BIZ.BUS;
+using BIZ.DTO;
 
 namespace BIZ.GUI.UserControls
 {
