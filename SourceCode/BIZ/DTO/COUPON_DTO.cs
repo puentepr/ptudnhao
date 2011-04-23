@@ -80,11 +80,6 @@ namespace DTO
         }
         private string _linkHinhAnh;
 
-        public string LinkHinhAnh
-        {
-            get { return _linkHinhAnh; }
-            set { _linkHinhAnh = value; }
-        }
         private int _soLuongCouponMin;
 
         public int SoLuongCouponMin
@@ -105,10 +100,9 @@ namespace DTO
             this._dieuKienSuDung = "";
             this._giaGoc = 0;
             this._donViTienTe = "";
-            this._linkHinhAnh = "";
             this._soLuongCouponMin = 0; 
         }
-        public COUPON_DTO(string maCP, string maSP, float giaSG, DateTime thoiGianBD, DateTime thoiGianKT, int soLuongSPMin, string tinhTrangCP, string dieuKienSD, float giaGoc, string donViTT, string linkHA, int soLuongCPMin)
+        public COUPON_DTO(string maCP, string maSP, float giaSG, DateTime thoiGianBD, DateTime thoiGianKT, int soLuongSPMin, string tinhTrangCP, string dieuKienSD, float giaGoc, string donViTT, int soLuongCPMin)
         {
             this._maCoupon = maCP;
             this._maSanPham = maSP;
@@ -120,7 +114,6 @@ namespace DTO
             this._dieuKienSuDung = dieuKienSD;
             this._giaGoc = giaGoc;
             this._donViTienTe = donViTT;
-            this._linkHinhAnh = linkHA;
             this._soLuongCouponMin = soLuongCPMin;
         }
     }

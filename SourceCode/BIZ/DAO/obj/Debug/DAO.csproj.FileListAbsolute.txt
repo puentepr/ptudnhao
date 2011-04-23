@@ -19,3 +19,10 @@ D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\DAO\bin\Debug\DTO.pd
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\DAO\obj\Debug\ResolveAssemblyReference.cache
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\DAO\obj\Debug\DAO.dll
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\DAO\obj\Debug\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\bin\Debug\DAO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\bin\Debug\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\bin\Debug\DTO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\bin\Debug\DTO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\obj\Debug\DAO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\DAO\obj\Debug\DAO.pdb
