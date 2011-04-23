@@ -23,15 +23,15 @@ namespace BIZ.GUI.UserControls
             COUPON_DTO couDTO = new COUPON_DTO();
             couDTO.MaCoupon = txtMaCP.Text;
             couDTO.MaSanPham = txtMaSP.Text;
-            couDTO.GiaGoc = float.Parse(txtGiaGoc.Text);
             couDTO.GiaSauGiam = float.Parse(txtGiaSauKhiGiam.Text);
-            couDTO.SoLuongCouponMin = int.Parse(txtSLCPMinGiamGia.Text);
-            couDTO.SoLuongSanPhamMin = int.Parse(txtSLSPmin.Text);
             couDTO.ThoiGianBD = DateTime.Today;
             couDTO.ThoiGianKT = couDTO.ThoiGianBD.Add(TimeSpan.Parse(txtTHCHL.Text));
+            couDTO.SoLuongSanPhamMin = int.Parse(txtSLSPmin.Text);
             couDTO.TinhTrangCoupon = txtTinhTrangCP.Text;
             couDTO.DieuKienSuDung = txtRreaDKSU.ToString();
+            couDTO.GiaGoc = float.Parse(txtGiaGoc.Text);
             couDTO.DonViTienTe = txtDVTienTe.Text;
+            couDTO.SoLuongCouponMin = int.Parse(txtSLCPMinGiamGia.Text);
             try
             {
                 CouponBUS.CreateCoupon(couDTO);
