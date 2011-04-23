@@ -6,8 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
-using DTO;
-using BUS;
+using BIZ.DTO;
+using BIZ.BUS;
 
 namespace BIZ.GUI.UserControls
 {
