@@ -98,6 +98,20 @@
     <Compile Include="GUI\Consumers\YCWebService.aspx.designer.cs">
       <DependentUpon>YCWebService.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Manager\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager\CreateCoupon.aspx.cs">
+      <DependentUpon>CreateCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\CreateCoupon.aspx.designer.cs">
+      <DependentUpon>CreateCoupon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Shared\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,6 +167,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\ConsumerRegister.ascx.designer.cs">
       <DependentUpon>ConsumerRegister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\CreateCoupon.ascx.cs">
+      <DependentUpon>CreateCoupon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CreateCoupon.ascx.designer.cs">
+      <DependentUpon>CreateCoupon.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\FastSearch.ascx.cs">
       <DependentUpon>FastSearch.ascx</DependentUpon>
@@ -288,6 +309,8 @@
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Consumers\YCWebService.aspx" />
+    <Content Include="GUI\Manager\AddProduct.aspx" />
+    <Content Include="GUI\Manager\CreateCoupon.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
@@ -296,6 +319,7 @@
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
     <Content Include="GUI\UserControls\ConsumerRegister.ascx" />
+    <Content Include="GUI\UserControls\CreateCoupon.ascx" />
     <Content Include="GUI\UserControls\FastSearch.ascx" />
     <Content Include="GUI\UserControls\Footer.ascx" />
     <Content Include="GUI\UserControls\Login.ascx" />
@@ -323,7 +347,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="dll\" />
     <Folder Include="GUI\Admin\" />
-    <Folder Include="GUI\Manager\" />
     <Folder Include="js\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

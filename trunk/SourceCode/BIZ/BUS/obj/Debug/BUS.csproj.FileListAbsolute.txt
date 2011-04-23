@@ -25,3 +25,12 @@ D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BUS\bin\Debug\DTO.pd
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BUS\obj\Debug\ResolveAssemblyReference.cache
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BUS\obj\Debug\BUS.dll
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BUS\obj\Debug\BUS.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\BUS.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\BUS.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\DAO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\DTO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\bin\Debug\DTO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\obj\Debug\BUS.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BUS\obj\Debug\BUS.pdb

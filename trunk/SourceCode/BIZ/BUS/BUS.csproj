@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CouponBUS.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="GeneralPurchasing.cs" />
     <Compile Include="MD5.cs" />
+    <Compile Include="ProductBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBUS.cs" />
   </ItemGroup>

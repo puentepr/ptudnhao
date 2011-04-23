@@ -29,3 +29,14 @@ D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\Sourc
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BIZ\BizWebservice\bin\DAO.pdb
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\bin\DAO.dll
 D:\Phong Worked Project\CD-TMDT Project\DOAN\SourceCode\BIZ\BizWebservice\bin\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\BizWebservice.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\BizWebservice.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\BUS.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\DTO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\DAO.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\BUS.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\DAO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\bin\DTO.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\obj\Debug\ResolveAssemblyReference.cache
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\obj\Debug\BizWebservice.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ\SourceCode\BIZ\BizWebservice\obj\Debug\BizWebservice.pdb

@@ -252,4 +252,20 @@ li label.title-box
 	padding-top:8px;
 	padding-bottom:10px;
 }
+
+.txtBox
+{
+    height:25px;
+    width:258px;
+    color:Blue;
+    font-family:Times New Roman;
+    font-size:medium;
+}
+
+.createObject
+{
+    color:Blue;
+    font-family:Times New Roman;
+    font-size:medium;
+}
 /* end css for content */

@@ -11,7 +11,25 @@
 namespace BIZ.GUI.UserControls {
     
     
-    public partial class AddProduct {
+    public partial class CreateCoupon {
+        
+        /// <summary>
+        /// txtMaCP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMaCP;
+        
+        /// <summary>
+        /// lbCodeCouponReportInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCodeCouponReportInfo;
         
         /// <summary>
         /// txtMaSP control.
@@ -23,60 +41,6 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.TextBox txtMaSP;
         
         /// <summary>
-        /// lbCodeproductReportInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbCodeproductReportInfo;
-        
-        /// <summary>
-        /// txtMaLSP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaLSP;
-        
-        /// <summary>
-        /// txtTenSP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenSP;
-        
-        /// <summary>
-        /// txtRreaMoTa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRreaMoTa;
-        
-        /// <summary>
-        /// fuLinkHinhAnh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuLinkHinhAnh;
-        
-        /// <summary>
-        /// txtChatLuong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChatLuong;
-        
-        /// <summary>
         /// txtGiaGoc control.
         /// </summary>
         /// <remarks>
@@ -86,58 +50,76 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.TextBox txtGiaGoc;
         
         /// <summary>
-        /// txtSoLuong control.
+        /// txtGiaSauKhiGiam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaSauKhiGiam;
         
         /// <summary>
-        /// txtDVTinh control.
+        /// txtTHCHL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVTinh;
+        protected global::System.Web.UI.WebControls.TextBox txtTHCHL;
         
         /// <summary>
-        /// txtSLTon control.
+        /// txtSLSPmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSLTon;
+        protected global::System.Web.UI.WebControls.TextBox txtSLSPmin;
         
         /// <summary>
-        /// txtTinhTrang control.
+        /// txtSLCPMinGiamGia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTinhTrang;
+        protected global::System.Web.UI.WebControls.TextBox txtSLCPMinGiamGia;
         
         /// <summary>
-        /// txtNgayXoa control.
+        /// txtRreaDKSU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNgayXoa;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRreaDKSU;
         
         /// <summary>
-        /// bttDangSanPham control.
+        /// txtDVTienTe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bttDangSanPham;
+        protected global::System.Web.UI.WebControls.TextBox txtDVTienTe;
+        
+        /// <summary>
+        /// txtTinhTrangCP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTinhTrangCP;
+        
+        /// <summary>
+        /// bttDangSP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button bttDangSP;
         
         /// <summary>
         /// bttHuyBo control.
