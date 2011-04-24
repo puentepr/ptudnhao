@@ -32,13 +32,13 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.Label lbCodeCouponReportInfo;
         
         /// <summary>
-        /// txtMaSP control.
+        /// ddlTenSP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaSP;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTenSP;
         
         /// <summary>
         /// txtGiaGoc control.
@@ -59,13 +59,13 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.TextBox txtGiaSauKhiGiam;
         
         /// <summary>
-        /// txtTHCHL control.
+        /// txtThoiGianApDung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTHCHL;
+        protected global::System.Web.UI.WebControls.TextBox txtThoiGianApDung;
         
         /// <summary>
         /// txtSLSPmin control.

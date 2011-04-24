@@ -20,7 +20,7 @@ namespace BIZ.GUI.UserControls
 
         protected void bttDangSP_Click(object sender, EventArgs e)
         {
-            COUPON_DTO couDTO = new COUPON_DTO();
+            /*COUPON_DTO couDTO = new COUPON_DTO();
             couDTO.MaCoupon = txtMaCP.Text;
             couDTO.MaSanPham = txtMaSP.Text;
             couDTO.GiaSauGiam = float.Parse(txtGiaSauKhiGiam.Text);
@@ -43,17 +43,17 @@ namespace BIZ.GUI.UserControls
                 else
                 {
                     HtmlTextWriterTag.Label.ToString("Tao That Bai");
-                }*/
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }
+            }*/
         }
 
         protected void bttHuyBo_Click(object sender, EventArgs e)
         {
-            txtMaCP.Text = "";
+            /*txtMaCP.Text = "";
             txtMaSP.Text = "";
             txtDVTienTe.Text = "";
             txtGiaGoc.Text = "";
@@ -62,7 +62,7 @@ namespace BIZ.GUI.UserControls
             txtSLCPMinGiamGia.Text = "";
             txtSLSPmin.Text = "";
             txtTHCHL.Text = "";
-            txtTinhTrangCP.Text = "";
+            txtTinhTrangCP.Text = "";*/
         }
     }
 }

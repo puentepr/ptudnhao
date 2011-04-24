@@ -20,7 +20,7 @@ namespace BIZ.GUI.UserControls
 
         protected void bttDangSanPham_Click(object sender, EventArgs e)
         {
-            SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
+            /*SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
             proDTO.MaSanPham = txtMaSP.Text;
             proDTO.MaLoaiSanPham = int.Parse(txtMaLSP.Text);
             proDTO.MoTaSanPham = txtRreaMoTa.Value;
@@ -40,12 +40,12 @@ namespace BIZ.GUI.UserControls
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }
+            }*/
         }
 
         protected void bttHuyBo_Click(object sender, EventArgs e)
         {
-            txtChatLuong.Text = "";
+            /*txtChatLuong.Text = "";
             txtDVTinh.Text = "";
             txtGiaGoc.Text = "";
             txtMaSP.Text = "";
@@ -54,7 +54,7 @@ namespace BIZ.GUI.UserControls
             txtSLTon.Text = "";
             txtSoLuong.Text = "";
             txtTenSP.Text = "";
-            txtTinhTrang.Text = "";
+            txtTinhTrang.Text = "";*/
         }
     }
 }
