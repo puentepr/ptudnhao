@@ -32,13 +32,22 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbCodeproductReportInfo;
         
         /// <summary>
-        /// txtMaLSP control.
+        /// ddlNhomLSP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaLSP;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNhomLSP;
+        
+        /// <summary>
+        /// ddlLoaiSP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLoaiSP;
         
         /// <summary>
         /// txtTenSP control.
@@ -120,15 +129,6 @@ namespace BIZ.GUI.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTinhTrang;
-        
-        /// <summary>
-        /// txtNgayXoa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNgayXoa;
         
         /// <summary>
         /// bttDangSanPham control.

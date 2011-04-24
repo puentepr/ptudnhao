@@ -11,9 +11,9 @@
             </td>
         </tr>
         <tr>
-            <th><label>Mã Sản Phẩm: </label></th>
+            <th><label>Sản Phẩm: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtMaSP" runat="server"></asp:TextBox>
+                <asp:DropDownList CssClass="txtBox" ID="ddlTenSP" runat="server"></asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -29,9 +29,9 @@
             </td>
         </tr>
         <tr>
-            <th><label>Thời Hạn Còn Hiệu Lực: </label></th>
+            <th><label>Thời Gian Áp Dụng: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtTHCHL" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox" ID="txtThoiGianApDung" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>

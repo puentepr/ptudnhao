@@ -12,9 +12,15 @@
             </td>
         </tr>
         <tr>
-            <th><label>Mã Loại Sản Phẩm</label></th>
+            <th><label>Nhóm Loại Sản Phẩm</label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtMaLSP" runat ="server"></asp:TextBox>
+                <asp:DropDownList CssClass="txtBox" ID="ddlNhomLSP" runat="server"></asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <th><label>Loại Sản Phẩm</label></th>
+            <td>
+                <asp:DropDownList CssClass="txtBox" ID="ddlLoaiSP" runat="server"></asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -70,12 +76,6 @@
             <th><label>Tình Trạng: </label></th>
             <td>
                 <asp:TextBox CssClass="txtBox" ID="txtTinhTrang" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <th><label>Ngày Xóa: </label></th>
-            <td>
-                <asp:TextBox CssClass="txtBox" ID="txtNgayXoa" runat="server"></asp:TextBox>
             </td>
         </tr>
     </table>
