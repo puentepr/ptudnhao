@@ -15,17 +15,27 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                //ddlLoaiSP.DataSource = ProductBUS.SelectingAllProduct();
+
+                ddlNhomLSP.DataSource = ProductTypeGroupBUS.SelectingAllProductTypeGroup();
+                ddlNhomLSP.DataBind();
+
+                ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
+                ddlLoaiSP.DataBind();
+            }
 
         }
 
         protected void bttDangSanPham_Click(object sender, EventArgs e)
         {
-            /*SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
+            SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
             proDTO.MaSanPham = txtMaSP.Text;
-            proDTO.MaLoaiSanPham = int.Parse(txtMaLSP.Text);
+            proDTO.MaLoaiSanPham = int.Parse(ddlLoaiSP.DataValueField);
             proDTO.MoTaSanPham = txtRreaMoTa.Value;
-            proDTO.HinhAnh = fuLinkHinhAnh.FileName;
-            proDTO.NgayXoa = DateTime.Parse(txtNgayXoa.Text);
+            proDTO.HinhAnh = "../Content/images/products/" + fuLinkHinhAnh.FileName;
+            proDTO.NgayXoa = DateTime.Parse(null);
             proDTO.SoLuong = float.Parse(txtSoLuong.Text);
             proDTO.SoLuongConLai = float.Parse(txtSLTon.Text);
             proDTO.TenSanPham = txtTenSP.Text;
@@ -33,6 +43,8 @@ namespace BIZ.GUI.UserControls
             proDTO.Gia = float.Parse(txtGiaGoc.Text);
             proDTO.DonViTinh = txtDVTinh.Text;
             proDTO.ChatLuong = txtChatLuong.Text;
+            proDTO.NgayDangSanPham = DateTime.Today;
+            proDTO.NgaySuaDoi = DateTime.Today;
             try
             {
                 ProductBUS.AddProduct(proDTO);
@@ -40,21 +52,20 @@ namespace BIZ.GUI.UserControls
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }*/
+            }
         }
 
         protected void bttHuyBo_Click(object sender, EventArgs e)
         {
-            /*txtChatLuong.Text = "";
+            txtChatLuong.Text = "";
             txtDVTinh.Text = "";
             txtGiaGoc.Text = "";
             txtMaSP.Text = "";
-            txtNgayXoa.Text = "";
             txtRreaMoTa.Value = "";
             txtSLTon.Text = "";
             txtSoLuong.Text = "";
             txtTenSP.Text = "";
-            txtTinhTrang.Text = "";*/
+            txtTinhTrang.Text = "";
         }
     }
 }

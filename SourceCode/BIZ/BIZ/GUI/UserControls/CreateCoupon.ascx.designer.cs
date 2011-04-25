@@ -95,13 +95,13 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRreaDKSU;
         
         /// <summary>
-        /// txtDVTienTe control.
+        /// ddlDVTienTe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDVTienTe;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDVTienTe;
         
         /// <summary>
         /// txtTinhTrangCP control.

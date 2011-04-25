@@ -14,13 +14,17 @@
         <tr>
             <th><label>Nhóm Loại Sản Phẩm</label></th>
             <td>
-                <asp:DropDownList CssClass="txtBox" ID="ddlNhomLSP" runat="server"></asp:DropDownList>
+                <asp:DropDownList CssClass="txtBox" ID="ddlNhomLSP" runat="server" 
+                    DataTextField = "TenNhomLoaiSanPham" DataValueField = "MaNhomLoaiSanPham">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <th><label>Loại Sản Phẩm</label></th>
             <td>
-                <asp:DropDownList CssClass="txtBox" ID="ddlLoaiSP" runat="server"></asp:DropDownList>
+                <asp:DropDownList CssClass="txtBox" ID="ddlLoaiSP" runat="server" 
+                    DataTextField="TenLoaiSanPham" DataValueField="MaLoaiSanPham">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
