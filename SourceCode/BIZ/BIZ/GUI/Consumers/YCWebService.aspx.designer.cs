@@ -8,19 +8,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.GUI.Manager {
+namespace BIZ.GUI.Consumers {
     
     
     public partial class YCWebService {
         
         /// <summary>
-        /// form1 control.
+        /// Catalogs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
+        
+        /// <summary>
+        /// NewProduce1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.NewProduce NewProduce1;
+        
+        /// <summary>
+        /// AdvertisementLeft1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
         
         /// <summary>
         /// YeuCauSuDungWebService1 control.
@@ -30,5 +48,23 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.YeuCauSuDungWebService YeuCauSuDungWebService1;
+        
+        /// <summary>
+        /// Cart1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Cart Cart1;
+        
+        /// <summary>
+        /// Payment1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Payment Payment1;
     }
 }
