@@ -47,9 +47,20 @@ namespace BizWebservice
         {
             return GeneralPurchasing.RegisterCoupon(sid, couponId);
         }
-      /*  [WebMethod]
+        [WebMethod]
         public string OrderCoupon(string sid, string couponId, int count)
         {
-        }*/
+            return GeneralPurchasing.OrderCoupon(sid, couponId, count);
+        }
+        [WebMethod]
+        public bool ValidateOrder(string sid, string validationCode)
+        {
+            return GeneralPurchasing.ValidateOrder(sid, validationCode);
+        }
+        [WebMethod]
+        public bool CancelOrder(string sid, string validationCode)
+        {
+            return GeneralPurchasing.CancelOrder(sid, validationCode);
+        }
     }
 }

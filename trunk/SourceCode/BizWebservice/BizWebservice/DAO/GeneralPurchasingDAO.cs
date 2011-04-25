@@ -151,6 +151,94 @@ namespace BizWebservice.DAO
             }
             return false;
         }
+        public static string OrderCoupon(string sid, string couponId, int count)
+        {
+            provider.connect();
+            string sqlCommand="sp_OrderCoupon";
+            List<SqlParameter>list=new List<SqlParameter>();
+            list.Add(new SqlParameter("@sid",sid));
+            list.Add(new SqlParameter("@couponId",couponId));
+            list.Add(new SqlParameter("@count",count));
+            SqlParameter orderId=new SqlParameter("@orderId",SqlDbType.Int);
+            orderId.Direction=ParameterDirection.Output;
+            list.Add(orderId);
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand,list);
+                return orderId.Value.ToString();
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+          //  return "0";
+        }
+        public static bool ValidateOrder(string sid, string validationCode)
+        {
+            int validateCode;
+            int.TryParse(validationCode,out validateCode);
+            provider.connect();
+            string sqlCommand = "sp_ValidateOrder";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@sid", sid));
+            list.Add(new SqlParameter("@validationCode", validationCode));
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            int kq;
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                kq=(int)result.Value;
+                if (kq == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
+        public static bool CancelOrder(string sid, string validationCode)
+        {
+            int validateCode;
+            int.TryParse(validationCode, out validateCode);
+            provider.connect();
+            string sqlCommand = "sp_CancelOrder";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@sid", sid));
+            list.Add(new SqlParameter("@validationCode", validationCode));
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            int kq;
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                kq = (int)result.Value;
+                if (kq == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
         private static Coupon[] TransFerToCouponArray(string sqlCommand1, Coupon[] cpArray, DataTable table)
         {
             int n = table.Rows.Count;

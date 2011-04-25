@@ -119,5 +119,18 @@ namespace BizWebservice.BUS
                 return false;
             }
         }
+        public static string OrderCoupon(string sid, string couponId, int count)
+        {
+            return GeneralPurchasingDAO.OrderCoupon(sid, couponId, count);
+        }
+
+        public static bool ValidateOrder(string sid, string validationCode)
+        {
+            return GeneralPurchasingDAO.ValidateOrder(sid, validationCode);
+        }
+        public static bool CancelOrder(string sid, string validationCode)
+        {
+            return GeneralPurchasingDAO.CancelOrder(sid, validationCode);
+        }
     }
 }
