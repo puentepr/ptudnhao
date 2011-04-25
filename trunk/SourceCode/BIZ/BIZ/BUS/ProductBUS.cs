@@ -23,5 +23,17 @@ namespace BIZ.BUS
                 throw ex;
             }
         }
+
+        public static List<SAN_PHAM_DTO> SelectingAllProduct()
+        {
+            try
+            {
+                return ProductDAO.SelectingAllProducts();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

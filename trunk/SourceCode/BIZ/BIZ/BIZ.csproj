@@ -67,6 +67,8 @@
     <Compile Include="BUS\GeneralPurchasing.cs" />
     <Compile Include="BUS\MD5.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
+    <Compile Include="BUS\ProductTypeBUS.cs" />
+    <Compile Include="BUS\ProductTypeGroupBUS.cs" />
     <Compile Include="BUS\Theme.cs" />
     <Compile Include="BUS\ThemeManager.cs" />
     <Compile Include="BUS\UserBUS.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="DAO\GeneralPurchasingDAO.cs" />
     <Compile Include="DAO\MyDataProvider.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
+    <Compile Include="DAO\ProductTypeDAO.cs" />
+    <Compile Include="DAO\ProductTypeGroupDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>

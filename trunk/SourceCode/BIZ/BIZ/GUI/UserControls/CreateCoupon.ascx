@@ -13,7 +13,9 @@
         <tr>
             <th><label>Sản Phẩm: </label></th>
             <td>
-                <asp:DropDownList CssClass="txtBox" ID="ddlTenSP" runat="server"></asp:DropDownList>
+                <asp:DropDownList CssClass="txtBox" ID="ddlTenSP" runat="server" 
+                    DataTextField ="TenSanPham" DataValueField = "MaSanPham" >
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -55,7 +57,13 @@
         <tr>
             <th><label>Đơn Vị Tiền Tệ: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtDVTienTe" runat="server"></asp:TextBox>
+                <asp:DropDownList CssClass="txtBox" ID="ddlDVTienTe" runat="server">
+                    <asp:ListItem>VND</asp:ListItem>
+                    <asp:ListItem>USD</asp:ListItem>
+                    <asp:ListItem>EUR</asp:ListItem>
+                    <asp:ListItem>GBP</asp:ListItem>
+                    <asp:ListItem>JPY</asp:ListItem>
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>
