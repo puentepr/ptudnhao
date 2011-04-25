@@ -6,14 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 
-namespace BIZ.GUI.Manager
+namespace BIZ.GUI.Consumers
 {
-    public partial class YCWebService : System.Web.UI.Page
+    public partial class YCWebService : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
