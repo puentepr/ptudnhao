@@ -32,12 +32,12 @@ namespace BIZ.GUI.UserControls
         {
             SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
             proDTO.MaSanPham = txtMaSP.Text;
-            proDTO.MaLoaiSanPham = int.Parse(ddlLoaiSP.DataValueField);
+            proDTO.MaLoaiSanPham = int.Parse(ddlLoaiSP.SelectedValue.ToString());
             proDTO.MoTaSanPham = txtRreaMoTa.Value;
             proDTO.HinhAnh = "../Content/images/products/" + fuLinkHinhAnh.FileName;
-            proDTO.NgayXoa = DateTime.Parse(null);
+            //proDTO.NgayXoa = DateTime.Parse("");
             proDTO.SoLuong = float.Parse(txtSoLuong.Text);
-            proDTO.SoLuongConLai = float.Parse(txtSLTon.Text);
+            proDTO.SoLuongConLai = float.Parse(txtSoLuong.Text);
             proDTO.TenSanPham = txtTenSP.Text;
             proDTO.TinhTrangSanPham = txtTinhTrang.Text;
             proDTO.Gia = float.Parse(txtGiaGoc.Text);
@@ -62,7 +62,6 @@ namespace BIZ.GUI.UserControls
             txtGiaGoc.Text = "";
             txtMaSP.Text = "";
             txtRreaMoTa.Value = "";
-            txtSLTon.Text = "";
             txtSoLuong.Text = "";
             txtTenSP.Text = "";
             txtTinhTrang.Text = "";
