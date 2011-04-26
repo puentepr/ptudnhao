@@ -72,6 +72,7 @@
     <Compile Include="BUS\Theme.cs" />
     <Compile Include="BUS\ThemeManager.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="BUS\YCWebServiceBUS.cs" />
     <Compile Include="DAO\ConsumerDAO.cs" />
     <Compile Include="DAO\CouponDAO.cs" />
     <Compile Include="DAO\GeneralPurchasingDAO.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="DAO\ProductTypeDAO.cs" />
     <Compile Include="DAO\ProductTypeGroupDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\YeuCauWebserviceDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -148,6 +150,13 @@
     <Compile Include="GUI\Manager\CreateCoupon.aspx.designer.cs">
       <DependentUpon>CreateCoupon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Manager\XetDuyetYeuCauWS.aspx.cs">
+      <DependentUpon>XetDuyetYeuCauWS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\XetDuyetYeuCauWS.aspx.designer.cs">
+      <DependentUpon>XetDuyetYeuCauWS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Shared\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +191,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\AdvertisementLeft.ascx.designer.cs">
       <DependentUpon>AdvertisementLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\CapNhatYCWebservice.ascx.cs">
+      <DependentUpon>CapNhatYCWebservice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CapNhatYCWebservice.ascx.designer.cs">
+      <DependentUpon>CapNhatYCWebservice.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\Cart.ascx.cs">
       <DependentUpon>Cart.ascx</DependentUpon>
@@ -357,11 +373,13 @@
     <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
     <Content Include="GUI\Manager\CreateCoupon.aspx" />
+    <Content Include="GUI\Manager\XetDuyetYeuCauWS.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
     <Content Include="GUI\UserControls\AddProduct.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
+    <Content Include="GUI\UserControls\CapNhatYCWebservice.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\CatalogManager.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
