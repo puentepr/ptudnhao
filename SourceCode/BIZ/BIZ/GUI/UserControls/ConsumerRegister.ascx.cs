@@ -11,6 +11,7 @@ namespace BIZ.GUI.UserControls
 {
     public partial class ConsumerRegister : System.Web.UI.UserControl
     {
+        private string message = "Bạn đã đăng ký thành công . Một email đã được gởi tới mail của bạn để kích hoạt tài khoản tại hệ thống của chúng tôi.<br/>Bạn hãy check mail và thực hiện kích hoạt tài khoản để có thể đăng nhập vào hệ thống. Chú ý mail có thể bị đưa vào thư mục spam :)";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -65,7 +66,8 @@ namespace BIZ.GUI.UserControls
                         string subject = "Kich hoat tai khoan";
                         bool test = Email.sendMail(user.EMail, body, subject);
                         
-                        lbCaptcha.Visible = true;
+                        lbCaptcha.Visible = false;
+                        showMessage(message);
                     }
                 }
                 catch (Exception ex)

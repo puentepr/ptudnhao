@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Footer.ascx.cs" Inherits="BIZ.GUI.UserControls.Footer" %>
 <div class="f-menu">
-    <a href="#">Trang chủ</a>&nbsp;|&nbsp;
+    <a href="../Shared/Default.aspx">Trang chủ</a>&nbsp;|&nbsp;
     <a href="#">Vật liệu xây dựng</a>&nbsp;|&nbsp;
     <a href="#">Thiết bị nội thất</a>&nbsp;|&nbsp;
-     <a href="#">Mua chung</a>&nbsp;|&nbsp;
+     <a href="../Consumers/YCWebService.aspx">Mua chung</a>&nbsp;|&nbsp;
     <a href="#">Tư vấn mua hàng</a>&nbsp;|&nbsp;
     <a href="#">Liên hệ</a>
 </div>
