@@ -113,6 +113,15 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.TextBox txtTinhTrangCP;
         
         /// <summary>
+        /// lbResultInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbResultInfo;
+        
+        /// <summary>
         /// bttDangSP control.
         /// </summary>
         /// <remarks>
