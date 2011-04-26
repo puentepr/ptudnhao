@@ -338,6 +338,8 @@
     <Content Include="Content\images\new.gif" />
     <Content Include="Content\images\new_red.gif" />
     <Content Include="Content\images\products\bep-karador.jpg" />
+    <Content Include="Content\images\products\binh-nuoc-nong-olympic-sieu-toc.jpeg" />
+    <Content Include="Content\images\products\giay-dan-tuong2.jpeg" />
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />

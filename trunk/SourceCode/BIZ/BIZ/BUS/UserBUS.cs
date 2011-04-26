@@ -43,5 +43,16 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static int IsAvaliableAcount(string username, string password)
+        {
+            try
+            {
+                return UserDAO.CheckAvaliableUser(username, password);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

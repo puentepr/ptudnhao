@@ -91,5 +91,45 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
+        public static int CheckAvaliableUser(string username, string password)
+        {
+            provider.connect();
+            string sqlCommand = "sp_CheckAccountIsAvaliable";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@username", username));
+            list.Add(new SqlParameter("@password", password));
+            SqlParameter loaiuser = new SqlParameter("@loaiuser", SqlDbType.Int);
+            loaiuser.Direction = ParameterDirection.Output;
+            list.Add(loaiuser);
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                int kq = (int)result.Value;
+                if (kq == 1)
+                {
+                    int loai = (int)loaiuser.Value;
+                    return loai;
+                }
+                else if (kq == 0 && loaiuser.Value.ToString()!="")
+                {
+                    return kq;
+                }
+                else
+                    return -1;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BIZ.BUS;
 
 namespace BIZ.GUI.UserControls
 {
@@ -29,7 +30,10 @@ namespace BIZ.GUI.UserControls
                 }
             }
         }
-
+        public void showMessage(string content)
+        {
+            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "<script language='javascript'>alert('" + content + "');</script>");
+        }
         protected void lbtDangKi_Click(object sender, EventArgs e)
         {
 
@@ -37,7 +41,48 @@ namespace BIZ.GUI.UserControls
 
         protected void btnDangNhap_Click(object sender, EventArgs e)
         {
+            if (txtUserName.Text == "")
+            {
+                showMessage("Chưa điền username");
+            }
+            else if (txtPassWord.Text == "")
+            {
+                showMessage("Chưa điền password");
+            }
+            else
+            {
+                string username = txtUserName.Text;
+                string pass = MD5.encryptPassword(txtPassWord.Text);
+                int typeUser = UserBUS.IsAvaliableAcount(username, pass);
+                
+                if (typeUser == 0)
+                {
+                    showMessage("Tài khoản chưa được kích hoạt");
+                }
+                else if (typeUser == -1)
+                {
+                    showMessage("Username và pass không đúng");
+                }
+                else
+                {
+                    Session["IsLogin"] = 1;
+                    Session["User"] = username;
+                    switch (typeUser)
+                    {
+                        case 1:
+                            Session["LoaiUser"] = "Admin";
+                            break;
+                        case 2:
+                            Session["LoaiUser"] = "Manager";
+                            Response.Redirect("../Manager/AddProduct.aspx");
+                            break;
+                        case 3:
+                            Session["LoaiUser"] = "Consumer";
+                            break;
+                    }
+                }
 
+            }
         }
     }
 }
