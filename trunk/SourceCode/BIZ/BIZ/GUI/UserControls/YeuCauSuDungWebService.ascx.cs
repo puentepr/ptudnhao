@@ -25,9 +25,9 @@ namespace BIZ.GUI.UserControls
 
         protected void btYeuCau_Click(object sender, EventArgs e)
         {
-            YC_WEBSERVICE_DTO yc= new YC_WEBSERVICE_DTO ();
+           /* YC_WEBSERVICE_DTO yc= new YC_WEBSERVICE_DTO ();
             yc.UserName=txtUsername.Text;
-            yc.TenDN=txtTenHeThongMuaChung.Text;
+            yc.Tendn=txtTenHeThongMuaChung.Text;
             yc.Email=txtEmail.Text;
             yc.LinkWebSite=txtLink.Text;
             try
@@ -41,7 +41,7 @@ namespace BIZ.GUI.UserControls
             {
                 
                 throw ex;
-            }
+            }*/
         }
 
        

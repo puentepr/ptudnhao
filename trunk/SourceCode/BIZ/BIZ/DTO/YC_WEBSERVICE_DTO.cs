@@ -28,6 +28,13 @@ namespace BIZ.DTO
             get { return _linkWebSite; }
             set { _linkWebSite = value; }
         }
+        private string _tendn;
+
+        public string Tendn
+        {
+            get { return _tendn; }
+            set { _tendn = value; }
+        }
         private string _email;
 
         public string Email
