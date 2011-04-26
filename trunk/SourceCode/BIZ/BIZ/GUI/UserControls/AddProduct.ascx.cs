@@ -22,8 +22,8 @@ namespace BIZ.GUI.UserControls
                 ddlNhomLSP.DataSource = ProductTypeGroupBUS.SelectingAllProductTypeGroup();
                 ddlNhomLSP.DataBind();
 
-                ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
-                ddlLoaiSP.DataBind();
+                /*ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
+                ddlLoaiSP.DataBind();*/
             }
 
         }
@@ -65,6 +65,15 @@ namespace BIZ.GUI.UserControls
             txtSoLuong.Text = "";
             txtTenSP.Text = "";
             txtTinhTrang.Text = "";
+        }
+
+        protected void ddlNhomLSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlNhomLSP.SelectedValue.Length != 0)
+            {
+                ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductTypeByGroup(int.Parse(ddlNhomLSP.SelectedValue));
+                ddlLoaiSP.DataBind();
+            }
         }
     }
 }
