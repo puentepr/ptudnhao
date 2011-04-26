@@ -23,6 +23,15 @@ namespace BIZ.GUI.Manager {
         protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
         
         /// <summary>
+        /// CatalogManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.CatalogManager CatalogManager1;
+        
+        /// <summary>
         /// NewProduce1 control.
         /// </summary>
         /// <remarks>
@@ -47,7 +56,7 @@ namespace BIZ.GUI.Manager {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl CreateCoupon1;
+        protected global::BIZ.GUI.UserControls.CreateCoupon CreateCoupon1;
         
         /// <summary>
         /// Cart1 control.

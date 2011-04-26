@@ -190,6 +190,13 @@
     <Compile Include="GUI\UserControls\Cart.ascx.designer.cs">
       <DependentUpon>Cart.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\CatalogManager.ascx.cs">
+      <DependentUpon>CatalogManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CatalogManager.ascx.designer.cs">
+      <DependentUpon>CatalogManager.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\Catalogs.ascx.cs">
       <DependentUpon>Catalogs.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,6 +346,7 @@
     <Content Include="Content\images\new_red.gif" />
     <Content Include="Content\images\products\bep-karador.jpg" />
     <Content Include="Content\images\products\binh-nuoc-nong-olympic-sieu-toc.jpeg" />
+    <Content Include="Content\images\products\giay-dan-tuong.jpeg" />
     <Content Include="Content\images\products\giay-dan-tuong2.jpeg" />
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
@@ -355,6 +363,7 @@
     <Content Include="GUI\UserControls\AddProduct.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
+    <Content Include="GUI\UserControls\CatalogManager.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
     <Content Include="GUI\UserControls\ConsumerRegister.ascx" />
     <Content Include="GUI\UserControls\CreateCoupon.ascx" />

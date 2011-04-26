@@ -6,6 +6,8 @@
 <%@ Register Src="../UserControls/AdvertisementLeft.ascx" TagName="AdvertisementLeft" TagPrefix="ucAdsLeft" %>
 <%@ Register Src="../UserControls/CreateCoupon.ascx" TagName="CreateCoupon" TagPrefix="ucCCoupon" %>
 
+<%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Tạo Coupon
 </asp:Content>
@@ -15,8 +17,10 @@ Tạo Coupon
     <div class="first-secondary">
         
         <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
-        
+        <uc1:CatalogManager ID="CatalogManager1" runat="server" />
         <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
+        
+        
         
         <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         
