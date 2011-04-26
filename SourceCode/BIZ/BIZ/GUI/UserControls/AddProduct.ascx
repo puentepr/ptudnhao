@@ -69,13 +69,6 @@
                 <asp:TextBox CssClass="txtBox" ID="txtDVTinh" runat="server"></asp:TextBox>
             </td>
         </tr>
-       
-        <tr>
-            <th><label>Số Lượng Còn Lại: </label></th>
-            <td>
-                <asp:TextBox CssClass="txtBox" ID="txtSLTon" runat="server"></asp:TextBox>
-            </td>
-        </tr>
         <tr>
             <th><label>Tình Trạng: </label></th>
             <td>

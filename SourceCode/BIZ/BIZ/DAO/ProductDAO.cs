@@ -30,7 +30,7 @@ namespace BIZ.DAO
             ds.Add(new SqlParameter("@ngayDangSanPham", proDTO.NgayDangSanPham));
             ds.Add(new SqlParameter("@ngaySuaDoi", proDTO.NgaySuaDoi));
             ds.Add(new SqlParameter("@tinhTrangSanPham", proDTO.TinhTrangSanPham));
-            ds.Add(new SqlParameter("@ngayXoa", proDTO.NgayXoa));
+            //ds.Add(new SqlParameter("@ngayXoa", proDTO.NgayXoa));
             try
             {
                 helper.executeNonQueryProcedure(sqlCommad, ds);
