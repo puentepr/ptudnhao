@@ -74,6 +74,9 @@
         </tr>
     </table>
     <table>
+        <tr align ="center">
+            <asp:Label ID="lbResultInfo" runat="server"></asp:Label>
+        </tr> 
         <tr align="center">
             <td>
                 <asp:Button ID="bttDangSP" runat="server" Text="Tạo Coupon" 

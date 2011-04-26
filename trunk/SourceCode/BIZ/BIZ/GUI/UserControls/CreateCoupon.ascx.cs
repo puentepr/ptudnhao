@@ -36,19 +36,20 @@ namespace BIZ.GUI.UserControls
         {
             COUPON_DTO couDTO = new COUPON_DTO();
             couDTO.MaCoupon = txtMaCP.Text;
-            couDTO.MaSanPham = ddlTenSP.DataValueField;
+            couDTO.MaSanPham = ddlTenSP.SelectedValue.ToString();
             couDTO.GiaSauGiam = float.Parse(txtGiaSauKhiGiam.Text);
             couDTO.ThoiGianBD = DateTime.Today;
             couDTO.ThoiGianKT = couDTO.ThoiGianBD.Add(TimeSpan.Parse(txtThoiGianApDung.Text));
             couDTO.SoLuongSanPhamMin = int.Parse(txtSLSPmin.Text);
             couDTO.TinhTrangCoupon = txtTinhTrangCP.Text;
-            couDTO.DieuKienSuDung = txtRreaDKSU.ToString();
+            couDTO.DieuKienSuDung = txtRreaDKSU.Value.ToString();
             couDTO.GiaGoc = float.Parse(txtGiaGoc.Text);
             couDTO.DonViTienTe = ddlDVTienTe.Text;
             couDTO.SoLuongCouponMin = int.Parse(txtSLCPMinGiamGia.Text);
             try
             {
                 CouponBUS.CreateCoupon(couDTO);
+                lbResultInfo.Text = "Successfully Implementation!";
             }
             catch (Exception ex)
             {
