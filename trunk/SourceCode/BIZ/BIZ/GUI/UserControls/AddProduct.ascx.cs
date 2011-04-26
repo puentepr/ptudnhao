@@ -34,7 +34,7 @@ namespace BIZ.GUI.UserControls
             proDTO.MaSanPham = txtMaSP.Text;
             proDTO.MaLoaiSanPham = int.Parse(ddlLoaiSP.SelectedValue.ToString());
             proDTO.MoTaSanPham = txtRreaMoTa.Value;
-            proDTO.HinhAnh = "../Content/images/products/" + fuLinkHinhAnh.FileName;
+            proDTO.HinhAnh = fuLinkHinhAnh.FileName;
             //proDTO.NgayXoa = DateTime.Parse("");
             proDTO.SoLuong = float.Parse(txtSoLuong.Text);
             proDTO.SoLuongConLai = float.Parse(txtSoLuong.Text);
@@ -48,6 +48,7 @@ namespace BIZ.GUI.UserControls
             try
             {
                 ProductBUS.AddProduct(proDTO);
+                fuLinkHinhAnh.SaveAs(Server.MapPath("../../Content/images/products/"+proDTO.HinhAnh));
             }
             catch (Exception ex)
             {
