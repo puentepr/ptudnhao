@@ -15,17 +15,32 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+           
+
+            int isLogIn;
+            int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
+            if (isLogIn == 1)
             {
-                //ddlLoaiSP.DataSource = ProductBUS.SelectingAllProduct();
+                string typeUser = Session["LoaiUser"].ToString();
+                if (typeUser == "Manager")
+                {
+                    if (!IsPostBack)
+                    {
 
-                ddlNhomLSP.DataSource = ProductTypeGroupBUS.SelectingAllProductTypeGroup();
-                ddlNhomLSP.DataBind();
+                        //ddlLoaiSP.DataSource = ProductBUS.SelectingAllProduct();
 
-                /*ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
-                ddlLoaiSP.DataBind();*/
+                        ddlNhomLSP.DataSource = ProductTypeGroupBUS.SelectingAllProductTypeGroup();
+                        ddlNhomLSP.DataBind();
+
+                        /*ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
+                        ddlLoaiSP.DataBind();*/
+                    }
+                }
+                else
+                    Response.Redirect("../Shared/Default.aspx");
             }
-
+            else
+                Response.Redirect("../Shared/Default.aspx");
         }
 
         protected void bttDangSanPham_Click(object sender, EventArgs e)
