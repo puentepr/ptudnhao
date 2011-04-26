@@ -15,7 +15,8 @@
             <th><label>Nhóm Loại Sản Phẩm</label></th>
             <td>
                 <asp:DropDownList CssClass="txtBox" ID="ddlNhomLSP" runat="server" 
-                    DataTextField = "TenNhomLoaiSanPham" DataValueField = "MaNhomLoaiSanPham">
+                    DataTextField = "TenNhomLoaiSanPham" DataValueField = "MaNhomLoaiSanPham" 
+                    AutoPostBack="True" onselectedindexchanged="ddlNhomLSP_SelectedIndexChanged">
                 </asp:DropDownList>
             </td>
         </tr>
