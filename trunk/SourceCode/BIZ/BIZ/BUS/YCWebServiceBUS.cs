@@ -45,5 +45,30 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static int ValidateUserName(string username, string pass)
+        {
+            try
+            {
+                return YeuCauWebserviceDAO.ValidateUserName(username, pass);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public static int InsertYCWebService(YC_WEBSERVICE_DTO yc)
+        {
+            try
+            {
+                int kq = YeuCauWebserviceDAO.InsertYCWebService(yc);
+                return kq;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
     }
 }
