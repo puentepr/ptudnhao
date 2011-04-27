@@ -3,13 +3,13 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <StartPageUrl>GUI/Manager/XetDuyetYeuCauWS.aspx</StartPageUrl>
+          <StartPageUrl>GUI/Shared/Default.aspx</StartPageUrl>
           <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
           <PublishCopyOption>RunFiles</PublishCopyOption>
-          <PublishTargetLocation>D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\giua ky deloy\publish\</PublishTargetLocation>
+          <PublishTargetLocation>D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\giua ky deloy\web\</PublishTargetLocation>
           <PublishDeleteAllFiles>False</PublishDeleteAllFiles>
           <PublishCopyAppData>True</PublishCopyAppData>
           <ExternalProgram>

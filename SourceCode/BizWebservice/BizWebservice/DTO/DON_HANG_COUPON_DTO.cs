@@ -35,13 +35,13 @@ namespace BizWebservice.DTO
             get { return _maPackage; }
             set { _maPackage = value; }
         }
-        private string _sID;
+      /*  private string _sID;
 
         public string SID
         {
             get { return _sID; }
             set { _sID = value; }
-        }
+        }*/
         private DateTime _ngayDat;
 
         public DateTime NgayDat
@@ -105,7 +105,7 @@ namespace BizWebservice.DTO
             this._maWebService = 0;
             this._maCoupon = "";
             this._maPackage = 0;
-            this._sID = "";
+          //  this._sID = "";
             this._ngayDat = DateTime.MaxValue;
             this._ngayGiao = DateTime.MaxValue;
             this._tongTien = 0;
@@ -121,7 +121,7 @@ namespace BizWebservice.DTO
             this._maWebService = maWS;
             this._maCoupon = maCP;
             this._maPackage = maPK;
-            this._sID = sID;
+          //  this._sID = sID;
             this._ngayDat = ngayDat;
             this._ngayGiao = ngayGiao;
             this._tongTien = tongTien;

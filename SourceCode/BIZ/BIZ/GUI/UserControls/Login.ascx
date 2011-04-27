@@ -3,7 +3,8 @@
 <div class="login box-right">
     <div class="logintop-box">
         <asp:Label ID="lblStatus" CssClass="title-box" runat="server"></asp:Label>
-        <asp:LinkButton ID="lbtLogout" CssClass="logout" Visible="false" runat="server">[LogOut]</asp:LinkButton>
+        <asp:LinkButton ID="lbtLogout" CssClass="logout" Visible="false" runat="server" 
+            onclick="lbtLogout_Click">[LogOut]</asp:LinkButton>
     </div>
     <div id="login" runat="server" class="content-box">
         <div >

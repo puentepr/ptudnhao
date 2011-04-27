@@ -35,13 +35,13 @@ namespace BizWebservice.DTO
             get { return _ngayCap; }
             set { _ngayCap = value; }
         }
-        private DateTime _ngayHetHieuLuc;
+       /* private DateTime _ngayHetHieuLuc;
 
         public DateTime NgayHetHieuLuc
         {
             get { return _ngayHetHieuLuc; }
             set { _ngayHetHieuLuc = value; }
-        }
+        }*/
 
         public SID_DTO()
         {
@@ -49,7 +49,7 @@ namespace BizWebservice.DTO
             this._maWebService = 0;
             this._tinhTrangSid = 0;
             this._ngayCap = DateTime.MaxValue;
-            this._ngayHetHieuLuc = DateTime.MaxValue;
+           // this._ngayHetHieuLuc = DateTime.MaxValue;
         }
         public SID_DTO(string sid, int maWS, int tinhTrangSid, DateTime ngayCap, DateTime ngayHHL)
         {
@@ -57,7 +57,7 @@ namespace BizWebservice.DTO
             this._maWebService = maWS;
             this._tinhTrangSid = tinhTrangSid;
             this._ngayCap = ngayCap;
-            this._ngayHetHieuLuc = ngayHHL;
+          //  this._ngayHetHieuLuc = ngayHHL;
         }
     }
 }

@@ -1,4 +1,95 @@
 <publishData>
+  <publishTarget publishUrl="D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\giua ky deloy\web\">
+    <file relUrl="Global.asax" publishTime="04/06/2011 23:50:04" />
+    <file relUrl="GUI/Shared/Default.aspx" publishTime="04/07/2011 22:50:58" />
+    <file relUrl="App_Themes/Blue/content_top_center.png" publishTime="04/05/2011 00:50:42" />
+    <file relUrl="bin/.svn/prop-base/BIZ.dll.svn-base" publishTime="04/26/2011 15:15:02" />
+    <file relUrl="Content/images/tu-van-thiet-ke-nha.gif" publishTime="04/03/2011 17:28:42" />
+    <file relUrl="GUI/UserControls/Payment.ascx" publishTime="04/07/2011 22:49:36" />
+    <file relUrl="App_Themes/Blue/box_bottom.png" publishTime="04/05/2011 00:52:40" />
+    <file relUrl="App_Themes/Blue/content.css" publishTime="04/23/2011 10:16:46" />
+    <file relUrl="bin/BIZ.pdb" publishTime="04/27/2011 11:11:44" />
+    <file relUrl="Content/images/bep-karador.jpg" publishTime="04/07/2011 21:50:22" />
+    <file relUrl="Content/images/new_red.gif" publishTime="04/06/2011 21:27:00" />
+    <file relUrl="App_Themes/Blue/right-hover.jpg" publishTime="03/26/2011 11:39:00" />
+    <file relUrl="bin/.svn/text-base/BIZ.pdb.svn-base" publishTime="04/26/2011 23:58:58" />
+    <file relUrl="App_Themes/Blue/menu-hover-bg.jpg" publishTime="03/26/2011 11:39:00" />
+    <file relUrl="GUI/Consumers/Active.aspx" publishTime="04/20/2011 23:38:40" />
+    <file relUrl="Web.config" publishTime="04/27/2011 10:32:22" />
+    <file relUrl="Content/images/banner.gif" publishTime="04/05/2011 00:39:36" />
+    <file relUrl="GUI/UserControls/NewModifyProduce.ascx" publishTime="04/07/2011 22:31:04" />
+    <file relUrl="GUI/UserControls/Logo.ascx" publishTime="04/07/2011 21:42:12" />
+    <file relUrl="App_Themes/Blue/middle_box_bottom.png" publishTime="04/07/2011 22:56:42" />
+    <file relUrl="Content/images/banks/vietcombank.png" publishTime="04/07/2011 22:34:18" />
+    <file relUrl="Content/images/xemchitiet_but.gif" publishTime="04/05/2011 17:00:30" />
+    <file relUrl="bin/.svn/prop-base/MSCaptcha.dll.svn-base" publishTime="04/26/2011 11:44:14" />
+    <file relUrl="Content/images/f-menubg.jpg" publishTime="04/07/2011 13:44:46" />
+    <file relUrl="GUI/UserControls/Footer.ascx" publishTime="04/26/2011 11:00:14" />
+    <file relUrl="App_Themes/Blue/submenu_bottom1.png" publishTime="04/04/2011 10:01:30" />
+    <file relUrl="bin/.svn/text-base/BIZ.dll.svn-base" publishTime="04/26/2011 23:59:08" />
+    <file relUrl="App_Themes/Blue/submenu_bottom.jpg" publishTime="04/04/2011 10:09:02" />
+    <file relUrl="Content/images/products/binh-nuoc-nong-olympic-sieu-toc.jpeg" publishTime="04/07/2011 00:35:10" />
+    <file relUrl="Content/images/list_remove_btn.gif" publishTime="04/06/2011 23:56:40" />
+    <file relUrl="Content/images/products/bep-karador.jpg" publishTime="04/07/2011 21:50:22" />
+    <file relUrl="GUI/Manager/AddProduct.aspx" publishTime="04/26/2011 17:06:32" />
+    <file relUrl="App_Themes/Blue/content_top_left.png" publishTime="04/05/2011 00:49:48" />
+    <file relUrl="Content/images/binh-nuoc-nong-olympic-sieu-toc.jpeg" publishTime="04/07/2011 00:35:10" />
+    <file relUrl="App_Themes/Blue/loginbox_top.png" publishTime="04/06/2011 10:40:14" />
+    <file relUrl="GUI/UserControls/Textrun.ascx" publishTime="03/28/2011 23:54:56" />
+    <file relUrl="Content/images/menu_bg1.jpg" publishTime="03/26/2011 11:39:00" />
+    <file relUrl="GUI/Shared/MasterPage.Master" publishTime="04/07/2011 01:20:22" />
+    <file relUrl="GUI/UserControls/ActiveAcount.ascx" publishTime="04/20/2011 23:41:06" />
+    <file relUrl="App_Themes/Blue/master.css" publishTime="04/14/2011 21:34:42" />
+    <file relUrl="App_Themes/Blue/content_top_right.png" publishTime="04/05/2011 00:50:08" />
+    <file relUrl="App_Themes/Blue/box_top.png" publishTime="04/05/2011 00:54:12" />
+    <file relUrl="App_Themes/Blue/submenu_bg.png" publishTime="04/03/2011 22:07:20" />
+    <file relUrl="GUI/UserControls/NewProduce.ascx" publishTime="04/07/2011 01:05:38" />
+    <file relUrl="bin/BIZ.dll" publishTime="04/27/2011 11:11:44" />
+    <file relUrl="GUI/UserControls/AdvertisementLeft.ascx" publishTime="04/07/2011 22:38:36" />
+    <file relUrl="Content/images/giay-dan-tuong.jpeg" publishTime="04/07/2011 00:34:32" />
+    <file relUrl="GUI/Consumers/YCWebService.aspx" publishTime="04/26/2011 09:40:28" />
+    <file relUrl="GUI/UserControls/Login.ascx" publishTime="04/27/2011 11:11:38" />
+    <file relUrl="GUI/UserControls/FastSearch.ascx" publishTime="04/04/2011 10:55:28" />
+    <file relUrl="GUI/UserControls/CreateCoupon.ascx" publishTime="04/26/2011 15:15:02" />
+    <file relUrl="App_Themes/Blue/category.png" publishTime="04/05/2011 22:44:40" />
+    <file relUrl="App_Themes/Blue/submenu_top.png" publishTime="04/03/2011 22:24:42" />
+    <file relUrl="App_Themes/Blue/bottom.jpg" publishTime="04/03/2011 21:33:28" />
+    <file relUrl="GUI/Consumers/Register.aspx" publishTime="04/26/2011 00:42:30" />
+    <file relUrl="bin/.svn/entries" publishTime="04/27/2011 11:07:40" />
+    <file relUrl="GUI/Manager/XetDuyetYeuCauWS.aspx" publishTime="04/26/2011 22:42:38" />
+    <file relUrl="GUI/UserControls/CatalogManager.ascx" publishTime="04/26/2011 23:54:30" />
+    <file relUrl="Content/images/products/giay-dan-tuong2.jpeg" publishTime="04/07/2011 00:34:48" />
+    <file relUrl="Default.aspx" publishTime="03/26/2011 14:46:06" />
+    <file relUrl="App_Themes/Blue/information.png" publishTime="04/05/2011 22:53:22" />
+    <file relUrl="Content/images/banks/acb.png" publishTime="04/07/2011 22:34:04" />
+    <file relUrl="App_Themes/Blue/left-hover.jpg" publishTime="03/26/2011 11:39:00" />
+    <file relUrl="App_Themes/Blue/cart.gif" publishTime="04/05/2011 00:46:26" />
+    <file relUrl="bin/.svn/text-base/MSCaptcha.dll.svn-base" publishTime="04/26/2011 11:44:14" />
+    <file relUrl="GUI/UserControls/Themes.ascx" publishTime="03/27/2011 22:44:00" />
+    <file relUrl="App_Themes/Blue/dotlist.gif" publishTime="01/14/2007 09:37:48" />
+    <file relUrl="GUI/UserControls/ConsumerRegister.ascx" publishTime="04/20/2011 22:26:52" />
+    <file relUrl="Content/images/products/giay-dan-tuong.jpeg" publishTime="04/26/2011 16:40:42" />
+    <file relUrl="App_Themes/Blue/bestsellers.png" publishTime="04/05/2011 23:27:22" />
+    <file relUrl="GUI/UserControls/Catalogs.ascx" publishTime="04/05/2011 23:46:18" />
+    <file relUrl="bin/.svn/prop-base/BIZ.pdb.svn-base" publishTime="04/26/2011 15:15:02" />
+    <file relUrl="Content/images/banks/agribank.png" publishTime="04/07/2011 22:34:28" />
+    <file relUrl="GUI/UserControls/YeuCauSuDungWebService.ascx" publishTime="04/27/2011 11:07:40" />
+    <file relUrl="bin/MSCaptcha.dll" publishTime="04/26/2011 11:44:14" />
+    <file relUrl="Content/images/banks/dongabank.png" publishTime="04/07/2011 22:33:54" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="04/27/2011 10:31:00" />
+    <file relUrl="GUI/UserControls/Menu.ascx" publishTime="04/26/2011 10:59:20" />
+    <file relUrl="Content/images/new.gif" publishTime="04/04/2011 21:21:04" />
+    <file relUrl="GUI/Consumers/CheckAccount.aspx" publishTime="04/15/2011 23:59:58" />
+    <file relUrl="Content/images/giay-dan-tuong2.jpeg" publishTime="04/07/2011 00:34:48" />
+    <file relUrl="App_Themes/Blue/run-bg.jpg" publishTime="04/04/2011 11:36:58" />
+    <file relUrl="Content/images/logo.gif" publishTime="04/07/2011 21:44:02" />
+    <file relUrl="GUI/UserControls/TenNewProduce.ascx" publishTime="04/07/2011 22:31:14" />
+    <file relUrl="Content/images/menu_bg.jpg" publishTime="04/04/2011 11:24:58" />
+    <file relUrl="GUI/UserControls/Cart.ascx" publishTime="04/07/2011 00:20:00" />
+    <file relUrl="GUI/UserControls/CapNhatYCWebservice.ascx" publishTime="04/26/2011 23:51:50" />
+    <file relUrl="GUI/UserControls/AddProduct.ascx" publishTime="04/26/2011 15:15:02" />
+    <file relUrl="GUI/Manager/CreateCoupon.aspx" publishTime="04/26/2011 17:08:10" />
+  </publishTarget>
   <publishTarget publishUrl="D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\giua ky deloy\publish\">
     <file relUrl="bin/.svn/text-base/DAO.dll.svn-base" publishTime="04/21/2011 21:13:18" />
     <file relUrl="Global.asax" publishTime="04/06/2011 23:50:04" />
@@ -55,10 +146,10 @@
     <file relUrl="GUI/UserControls/AdvertisementLeft.ascx" publishTime="04/07/2011 22:38:36" />
     <file relUrl="Content/images/giay-dan-tuong.jpeg" publishTime="04/07/2011 00:34:32" />
     <file relUrl="GUI/Consumers/YCWebService.aspx" publishTime="04/22/2011 15:05:18" />
-    <file relUrl="GUI/UserControls/ConsumerRegister.ascx" publishTime="04/20/2011 22:26:52" />
     <file relUrl="GUI/UserControls/Login.ascx" publishTime="04/08/2011 16:42:06" />
     <file relUrl="bin/DAO.dll" publishTime="04/22/2011 20:42:00" />
     <file relUrl="GUI/UserControls/FastSearch.ascx" publishTime="04/04/2011 10:55:28" />
+    <file relUrl="bin/DAO.pdb" publishTime="04/22/2011 20:41:58" />
     <file relUrl="App_Themes/Blue/category.png" publishTime="04/05/2011 22:44:40" />
     <file relUrl="App_Themes/Blue/submenu_top.png" publishTime="04/03/2011 22:24:42" />
     <file relUrl="App_Themes/Blue/bottom.jpg" publishTime="04/03/2011 21:33:28" />
@@ -76,7 +167,7 @@
     <file relUrl="bin/.svn/text-base/MSCaptcha.dll.svn-base" publishTime="04/08/2011 20:27:56" />
     <file relUrl="GUI/UserControls/Themes.ascx" publishTime="03/27/2011 22:44:00" />
     <file relUrl="App_Themes/Blue/dotlist.gif" publishTime="01/14/2007 09:37:48" />
-    <file relUrl="bin/DAO.pdb" publishTime="04/22/2011 20:41:58" />
+    <file relUrl="GUI/UserControls/ConsumerRegister.ascx" publishTime="04/20/2011 22:26:52" />
     <file relUrl="GUI/Consumers/CheckAccount.aspx" publishTime="04/15/2011 23:59:58" />
     <file relUrl="App_Themes/Blue/bestsellers.png" publishTime="04/05/2011 23:27:22" />
     <file relUrl="GUI/UserControls/Catalogs.ascx" publishTime="04/05/2011 23:46:18" />
