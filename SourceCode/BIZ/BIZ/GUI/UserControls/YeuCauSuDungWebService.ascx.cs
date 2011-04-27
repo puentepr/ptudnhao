@@ -41,7 +41,9 @@ namespace BIZ.GUI.UserControls
                     try
                     {
                         YCWebServiceBUS.InsertYCWebService(yc);
-
+                        Panel1.Visible = false;
+                        Button1.Visible = true;
+                        lbThongBao.Text = "<b style='color:red ' ><br />Yêu cầu của bạn đã được gửi đi thành công!</b>";
                     }
                     catch (Exception ex)
                     {
@@ -55,6 +57,11 @@ namespace BIZ.GUI.UserControls
 
                 throw ex;
             }    
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/");
         }
 
        
