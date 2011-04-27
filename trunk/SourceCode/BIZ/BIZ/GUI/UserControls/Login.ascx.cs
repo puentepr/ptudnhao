@@ -84,5 +84,12 @@ namespace BIZ.GUI.UserControls
 
             }
         }
+
+        protected void lbtLogout_Click(object sender, EventArgs e)
+        {
+            Session["IsLogin"] = 0;
+            Session["LoaiUser"] = "";
+            Response.Redirect("../Shared/Default.aspx");
+        }
     }
 }

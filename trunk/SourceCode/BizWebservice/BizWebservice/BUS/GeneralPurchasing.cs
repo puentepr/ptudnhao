@@ -14,10 +14,10 @@ namespace BizWebservice.BUS
             password = MD5.encryptPassword(password);
             string sid = MD5.encryptPassword(username + DateTime.Now.ToLongTimeString());
             DateTime dateOfIssue = DateTime.Today;
-            DateTime deadline = DateTime.Today.AddHours(24);
+           // DateTime deadline = DateTime.Today.AddHours(24);
             try
             {
-                int result = GeneralPurchasingDAO.Authenticate(username, password, sid,dateOfIssue,deadline);
+                int result = GeneralPurchasingDAO.Authenticate(username, password, sid,dateOfIssue);
                 if (result == 1)
                 {
                     return sid;

@@ -11,7 +11,7 @@ namespace BizWebservice.DAO
     public class GeneralPurchasingDAO
     {
         static MyDataProvider provider = new MyDataProvider();
-        public static int Authenticate(string username, string password,string sid,DateTime dateOfIssue,DateTime deadline)
+        public static int Authenticate(string username, string password,string sid,DateTime dateOfIssue)
         {
             provider.connect();
             string sqlCommand = "sp_Authenticate";
@@ -20,7 +20,6 @@ namespace BizWebservice.DAO
             list.Add(new SqlParameter("@password", password));
             list.Add(new SqlParameter("@sid", sid));
             list.Add(new SqlParameter("@ngaycap", dateOfIssue));
-            list.Add(new SqlParameter("@ngayhethieuluc", deadline));
             SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
             result.Direction = ParameterDirection.ReturnValue;
             list.Add(result);
