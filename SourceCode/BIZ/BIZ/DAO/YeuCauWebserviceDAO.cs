@@ -69,5 +69,58 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
+        public static int InsertYCWebService(YC_WEBSERVICE_DTO yc)
+        {
+            provider.connect();
+            string sqlCommand = "sp_Insert_ycwebservice";
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            list.Add(new SqlParameter("@username", yc.UserName));
+            list.Add(new SqlParameter("@link", yc.LinkWebSite));
+            list.Add(new SqlParameter("@email", yc.Email));
+            list.Add(new SqlParameter("@tendoanhnghiep", yc.Tendn));
+
+            try
+            {
+                return provider.executeNonQueryProcedure(sqlCommand, list);
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+
+
+        }
+        public static int ValidateUserName(string username, string pass)
+        {
+            provider.connect();
+            string sqlCommand = "sp_KiemTra_UserName_PassWord_HopLe";
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            list.Add(new SqlParameter("@username", username));
+            list.Add(new SqlParameter("@pass", pass));
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                return (int)result.Value;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
+
     }
 }
