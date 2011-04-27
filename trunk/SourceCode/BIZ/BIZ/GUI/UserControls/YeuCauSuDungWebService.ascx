@@ -90,10 +90,5 @@
                     Text="Yêu cầu" />
             </td>
         </tr>
-        <tr>
-            <td class="style2" colspan="3">
-                <asp:Label ID="lbthongbao" runat="server" Text="Label" Visible="False"></asp:Label>
-            </td>
-        </tr>
-    </table>
+        </table>
 </div>
