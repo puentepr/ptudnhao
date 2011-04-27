@@ -2,22 +2,18 @@
 <style type="text/css">
     .style1
     {
-        width: 457px;
-        height: 203px;
+        width: 525px;
+        height: 255px;
         margin-left: 0px;
     }
     .style2
     {
         text-align: center;
     }
-    .style4
-    {
-        width: 145px;
-    }
     .style6
     {
         text-align: left;
-        width: 198px;
+        width: 146px;
     }
     .style7
     {
@@ -27,6 +23,27 @@
     #txtusername
     {
         width: 198px;
+    }
+    .style8
+    {
+        width: 219px;
+    }
+    .style9
+    {
+        text-align: left;
+        width: 146px;
+        height: 29px;
+    }
+    .style10
+    {
+        width: 18px;
+        text-align: center;
+        height: 29px;
+    }
+    .style11
+    {
+        width: 219px;
+        height: 29px;
     }
 </style>
 <div>
@@ -38,8 +55,10 @@
             </td>
             <td class="style7">
                 :</td>
-            <td class="style4">
+            <td class="style8">
                 <asp:TextBox ID="txtUsername" runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                    ControlToValidate="txtUsername" ErrorMessage="(*)"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -48,18 +67,25 @@
             </td>
             <td class="style7">
                 :</td>
-            <td class="style4">
+            <td class="style8">
                 <asp:TextBox ID="txtPass" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                    ControlToValidate="txtPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="style6">
+            <td class="style9">
                 <asp:Label ID="lbEmail" runat="server" Text="Email"></asp:Label>
             </td>
-            <td class="style7">
+            <td class="style10">
                 :</td>
-            <td class="style4">
+            <td class="style11">
                 <asp:TextBox ID="txtEmail"  runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
+                    ControlToValidate="txtPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                    ControlToValidate="txtEmail" ErrorMessage="Sai định dạng email!" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
@@ -69,8 +95,10 @@
             </td>
             <td class="style7">
                 :</td>
-            <td class="style4">
+            <td class="style8">
                 <asp:TextBox ID="txtTenHeThongMuaChung" runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
+                    ControlToValidate="txtTenHeThongMuaChung" ErrorMessage="(*)"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -80,8 +108,14 @@
             </td>
             <td class="style7">
                 :</td>
-            <td class="style4">
+            <td class="style8">
                 <asp:TextBox ID="txtLink"  runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
+                    ControlToValidate="txtLink" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                <br />
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+                    ControlToValidate="txtLink" ErrorMessage="Sai định dạng websitel!" 
+                    ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?"></asp:RegularExpressionValidator>
             </td>
         </tr>
         <tr>
