@@ -25,23 +25,36 @@ namespace BIZ.GUI.UserControls
 
         protected void btYeuCau_Click(object sender, EventArgs e)
         {
-           /* YC_WEBSERVICE_DTO yc= new YC_WEBSERVICE_DTO ();
-            yc.UserName=txtUsername.Text;
-            yc.Tendn=txtTenHeThongMuaChung.Text;
-            yc.Email=txtEmail.Text;
-            yc.LinkWebSite=txtLink.Text;
+            YC_WEBSERVICE_DTO yc = new YC_WEBSERVICE_DTO();
+
+            yc.UserName = txtUsername.Text;
+            string pass = MD5.encryptPassword(txtPass.Text);
+            yc.Tendn = txtTenHeThongMuaChung.Text;
+            yc.Email = txtEmail.Text;
+            yc.LinkWebSite = txtLink.Text;
+
             try
             {
-                YC_WEBSERVICE_BUS.InsertYCWebService(yc);               
-                lbthongbao.Text = "yêu cầu của bạn đã được gửi thành công";
-                lbthongbao.Enabled = true;
-                
+                int kq = YCWebServiceBUS.ValidateUserName(yc.UserName, pass);
+                if (kq == 1)
+                {
+                    try
+                    {
+                        YCWebServiceBUS.InsertYCWebService(yc);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        throw ex;
+                    }
+                }
             }
             catch (Exception ex)
             {
-                
+
                 throw ex;
-            }*/
+            }    
         }
 
        
