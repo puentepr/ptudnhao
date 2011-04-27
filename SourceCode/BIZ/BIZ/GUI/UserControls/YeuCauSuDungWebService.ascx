@@ -51,6 +51,8 @@
         </tr>
         <tr>
             <td style="text-align: center">
+                <asp:Button ID="Button1" runat="server" Text="Quay về trang chủ" style="text-align: center" onclick="Button1_Click"   Visible="False" />
+                       
                 <asp:Panel ID="Panel1" runat="server">
                     <table cellpadding="0" cellspacing="0" class="style1" align="center">
                         <tr>
@@ -136,8 +138,6 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <asp:Button ID="Button1" runat="server"  Text="Quay về trang chủ" 
-                    style="text-align: center" onclick="Button1_Click" Visible="False" />
             
             </td>
         </tr>

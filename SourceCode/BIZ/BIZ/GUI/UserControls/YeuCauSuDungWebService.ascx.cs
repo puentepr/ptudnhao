@@ -51,11 +51,18 @@ namespace BIZ.GUI.UserControls
                         throw ex;
                     }
                 }
+                else
+                {
+                    lbThongBao.Text = "<b style='color:red ' ><br/> Không thành công! username, pass không đúng hoặc trạng thái của bạn chưa active!</b>";
+                    Panel1.Visible = true;
+                    Button1.Visible = false;
+                }
             }
             catch (Exception ex)
             {
 
                 throw ex;
+              
             }    
         }
 
