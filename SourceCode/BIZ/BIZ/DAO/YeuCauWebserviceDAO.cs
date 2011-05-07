@@ -79,6 +79,9 @@ namespace BIZ.DAO
             list.Add(new SqlParameter("@link", yc.LinkWebSite));
             list.Add(new SqlParameter("@email", yc.Email));
             list.Add(new SqlParameter("@tendoanhnghiep", yc.Tendn));
+            list.Add(new SqlParameter("@linkws", yc.LinkWS));
+            list.Add(new SqlParameter("@mcusername", yc.McUserName));
+            list.Add(new SqlParameter("@mcpassword", yc.McPassWord));
 
             try
             {

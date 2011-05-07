@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BizWebservice.DTO
+namespace BIZ.DTO
 {
     public class YC_WEBSERVICE_DTO
     {
@@ -27,6 +27,13 @@ namespace BizWebservice.DTO
         {
             get { return _linkWebSite; }
             set { _linkWebSite = value; }
+        }
+        private string _tendn;
+
+        public string Tendn
+        {
+            get { return _tendn; }
+            set { _tendn = value; }
         }
         private string _email;
 
@@ -56,7 +63,27 @@ namespace BizWebservice.DTO
             get { return _soLuongSIDThanhToan; }
             set { _soLuongSIDThanhToan = value; }
         }
+        private string _linkWS;
 
+        public string LinkWS
+        {
+            get { return _linkWS; }
+            set { _linkWS = value; }
+        }
+        private string _mcUserName;
+
+        public string McUserName
+        {
+            get { return _mcUserName; }
+            set { _mcUserName = value; }
+        }
+        private string _mcPassWord;
+
+        public string McPassWord
+        {
+            get { return _mcPassWord; }
+            set { _mcPassWord = value; }
+        }
         public YC_WEBSERVICE_DTO()
         {
             this._ma = 0;

@@ -69,6 +69,7 @@
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProductTypeBUS.cs" />
     <Compile Include="BUS\ProductTypeGroupBUS.cs" />
+    <Compile Include="BUS\ServiceTransBUS.cs" />
     <Compile Include="BUS\Theme.cs" />
     <Compile Include="BUS\ThemeManager.cs" />
     <Compile Include="BUS\UserBUS.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\ProductTypeDAO.cs" />
     <Compile Include="DAO\ProductTypeGroupDAO.cs" />
+    <Compile Include="DAO\ServiceTransDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DAO\YeuCauWebserviceDAO.cs" />
     <Compile Include="Default.aspx.cs">
@@ -89,10 +91,14 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DTO\AcceptCouponDTO.cs" />
     <Compile Include="DTO\BTS_BIZ_DTO.cs" />
     <Compile Include="DTO\CHI_TIET_DON_HANG_DTO.cs" />
+    <Compile Include="DTO\ContactInfo.cs" />
     <Compile Include="DTO\Coupon.cs" />
+    <Compile Include="DTO\CouponNhieuDTO.cs" />
     <Compile Include="DTO\COUPON_DTO.cs" />
+    <Compile Include="DTO\DonHangCouponNhieuDTO.cs" />
     <Compile Include="DTO\DON_HANG_COUPON_DTO.cs" />
     <Compile Include="DTO\DON_HANG_DTO.cs" />
     <Compile Include="DTO\KHACH_HANG_DTO.cs" />
@@ -106,8 +112,25 @@
     <Compile Include="DTO\SERVICE_TRANS_DTO.cs" />
     <Compile Include="DTO\SID_DTO.cs" />
     <Compile Include="DTO\TK_BANK_DTO.cs" />
+    <Compile Include="DTO\TransportCompany.cs" />
+    <Compile Include="DTO\TransportType.cs" />
+    <Compile Include="DTO\hinhthuc.cs" />
     <Compile Include="DTO\USERS_DTO.cs" />
     <Compile Include="DTO\YC_WEBSERVICE_DTO.cs" />
+    <Compile Include="GUI\Admin\ServiceTransfer.aspx.cs">
+      <DependentUpon>ServiceTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ServiceTransfer.aspx.designer.cs">
+      <DependentUpon>ServiceTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.cs">
+      <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.designer.cs">
+      <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\Active.aspx.cs">
       <DependentUpon>Active.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,6 +158,13 @@
     </Compile>
     <Compile Include="GUI\Consumers\YCWebService.aspx.designer.cs">
       <DependentUpon>YCWebService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager\AcceptCoupons.aspx.cs">
+      <DependentUpon>AcceptCoupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\AcceptCoupons.aspx.designer.cs">
+      <DependentUpon>AcceptCoupons.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Manager\AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
@@ -171,6 +201,13 @@
     <Compile Include="GUI\Shared\MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\AcceptOrders.ascx.cs">
+      <DependentUpon>AcceptOrders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\AcceptOrders.ascx.designer.cs">
+      <DependentUpon>AcceptOrders.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\ActiveAcount.ascx.cs">
       <DependentUpon>ActiveAcount.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -184,6 +221,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\AddProduct.ascx.designer.cs">
       <DependentUpon>AddProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\AddServiceTrans.ascx.cs">
+      <DependentUpon>AddServiceTrans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\AddServiceTrans.ascx.designer.cs">
+      <DependentUpon>AddServiceTrans.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\AdvertisementLeft.ascx.cs">
       <DependentUpon>AdvertisementLeft.ascx</DependentUpon>
@@ -205,6 +249,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\Cart.ascx.designer.cs">
       <DependentUpon>Cart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\CatalogAdmin.ascx.cs">
+      <DependentUpon>CatalogAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CatalogAdmin.ascx.designer.cs">
+      <DependentUpon>CatalogAdmin.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\CatalogManager.ascx.cs">
       <DependentUpon>CatalogManager.ascx</DependentUpon>
@@ -311,6 +362,20 @@
     <Compile Include="GUI\UserControls\Themes.ascx.designer.cs">
       <DependentUpon>Themes.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\UpdateServiceTrans.ascx.cs">
+      <DependentUpon>UpdateServiceTrans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\UpdateServiceTrans.ascx.designer.cs">
+      <DependentUpon>UpdateServiceTrans.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewAndEditServiceTrans.ascx.cs">
+      <DependentUpon>ViewAndEditServiceTrans.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewAndEditServiceTrans.ascx.designer.cs">
+      <DependentUpon>ViewAndEditServiceTrans.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\YeuCauSuDungWebService.ascx.cs">
       <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,6 +384,16 @@
       <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MuaChung\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Blue\bestsellers.png" />
@@ -367,20 +442,26 @@
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />
+    <Content Include="GUI\Admin\ServiceTransfer.aspx" />
+    <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Consumers\YCWebService.aspx" />
+    <Content Include="GUI\Manager\AcceptCoupons.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
     <Content Include="GUI\Manager\CreateCoupon.aspx" />
     <Content Include="GUI\Manager\XetDuyetYeuCauWS.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
+    <Content Include="GUI\UserControls\AcceptOrders.ascx" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
     <Content Include="GUI\UserControls\AddProduct.ascx" />
+    <Content Include="GUI\UserControls\AddServiceTrans.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\CapNhatYCWebservice.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
+    <Content Include="GUI\UserControls\CatalogAdmin.ascx" />
     <Content Include="GUI\UserControls\CatalogManager.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
     <Content Include="GUI\UserControls\ConsumerRegister.ascx" />
@@ -396,12 +477,40 @@
     <Content Include="GUI\UserControls\TenNewProduce.ascx" />
     <Content Include="GUI\UserControls\Textrun.ascx" />
     <Content Include="GUI\UserControls\Themes.ascx" />
+    <Content Include="GUI\UserControls\UpdateServiceTrans.ascx" />
+    <Content Include="GUI\UserControls\ViewAndEditServiceTrans.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://aspspider.info/thienthoi/Service1.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MuaChung\</RelPath>
+      <UpdateFromURL>http://aspspider.info/thienthoi/Service1.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BIZ_MuaChung_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MuaChung\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MuaChung\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="dll\" />
-    <Folder Include="GUI\Admin\" />
     <Folder Include="js\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

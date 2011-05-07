@@ -42,7 +42,34 @@ namespace BizWebservice.DTO
             get { return _passWord; }
             set { _passWord = value; }
         }
+        private int _tinhTrang;
 
+        public int TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
+        private string _website;
+
+        public string Website
+        {
+            get { return _website; }
+            set { _website = value; }
+        }
+         private string _title;
+
+         public string Title
+         {
+             get { return _title; }
+             set { _title = value; }
+         }
+         private string _bizAddress;
+
+         public string BizAddress
+         {
+             get { return _bizAddress; }
+             set { _bizAddress = value; }
+         }
         public SERVICE_TRANS_DTO()
         {
             this._maDV = 0;
@@ -50,6 +77,7 @@ namespace BizWebservice.DTO
             this._linkWebService = "";
             this._userName = "";
             this._passWord = "";
+            this._website = "";
         }
         public SERVICE_TRANS_DTO(int maDV, string tenCT, string linkWS, string user, string pass)
         {

@@ -63,6 +63,7 @@
     <Compile Include="BUS\Email.cs" />
     <Compile Include="BUS\GeneralPurchasing.cs" />
     <Compile Include="BUS\MD5.cs" />
+    <Compile Include="BUS\VanChuyenBUS.cs" />
     <Compile Include="DAO\ConsumerDAO.cs" />
     <Compile Include="DAO\CouponWebService.cs" />
     <Compile Include="DAO\GeneralPurchasingDAO.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="DTO\BTS_BIZ_DTO.cs" />
     <Compile Include="DTO\CHI_TIET_DON_HANG_DTO.cs" />
     <Compile Include="DTO\Class1.cs" />
+    <Compile Include="DTO\ContactInfo.cs" />
     <Compile Include="DTO\Coupon.cs" />
     <Compile Include="DTO\COUPON_DTO.cs" />
     <Compile Include="DTO\DON_HANG_COUPON_DTO.cs" />
@@ -92,13 +94,55 @@
     <Compile Include="DTO\SERVICE_TRANS_DTO.cs" />
     <Compile Include="DTO\SID_DTO.cs" />
     <Compile Include="DTO\TK_BANK_DTO.cs" />
+    <Compile Include="DTO\TransportCompany.cs" />
+    <Compile Include="DTO\TransportType.cs" />
     <Compile Include="DTO\USERS_DTO.cs" />
     <Compile Include="DTO\YC_WEBSERVICE_DTO.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Service1.asmx.cs">
       <DependentUpon>Service1.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\VanChuyen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VanChuyen\FedexWebService.wsdl" />
+    <None Include="Web References\VanChuyen\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://fedexgroup4a.somee.com/FedexWebService.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VanChuyen\</RelPath>
+      <UpdateFromURL>http://fedexgroup4a.somee.com/FedexWebService.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BizWebservice_VanChuyen_FedexWebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

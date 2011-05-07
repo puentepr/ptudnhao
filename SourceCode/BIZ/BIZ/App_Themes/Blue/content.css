@@ -269,3 +269,12 @@ li label.title-box
     font-size:medium;
 }
 /* end css for content */
+/* css for webservice trans */
+.column1
+{
+	width:100px;
+}
+.column2
+{
+	width:400px;
+}

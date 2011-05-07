@@ -56,7 +56,13 @@ namespace BIZ.DTO
             get { return _tinhTrangWS; }
             set { _tinhTrangWS = value; }
         }
+        private string _website;
 
+        public string Website
+        {
+            get { return _website; }
+            set { _website = value; }
+        }
         public SERVICE_BANK_DTO()
         {
             this._maBank = "";
@@ -66,6 +72,7 @@ namespace BIZ.DTO
             this._linkWebService = "";
             this._anhBank = "";
             this._tinhTrangWS = 0;
+            this._website = "";
         }
         public SERVICE_BANK_DTO(string maB, string tenB, string user, string pass, string linkWS, string anhB, int tinhTrangWS)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 using BizWebservice.DAO;
 using BizWebservice.DTO;
 
@@ -131,6 +132,110 @@ namespace BizWebservice.BUS
         public static bool CancelOrder(string sid, string validationCode)
         {
             return GeneralPurchasingDAO.CancelOrder(sid, validationCode);
+        }
+        public static TransportCompany[] GetTransportCompany()
+        {
+            return GeneralPurchasingDAO.GetTransportCompany();
+        }
+        public static string ConfirmOrder(string sid, string transCompanyId, string transTypeId, string validationCode, ContactInfo contact)
+        {
+            int result = ConsumerDAO.CheckAvaliableSID(sid);
+            if (result >= 1)
+            {
+                int madv = 0;
+                if (int.TryParse(transCompanyId, out madv))
+                {
+                    int madh = 0;
+                    int.TryParse(validationCode, out madh);
+                    int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
+                    int transtype = 0;
+                    int.TryParse(transTypeId, out transtype);
+                    SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
+                    /*string bizAddress = "";
+                    if (ConfigurationManager.AppSettings.GetValues(transCompanyId)[0] != null)
+                    {
+                        bizAddress = ConfigurationManager.AppSettings.GetValues(transCompanyId)[0];
+                    }
+                    else
+                    {
+                        bizAddress = ConfigurationManager.AppSettings.GetValues("biz")[0];
+                    }*/
+                    VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
+                    proxy.Url = sv.LinkWebService;
+                    string id = proxy.Authenticate(sv.UserName, sv.PassWord);
+                    string url = proxy.TransportGoods(id, validationCode, soluong, DateTime.Today.Date.AddDays(1), contact.DiaChi, transtype, sv.BizAddress);
+                    // if (url.IndexOf("http://") >= 0 || url.IndexOf("https://") >= 0)
+                    if (url.IndexOf(".aspx?") >= 0)
+                    {
+                        // string package = proxy.GetPackageInfo(id, url);
+                        int result1 = GeneralPurchasingDAO.ConfirmOrder(madh, contact.DiaChi, sid);
+
+                        /*  if (result1 != 1)
+                          {
+                              proxy.CancelPackage(id, url);
+                          }*/
+                    }
+                    return url;
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            else
+            {
+                return "Invalid sid";
+            }
+        }
+        public static string Confirm(string sid, string transCompanyId, string transTypeId, string validationCode, string contact)
+        {
+            int result = ConsumerDAO.CheckAvaliableSID(sid);
+            if (result >= 1)
+            {
+                int madv = 0;
+                if (int.TryParse(transCompanyId, out madv))
+                {
+                    int madh = 0;
+                    int.TryParse(validationCode, out madh);
+                    int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
+                    int transtype = 0;
+                    int.TryParse(transTypeId, out transtype);
+                    SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
+                    /*string bizAddress = "";
+                    if (ConfigurationManager.AppSettings.GetValues(transCompanyId)[0] != null)
+                    {
+                        bizAddress = ConfigurationManager.AppSettings.GetValues(transCompanyId)[0];
+                    }
+                    else
+                    {
+                        bizAddress = ConfigurationManager.AppSettings.GetValues("biz")[0];
+                    }*/
+                    VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
+                    proxy.Url = sv.LinkWebService;
+                    string id = proxy.Authenticate(sv.UserName, sv.PassWord);
+                    string url = proxy.TransportGoods(id, validationCode, soluong, DateTime.Today.Date.AddDays(1), contact, transtype, sv.BizAddress);
+                   // if (url.IndexOf("http://") >= 0 || url.IndexOf("https://") >= 0)
+                    if(url.IndexOf(".aspx?")>=0)
+                    {
+                       // string package = proxy.GetPackageInfo(id, url);
+                        int result1 = GeneralPurchasingDAO.ConfirmOrder(madh, contact,sid);
+                        
+                      /*  if (result1 != 1)
+                        {
+                            proxy.CancelPackage(id, url);
+                        }*/
+                    }
+                    return url;
+                }
+                else
+                {
+                    return "false";
+                }
+            }
+            else
+            {
+                return "Invalid sid";
+            }
         }
     }
 }
