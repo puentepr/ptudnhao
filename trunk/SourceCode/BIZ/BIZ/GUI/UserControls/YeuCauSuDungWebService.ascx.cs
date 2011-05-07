@@ -32,6 +32,9 @@ namespace BIZ.GUI.UserControls
             yc.Tendn = txtTenHeThongMuaChung.Text;
             yc.Email = txtEmail.Text;
             yc.LinkWebSite = txtLink.Text;
+            yc.LinkWS = txtLinkWS.Text;
+            yc.McUserName = txtMCUsernme.Text;
+            yc.McPassWord = txtMCPass.Text;
 
             try
             {

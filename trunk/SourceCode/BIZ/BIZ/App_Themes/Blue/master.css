@@ -29,7 +29,7 @@ img
 {
 	background:url("../../Content/images/menu_bg.jpg") scroll repeat-x 0px -6px;
 	height:40px;
-	margin-left:auto 0px;
+	margin-left:0px;
 	/*background-color:Fuchsia;*/
 	text-align:center;
 	padding-left:200px;

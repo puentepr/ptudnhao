@@ -131,6 +131,66 @@
                             </td>
                         </tr>
                         <tr>
+                            <td class="style6">
+                                <asp:Label ID="Label1" runat="server" 
+                    Text="Webservice nhận phản hồi"></asp:Label>
+                            </td>
+                            <td class="style7">
+                                :</td>
+                            <td class="style9">
+                                <asp:TextBox ID="txtLinkWS"  runat="server" Width="200px" 
+                    style="text-align: left"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="txtLinkWS" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                                <br />
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" 
+                    ControlToValidate="txtLinkWS" ErrorMessage="Webservice không đúng" 
+                    ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*.([asmx])+)?" ></asp:RegularExpressionValidator>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="3" style="text-align:center"><h4 style="color:Green">Xin cung câp thông tin một tài khoản đăng nhập vào hệ thống Mua chung</h4></td>
+                        </tr>
+                         <tr>
+                            <td class="style6">
+                                <asp:Label ID="Label2" runat="server" 
+                    Text="Tên đăng nhập"></asp:Label>
+                            </td>
+                            <td class="style7">
+                                :</td>
+                            <td class="style9">
+                                <asp:TextBox ID="txtMCUsernme"  runat="server" Width="200px" 
+                    style="text-align: left"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="txtMCUsernme" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                                <br />
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style6">
+                                <asp:Label ID="Label3" runat="server" 
+                    Text="Mật khẩu"></asp:Label>
+                            </td>
+                            <td class="style7">
+                                :</td>
+                            <td class="style9">
+                                <asp:TextBox ID="txtMCPass"  runat="server" Width="200px" 
+                    style="text-align: left"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                    ControlToValidate="txtMCPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                                <br />
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style12" colspan="3">
+                                <asp:Button ID="Button2" runat="server" onclick="btYeuCau_Click" 
+                    Text="Yêu cầu" style="text-align: center" />
+                            </td>
+                        </tr>
+                        <tr>
                             <td class="style12" colspan="3">
                                 <asp:Button ID="btYeuCau" runat="server" onclick="btYeuCau_Click" 
                     Text="Yêu cầu" style="text-align: center" />

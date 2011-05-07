@@ -62,5 +62,20 @@ namespace BizWebservice
         {
             return GeneralPurchasing.CancelOrder(sid, validationCode);
         }
+        [WebMethod]
+        public TransportCompany[] GetTranports()
+        {
+            return GeneralPurchasing.GetTransportCompany();
+        }
+        [WebMethod]
+        public string ConfirmOrder(string sid, string transCompanyId, string transTypeId, string validationCode, ContactInfo contact)
+        {
+            return GeneralPurchasing.ConfirmOrder(sid, transCompanyId, transTypeId, validationCode, contact);
+        }
+        /*[WebMethod]
+        public string Confirm(string sid, string transCompanyId, string transTypeId, string validationCode, string contact)
+        {
+            return GeneralPurchasing.Confirm(sid, transCompanyId, transTypeId, validationCode, contact);
+        }*/
     }
 }

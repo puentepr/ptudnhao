@@ -1,0 +1,22 @@
+﻿	
+địa chỉ: http://fedexgroup4a.somee.com/FedexWebService.asmx
+http://fedexgroup4a.somee.com/FedexWebService.asmx
+
+string Authenticate(string username, string password)
+- username: demo1, demo2, demo3
+- password: 123456
+- Thành công sẽ có chuỗi sid, tồn tại trong 5m.
+
+string TransportGoods(string sid, string packageInfo, int NumberOfItems, date GetPackageFromBiz, string CustomerAddress, int TransportType, string BizAddress)
+- Địa phận Việt Nam có thành phố: Hà Nội, Hải Phòng, Nam Định, Tp Vinh, Đà Nẵng, Quãng Ngãi, Quy Nhơn, Nha Trang, Tp Hồ Chí Minh(trụ sở chính)
+- Chuyển từ Việt Nam sang Hoa Kỳ: New York(trụ sở phụ), Oxford, Greenwood, Santa Fe, Colorado Springs, Denver, Olympia, Bellingham, Albuquerque, Los Angeles , Sacramento, Jacksonville, Orlando, Utica, Syracuse
+- Không hỗ trợ nơi chuyển từ Hoa Kỳ.
+- CustomerAddress, BizAddress định dạng: abcdefghijk , Tên thành phố
+- VD: Q4, Tp Hồ Chí Minh (nhớ có khoảng trắng giữa dấu , và tên thành phố)
+- GetPackageFromBiz định dạng: mm/dd/yy
+- TransportType: 0:bình thường, 1: gấp, vận chuyển trong địa phận VN là như nhau.
+-
+string GetPackageInfo(string sid, string packageURL)
+float CancelPackage (string sid, string packageURL)
+
+Các bạn kiểm tra giúp mình!!!

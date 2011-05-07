@@ -13,8 +13,12 @@
                 <a href="../Manager/CreateCoupon.aspx">Thêm Coupon</a>
             </li>
             <li>
+                <a href="../Manager/AcceptCoupons.aspx">Order coupon</a>
+            </li>
+            <li>
                 <a href="../Manager/XetDuyetYeuCauWS.aspx">Quản lý yêu cầu ws</a>
             </li>
+
         </ul>
     </div>
     <div class="bottom-box">

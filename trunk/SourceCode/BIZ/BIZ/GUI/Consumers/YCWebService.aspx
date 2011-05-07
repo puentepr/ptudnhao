@@ -10,7 +10,7 @@
 <%@ Register src="../UserControls/YeuCauSuDungWebService.ascx" tagname="YeuCauSuDungWebService" tagprefix="uc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-
+Đăng ký sử dụng webservice
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="include" runat="server">
 </asp:Content>

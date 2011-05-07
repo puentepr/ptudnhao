@@ -71,6 +71,7 @@ namespace BIZ.GUI.UserControls
                     {
                         case 1:
                             Session["LoaiUser"] = "Admin";
+                            Response.Redirect("../Admin/ServiceTransfer.aspx");
                             break;
                         case 2:
                             Session["LoaiUser"] = "Manager";
@@ -89,6 +90,7 @@ namespace BIZ.GUI.UserControls
         {
             Session["IsLogin"] = 0;
             Session["LoaiUser"] = "";
+            Session["User"] = "Guest";
             Response.Redirect("../Shared/Default.aspx");
         }
     }

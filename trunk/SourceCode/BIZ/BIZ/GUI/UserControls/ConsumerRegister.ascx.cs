@@ -35,7 +35,7 @@ namespace BIZ.GUI.UserControls
            // showMessage("hostname " + Request.UserHostName);//127.1.1
            // showMessage(Request.UserHostAddress);
 
-            captcha.ValidateCaptcha(txtCaptcha.Text);
+           captcha.ValidateCaptcha(txtCaptcha.Text);
             if (captcha.UserValidated)
             {
                 USERS_DTO user = new USERS_DTO();
@@ -89,5 +89,16 @@ namespace BIZ.GUI.UserControls
         {
             lbCaptcha.Visible = false;
         }
+
+
+        protected void MyValidate(object source, ServerValidateEventArgs args)
+        {
+            if (txtPass.Text.Length < 5)
+                args.IsValid = false;
+            else
+                args.IsValid = true;
+        }
+
+ 
     }
 }
