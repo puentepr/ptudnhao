@@ -17,13 +17,15 @@
             <li style="padding-bottom:2px;">
                 <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="txtUserName"
-                    ID="RequiredFieldValidator1" ValidationGroup="login" runat="server" ErrorMessage="username invalid"></asp:RequiredFieldValidator>
+                    ID="RequiredFieldValidator1" ValidationGroup="login" runat="server" 
+                    ErrorMessage="username invalid" Display="Dynamic"></asp:RequiredFieldValidator>
             </li>
             <li><label id="lblPassWord" class="title-box" runat="server">PassWord:</label></li>
             <li style="padding-bottom:2px;">
                 <asp:TextBox ID="txtPassWord" TextMode="Password" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="txtUserName"
-                    ID="RequiredFieldValidator2" ValidationGroup="login" runat="server" ErrorMessage="pass invalid"></asp:RequiredFieldValidator>
+                    ID="RequiredFieldValidator2" ValidationGroup="login" runat="server" 
+                    ErrorMessage="pass invalid" Display="Dynamic"></asp:RequiredFieldValidator>
             </li>							
             <li>
                 <asp:Button ID="btnDangNhap" runat="server" Text="Đăng Nhập" CssClass="button" 

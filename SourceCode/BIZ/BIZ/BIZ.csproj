@@ -101,6 +101,7 @@
     <Compile Include="DTO\DonHangCouponNhieuDTO.cs" />
     <Compile Include="DTO\DON_HANG_COUPON_DTO.cs" />
     <Compile Include="DTO\DON_HANG_DTO.cs" />
+    <Compile Include="DTO\GioHang.cs" />
     <Compile Include="DTO\KHACH_HANG_DTO.cs" />
     <Compile Include="DTO\LOAISP_DTO.cs" />
     <Compile Include="DTO\LOAI_USER_DTO.cs" />
@@ -145,12 +146,33 @@
     <Compile Include="GUI\Consumers\CheckAccount.aspx.designer.cs">
       <DependentUpon>CheckAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\QuanLyDonHang.aspx.cs">
+      <DependentUpon>QuanLyDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\QuanLyDonHang.aspx.designer.cs">
+      <DependentUpon>QuanLyDonHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\Consumers\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consumers\ViewDetailCart.aspx.cs">
+      <DependentUpon>ViewDetailCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\ViewDetailCart.aspx.designer.cs">
+      <DependentUpon>ViewDetailCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consumers\ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Consumers\YCWebService.aspx.cs">
       <DependentUpon>YCWebService.aspx</DependentUpon>
@@ -376,6 +398,20 @@
     <Compile Include="GUI\UserControls\ViewAndEditServiceTrans.ascx.designer.cs">
       <DependentUpon>ViewAndEditServiceTrans.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailCart.ascx.cs">
+      <DependentUpon>ViewDetailCart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailCart.ascx.designer.cs">
+      <DependentUpon>ViewDetailCart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewProduct.ascx.cs">
+      <DependentUpon>ViewProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewProduct.ascx.designer.cs">
+      <DependentUpon>ViewProduct.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\YeuCauSuDungWebService.ascx.cs">
       <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,6 +462,7 @@
     <Content Include="Content\images\banner.gif" />
     <Content Include="Content\images\bep-karador.jpg" />
     <Content Include="Content\images\binh-nuoc-nong-olympic-sieu-toc.jpeg" />
+    <Content Include="Content\images\delete.gif" />
     <Content Include="Content\images\f-menubg.jpg" />
     <Content Include="Content\images\giay-dan-tuong.jpeg" />
     <Content Include="Content\images\giay-dan-tuong2.jpeg" />
@@ -446,7 +483,10 @@
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
+    <Content Include="GUI\Consumers\QuanLyDonHang.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
+    <Content Include="GUI\Consumers\ViewDetailCart.aspx" />
+    <Content Include="GUI\Consumers\ViewProduct.aspx" />
     <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Manager\AcceptCoupons.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
@@ -479,10 +519,23 @@
     <Content Include="GUI\UserControls\Themes.ascx" />
     <Content Include="GUI\UserControls\UpdateServiceTrans.ascx" />
     <Content Include="GUI\UserControls\ViewAndEditServiceTrans.ascx" />
+    <Content Include="GUI\UserControls\ViewDetailCart.ascx" />
+    <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MuaChung\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MuaChung\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://aspspider.info/thienthoi/Service1.asmx%3fWSDL">
@@ -496,17 +549,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>BIZ_MuaChung_Service1</CachedSettingsPropName>
     </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\MuaChung\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\MuaChung\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -528,7 +570,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1155</DevelopmentServerPort>
+          <DevelopmentServerPort>2418</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

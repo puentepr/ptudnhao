@@ -278,3 +278,30 @@ li label.title-box
 {
 	width:400px;
 }
+.viewdetail
+{
+	padding:40px;
+}
+.viewdetail table tr td label
+{
+	color:Blue;
+	font-size:16px;
+	font-weight:bold;
+}
+.productname
+{
+	font-size:22px;
+	color:Purple;
+	font-weight:bold;
+}
+
+.button
+{
+	background-color:#3CB371;
+
+}
+.content-box label
+{
+	font-weight:bold;
+	color:Blue;
+}

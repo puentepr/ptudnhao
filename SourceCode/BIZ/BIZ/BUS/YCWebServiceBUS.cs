@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Threading;
+using System.Configuration;
 using BIZ.DTO;
 using BIZ.DAO;
 
@@ -31,7 +32,7 @@ namespace BIZ.BUS
                 {
                     if (yc.TinhTrangYeuCau == 1)
                     {
-                        string body = "<b style='color:green'>Doanh nghiệp bạn đã được cho phép sử dụng webservice tại hệ thống của chúng tôi</b>";
+                        string body = "<b style='color:green'>Doanh nghiệp bạn đã được cho phép sử dụng webservice tại hệ thống của chúng tôi</b><b>Link webservice: " + ConfigurationManager.AppSettings.GetValues("ws")[0].ToString();
                         Email.sendMail(yc.Email, body, subject);
                      //   ThreadStart start=new ThreadStart(
                      //   Thread thread=new Thread(

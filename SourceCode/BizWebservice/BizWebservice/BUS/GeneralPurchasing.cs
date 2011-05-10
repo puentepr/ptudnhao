@@ -122,6 +122,8 @@ namespace BizWebservice.BUS
         }
         public static string OrderCoupon(string sid, string couponId, int count)
         {
+            if (count <= 0)
+                return "count cần lớn hơn 0";
             return GeneralPurchasingDAO.OrderCoupon(sid, couponId, count);
         }
 
@@ -148,6 +150,8 @@ namespace BizWebservice.BUS
                     int madh = 0;
                     int.TryParse(validationCode, out madh);
                     int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
+                    if (soluong == 0)
+                        return "Đơn hàng không có coupon nào";
                     int transtype = 0;
                     int.TryParse(transTypeId, out transtype);
                     SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
@@ -198,6 +202,8 @@ namespace BizWebservice.BUS
                     int madh = 0;
                     int.TryParse(validationCode, out madh);
                     int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
+                    if (soluong == 0)
+                        return "Đơn hàng không có coupon nào";
                     int transtype = 0;
                     int.TryParse(transTypeId, out transtype);
                     SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);

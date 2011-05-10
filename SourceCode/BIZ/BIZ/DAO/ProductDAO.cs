@@ -84,5 +84,54 @@ namespace BIZ.DAO
             }
             return ds;
         }
+        public static SAN_PHAM_DTO GetProductInfor(string masp)
+        {
+            helper.connect();
+            string sqlCommand="sp_GetProductInfor";
+            List<SqlParameter>list=new List<SqlParameter>();
+            list.Add(new SqlParameter("@masp",masp));
+            SqlParameter soluong=new SqlParameter("@soluong",SqlDbType.Int);
+            soluong.Direction=ParameterDirection.Output;
+            list.Add(soluong);
+            try
+            {
+                SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    DataRow row=table.Rows[0];
+                    sp.ChatLuong=row["CHATLUONG"].ToString();
+                    sp.DonViTinh=row["DVTINH"].ToString();
+                    float price=0;
+                    float.TryParse(row["GIA"].ToString(),out price);
+                    sp.Gia=price;
+                    sp.HinhAnh="../../Content/images/products/"+row["HINHANH"].ToString();
+                    int maloai=0;
+                    int.TryParse(row["MALSP"].ToString(),out maloai);
+                    sp.MaLoaiSanPham=maloai;
+                    sp.MaSanPham=row["MASP"].ToString();
+                    sp.MoTaSanPham=row["MOTA"].ToString();
+                    sp.NgayDangSanPham=DateTime.Parse(row["NGAYDSP"].ToString());
+                    sp.NgaySuaDoi=DateTime.Parse(row["NGAYSD"].ToString());
+                    float slcl=0;
+                    float.TryParse(row["SLCONLAI"].ToString(),out slcl);
+                    sp.SoLuongConLai=slcl;
+                    sp.SoNguoiMua=(int)soluong.Value;
+                    sp.TenSanPham=row["TENSP"].ToString();
+                    
+
+
+                }
+                return sp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
     }
 }

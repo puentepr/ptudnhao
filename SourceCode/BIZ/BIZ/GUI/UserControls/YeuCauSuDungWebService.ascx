@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="YeuCauSuDungWebService.ascx.cs" Inherits="BIZ.GUI.UserControls.YeuCauSuDungWebService" %>
+<%@ Register Assembly="MSCaptcha" Namespace="MSCaptcha" TagPrefix="cc1" %>
 <style type="text/css">
     #txtusername
     {
@@ -42,11 +43,12 @@
     }
 </style>
 
-<div>
+<div >
     <table cellpadding="0" cellspacing="0" class="style1">
         <tr>
-            <td>            
-                <span class="style2">YÊU CẦU WEBSERVICE</span><asp:Label ID="lbThongBao" runat="server"></asp:Label>
+            <td colspan="3" align="center">            
+                <h3><span class="style2">Đăng ký sử dụng WEBSERVICE</span></h3>
+                <asp:Label ID="lbThongBao" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -133,7 +135,7 @@
                         <tr>
                             <td class="style6">
                                 <asp:Label ID="Label1" runat="server" 
-                    Text="Webservice nhận phản hồi"></asp:Label>
+                    Text="Webservice của Mua chung"></asp:Label>
                             </td>
                             <td class="style7">
                                 :</td>
@@ -184,12 +186,38 @@
                                 
                             </td>
                         </tr>
-                        <tr>
-                            <td class="style12" colspan="3">
-                                <asp:Button ID="Button2" runat="server" onclick="btYeuCau_Click" 
-                    Text="Yêu cầu" style="text-align: center" />
+                       <tr>
+                            <td class="style6">
+                                <asp:Label ID="Label4" runat="server" 
+                    Text="Mã an toàn"></asp:Label>
+                            </td>
+                            <td class="style7">
+                                :</td>
+                            <td class="style9">
+                                <cc1:CaptchaControl ID="captcha" runat="server" />
+                                <br />
+                                <asp:Label ID="Label6" runat="server" Text="Không có khoảng trắng" ForeColor="Green" ></asp:Label>
                             </td>
                         </tr>
+                        
+                        <tr>
+                            <td class="style6">
+                                <asp:Label ID="Label5" runat="server" 
+                    Text="Nhập mã an toàn"></asp:Label>
+                            </td>
+                            <td class="style7">
+                                :</td>
+                            <td class="style9">
+                                <asp:TextBox ID="txtCaptcha"  runat="server" Width="200px" 
+                    style="text-align: left"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
+                    ControlToValidate="txtCaptcha" ErrorMessage="(*)"></asp:RequiredFieldValidator>
+                    <asp:Label ID="lbCaptcha" runat="server" Text="Mã an toàn không đúng" ForeColor="Red" Visible="false"></asp:Label>
+                                <br />
+                                
+                            </td>
+                        </tr>
+                        
                         <tr>
                             <td class="style12" colspan="3">
                                 <asp:Button ID="btYeuCau" runat="server" onclick="btYeuCau_Click" 

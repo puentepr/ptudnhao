@@ -8,63 +8,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.GUI.UserControls {
+namespace BIZ.GUI.Consumers {
     
     
-    public partial class Cart {
+    public partial class QuanLyDonHang {
         
         /// <summary>
-        /// lbSoLuong control.
+        /// Catalogs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSoLuong;
+        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
         
         /// <summary>
-        /// GridView1 control.
+        /// NewProduce1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::BIZ.GUI.UserControls.NewProduce NewProduce1;
         
         /// <summary>
-        /// divcart control.
+        /// AdvertisementLeft1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divcart;
+        protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
         
         /// <summary>
-        /// lbsumMoney control.
+        /// Login1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbsumMoney;
+        protected global::BIZ.GUI.UserControls.Login Login1;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// Cart1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::BIZ.GUI.UserControls.Cart Cart1;
         
         /// <summary>
-        /// lbtPayment control.
+        /// Payment1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtPayment;
+        protected global::BIZ.GUI.UserControls.Payment Payment1;
     }
 }
