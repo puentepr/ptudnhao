@@ -35,5 +35,16 @@ namespace BIZ.BUS
                 throw ex;
             }
         }
+        public static SAN_PHAM_DTO GetProductInfor(string masp)
+        {
+            try
+            {
+                return ProductDAO.GetProductInfor(masp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

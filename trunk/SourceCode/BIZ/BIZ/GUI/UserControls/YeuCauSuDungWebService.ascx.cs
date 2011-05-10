@@ -25,48 +25,56 @@ namespace BIZ.GUI.UserControls
 
         protected void btYeuCau_Click(object sender, EventArgs e)
         {
-            YC_WEBSERVICE_DTO yc = new YC_WEBSERVICE_DTO();
-
-            yc.UserName = txtUsername.Text;
-            string pass = MD5.encryptPassword(txtPass.Text);
-            yc.Tendn = txtTenHeThongMuaChung.Text;
-            yc.Email = txtEmail.Text;
-            yc.LinkWebSite = txtLink.Text;
-            yc.LinkWS = txtLinkWS.Text;
-            yc.McUserName = txtMCUsernme.Text;
-            yc.McPassWord = txtMCPass.Text;
-
-            try
+            if (captcha.UserValidated)
             {
-                int kq = YCWebServiceBUS.ValidateUserName(yc.UserName, pass);
-                if (kq == 1)
-                {
-                    try
-                    {
-                        YCWebServiceBUS.InsertYCWebService(yc);
-                        Panel1.Visible = false;
-                        Button1.Visible = true;
-                        lbThongBao.Text = "<b style='color:red ' ><br />Yêu cầu của bạn đã được gửi đi thành công!</b>";
-                    }
-                    catch (Exception ex)
-                    {
+                lbCaptcha.Visible = false;
+                YC_WEBSERVICE_DTO yc = new YC_WEBSERVICE_DTO();
 
-                        throw ex;
+                yc.UserName = txtUsername.Text;
+                string pass = MD5.encryptPassword(txtPass.Text);
+                yc.Tendn = txtTenHeThongMuaChung.Text;
+                yc.Email = txtEmail.Text;
+                yc.LinkWebSite = txtLink.Text;
+                yc.LinkWS = txtLinkWS.Text;
+                yc.McUserName = txtMCUsernme.Text;
+                yc.McPassWord = txtMCPass.Text;
+
+                try
+                {
+                    int kq = YCWebServiceBUS.ValidateUserName(yc.UserName, pass);
+                    if (kq == 1)
+                    {
+                        try
+                        {
+                            YCWebServiceBUS.InsertYCWebService(yc);
+                            Panel1.Visible = false;
+                            Button1.Visible = true;
+                            lbThongBao.Text = "<b style='color:red ' ><br />Yêu cầu của bạn đã được gửi đi thành công!</b>";
+                        }
+                        catch (Exception ex)
+                        {
+
+                            throw ex;
+                        }
+                    }
+                    else
+                    {
+                        lbThongBao.Text = "<b style='color:red ' ><br/> Không thành công! username, pass không đúng hoặc trạng thái của bạn chưa active!</b>";
+                        Panel1.Visible = true;
+                        Button1.Visible = false;
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    lbThongBao.Text = "<b style='color:red ' ><br/> Không thành công! username, pass không đúng hoặc trạng thái của bạn chưa active!</b>";
-                    Panel1.Visible = true;
-                    Button1.Visible = false;
+
+                    throw ex;
+
                 }
             }
-            catch (Exception ex)
+            else
             {
-
-                throw ex;
-              
-            }    
+                lbCaptcha.Visible = true;
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

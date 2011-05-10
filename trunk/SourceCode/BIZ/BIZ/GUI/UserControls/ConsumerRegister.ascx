@@ -121,13 +121,17 @@
                 </asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                     ErrorMessage="(*)" ControlToValidate="txtEmail" 
-                    ValidationGroup="register"></asp:RequiredFieldValidator>
+                    ValidationGroup="register"></asp:RequiredFieldValidator><br />
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+                    ErrorMessage="Email không hợp lệ" ValidationGroup="register" 
+                    ControlToValidate="txtEmail" 
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </td>
         </tr>
          <tr>
             <td><label>Địa chỉ website :</label></td>
             <td>
-                <asp:TextBox ID="txtWebAdress"  runat="server">
+                <asp:TextBox  ID="txtWebAdress"  runat="server">
                 </asp:TextBox><br />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                     ErrorMessage="Link website khôn đúng" ControlToValidate="txtWebAdress" 

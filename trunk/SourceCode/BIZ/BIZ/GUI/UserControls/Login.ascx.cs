@@ -79,6 +79,7 @@ namespace BIZ.GUI.UserControls
                             break;
                         case 3:
                             Session["LoaiUser"] = "Consumer";
+                            Response.Redirect("../Consumers/QuanLyDonHang.aspx");
                             break;
                     }
                 }

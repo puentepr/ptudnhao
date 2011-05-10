@@ -50,6 +50,15 @@ namespace BIZ.GUI.Consumers {
         protected global::BIZ.GUI.UserControls.ConsumerRegister ConsumerRegister1;
         
         /// <summary>
+        /// Login1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Login Login1;
+        
+        /// <summary>
         /// Cart1 control.
         /// </summary>
         /// <remarks>

@@ -106,7 +106,13 @@ namespace BIZ.DTO
             get { return _ngayXoa; }
             set { _ngayXoa = value; }
         }
+        private int _soNguoiMua;
 
+        public int SoNguoiMua
+        {
+            get { return _soNguoiMua; }
+            set { _soNguoiMua = value; }
+        }
         public SAN_PHAM_DTO()
         {
             this._maSanPham = "";
