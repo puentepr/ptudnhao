@@ -8,6 +8,8 @@
 
 <%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc1" %>
 
+<%@ Register src="../UserControls/Login.ascx" tagname="Login" tagprefix="uc2" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Tạo Coupon
 </asp:Content>
@@ -18,11 +20,7 @@ Tạo Coupon
         
         <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
         <uc1:CatalogManager ID="CatalogManager1" runat="server" />
-        <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
-        
-        
-        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         
     </div>
     <div class="primary">
@@ -30,7 +28,13 @@ Tạo Coupon
     </div>
     <div class="second-secondary">
         
-        <ucCart:Cart ID="Cart1" runat="server" />
+        
+        <uc2:Login ID="Login1" runat="server" />
+        
+        
+        <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
+                
+        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         
         <ucPay:Payment ID="Payment1" runat="server" />
         

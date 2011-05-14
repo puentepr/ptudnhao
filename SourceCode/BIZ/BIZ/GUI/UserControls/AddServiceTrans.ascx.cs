@@ -24,7 +24,7 @@ namespace BIZ.GUI.UserControls
                     if (!IsPostBack)
                     {
                         GridServiceTransDataBind();
-                        List<hinhthuc> types = new List<hinhthuc>();
+                       /* List<hinhthuc> types = new List<hinhthuc>();
                         hinhthuc h1 = new hinhthuc();
                         h1.HinhThuc = "Vận chuyển thường";
                         hinhthuc h2 = new hinhthuc();
@@ -32,7 +32,7 @@ namespace BIZ.GUI.UserControls
                         types.Add(h1);
                         types.Add(h2);
                         grTransType.DataSource = types;
-                        grTransType.DataBind();
+                        grTransType.DataBind();*/
                     }
                 }
                 else
@@ -59,7 +59,7 @@ namespace BIZ.GUI.UserControls
             service.BizAddress = txtBizAddress.Text;
             try
             {
-                List<TransportType> transtypes = new List<TransportType>();
+              /*  List<TransportType> transtypes = new List<TransportType>();
                 for (int i = 0; i < grTransType.Rows.Count; i++)
                 {
                     TransportType trans = new TransportType();
@@ -70,8 +70,8 @@ namespace BIZ.GUI.UserControls
                     trans.Gia = price;
                     trans.DonViTien = ((TextBox)grTransType.Rows[i].FindControl("txtMoney")).Text;
                     transtypes.Add(trans);
-                }
-                int result = ServiceTransBUS.InsertServiceTrans(service,transtypes);
+                }*/
+                int result = ServiceTransBUS.InsertServiceTrans(service);
                 if (result == 1)
                 {
                     lbResult.ForeColor = Color.Green;

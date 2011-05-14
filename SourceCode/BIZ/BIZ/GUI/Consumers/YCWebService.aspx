@@ -9,6 +9,12 @@
 
 <%@ Register src="../UserControls/YeuCauSuDungWebService.ascx" tagname="YeuCauSuDungWebService" tagprefix="uc1" %>
 
+<%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc2" %>
+
+<%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc3" %>
+
+<%@ Register src="../UserControls/Login.ascx" tagname="Login" tagprefix="uc4" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Đăng ký sử dụng webservice
 </asp:Content>
@@ -19,9 +25,13 @@
         
         <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
         
+        <uc2:CatalogManager ID="CatalogManager1" runat="server" />
+        
+        <uc3:CatalogAdmin ID="CatalogAdmin1" runat="server" />
+        
         <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
-        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
+        
         
     </div>
     <div class="primary">
@@ -31,8 +41,10 @@
     </div>
     <div class="second-secondary">
         
-        <ucCart:Cart ID="Cart1" runat="server" />
+        <uc4:Login ID="Login1" runat="server" />
         
+        <ucCart:Cart ID="Cart1" runat="server" />
+        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         <ucPay:Payment ID="Payment1" runat="server" />
         
     </div>

@@ -9,18 +9,18 @@ namespace BIZ.BUS
 {
     public class ServiceTransBUS
     {
-        public static int InsertServiceTrans(SERVICE_TRANS_DTO service,List<TransportType>types)
+        public static int InsertServiceTrans(SERVICE_TRANS_DTO service)
         {
             try
             {
                 int madv=ServiceTransDAO.InsertServiceTrans(service);
                 if (madv == -1)
                     return -1;
-                foreach (TransportType type in types)
+              /*  foreach (TransportType type in types)
                 {
                     type.Madv = madv;
                     ServiceTransDAO.InsertTransType(type);
-                }
+                }*/
                 return 1;
             }
             catch (Exception e)

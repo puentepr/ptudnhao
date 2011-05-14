@@ -75,7 +75,7 @@ namespace BIZ.GUI.UserControls
                             break;
                         case 2:
                             Session["LoaiUser"] = "Manager";
-                            Response.Redirect("../Manager/AddProduct.aspx");
+                            Response.Redirect("../Manager/AcceptCoupons.aspx");
                             break;
                         case 3:
                             Session["LoaiUser"] = "Consumer";

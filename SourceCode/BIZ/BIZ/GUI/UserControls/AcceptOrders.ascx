@@ -5,7 +5,7 @@
 <ContentTemplate>
 <div align="center">
 
-    <h3>Danh sách Coupon hết hạn chưa xử lý</h3>
+    <h3 id="cph3" runat="server">Danh sách Coupon hết hạn chưa xử lý</h3>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
             CellPadding="4" ForeColor="#333333" GridLines="None">
             <RowStyle BackColor="#EFF3FB" />
@@ -32,10 +32,10 @@
     <asp:HiddenField ID="hdfCouponId" runat="server" />
        
 </div>
-
+<hr />
 
 <div align="center" id="divDetail" runat="server" visible="false">
-    <h3 id="h3" runat="server">sfdsfadsaf</h3>
+    <h3 id="h3" runat="server"></h3>
     <h4 id="h41" runat="server"></h4>
     <h4 id="h42" runat="server" style="color:Red"></h4>
     <asp:GridView ID="grDetail" runat="server" AutoGenerateColumns="False" 

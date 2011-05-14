@@ -71,5 +71,27 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<Coupon> SelectAnyCoupon()
+        {
+            try
+            {
+                return CouponDAO.SelectAnyCoupon();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<Coupon> GetCouponInfor(string macp)
+        {
+            try
+            {
+                return CouponDAO.GetCouponInfo(macp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

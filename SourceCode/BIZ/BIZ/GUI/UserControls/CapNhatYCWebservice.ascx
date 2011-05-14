@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CapNhatYCWebservice.ascx.cs" Inherits="BIZ.GUI.UserControls.CapNhatYCWebservice" %>
+<div align="center">
 <h3>Cập nhật tình trạng yêu cầu sử dụng webservice</h3>
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
     DataKeyNames="Ma" BackColor="White" BorderColor="#CCCCCC" 
@@ -26,3 +27,4 @@
     <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
 </asp:GridView>
 <asp:Button ID="Button1" runat="server" Text="Đồng ý" onclick="Button1_Click" />
+</div>

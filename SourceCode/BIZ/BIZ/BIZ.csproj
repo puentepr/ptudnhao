@@ -202,6 +202,20 @@
     <Compile Include="GUI\Manager\CreateCoupon.aspx.designer.cs">
       <DependentUpon>CreateCoupon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Manager\ListCoupon.aspx.cs">
+      <DependentUpon>ListCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\ListCoupon.aspx.designer.cs">
+      <DependentUpon>ListCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager\ViewDetailCoupon.aspx.cs">
+      <DependentUpon>ViewDetailCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\ViewDetailCoupon.aspx.designer.cs">
+      <DependentUpon>ViewDetailCoupon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Manager\XetDuyetYeuCauWS.aspx.cs">
       <DependentUpon>XetDuyetYeuCauWS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +335,13 @@
     <Compile Include="GUI\UserControls\Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\ListCoupon.ascx.cs">
+      <DependentUpon>ListCoupon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ListCoupon.ascx.designer.cs">
+      <DependentUpon>ListCoupon.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +425,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\ViewDetailCart.ascx.designer.cs">
       <DependentUpon>ViewDetailCart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailCoupon.ascx.cs">
+      <DependentUpon>ViewDetailCoupon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailCoupon.ascx.designer.cs">
+      <DependentUpon>ViewDetailCoupon.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\ViewProduct.ascx.cs">
       <DependentUpon>ViewProduct.ascx</DependentUpon>
@@ -491,6 +519,8 @@
     <Content Include="GUI\Manager\AcceptCoupons.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
     <Content Include="GUI\Manager\CreateCoupon.aspx" />
+    <Content Include="GUI\Manager\ListCoupon.aspx" />
+    <Content Include="GUI\Manager\ViewDetailCoupon.aspx" />
     <Content Include="GUI\Manager\XetDuyetYeuCauWS.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
@@ -508,6 +538,7 @@
     <Content Include="GUI\UserControls\CreateCoupon.ascx" />
     <Content Include="GUI\UserControls\FastSearch.ascx" />
     <Content Include="GUI\UserControls\Footer.ascx" />
+    <Content Include="GUI\UserControls\ListCoupon.ascx" />
     <Content Include="GUI\UserControls\Login.ascx" />
     <Content Include="GUI\UserControls\Logo.ascx" />
     <Content Include="GUI\UserControls\Menu.ascx" />
@@ -520,6 +551,7 @@
     <Content Include="GUI\UserControls\UpdateServiceTrans.ascx" />
     <Content Include="GUI\UserControls\ViewAndEditServiceTrans.ascx" />
     <Content Include="GUI\UserControls\ViewDetailCart.ascx" />
+    <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
   </ItemGroup>

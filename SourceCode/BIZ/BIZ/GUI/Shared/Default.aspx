@@ -7,6 +7,8 @@
 <%@ Register src="../UserControls/TenNewProduce.ascx" tagname="TenNewProduce" tagprefix="uc6" %>
 <%@ Register src="../UserControls/NewModifyProduce.ascx" tagname="NewModifyProduce" tagprefix="uc7" %>
 <%@ Register src="../UserControls/Payment.ascx" tagname="Payment" tagprefix="uc8" %>
+<%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc9" %>
+<%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc10" %>
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
 Trang chủ
 </asp:Content>
@@ -18,11 +20,14 @@ Trang chủ
         <!-- begin catalog-box -->
          
          <uc1:Catalogs ID="Catalogs1" runat="server" />
+         
         <!-- end catalog-box -->
+        <uc9:CatalogManager ID="CatalogManager1" runat="server" />
+        <uc10:CatalogAdmin ID="CatalogAdmin1" runat="server" />
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         <!-- begin advleft-box -->
         
-        <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
+        
         <!-- end advleft-box -->
         
     </div>
@@ -39,6 +44,7 @@ Trang chủ
     <div class="second-secondary">
         <uc2:Login ID="Login1" runat="server" />
         <uc3:Cart ID="Cart1" runat="server" />
+        <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         <uc8:Payment ID="Payment1" runat="server" />
     </div>
     <!-- begin second-secondary -->

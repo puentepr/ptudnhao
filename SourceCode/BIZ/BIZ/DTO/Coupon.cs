@@ -207,6 +207,19 @@ namespace BIZ.DTO
             get { return _linkHinhAnh; }
             set { _linkHinhAnh = value; }
         }
-    
+        private string _tinhTrang;
+
+        public string TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
+        private string _title;
+
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
     }
 }

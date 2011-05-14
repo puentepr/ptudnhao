@@ -21,9 +21,7 @@ Quản lý coupon tới hạn
 
         <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
         <uc2:CatalogManager ID="CatalogManager1" runat="server" />
-        <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
-        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         
     </div>
     <div class="primary">
@@ -35,8 +33,9 @@ Quản lý coupon tới hạn
         
         <uc1:Login ID="Login1" runat="server" />
         
-        <ucCart:Cart ID="Cart1" runat="server" />
+        <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
+        <ucAdsLeft:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
         <ucPay:Payment ID="Payment1" runat="server" />
         
     </div>
