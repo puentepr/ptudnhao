@@ -4,6 +4,7 @@ using System.Text;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 using BIZ.DTO;
 using System;
 
@@ -104,6 +105,7 @@ namespace BIZ.DAO
                         order.NgayDat=DateTime.Parse(row["NGAYDAT"].ToString());
                         order.SoLuongCoupon=int.Parse(row["SOLUONGCP"].ToString());
                         order.TenDN=row["TENDN"].ToString();
+                        order.TinhTrang = row["TINHTRANGDH"].ToString();
                         orders.Add(order);
                     } 
                 }
@@ -159,6 +161,108 @@ namespace BIZ.DAO
             finally
             {
                 helper.disconnect();
+            }
+
+        }
+        public static List<Coupon> SelectAnyCoupon()
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectAnyCoupon";
+            string sqlCommand1 = "sp_CountOrderCoupon";
+            List<SqlParameter> list = new List<SqlParameter>();
+            try
+            {
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                List<Coupon> cpArray = new List<Coupon>();
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransformToCouponList(sqlCommand1, table, cpArray);
+                }
+                return cpArray;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        public static List<Coupon> GetCouponInfo(string couponId)
+        {
+            helper.connect();
+            string sqlCommand = "sp_FindCouponInfo";
+            string sqlCommand1 = "sp_CountOrderCoupon";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@couponId", couponId));
+
+            List<Coupon> cpArray = new List<Coupon>();
+            try
+            {
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransformToCouponList(sqlCommand1, table, cpArray);
+                }
+                return cpArray;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+           // return new Coupon();
+        }
+        private static void TransformToCouponList(string sqlCommand1, DataTable table, List<Coupon> cpArray)
+        {
+            int n = table.Rows.Count;
+            for (int i = 0; i < n; i++)
+            {
+                Coupon cp = new Coupon();
+                DataRow row = table.Rows[i];
+                cp.DieuKienSuDung = row["DIEUKIENSD"].ToString();
+                cp.DonViTien = row["DVTIENTE"].ToString();
+                cp.GiaHangKhiChuaGiam = row["GIAGOC"].ToString();
+                cp.GiaHangSauKhiGiam = row["GIASGIAM"].ToString();
+                cp.LinkHinhAnh = new string[1];
+                //pArray[i].LinkHinhAnh[0] = "http://www.beatifulhouse.somee.com/Content/images/products/" + row["HINHANH"].ToString();
+                cp.LinkHinhAnh[0] = ConfigurationManager.AppSettings.GetValues("image")[0].ToString() + row["HINHANH"].ToString();
+                cp.MaCoupon = row["MACP"].ToString();
+                cp.MaMatHang = row["MASP"].ToString();
+                cp.MaNhaCungCap = "BIZ";
+                cp.NgayBatDau = DateTime.Parse(row["THOIGIANBD"].ToString());
+                cp.NgayCouponBatDauDuocSuDung = cp.NgayBatDau;
+                cp.NgayKetThuc = DateTime.Parse(row["THOIGIANKT"].ToString());
+                cp.NgayCouponHetHan = cp.NgayKetThuc;
+                List<SqlParameter> sql = new List<SqlParameter>();
+                sql.Add(new SqlParameter("@macp", cp.MaCoupon));
+                SqlParameter output = new SqlParameter("@count", SqlDbType.Int);
+                output.Direction = ParameterDirection.Output;
+                sql.Add(output);
+                helper.executeNonQueryProcedure(sqlCommand1, sql);
+                cp.SoLuongDaDat = (int)output.Value;
+                float slcl = float.Parse(row["SLCONLAI"].ToString());
+                int slspmin = int.Parse(row["SLSPMIN"].ToString());
+                cp.SoLuongMuaLonNhat = (int)slcl / slspmin;
+                cp.SoLuongThoaCoupon = int.Parse(row["SLCPMINGIAMGIA"].ToString());
+                cp.TenMatHang = row["TENSP"].ToString();
+                cp.TenNhaCungCap = "BeatifulhouseGroup";
+                cp.ThongTinMoTa = row["MOTA"].ToString();
+                cp.ThongTinMoTa += " .Mỗi coupon gồm " + slspmin.ToString() + " " + row["DVTINH"].ToString() + " sản phẩm";
+                cp.Title = "Xem chi tiết";
+                if (row["TINHTRANGCP"].ToString() == "1" && cp.NgayKetThuc>=DateTime.Today)
+                {
+                    cp.TinhTrang = "Còn hiệu lực";
+                }
+                else
+                {
+                    cp.TinhTrang = "Hết hạn";
+                }
+                cpArray.Add(cp);
             }
         }
     }

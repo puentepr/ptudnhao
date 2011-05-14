@@ -39,6 +39,14 @@ namespace BIZ.DTO
             get { return _tenDN; }
             set { _tenDN = value; }
         }
+        private string _tinhTrang;
+
+        public string TinhTrang
+        {
+            get { return _tinhTrang; }
+            set { _tinhTrang = value; }
+        }
+
         public DonHangCouponNhieuDTO()
         {
             this._maDonHangCoupon = 0;

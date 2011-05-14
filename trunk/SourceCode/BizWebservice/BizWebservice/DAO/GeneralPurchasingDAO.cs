@@ -299,7 +299,7 @@ namespace BizWebservice.DAO
                         companies[i] = new TransportCompany();
                         companies[i].MaCongTyVanChuyen = row["MADV"].ToString();
                         companies[i].TenCongTyVanChuyen = row["TENCTY"].ToString();
-                        companies[i].HinhThucVanChuyen = GetTransportType(companies[i].MaCongTyVanChuyen);
+                     //   companies[i].HinhThucVanChuyen = GetTransportType(companies[i].MaCongTyVanChuyen);
 
                     }
                 }
@@ -314,7 +314,7 @@ namespace BizWebservice.DAO
                 provider.disconnect();
             }
         }
-        private static TransportType[] GetTransportType(string madv)
+      /*  private static TransportType[] GetTransportType(string madv)
         {
             TransportType[] trans = new TransportType[0];
             string sqlCommand="sp_SelectTransType";
@@ -346,7 +346,7 @@ namespace BizWebservice.DAO
             }
             return trans;
         }
-
+        */
 
         public static SERVICE_TRANS_DTO GetInfoServiceTrans(int madv)
         {

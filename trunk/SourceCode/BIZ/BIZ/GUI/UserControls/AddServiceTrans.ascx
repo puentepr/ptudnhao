@@ -61,7 +61,7 @@
                 </td>
             </tr>
                <tr>
-                <td colspan="2" align="center">
+              <!--  <td colspan="2" align="center">
                     <h4 style="color:Green">Các hình thức vận chuyển</h4>
                     <asp:GridView ID="grTransType" runat="server" AutoGenerateColumns="False">
                         <Columns>
@@ -84,7 +84,7 @@
                     </asp:GridView>
                     <br />
                     
-                </td>
+                </td> -->
             </tr>
             
         </table>

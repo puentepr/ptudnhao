@@ -22,8 +22,7 @@ namespace BIZ.GUI.UserControls
                 {
                     if (!IsPostBack)
                     {
-                        GridView1.DataSource = YCWebServiceBUS.SelectNewRequest();
-                        GridView1.DataBind();
+                        GridRequestDataBind();
                     }
                 }
                 else
@@ -31,6 +30,16 @@ namespace BIZ.GUI.UserControls
             }
             else
                 Response.Redirect("../Shared/Default.aspx");
+        }
+
+        private void GridRequestDataBind()
+        {
+            GridView1.DataSource = YCWebServiceBUS.SelectNewRequest();
+            GridView1.DataBind();
+            if (GridView1.Rows.Count <= 0)
+                Button1.Visible = false;
+            else
+                Button1.Visible = true;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -47,8 +56,9 @@ namespace BIZ.GUI.UserControls
                 list.Add(yc);
             }
             YCWebServiceBUS.UpdateStatusRequest(list);
-            GridView1.DataSource = YCWebServiceBUS.SelectNewRequest();
-            GridView1.DataBind();
+            /*GridView1.DataSource = YCWebServiceBUS.SelectNewRequest();
+            GridView1.DataBind();*/
+            GridRequestDataBind();
         }
     }
 }

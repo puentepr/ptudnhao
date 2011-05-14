@@ -37,6 +37,13 @@ namespace BIZ.GUI.UserControls
         {
             GridView1.DataSource = CouponBUS.GetExCoupons();
             GridView1.DataBind();
+            if (GridView1.Rows.Count <= 0 && grDetail.Rows.Count > 0 && btnSale.Visible == false)
+            {
+                cph3.InnerHtml = "Chúc mừng bạn đã hoàn thành công việc";
+            }
+            if (GridView1.Rows.Count == 0 && grDetail.Rows.Count == 0)
+                cph3.InnerHtml = "Không có Coupon nào hết hạn cần xử lý cả";
+            
         }
 
 

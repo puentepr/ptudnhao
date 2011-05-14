@@ -137,7 +137,32 @@ namespace BizWebservice.BUS
         }
         public static TransportCompany[] GetTransportCompany()
         {
-            return GeneralPurchasingDAO.GetTransportCompany();
+            TransportCompany[] companny=GeneralPurchasingDAO.GetTransportCompany();
+            foreach (TransportCompany cp in companny)
+            {
+                int madv = 0;
+                int.TryParse(cp.MaCongTyVanChuyen, out madv);
+                SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
+                VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
+                proxy.Url = sv.LinkWebService;
+                //string sid = proxy.Authenticate(sv.UserName, sv.PassWord);
+                VanChuyen.TransportCompany[] tr = proxy.GetTranports();
+                int n = tr[0].HinhThucVanChuyen.Length;
+                cp.HinhThucVanChuyen = new TransportType[n];
+                if (tr.Length > 0)
+                {
+                    cp.TenCongTyVanChuyen = tr[0].TenCongTyVanChuyen;
+                    for (int i = 0; i < n; i++)
+                    {
+                        cp.HinhThucVanChuyen[i] = new TransportType();
+                        cp.HinhThucVanChuyen[i].MaHinhThucVanChuyen = tr[0].HinhThucVanChuyen[i].MaHinhThucVanChuyen;
+                        cp.HinhThucVanChuyen[i].TenHinhThucVanChuyen = tr[0].HinhThucVanChuyen[i].TenHinhThucVanChuyen;
+                        cp.HinhThucVanChuyen[i].Gia = tr[0].HinhThucVanChuyen[i].Gia;
+                        cp.HinhThucVanChuyen[i].DonViTien = tr[0].HinhThucVanChuyen[i].DonViTien;
+                    }
+                }
+            }
+            return companny;
         }
         public static string ConfirmOrder(string sid, string transCompanyId, string transTypeId, string validationCode, ContactInfo contact)
         {
@@ -164,12 +189,14 @@ namespace BizWebservice.BUS
                     {
                         bizAddress = ConfigurationManager.AppSettings.GetValues("biz")[0];
                     }*/
+
                     VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
                     proxy.Url = sv.LinkWebService;
+                    
                     string id = proxy.Authenticate(sv.UserName, sv.PassWord);
                     string url = proxy.TransportGoods(id, validationCode, soluong, DateTime.Today.Date.AddDays(1), contact.DiaChi, transtype, sv.BizAddress);
                     // if (url.IndexOf("http://") >= 0 || url.IndexOf("https://") >= 0)
-                    if (url.IndexOf(".aspx?") >= 0)
+                    if (url.IndexOf(".aspx?") >= 0 || url.IndexOf("http://") >= 0 || url.IndexOf("https://")>=0)
                     {
                         // string package = proxy.GetPackageInfo(id, url);
                         int result1 = GeneralPurchasingDAO.ConfirmOrder(madh, contact.DiaChi, sid);

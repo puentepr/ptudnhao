@@ -24,6 +24,7 @@
         // Code that runs when a new session is started
         Session["IsLogin"] = 0;
         Session["User"] = "Guest";
+        Session["LoaiUser"] = "Guest";
         Session["Cart"] = null;
         Application.Lock();
         int count = (int)Application["UserCount"];

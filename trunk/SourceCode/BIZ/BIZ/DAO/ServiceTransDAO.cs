@@ -39,7 +39,7 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
-        public static void InsertTransType(TransportType type)
+       /* public static void InsertTransType(TransportType type)
         {
             provider.connect();
             string sqlCommand = "sp_InsertTransType";
@@ -61,7 +61,7 @@ namespace BIZ.DAO
             {
                 provider.disconnect();
             }
-        }
+        }*/
         public static List<SERVICE_TRANS_DTO> SelectServiceTrans()
         {
             provider.connect();
