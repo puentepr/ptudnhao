@@ -133,5 +133,82 @@ namespace BIZ.DAO
                 helper.disconnect();
             }
         }
+        public static List<SAN_PHAM_DTO> SelectTopNewProducts()
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectNewProducts";
+            List<SqlParameter> list = new List<SqlParameter>();
+            try
+            {
+                List<SAN_PHAM_DTO> ds = new List<SAN_PHAM_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransforListSanPham(table,ds);
+                }
+                return ds;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        public static List<SAN_PHAM_DTO> SelectModifyNewProducts()
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectModifyProducts";
+            List<SqlParameter> list = new List<SqlParameter>();
+            try
+            {
+                List<SAN_PHAM_DTO> ds = new List<SAN_PHAM_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransforListSanPham(table, ds);
+                }
+                return ds;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+
+        private static void TransforListSanPham(DataTable table,List<SAN_PHAM_DTO>ds)
+        {
+            int n=table.Rows.Count;
+            for(int i=0;i<n;i++)
+            {
+                SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
+                DataRow row = table.Rows[i];
+                sp.ChatLuong = row["CHATLUONG"].ToString();
+                sp.DonViTinh = row["DVTINH"].ToString();
+                float price = 0;
+                float.TryParse(row["GIA"].ToString(), out price);
+                sp.Gia = price;
+                sp.HinhAnh = "../../Content/images/products/" + row["HINHANH"].ToString();
+                int maloai = 0;
+                int.TryParse(row["MALSP"].ToString(), out maloai);
+                sp.MaLoaiSanPham = maloai;
+                sp.MaSanPham = row["MASP"].ToString();
+                sp.MoTaSanPham = row["MOTA"].ToString();
+                sp.NgayDangSanPham = DateTime.Parse(row["NGAYDSP"].ToString());
+                sp.NgaySuaDoi = DateTime.Parse(row["NGAYSD"].ToString());
+                float slcl = 0;
+                float.TryParse(row["SLCONLAI"].ToString(), out slcl);
+                sp.SoLuongConLai = slcl;
+                // sp.SoNguoiMua = (int)soluong.Value;
+                sp.TenSanPham = row["TENSP"].ToString();
+                ds.Add(sp);
+            }
+        }
     }
 }

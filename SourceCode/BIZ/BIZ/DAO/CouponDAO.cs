@@ -230,7 +230,8 @@ namespace BIZ.DAO
                 cp.GiaHangSauKhiGiam = row["GIASGIAM"].ToString();
                 cp.LinkHinhAnh = new string[1];
                 //pArray[i].LinkHinhAnh[0] = "http://www.beatifulhouse.somee.com/Content/images/products/" + row["HINHANH"].ToString();
-                cp.LinkHinhAnh[0] = ConfigurationManager.AppSettings.GetValues("image")[0].ToString() + row["HINHANH"].ToString();
+               // cp.LinkHinhAnh[0] = ConfigurationManager.AppSettings.GetValues("image")[0].ToString() + row["HINHANH"].ToString();
+                cp.LinkHinhAnh[0] ="../../Content/images/products/" +row["HINHANH"].ToString();
                 cp.MaCoupon = row["MACP"].ToString();
                 cp.MaMatHang = row["MASP"].ToString();
                 cp.MaNhaCungCap = "BIZ";
