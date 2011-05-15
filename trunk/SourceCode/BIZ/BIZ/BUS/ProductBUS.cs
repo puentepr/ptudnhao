@@ -46,5 +46,27 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<SAN_PHAM_DTO> SelectTopNewProducts()
+        {
+            try
+            {
+                return ProductDAO.SelectTopNewProducts();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<SAN_PHAM_DTO> SelectModifyNewProducts()
+        {
+            try
+            {
+                return ProductDAO.SelectModifyNewProducts();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
