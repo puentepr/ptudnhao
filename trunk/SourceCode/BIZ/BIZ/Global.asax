@@ -22,9 +22,10 @@
     void Session_Start(object sender, EventArgs e) 
     {
         // Code that runs when a new session is started
+        Session["LoaiUser"] = "Guest";
         Session["IsLogin"] = 0;
         Session["User"] = "Guest";
-        Session["LoaiUser"] = "Guest";
+        
         Session["Cart"] = null;
         Application.Lock();
         int count = (int)Application["UserCount"];

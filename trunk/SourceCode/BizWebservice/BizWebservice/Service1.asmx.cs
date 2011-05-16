@@ -72,10 +72,10 @@ namespace BizWebservice
         {
             return GeneralPurchasing.ConfirmOrder(sid, transCompanyId, transTypeId, validationCode, contact);
         }
-        /*[WebMethod]
+        [WebMethod]
         public string Confirm(string sid, string transCompanyId, string transTypeId, string validationCode, string contact)
         {
             return GeneralPurchasing.Confirm(sid, transCompanyId, transTypeId, validationCode, contact);
-        }*/
+        }
     }
 }

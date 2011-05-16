@@ -44,7 +44,7 @@
             <h3>Quy định sử dụng webservice</h3>
             <p>
                 Bạn có thể xem mô tả về webservice tại <a href="Service1.asmx"><b>beatifulhouser.Webservice</b></a><br />
-                Đăng ký sử dụng Webservice tại <a href="http://www.beatifulhouse.somee.com/"><b>đây</b></a>
+                Đăng ký sử dụng Webservice tại <a href="http://aspspider.ws/tmdt2011/"><b>đây</b></a>
             </p>
             <img src="http://www.beatifulhouse.somee.com/Content/images/products/bep-karador.jpg" alt="hinh" />
         </div>

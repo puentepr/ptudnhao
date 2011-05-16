@@ -11,7 +11,16 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["LoaiUser"].ToString() == "Manager")
+                {
+                    manager.Visible = true;
+                }
+                else
+                    manager.Visible = false;
+               
+            }
         }
     }
 }

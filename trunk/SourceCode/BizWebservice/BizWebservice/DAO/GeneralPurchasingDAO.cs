@@ -397,7 +397,7 @@ namespace BizWebservice.DAO
         public static int GetNumberCouponInOrder(int madh)
         {
             provider.connect();
-            string sqlCommand="sp_GetNumberCouponInOrder";
+            string sqlCommand = "sp_GetNumberCouponInOrderAccept";
             List<SqlParameter>list=new List<SqlParameter>();
             list.Add(new SqlParameter("@madh",madh));
             SqlParameter soluong=new SqlParameter("@soluong",SqlDbType.Int);

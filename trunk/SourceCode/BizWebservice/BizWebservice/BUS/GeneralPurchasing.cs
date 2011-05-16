@@ -146,19 +146,20 @@ namespace BizWebservice.BUS
                 VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
                 proxy.Url = sv.LinkWebService;
                 //string sid = proxy.Authenticate(sv.UserName, sv.PassWord);
-                VanChuyen.TransportCompany[] tr = proxy.GetTranports();
-                int n = tr[0].HinhThucVanChuyen.Length;
+                VanChuyen.TransportCompany tr = proxy.GetTranports();
+                
+                int n = tr.HinhThucVanChuyen.Length;
                 cp.HinhThucVanChuyen = new TransportType[n];
-                if (tr.Length > 0)
+                if (tr!=null)
                 {
-                    cp.TenCongTyVanChuyen = tr[0].TenCongTyVanChuyen;
+                    cp.TenCongTyVanChuyen = tr.TenCongTyVanChuyen;
                     for (int i = 0; i < n; i++)
                     {
                         cp.HinhThucVanChuyen[i] = new TransportType();
-                        cp.HinhThucVanChuyen[i].MaHinhThucVanChuyen = tr[0].HinhThucVanChuyen[i].MaHinhThucVanChuyen;
-                        cp.HinhThucVanChuyen[i].TenHinhThucVanChuyen = tr[0].HinhThucVanChuyen[i].TenHinhThucVanChuyen;
-                        cp.HinhThucVanChuyen[i].Gia = tr[0].HinhThucVanChuyen[i].Gia;
-                        cp.HinhThucVanChuyen[i].DonViTien = tr[0].HinhThucVanChuyen[i].DonViTien;
+                        cp.HinhThucVanChuyen[i].MaHinhThucVanChuyen = tr.HinhThucVanChuyen[i].MaHinhThucVanChuyen;
+                        cp.HinhThucVanChuyen[i].TenHinhThucVanChuyen = tr.HinhThucVanChuyen[i].TenHinhThucVanChuyen;
+                        cp.HinhThucVanChuyen[i].Gia = tr.HinhThucVanChuyen[i].Gia;
+                        cp.HinhThucVanChuyen[i].DonViTien = tr.HinhThucVanChuyen[i].DonViTien;
                     }
                 }
             }
@@ -176,7 +177,7 @@ namespace BizWebservice.BUS
                     int.TryParse(validationCode, out madh);
                     int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
                     if (soluong == 0)
-                        return "Đơn hàng không có coupon nào";
+                        return "Đơn hàng chưa được duyệt";
                     int transtype = 0;
                     int.TryParse(transTypeId, out transtype);
                     SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
@@ -230,7 +231,7 @@ namespace BizWebservice.BUS
                     int.TryParse(validationCode, out madh);
                     int soluong = GeneralPurchasingDAO.GetNumberCouponInOrder(madh);
                     if (soluong == 0)
-                        return "Đơn hàng không có coupon nào";
+                        return "Đơn hàng chưa được duyệt";
                     int transtype = 0;
                     int.TryParse(transTypeId, out transtype);
                     SERVICE_TRANS_DTO sv = GeneralPurchasingDAO.GetInfoServiceTrans(madv);
@@ -246,6 +247,8 @@ namespace BizWebservice.BUS
                     VanChuyen.FedexWebService1 proxy = new BizWebservice.VanChuyen.FedexWebService1();
                     proxy.Url = sv.LinkWebService;
                     string id = proxy.Authenticate(sv.UserName, sv.PassWord);
+                   // proxy.Url = "http://thuongmainhommot.somee.com/Service/WebServiceVanChuyen.asmx";
+                   // string id = proxy.Authenticate("demo","123");
                     string url = proxy.TransportGoods(id, validationCode, soluong, DateTime.Today.Date.AddDays(1), contact, transtype, sv.BizAddress);
                    // if (url.IndexOf("http://") >= 0 || url.IndexOf("https://") >= 0)
                     if(url.IndexOf(".aspx?")>=0)
