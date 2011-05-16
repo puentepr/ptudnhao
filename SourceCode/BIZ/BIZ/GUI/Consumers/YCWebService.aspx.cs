@@ -17,7 +17,7 @@ namespace BIZ.GUI.Consumers
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 if (Session["LoaiUser"].ToString() == "Manager")
                 {
@@ -31,7 +31,7 @@ namespace BIZ.GUI.Consumers
                 }
                 else
                     CatalogAdmin1.Visible = false;
-            }
+            */
         }
     }
 }

@@ -11,21 +11,7 @@ namespace BIZ.GUI.Shared
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (Session["LoaiUser"].ToString() == "Manager")
-                {
-                    CatalogManager1.Visible = true;
-                }
-                else
-                    CatalogManager1.Visible = false;
-                if (Session["LoaiUser"].ToString() == "Admin")
-                {
-                    CatalogAdmin1.Visible = true;
-                }
-                else
-                    CatalogAdmin1.Visible = false;
-            }
+            
         }
     }
 }

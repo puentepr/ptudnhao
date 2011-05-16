@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CatalogManager.ascx.cs" Inherits="BIZ.GUI.UserControls.CatalogManager" %>
-<div class="catalogs box">
+<div class="catalogs box" id="manager" runat="server">
     <div class="top-box">
         <img src="../../App_Themes/Blue/information.png" />
         <label>MANAGER</label>

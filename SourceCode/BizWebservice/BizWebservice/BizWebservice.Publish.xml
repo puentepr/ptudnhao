@@ -1,16 +1,16 @@
 <publishData>
   <publishTarget publishUrl="D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\giua ky deloy\publish\">
-    <file relUrl="bin/BizWebservice.dll" publishTime="05/08/2011 11:25:34" />
+    <file relUrl="bin/BizWebservice.dll" publishTime="05/16/2011 10:34:26" />
     <file relUrl="images/logo.gif" publishTime="04/07/2011 21:44:02" />
     <file relUrl="bin/.svn/prop-base/BizWebservice.pdb.svn-base" publishTime="04/23/2011 12:01:14" />
-    <file relUrl="bin/BizWebservice.pdb" publishTime="05/08/2011 11:25:34" />
-    <file relUrl="Web.config" publishTime="05/07/2011 16:33:00" />
-    <file relUrl="Default.aspx" publishTime="04/22/2011 21:00:28" />
-    <file relUrl="bin/.svn/text-base/BizWebservice.dll.svn-base" publishTime="05/07/2011 22:43:32" />
+    <file relUrl="bin/BizWebservice.pdb" publishTime="05/16/2011 10:34:26" />
+    <file relUrl="Web.config" publishTime="05/16/2011 10:32:44" />
+    <file relUrl="Default.aspx" publishTime="05/16/2011 10:34:14" />
+    <file relUrl="bin/.svn/text-base/BizWebservice.dll.svn-base" publishTime="05/14/2011 17:36:26" />
     <file relUrl="bin/.svn/prop-base/BizWebservice.dll.svn-base" publishTime="04/23/2011 12:01:14" />
-    <file relUrl="bin/.svn/text-base/BizWebservice.pdb.svn-base" publishTime="05/07/2011 22:43:22" />
-    <file relUrl="bin/.svn/entries" publishTime="05/07/2011 22:45:06" />
-    <file relUrl="bin/.svn/all-wcprops" publishTime="05/07/2011 22:45:06" />
+    <file relUrl="bin/.svn/text-base/BizWebservice.pdb.svn-base" publishTime="05/14/2011 17:36:22" />
+    <file relUrl="bin/.svn/entries" publishTime="05/15/2011 21:44:04" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="05/15/2011 21:44:02" />
     <file relUrl="Service1.asmx" publishTime="03/26/2011 14:46:56" />
     <file relUrl="images/banner.gif" publishTime="04/05/2011 00:39:36" />
   </publishTarget>
