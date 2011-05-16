@@ -54,5 +54,33 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+
+        #region 2.2.1 Xem thông tin tài khoản
+        public static KHACH_HANG_DTO XemThongTinTaiKhoan(string username)
+        {
+            try
+            {
+                return ConsumerDAO.XemThongTinTaiKhoan(username);
+            }
+            catch (Exception e)
+            {                
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Cập nhật thông tin tài khoản khách hàng
+        public static int CapNhatTaiKhoanKhachHang(KHACH_HANG_DTO kh)
+        {
+            try
+            {
+                return ConsumerDAO.CapNhatTaiKhoanKhachHang(kh);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        #endregion
     }
 }
