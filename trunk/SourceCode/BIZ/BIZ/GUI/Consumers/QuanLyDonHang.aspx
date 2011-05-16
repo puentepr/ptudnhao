@@ -9,6 +9,8 @@
 
 <%@ Register src="../UserControls/Login.ascx" tagname="Login" tagprefix="uc1" %>
 
+<%@ Register src="../UserControls/XemThongTinTaiKhoan.ascx" tagname="XemThongTinTaiKhoan" tagprefix="uc2" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Quản lý đơn hàng của khách
 </asp:Content>
@@ -27,6 +29,8 @@ Quản lý đơn hàng của khách
     <div class="primary">
 
         Hi, bạn đang ở trang dành cho khách hàng
+
+        <a href="../Consumers/XemThongTinTaiKhoan.aspx" >Xem thông tin tài khoản</a></li>
 
     </div>
     <div class="second-secondary">

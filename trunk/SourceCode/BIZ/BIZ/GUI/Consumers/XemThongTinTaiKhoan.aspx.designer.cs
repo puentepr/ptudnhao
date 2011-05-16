@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.GUI.Consumers {
+namespace BIZ.GUI {
     
     
-    public partial class QuanLyDonHang {
+    public partial class XemThongTinTaiKhoan {
         
         /// <summary>
         /// Catalogs1 control.
@@ -39,6 +39,15 @@ namespace BIZ.GUI.Consumers {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
+        
+        /// <summary>
+        /// XemThongTinTaiKhoan1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.XemThongTinTaiKhoan XemThongTinTaiKhoan1;
         
         /// <summary>
         /// Login1 control.
