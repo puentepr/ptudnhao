@@ -82,5 +82,19 @@ namespace BIZ.BUS
             }
         }
         #endregion
+
+        #region 2.4.5 Lấy danh sách user
+        public static List<USERS_DTO> LayDanhSachUser()
+        {
+            try
+            {
+                return UserDAO.LayDanhSachUser();
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
