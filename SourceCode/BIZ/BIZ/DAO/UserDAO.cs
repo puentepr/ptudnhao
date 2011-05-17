@@ -131,5 +131,46 @@ namespace BIZ.DAO
             }
 
         }
+        #region Xem danh sách User
+        public static List<USERS_DTO> LayDanhSachUser()
+        {
+            provider.connect();
+            List<USERS_DTO> ds = new List<USERS_DTO>();
+
+            string sqlCommand = "sp_LayDanhSachUser";
+
+            try
+            {
+
+                List<SqlParameter> list = new List<SqlParameter>();
+                DataTable table = provider.executeQueryDataTableProcedure(sqlCommand, list);
+                foreach (DataRow dr in table.Rows)
+                {
+                    USERS_DTO user = new USERS_DTO();
+                    user.UserName = dr["USERNAME"].ToString();
+                    user.MaLoaiUser = int.Parse(dr["MALOAI"].ToString());
+                    user.PassWord = dr["PASS_WORD"].ToString();
+                    user.EMail = dr["EMAIL"].ToString();
+                    user.TrangThai =int.Parse( dr["TRANGTHAI"].ToString());
+                    int ma = int.Parse(dr["MALOAI"].ToString());
+                    
+
+                    ds.Add(user);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+            return ds;
+        }
+        #endregion
+
+        #region Lấy tên loại user
+        #endregion
     }
 }
