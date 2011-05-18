@@ -84,11 +84,69 @@ namespace BIZ.BUS
         #endregion
 
         #region 2.4.5 Lấy danh sách user
-        public static List<USERS_DTO> LayDanhSachUser()
+        //public static List<USERS_DTO> LayDanhSachUser()
+        //{
+        //    try
+        //    {
+        //        return UserDAO.LayDanhSachUser();
+        //    }
+        //    catch (Exception ex)
+        //    {                
+        //        throw ex;
+        //    }
+        //}
+        #endregion
+
+        #region Lấy danh sách loại user
+        public static List<LOAI_USER_DTO> LayDanhSachLoaiUser()
         {
             try
             {
-                return UserDAO.LayDanhSachUser();
+                return UserDAO.LayDanhSachLoaiUser();
+            }
+            catch (Exception e)
+            {                
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Lấy danh sách user theo mã loại
+        public static List<USERS_DTO> LayDanhSachUserTheoLoaiUser(string tenloai)
+        {
+            try
+            {
+                return UserDAO.LayDanhSachUserTheoLoaiUser(tenloai);
+            }
+            catch (Exception e)
+            {
+                
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Lấy thông tin user theo username
+        public static USERS_DTO LayThongTinUserTheoUserName(string username)
+        {
+            try
+            {
+                return UserDAO.LayThongTinUserTheoUserName(username);
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Lấy thông tin quản trị theo username
+        public static QUAN_TRI_DTO LayThongTinQuanTriTheoUserName(string username)
+        {
+            try
+            {
+                return UserDAO.LayThongTinQuanTriTheoUserName(username);
             }
             catch (Exception ex)
             {                

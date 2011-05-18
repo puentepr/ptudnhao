@@ -82,6 +82,11 @@ namespace BIZ.GUI.UserControls
             Response.Redirect("../Shared/Default.aspx");
         }
 
+        protected void txtWebsite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }

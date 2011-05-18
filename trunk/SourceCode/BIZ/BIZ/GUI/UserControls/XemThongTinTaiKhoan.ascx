@@ -96,7 +96,8 @@
             <asp:Label ID="Label5" runat="server" Text="Website :"></asp:Label>
         </td>
         <td colspan="2">
-            <asp:TextBox ID="txtWebsite" runat="server" Width="260px"></asp:TextBox>
+            <asp:TextBox ID="txtWebsite" runat="server" Width="260px" 
+                ontextchanged="txtWebsite_TextChanged"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                 ControlToValidate="txtWebsite" ErrorMessage="(*)"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
