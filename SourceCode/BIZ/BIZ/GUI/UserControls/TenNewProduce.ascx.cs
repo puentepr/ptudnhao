@@ -23,6 +23,9 @@ namespace BIZ.GUI.UserControls
             if (!IsPostBack)
             {
                 List<SAN_PHAM_DTO> list = ProductBUS.SelectTopNewProducts();
+              /*  DataList1.DataSource = list;
+                DataList1.DataBind();*/
+
                 string strProduct = "<table class='tbproduct'>";
                 int n = list.Count;
                 int m=Min(3,n);
@@ -81,5 +84,70 @@ namespace BIZ.GUI.UserControls
             str+="<img src='../../Content/images/xemchitiet_but.gif' /></a></td>";
             return str;
         }
+
+/*        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            
+            Label lb = (Label)DataList1.FindControl("lbResult");
+            Label lbdvtinh = (Label)DataList1.FindControl("lbDvTinh");
+            TextBox soluong=(TextBox)DataList1.FindControl("TextBox1");
+            GioHang cart = new GioHang();
+            int s = 0;
+            if (soluong.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                
+                bool test = int.TryParse(soluong.Text, out s);
+                if (test == false || s < 1)
+                {
+                    lb.Text = "Số lượng mua phải là số lương nguyên , lớn hơn 0";
+                    lb.Visible = true;
+                    return;
+                }
+
+            }
+            lb.Visible = false;
+           // cart.MaSanPham = DataList1.DataKey.Value.ToString();
+            cart.SoLuong = s;
+            cart.DonViTinh = lbdvtinh.Text;
+            cart.TenSanPham = ((Label)DataList1.FindControl("lbTen")).Text;
+            float price = 0;
+            float.TryParse(((Label)DataList1.FindControl("lbGia")).Text, out price);
+            cart.TienTe = "VNĐ";
+            cart.DonGia = price;
+            cart.SoTien = price * s;
+
+            List<GioHang> carts;
+            if (Session["Cart"] == null)
+            {
+                carts = new List<GioHang>();
+            }
+            else
+            {
+                carts = (List<GioHang>)Session["Cart"];
+            }
+            int flag = 0;
+            foreach (GioHang gh in carts)
+            {
+                if (gh.MaSanPham == cart.MaSanPham)
+                {
+                    flag = 1;
+                    gh.SoLuong += cart.SoLuong;
+                    gh.SoTien += cart.SoTien;
+                    break;
+                }
+            }
+            if(flag==0)
+                carts.Add(cart);
+            Session["Cart"] = carts;
+
+        
+        }*/
+
+       
     }
 }

@@ -266,5 +266,25 @@ namespace BIZ.DAO
                 cpArray.Add(cp);
             }
         }
+        public static void updateDate(string ma, DateTime date)
+        {
+            helper.connect();
+            string sql = "Update COUPON set THOIGIANKT=@date, TINHTRANGCP=N'1' Where MACP=@ma";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@date", date));
+            list.Add(new SqlParameter("@ma", ma));
+            try
+            {
+                helper.executeNonQuery(sql, list);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
     }
 }

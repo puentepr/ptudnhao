@@ -52,13 +52,36 @@ namespace BIZ.BUS
                 float price = 0;
                 string unit = "";
                 List<AcceptCouponDTO> list = CouponDAO.AcceptOrdersCoupon(macp, typePrice,ref price,ref unit);
-                MuaChung.Service1 proxy = new BIZ.MuaChung.Service1();
+               // MuaChung.Service1 proxy = new BIZ.MuaChung.Service1();
+                MuaChung.MuaChungWebService proxy = new BIZ.MuaChung.MuaChungWebService();
+                
                 /* chỗ này sẽ duyệt lần lượt webservice kết nối và báo cho mua chung biết */
                 foreach (AcceptCouponDTO ac in list)
                 {
                     proxy.Url = ac.LinkWS;
-                    string sid = proxy.Authenticate(ac.McUserName, ac.McPassWord);
-                    bool test = proxy.ConfirmCoupon(sid, macp, price, unit);
+                    string sid=null;
+                    try
+                    {
+
+                        sid = proxy.Authenticate(ac.McUserName, ac.McPassWord);
+                    }
+                    catch (Exception ex)
+                    {
+                        error += ac.TenDN + "; ";
+                        continue;
+                    }
+                    if(sid ==null)
+                        error += ac.TenDN + "; ";
+                    bool test = false;
+                    try
+                    {
+                        test = proxy.ConfirmCoupon(sid, macp, price, unit);
+                    }
+                    catch (Exception ex)
+                    {
+                        error += ac.TenDN + "; ";
+                        continue;
+                    }
                     if (test == false)
                     {
                         error += ac.TenDN + "; ";
@@ -87,6 +110,17 @@ namespace BIZ.BUS
             try
             {
                 return CouponDAO.GetCouponInfo(macp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static void UpdateDate(string ma, DateTime date)
+        {
+            try
+            {
+                CouponDAO.updateDate(ma, date);
             }
             catch (Exception e)
             {
