@@ -7,7 +7,10 @@
     <div class="content-box">
         <ul>
             <li>
-                <a href="../Manager/ServiceTransfer.aspx">Vận chuyển</a>
+                <a href="../Admin/ServiceTransfer.aspx">Vận chuyển</a>
+            </li>
+            <li>
+                <a href="../Admin/UpdateCoupon.aspx">Cập nhật ngày</a>
             </li>
         </ul>
     </div>

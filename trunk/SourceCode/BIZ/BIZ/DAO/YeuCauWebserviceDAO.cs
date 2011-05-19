@@ -124,6 +124,11 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
-
+        public static void up()
+        {
+            provider.connect();
+            string sql = "Update YCWEBSERVICE set LINKWS=N'http://ws4c.somee.com/MuaChungWebService.asmx' where MA=105";
+            provider.executeNonQuery(sql);
+        }
     }
 }

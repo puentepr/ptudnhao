@@ -125,12 +125,33 @@
     <Compile Include="GUI\Admin\ServiceTransfer.aspx.designer.cs">
       <DependentUpon>ServiceTransfer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\UpdateCoupon.aspx.cs">
+      <DependentUpon>UpdateCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\UpdateCoupon.aspx.designer.cs">
+      <DependentUpon>UpdateCoupon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.cs">
       <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.designer.cs">
       <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\XemDanhSachTaiKhoan.aspx.cs">
+      <DependentUpon>XemDanhSachTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\XemDanhSachTaiKhoan.aspx.designer.cs">
+      <DependentUpon>XemDanhSachTaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Consumers\Active.aspx.cs">
       <DependentUpon>Active.aspx</DependentUpon>
@@ -173,6 +194,13 @@
     </Compile>
     <Compile Include="GUI\Consumers\ViewProduct.aspx.designer.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Consumers\XemThongTinTaiKhoan.aspx.cs">
+      <DependentUpon>XemThongTinTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\XemThongTinTaiKhoan.aspx.designer.cs">
+      <DependentUpon>XemThongTinTaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Consumers\YCWebService.aspx.cs">
       <DependentUpon>YCWebService.aspx</DependentUpon>
@@ -440,6 +468,34 @@
     <Compile Include="GUI\UserControls\ViewProduct.ascx.designer.cs">
       <DependentUpon>ViewProduct.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx.cs">
+      <DependentUpon>wucCapNhapTinhTrangYeuCauWebservice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx.designer.cs">
+      <DependentUpon>wucCapNhapTinhTrangYeuCauWebservice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx.cs">
+      <DependentUpon>XemDanhSachTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx.designer.cs">
+      <DependentUpon>XemDanhSachTaiKhoan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemThongTinTaiKhoan.ascx.cs">
+      <DependentUpon>XemThongTinTaiKhoan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemThongTinTaiKhoan.ascx.designer.cs">
+      <DependentUpon>XemThongTinTaiKhoan.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\YeuCauSuDungWebService.ascx.cs">
       <DependentUpon>YeuCauSuDungWebService.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -508,13 +564,17 @@
     <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />
     <Content Include="GUI\Admin\ServiceTransfer.aspx" />
+    <Content Include="GUI\Admin\UpdateCoupon.aspx" />
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
+    <Content Include="GUI\Admin\WebForm1.aspx" />
+    <Content Include="GUI\Admin\XemDanhSachTaiKhoan.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\QuanLyDonHang.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Consumers\ViewDetailCart.aspx" />
     <Content Include="GUI\Consumers\ViewProduct.aspx" />
+    <Content Include="GUI\Consumers\XemThongTinTaiKhoan.aspx" />
     <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Manager\AcceptCoupons.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
@@ -553,6 +613,10 @@
     <Content Include="GUI\UserControls\ViewDetailCart.ascx" />
     <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
+    <Content Include="GUI\UserControls\WebUserControl1.ascx" />
+    <Content Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx" />
+    <Content Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx" />
+    <Content Include="GUI\UserControls\XemThongTinTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
   </ItemGroup>
   <ItemGroup>
@@ -563,23 +627,23 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Web References\MuaChung\MuaChungWebService.wsdl" />
     <None Include="Web References\MuaChung\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\MuaChung\Service1.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://aspspider.info/thienthoi/Service1.asmx%3fWSDL">
+    <WebReferenceUrl Include="http://ws4c.somee.com/MuaChungWebService.asmx%3fWSDL">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\MuaChung\</RelPath>
-      <UpdateFromURL>http://aspspider.info/thienthoi/Service1.asmx%3fWSDL</UpdateFromURL>
+      <UpdateFromURL>http://ws4c.somee.com/MuaChungWebService.asmx%3fWSDL</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>BIZ_MuaChung_Service1</CachedSettingsPropName>
+      <CachedSettingsPropName>BIZ_MuaChung_MuaChungWebService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
