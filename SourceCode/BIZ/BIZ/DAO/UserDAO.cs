@@ -225,7 +225,7 @@ namespace BIZ.DAO
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
