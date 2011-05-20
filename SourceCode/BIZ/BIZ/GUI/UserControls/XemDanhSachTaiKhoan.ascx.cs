@@ -145,6 +145,8 @@ namespace BIZ.GUI.UserControls
             {
                 //ẩn thông tin khách hàng
                 panelKhachHang.Visible = false;
+                //hiện thông tin quản trị
+                panelQuanTri.Visible = true;
                 #region Xem thông tin quản tri
                 //lấy thông tin admin hoặc Manager
                 QUAN_TRI_DTO qt = UserBUS.LayThongTinQuanTriTheoUserName(id);
