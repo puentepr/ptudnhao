@@ -6,14 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 
-namespace BIZ.GUI.UserControls
+namespace BIZ.GUI.Admin
 {
-    public partial class wucCapNhapTinhTrangYeuCauWebservice : System.Web.UI.UserControl
+    public partial class AddWebserviceBank : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

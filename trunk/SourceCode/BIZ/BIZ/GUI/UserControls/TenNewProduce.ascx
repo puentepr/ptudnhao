@@ -45,7 +45,7 @@
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 
-                                        CssClass="button" onclick="Button1_Click" 
+                                        CssClass="button" 
                              CommandArgument='<%# Eval("MaSanPham") %>'/>   <br />
                                         <asp:Label ID="lbResult" runat="server" Visible="false" ForeColor="Red"></asp:Label>                                                      
                     </td>

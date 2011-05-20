@@ -8,54 +8,73 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.GUI.UserControls {
+namespace BIZ.GUI.Admin {
     
     
-    public partial class wucCapNhapTinhTrangYeuCauWebservice {
+    public partial class AddWebserviceBank {
         
         /// <summary>
-        /// Label2 control.
+        /// Catalogs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
         
         /// <summary>
-        /// Label1 control.
+        /// CatalogAdmin1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::BIZ.GUI.UserControls.CatalogAdmin CatalogAdmin1;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// NewProduce1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::BIZ.GUI.UserControls.NewProduce NewProduce1;
         
         /// <summary>
-        /// GridView1 control.
+        /// AdvertisementLeft1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
         
         /// <summary>
-        /// SqlDataSourceYCWEBSERVICE control.
+        /// AddServiceBank1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceYCWEBSERVICE;
+        
+        protected global::BIZ.GUI.UserControls.Login Login1;
+        
+        /// <summary>
+        /// Cart1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Cart Cart1;
+        
+        /// <summary>
+        /// Payment1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Payment Payment1;
     }
 }

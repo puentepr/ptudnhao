@@ -12,6 +12,12 @@
             <li>
                 <a href="../Admin/UpdateCoupon.aspx">Cập nhật ngày</a>
             </li>
+            <li>
+                <a href ="../Admin/XemDanhSachTaiKhoan.aspx">Xem danh sách tài khoản</a>
+            </li>
+            <li>
+                <a href="../Admin/AddWebserviceBank.aspx">Thêm webservice bank</a>
+            </li>
         </ul>
     </div>
     <div class="bottom-box">

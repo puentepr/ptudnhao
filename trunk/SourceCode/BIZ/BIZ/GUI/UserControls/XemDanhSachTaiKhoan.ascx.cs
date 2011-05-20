@@ -20,12 +20,32 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
+            //if (!Page.IsPostBack)
+            //{
+            //    dropVaiTro.DataSource = UserBUS.LayDanhSachLoaiUser();
+            //    dropVaiTro.DataBind();
+            //    dropVaiTro_SelectedIndexChanged(null,null);                
+            //}
+
+            int isLogIn;
+            int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
+            if (isLogIn == 1)
             {
-                dropVaiTro.DataSource = UserBUS.LayDanhSachLoaiUser();
-                dropVaiTro.DataBind();
-                dropVaiTro_SelectedIndexChanged(null,null);                
+                string typeUser = Session["LoaiUser"].ToString();
+                if (typeUser == "Admin")
+                {
+                    if (!IsPostBack)
+                    {
+                        dropVaiTro.DataSource = UserBUS.LayDanhSachLoaiUser();
+                        dropVaiTro.DataBind();
+                        dropVaiTro_SelectedIndexChanged(null, null);      
+                    }
+                }
+                else
+                    Response.Redirect("../Shared/Default.aspx");
             }
+            else
+                Response.Redirect("../Shared/Default.aspx");
         }
 
         protected void gvDSTaiKhoan_RowCreated(object sender, GridViewRowEventArgs e)
