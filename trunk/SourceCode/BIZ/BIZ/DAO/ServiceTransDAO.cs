@@ -108,10 +108,11 @@ namespace BIZ.DAO
         public static int DeleteServiceTrans(int madv)
         {
             provider.connect();
+            int tinhtrang = -1;
             string sqlCommand = "sp_DeleteServiceTrans";
             List<SqlParameter> list = new List<SqlParameter>();
             list.Add(new SqlParameter("@madv", madv));
-            list.Add(new SqlParameter("@tinhtrang", 0));
+            list.Add(new SqlParameter("@tinhtrang", tinhtrang));
             SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
             result.Direction = ParameterDirection.ReturnValue;
             list.Add(result);
@@ -163,9 +164,10 @@ namespace BIZ.DAO
             list.Add(new SqlParameter("@madv",service.MaDV));
             list.Add(new SqlParameter("@tencty",service.TenCongTy));
             list.Add(new SqlParameter("@linkws",service.LinkWebService));
-            list.Add(new SqlParameter("@username",service.UserName));
-            list.Add(new SqlParameter("@password",service.PassWord));
+           // list.Add(new SqlParameter("@username",service.UserName));
+           // list.Add(new SqlParameter("@password",service.PassWord));
             list.Add(new SqlParameter("@website",service.Website));
+            list.Add(new SqlParameter("@tinhtrang", service.TinhTrang));
             SqlParameter result=new SqlParameter("@result",SqlDbType.Int);
             result.Direction=ParameterDirection.ReturnValue;
             list.Add(result);
@@ -248,6 +250,32 @@ namespace BIZ.DAO
                 return trans;
             }
             return trans;
+        }
+        public static int UpdateAccountServiceTrans(int madv, string username, string password)
+        {
+            provider.connect();
+            string sqlCommand = "sp_UpdateAccountServiceTrans";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@madv", madv));
+            list.Add(new SqlParameter("@username", username));
+            list.Add(new SqlParameter("@password", password));
+            SqlParameter result = new SqlParameter("@result",SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                return (int)result.Value;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+
         }
     }
 }

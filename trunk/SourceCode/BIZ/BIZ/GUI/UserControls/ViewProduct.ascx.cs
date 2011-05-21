@@ -66,6 +66,8 @@ namespace BIZ.GUI.UserControls
             lb.Visible = false;
             cart.MaSanPham = FormView1.DataKey.Value.ToString();
             cart.SoLuong = s;
+            float slCon = 0;
+            float.TryParse(((Label)FormView1.FindControl("lbSoLuong")).Text, out slCon);
             cart.DonViTinh = lbdvtinh.Text;
             cart.TenSanPham = ((Label)FormView1.FindControl("lbTen")).Text;
             float price = 0;
@@ -73,7 +75,12 @@ namespace BIZ.GUI.UserControls
             cart.TienTe = "VNĐ";
             cart.DonGia = price;
             cart.SoTien = price * s;
-
+            if (cart.SoLuong > slCon)
+            {
+                lb.Text = "Số lượng bạn mua vượt khả năng đáp ứng của chúng tôi, cảm ơn bạn đã đặt hàng!";
+                lb.Visible = true;
+                return;
+            }
             List<GioHang> carts;
             if (Session["Cart"] == null)
             {
@@ -91,6 +98,12 @@ namespace BIZ.GUI.UserControls
                     flag = 1;
                     gh.SoLuong += cart.SoLuong;
                     gh.SoTien += cart.SoTien;
+                    if (cart.SoLuong > slCon)
+                    {
+                        lb.Text = "Số lượng bạn mua vượt khả năng đáp ứng của chúng tôi, cảm ơn bạn đã đặt hàng!";
+                        lb.Visible = true;
+                        return;
+                    }
                     break;
                 }
             }

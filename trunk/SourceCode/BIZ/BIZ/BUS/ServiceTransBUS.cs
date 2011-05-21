@@ -72,5 +72,16 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static int UpdateAccountServiceTrans(int madv, string username, string password)
+        {
+            try
+            {
+                return ServiceTransDAO.UpdateAccountServiceTrans(madv, username, password);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

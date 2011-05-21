@@ -13,8 +13,15 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+       
+            
             if (!IsPostBack)
             {
+                string typeUser = Session["LoaiUser"].ToString();
+                if (typeUser == "Admin" || typeUser == "Manager")
+                    cartid.Visible = false;
+                else
+                    cartid.Visible = true;
                 LoadCart();
             }
         }

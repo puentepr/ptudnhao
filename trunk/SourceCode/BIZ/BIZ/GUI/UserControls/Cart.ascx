@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Cart.ascx.cs" Inherits="BIZ.GUI.UserControls.Cart" %>
-<div class="cart box-right">
+<div class="cart box-right" id="cartid" runat="server">
     <div class="top-box">
         <img src="../../App_Themes/Blue/cart.gif" />
         <label>GIỎ HÀNG</label>

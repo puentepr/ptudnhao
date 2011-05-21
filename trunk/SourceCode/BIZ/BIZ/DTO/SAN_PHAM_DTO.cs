@@ -7,6 +7,13 @@ namespace BIZ.DTO
 {
     public class SAN_PHAM_DTO
     {
+        int _index;
+
+        public int Index
+        {
+            get { return _index; }
+            set { _index = value; }
+        }
         private string _maSanPham;
 
         public string MaSanPham

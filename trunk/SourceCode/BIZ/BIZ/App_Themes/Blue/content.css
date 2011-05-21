@@ -247,6 +247,10 @@ li label.title-box
 	color:Green;
 	font-weight:bold;
 }
+.tbproduct
+{
+	
+}
 .tbproduct tr td
 {
 	padding-top:8px;
@@ -304,4 +308,9 @@ li label.title-box
 {
 	font-weight:bold;
 	color:Blue;
+}
+.imgproduct
+{
+	width:150px;
+	height:150px;
 }
