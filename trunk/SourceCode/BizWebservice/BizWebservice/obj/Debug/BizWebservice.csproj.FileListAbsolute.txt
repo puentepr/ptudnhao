@@ -3,3 +3,8 @@ D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\Sourc
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BizWebservice\BizWebservice\bin\BizWebservice.pdb
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BizWebservice\BizWebservice\obj\Debug\BizWebservice.dll
 D:\MyProjects\TH nam IV 10-11\TH Ki II 10-11\Thuong mai dien tu\DOANMONHOC\SourceCode\BizWebservice\BizWebservice\obj\Debug\BizWebservice.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BizWebservice\BizWebservice\bin\BizWebservice.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BizWebservice\BizWebservice\bin\BizWebservice.pdb
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BizWebservice\BizWebservice\obj\Debug\ResolveAssemblyReference.cache
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BizWebservice\BizWebservice\obj\Debug\BizWebservice.dll
+D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BizWebservice\BizWebservice\obj\Debug\BizWebservice.pdb
