@@ -139,13 +139,6 @@
     <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.designer.cs">
       <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Admin\XemDanhSachTaiKhoan.aspx.cs">
       <DependentUpon>XemDanhSachTaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -475,13 +468,6 @@
     <Compile Include="GUI\UserControls\WebUserControl1.ascx.designer.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx.cs">
-      <DependentUpon>wucCapNhapTinhTrangYeuCauWebservice.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx.designer.cs">
-      <DependentUpon>wucCapNhapTinhTrangYeuCauWebservice.ascx</DependentUpon>
-    </Compile>
     <Compile Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx.cs">
       <DependentUpon>XemDanhSachTaiKhoan.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -566,7 +552,6 @@
     <Content Include="GUI\Admin\ServiceTransfer.aspx" />
     <Content Include="GUI\Admin\UpdateCoupon.aspx" />
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
-    <Content Include="GUI\Admin\WebForm1.aspx" />
     <Content Include="GUI\Admin\XemDanhSachTaiKhoan.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
@@ -614,7 +599,6 @@
     <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\WebUserControl1.ascx" />
-    <Content Include="GUI\UserControls\wucCapNhapTinhTrangYeuCauWebservice.ascx" />
     <Content Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\XemThongTinTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
