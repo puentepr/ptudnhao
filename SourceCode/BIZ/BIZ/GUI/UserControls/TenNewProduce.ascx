@@ -15,39 +15,49 @@
     <!-- Đổ dữ liệu vào đây , dùng innerHTML cho thẻ div này thì phải -->
     <div class="middle-content-box" id="divNewProduce" runat="server">
       
-        <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" 
-            onselectedindexchanged="DataList1_SelectedIndexChanged">
+        <asp:DataList ID="DataList1" runat="server" 
+            RepeatDirection="Horizontal" RepeatColumns="3" 
+            >
           <ItemTemplate>
             <table class="tbproduct">
                 <tr>
-                    <td>
+                    <td class='produce'>
                         
                          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
-                            <asp:Image ID="Image1" runat="server" />
+                            <asp:Image CssClass="imgproduct" ID="Image1" runat="server" ImageUrl='<%#Eval("HinhAnh") %>' />
                             <img alt="new" src='../../Content/images/new.gif' />
                             <br />
                         </asp:HyperLink>
-                        <asp:Label ID="lbTen" CssClass="lbname" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="lbTen" CssClass="lbname" runat="server" 
+                             Text='<%# Eval("TenSanPham") %>'></asp:Label>
                         <br />
-                        <asp:Label ID="lbSoLuong" runat="server" Text="Label"></asp:Label> 
-                        <asp:Label ID="Label1" CssClass="label" runat="server" Text="Label"></asp:Label>
+                        <label class="lbname">Số lượng:</label>
+                        <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuongConLai") %>'></asp:Label> 
+                        <asp:Label ID="Label1" CssClass="label" runat="server" 
+                             Text='<%# Eval("DonViTinh") %>'></asp:Label>
                         <br />
-                        <asp:Label ID="lbGia" CssClass="label" runat="server" Text="Label"></asp:Label>
-                         <label>VND / </label><asp:Label ID="lbDvTinh" CssClass="label" runat="server" Text="Label"></asp:Label>
+                        <label class="lbname">Giá:</label>
+                        <asp:Label ID="lbGia" CssClass="label" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
+                         <label>VND / </label><asp:Label ID="lbDvTinh" CssClass="label" runat="server" 
+                             Text='<%# Eval("DonViTinh") %>'></asp:Label>
                         <br />
                     
                       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                         <img src='../../Content/images/xemchitiet_but.gif' />
                         </asp:HyperLink>
                     <br />
-                    <label>Số lượng muốn mua : </label>
+                    <label>Mua : </label>
                     <asp:TextBox ID="TextBox1" runat="server" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 
-                                        CssClass="button" 
-                             CommandArgument='<%# Eval("MaSanPham") %>'/>   <br />
-                                        <asp:Label ID="lbResult" runat="server" Visible="false" ForeColor="Red"></asp:Label>                                                      
+
+                                        CssClass="button"  
+                             CommandArgument='<%# Eval("MaSanPham") %>' onclick="Button1_Click" 
+                             CommandName='<%#Eval("Index") %>' style="height: 26px; width: 164px"/>   <br />
+
+                                        
+                        <asp:Label ID="lbResult" runat="server" Visible="false" ForeColor="Red"></asp:Label>                                                      
                     </td>
                 </tr>
               </table>

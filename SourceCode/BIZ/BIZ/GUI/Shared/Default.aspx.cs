@@ -13,5 +13,10 @@ namespace BIZ.GUI.Shared
         {
             
         }
+        protected override void OnLoadComplete(EventArgs e)
+        {
+            base.OnLoadComplete(e);
+            Cart1.LoadCart();
+        }
     }
 }

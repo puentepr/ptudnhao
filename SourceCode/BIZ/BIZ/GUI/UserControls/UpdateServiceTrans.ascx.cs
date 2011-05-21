@@ -38,7 +38,12 @@ namespace BIZ.GUI.UserControls
                             txtPass.Text = service.PassWord;
                             //  txtPass.AutoPostBack = false;
                             //  txtPass.TextMode = TextBoxMode.Password;
-
+                            if (service.TinhTrang == 1)
+                            {
+                                DropDownList1.Items[0].Selected = true;
+                            }
+                            else
+                                DropDownList1.Items[1].Selected = true;
 
 
                         }
@@ -57,8 +62,9 @@ namespace BIZ.GUI.UserControls
             service.TenCongTy = txtUserName.Text;
             service.LinkWebService = txtLink.Text;
             service.MaDV = int.Parse(hdfId.Value);
-            service.PassWord = txtPass.Text;
-            service.UserName = txtUserName.Text;
+           // service.PassWord = txtPass.Text;
+           // service.UserName = txtUserName.Text;
+            service.TinhTrang = int.Parse(DropDownList1.SelectedValue);
             service.Website = txtWebsite.Text;
             try
             {
@@ -81,5 +87,29 @@ namespace BIZ.GUI.UserControls
                 lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string username = txtName.Text;
+            string password = txtPass.Text;
+            int madv;
+            if (int.TryParse(hdfId.Value, out madv))
+            {
+                int result = ServiceTransBUS.UpdateAccountServiceTrans(madv, username, password);
+                if (result == 1)
+                {
+                    Label1.ForeColor = Color.Green;
+                    Label1.Text = "Đã cập nhật thành công";
+
+                }
+                else
+                {
+                    Label1.ForeColor = Color.Green;
+                    Label1.Text = "Đã cập nhật thành công";
+                }
+            }
+        }
+
+      
     }
 }

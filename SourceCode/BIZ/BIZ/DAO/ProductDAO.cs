@@ -189,6 +189,7 @@ namespace BIZ.DAO
             {
                 SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
                 DataRow row = table.Rows[i];
+                sp.Index = i;
                 sp.ChatLuong = row["CHATLUONG"].ToString();
                 sp.DonViTinh = row["DVTINH"].ToString();
                 float price = 0;

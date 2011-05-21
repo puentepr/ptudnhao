@@ -93,7 +93,7 @@ namespace BIZ.GUI.UserControls
         protected void grWebservice_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int madv;
-            int.TryParse(grWebservice.DataKeyNames[e.RowIndex],out madv);
+            int.TryParse(grWebservice.DataKeys[e.RowIndex].Value.ToString(),out madv);
             try
             {
                 int result = ServiceTransBUS.DeleteServiceTrans(madv);

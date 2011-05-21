@@ -11,7 +11,7 @@ namespace BIZ.GUI.UserControls
 {
     public partial class TenNewProduce : System.Web.UI.UserControl
     {
-        private int j=0;
+       
         private int Min(int a, int b)
         {
             if (a < b)
@@ -23,10 +23,10 @@ namespace BIZ.GUI.UserControls
             if (!IsPostBack)
             {
                 List<SAN_PHAM_DTO> list = ProductBUS.SelectTopNewProducts();
-              /*  DataList1.DataSource = list;
-                DataList1.DataBind();*/
+                DataList1.DataSource = list;
+                DataList1.DataBind();
 
-                string strProduct = "<table class='tbproduct'>";
+           /*     string strProduct = "<table class='tbproduct'>";
                 int n = list.Count;
                 int m=Min(3,n);
                 strProduct += AddListProducts(0,list, m);
@@ -35,7 +35,7 @@ namespace BIZ.GUI.UserControls
                 m = Min(9, n);
                 strProduct += AddListProducts(6,list, m);
                 strProduct += "</table>";
-                divNewProduce.InnerHtml = strProduct;
+                divNewProduce.InnerHtml = strProduct;*/
           /*      
             
                 <td class='produce'>
@@ -85,11 +85,85 @@ namespace BIZ.GUI.UserControls
             return str;
         }
 
-        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int index = 0;
+            int.TryParse(((Button)sender).CommandName, out index);
+            Label lb = (Label)DataList1.Items[index].FindControl("lbResult");
+
+            Label lbdvtinh = (Label)DataList1.Items[index].FindControl("lbDvTinh");
+            TextBox soluong = (TextBox)DataList1.Items[index].FindControl("TextBox1");
+            float slCon = 0;
+            float.TryParse(((Label)DataList1.Items[index].FindControl("lbSoLuong")).Text, out slCon);
+            GioHang cart = new GioHang();
+            int s = 0;
+            if (soluong.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                bool test = int.TryParse(soluong.Text, out s);
+                if (test == false || s < 1)
+                {
+                    lb.Text = "Số lượng mua phải là số lương nguyên , lớn hơn 0";
+                    lb.Visible = true;
+                    return;
+                }
+
+            }
+            lb.Visible = false;
+            // cart.MaSanPham = DataList1.DataKey.Value.ToString();
+            cart.MaSanPham = ((Button)sender).CommandArgument;
+            cart.SoLuong = s;
+            cart.DonViTinh = lbdvtinh.Text;
+            cart.TenSanPham = ((Label)DataList1.Items[index].FindControl("lbTen")).Text;
+           float price = 0;
+            float.TryParse(((Label)DataList1.Items[index].FindControl("lbGia")).Text, out price);
+            cart.TienTe = "VNĐ";
+            cart.DonGia = price;
+            cart.SoTien = price * s;
+            
+            if (cart.SoLuong > slCon)
+            {
+                lb.Text = "Số lượng bạn mua vượt khả năng đáp ứng của chúng tôi, cảm ơn bạn đã đặt hàng!";
+                lb.Visible = true;
+                return;
+            }
+            List<GioHang> carts;
+            if (Session["Cart"] == null)
+            {
+                carts = new List<GioHang>();
+            }
+            else
+            {
+                carts = (List<GioHang>)Session["Cart"];
+            }
+            int flag = 0;
+            foreach (GioHang gh in carts)
+            {
+                if (gh.MaSanPham == cart.MaSanPham)
+                {
+                    flag = 1;
+
+                    gh.SoLuong += cart.SoLuong;
+                    gh.SoTien += cart.SoTien;
+                    if (cart.SoLuong > slCon)
+                    {
+                        lb.Text = "Số lượng bạn mua vượt khả năng đáp ứng của chúng tôi, cảm ơn bạn đã đặt hàng!";
+                        lb.Visible = true;
+                        return;
+                    }
+                    break;
+                }
+            }
+            if (flag == 0)
+                carts.Add(cart);
+            Session["Cart"] = carts;
         }
 
+   
 /*        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
