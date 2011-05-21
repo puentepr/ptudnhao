@@ -18,6 +18,9 @@
             <li>
                 <a href="../Admin/AddWebserviceBank.aspx">Thêm webservice bank</a>
             </li>
+            <li>
+                <a href="../Admin/XemDanhSachWebserviceBank.aspx">Xem, cập nhật, xóa webservice bank</a>
+            </li>
         </ul>
     </div>
     <div class="bottom-box">
