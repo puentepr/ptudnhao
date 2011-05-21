@@ -47,8 +47,7 @@ namespace BIZ.GUI.Manager {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BIZ.GUI.UserControls.wucCapNhapTinhTrangYeuCauWebservice wucCapNhapTinhTrangYeuCauWebservice1;
-        
+               
         /// <summary>
         /// Cart1 control.
         /// </summary>

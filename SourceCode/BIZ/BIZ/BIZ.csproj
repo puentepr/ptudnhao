@@ -69,6 +69,7 @@
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProductTypeBUS.cs" />
     <Compile Include="BUS\ProductTypeGroupBUS.cs" />
+    <Compile Include="BUS\ServiceBankBUS.cs" />
     <Compile Include="BUS\ServiceTransBUS.cs" />
     <Compile Include="BUS\Theme.cs" />
     <Compile Include="BUS\ThemeManager.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\ProductTypeDAO.cs" />
     <Compile Include="DAO\ProductTypeGroupDAO.cs" />
+    <Compile Include="DAO\ServiceBankDAO.cs" />
     <Compile Include="DAO\ServiceTransDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DAO\YeuCauWebserviceDAO.cs" />
@@ -118,6 +120,13 @@
     <Compile Include="DTO\hinhthuc.cs" />
     <Compile Include="DTO\USERS_DTO.cs" />
     <Compile Include="DTO\YC_WEBSERVICE_DTO.cs" />
+    <Compile Include="GUI\Admin\AddWebserviceBank.aspx.cs">
+      <DependentUpon>AddWebserviceBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\AddWebserviceBank.aspx.designer.cs">
+      <DependentUpon>AddWebserviceBank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\ServiceTransfer.aspx.cs">
       <DependentUpon>ServiceTransfer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +225,13 @@
     <Compile Include="GUI\Manager\AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Manager\CapNhatTinhTrangWebService.aspx.cs">
+      <DependentUpon>CapNhatTinhTrangWebService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\CapNhatTinhTrangWebService.aspx.designer.cs">
+      <DependentUpon>CapNhatTinhTrangWebService.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Manager\CreateCoupon.aspx.cs">
       <DependentUpon>CreateCoupon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,6 +294,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\AddProduct.ascx.designer.cs">
       <DependentUpon>AddProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\AddServiceBank.ascx.cs">
+      <DependentUpon>AddServiceBank.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\AddServiceBank.ascx.designer.cs">
+      <DependentUpon>AddServiceBank.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\AddServiceTrans.ascx.cs">
       <DependentUpon>AddServiceTrans.ascx</DependentUpon>
@@ -549,6 +572,7 @@
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
     <Content Include="Global.asax" />
+    <Content Include="GUI\Admin\AddWebserviceBank.aspx" />
     <Content Include="GUI\Admin\ServiceTransfer.aspx" />
     <Content Include="GUI\Admin\UpdateCoupon.aspx" />
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
@@ -563,6 +587,7 @@
     <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Manager\AcceptCoupons.aspx" />
     <Content Include="GUI\Manager\AddProduct.aspx" />
+    <Content Include="GUI\Manager\CapNhatTinhTrangWebService.aspx" />
     <Content Include="GUI\Manager\CreateCoupon.aspx" />
     <Content Include="GUI\Manager\ListCoupon.aspx" />
     <Content Include="GUI\Manager\ViewDetailCoupon.aspx" />
@@ -572,6 +597,7 @@
     <Content Include="GUI\UserControls\AcceptOrders.ascx" />
     <Content Include="GUI\UserControls\ActiveAcount.ascx" />
     <Content Include="GUI\UserControls\AddProduct.ascx" />
+    <Content Include="GUI\UserControls\AddServiceBank.ascx" />
     <Content Include="GUI\UserControls\AddServiceTrans.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\CapNhatYCWebservice.ascx" />
