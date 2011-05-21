@@ -24,6 +24,20 @@ namespace BIZ.BUS
         }
         #endregion
 
+        #region Cập nhật thông tin service bank
+        public static int CapNhatServiceBank(SERVICE_BANK_DTO bank)
+        {
+            try
+            {
+                return ServiceBankDAO.CapNhatServiceBank(bank);
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+        #endregion
+
         #region Lấy danh sách ServiceBank đang sử dung
         public static List<SERVICE_BANK_DTO> LayDanhSachServiceBank(int trangthai)
         {
@@ -39,7 +53,33 @@ namespace BIZ.BUS
         }
         #endregion
 
+        #region Lấy thông tin ServiceBank theo mã bank
+        public static SERVICE_BANK_DTO LayServiceBankTheoMaBank(string mabank)
+        {
+            try
+            {
+                return ServiceBankDAO.LayServiceBankTheoMaBank(mabank);
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
+        #endregion
+
         #region Xóa ServiceBank
+        public static int XoaServiceBank(string mabank, int tinhtrang)
+        {
+            try
+            {
+                return ServiceBankDAO.XoaServiceBank(mabank, tinhtrang);
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
         #endregion
     }
 }
