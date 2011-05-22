@@ -67,9 +67,9 @@
         </a>
     </li>
     <li class="first-li">
-        <a class="first-a" href="../Shared/Default.aspx">
+        <a class="first-a" href="../Consumers/AdvanceSearch.aspx">
             <span class="pmenuL"></span>
-            <span class="pmenuM">Liên hệ</span>
+            <span class="pmenuM">Tìm kiếm</span>
             <span class="pmenuR"></span>
         </a>
     </li>

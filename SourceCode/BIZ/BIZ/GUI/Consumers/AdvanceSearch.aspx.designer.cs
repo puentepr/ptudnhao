@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BIZ.GUI.Manager {
+namespace BIZ.GUI.Consumers {
     
     
-    public partial class CapNhatTinhTrangWebService {
+    public partial class AdvanceSearch {
         
         /// <summary>
         /// Catalogs1 control.
@@ -21,6 +21,24 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
+        
+        /// <summary>
+        /// CatalogAdmin1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.CatalogAdmin CatalogAdmin1;
+        
+        /// <summary>
+        /// CatalogManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.CatalogManager CatalogManager1;
         
         /// <summary>
         /// NewProduce1 control.
@@ -39,6 +57,24 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
+        
+        /// <summary>
+        /// AdvanceSearch1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.AdvanceSearch AdvanceSearch1;
+        
+        /// <summary>
+        /// Login1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.Login Login1;
         
         /// <summary>
         /// Cart1 control.

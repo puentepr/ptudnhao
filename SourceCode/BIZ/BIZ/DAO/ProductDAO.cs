@@ -182,6 +182,40 @@ namespace BIZ.DAO
             }
         }
 
+        public static List<SAN_PHAM_DTO> AdvanceSearch(string tensp, int lsp, string chatluong, float minprice, float maxprice)
+        {
+            helper.connect();
+            string sqlCommand="sp_AdvanceSearch";
+            List<SqlParameter>list=new List<SqlParameter>();
+            list.Add(new SqlParameter("@tensp",tensp));
+            list.Add(new SqlParameter("@malsp",lsp));
+            list.Add(new SqlParameter("@chatluong",chatluong));
+            list.Add(new SqlParameter("@minprice",minprice));
+            list.Add(new SqlParameter("@maxprice",maxprice));
+
+            SqlParameter put = new SqlParameter("@put", SqlDbType.NVarChar);
+            put.Size = 100;
+            put.Direction = ParameterDirection.Output;
+            list.Add(put);
+            try
+            {
+                List<SAN_PHAM_DTO> listsp = new List<SAN_PHAM_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransforListSanPham(table, listsp);
+                }
+                return listsp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
         private static void TransforListSanPham(DataTable table,List<SAN_PHAM_DTO>ds)
         {
             int n=table.Rows.Count;

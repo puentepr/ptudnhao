@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BIZ.BUS;
 using BIZ.DTO;
+using System.Drawing;
 
 namespace BIZ.GUI.UserControls
 {
@@ -13,23 +14,30 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int isLogIn;
+          /*  int isLogIn;
             int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
             if (isLogIn == 1)
             {
                 string typeUser = Session["LoaiUser"].ToString();
                 if (typeUser == "Manager")
-                {
+                {*/
                     if (!IsPostBack)
                     {
                         GridRequestDataBind();
+                        GridView2DataBind();
                     }
-                }
+            /*    }
                 else
                     Response.Redirect("../Shared/Default.aspx");
             }
             else
-                Response.Redirect("../Shared/Default.aspx");
+                Response.Redirect("../Shared/Default.aspx");*/
+        }
+
+        private void GridView2DataBind()
+        {
+            GridView2.DataSource = YCWebServiceBUS.GetRequest();
+            GridView2.DataBind();
         }
 
         private void GridRequestDataBind()
@@ -59,6 +67,25 @@ namespace BIZ.GUI.UserControls
             /*GridView1.DataSource = YCWebServiceBUS.SelectNewRequest();
             GridView1.DataBind();*/
             GridRequestDataBind();
+        }
+
+        protected void GridView2_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int ma =int.Parse( GridView2.DataKeys[e.RowIndex].Value.ToString());
+            DropDownList dr = (DropDownList)GridView2.Rows[e.RowIndex].FindControl("DropDownList3");
+            int tinhtrang=-1;
+            int.TryParse(dr.SelectedValue, out tinhtrang);
+            try
+            {
+                YCWebServiceBUS.updateRequest(ma, tinhtrang);
+                lbupdateResult.ForeColor = Color.Green;
+                lbupdateResult.Text = "Cập nhật thành công";
+            }
+            catch (Exception ex)
+            {
+                lbupdateResult.ForeColor = Color.Red;
+                lbupdateResult.Text = "Chưa cập nhật được";
+            }
         }
     }
 }

@@ -162,6 +162,13 @@
     <Compile Include="GUI\Consumers\Active.aspx.designer.cs">
       <DependentUpon>Active.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\AdvanceSearch.aspx.cs">
+      <DependentUpon>AdvanceSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\AdvanceSearch.aspx.designer.cs">
+      <DependentUpon>AdvanceSearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\CheckAccount.aspx.cs">
       <DependentUpon>CheckAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,6 +315,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\AddServiceTrans.ascx.designer.cs">
       <DependentUpon>AddServiceTrans.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\AdvanceSearch.ascx.cs">
+      <DependentUpon>AdvanceSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\AdvanceSearch.ascx.designer.cs">
+      <DependentUpon>AdvanceSearch.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\AdvertisementLeft.ascx.cs">
       <DependentUpon>AdvertisementLeft.ascx</DependentUpon>
@@ -578,6 +592,7 @@
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
     <Content Include="GUI\Admin\XemDanhSachTaiKhoan.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
+    <Content Include="GUI\Consumers\AdvanceSearch.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\QuanLyDonHang.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
@@ -599,6 +614,7 @@
     <Content Include="GUI\UserControls\AddProduct.ascx" />
     <Content Include="GUI\UserControls\AddServiceBank.ascx" />
     <Content Include="GUI\UserControls\AddServiceTrans.ascx" />
+    <Content Include="GUI\UserControls\AdvanceSearch.ascx" />
     <Content Include="GUI\UserControls\AdvertisementLeft.ascx" />
     <Content Include="GUI\UserControls\CapNhatYCWebservice.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
