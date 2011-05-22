@@ -8,7 +8,7 @@
 <%@ Register Src="../UserControls/NewProduce.ascx" TagName="NewProduce" TagPrefix="ucNPro" %>
 <%@ Register Src="../UserControls/AdvertisementLeft.ascx" TagName="AdvertisementLeft" TagPrefix="ucAdsLeft" %>
 
-<%@ Register src="../UserControls/wucCapNhapTinhTrangYeuCauWebservice.ascx" tagname="wucCapNhapTinhTrangYeuCauWebservice" tagprefix="uc1" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
@@ -26,8 +26,7 @@
     </div>
     
 <div class="primary">
-    <uc1:wucCapNhapTinhTrangYeuCauWebservice ID="wucCapNhapTinhTrangYeuCauWebservice1" 
-        runat="server" />
+   
 </div>
  <div class="second-secondary">
         

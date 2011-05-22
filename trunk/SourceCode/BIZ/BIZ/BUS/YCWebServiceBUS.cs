@@ -74,5 +74,27 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<YC_WEBSERVICE_DTO> GetRequest()
+        {
+            try
+            {
+                return YeuCauWebserviceDAO.GetRequest();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static void updateRequest(int ma, int tinhtrang)
+        {
+            try
+            {
+                YeuCauWebserviceDAO.updateRequest(ma, tinhtrang);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

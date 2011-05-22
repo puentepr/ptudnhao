@@ -68,5 +68,16 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<SAN_PHAM_DTO> AdvanceSearch(string tensp, int lsp, string chatluong, float minprice, float maxprice)
+        {
+            try
+            {
+                return ProductDAO.AdvanceSearch(tensp, lsp, chatluong, minprice, maxprice);
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

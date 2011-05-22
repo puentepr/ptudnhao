@@ -130,5 +130,61 @@ namespace BIZ.DAO
             string sql = "Update YCWEBSERVICE set LINKWS=N'http://ws4c.somee.com/MuaChungWebService.asmx' where MA=105";
             provider.executeNonQuery(sql);
         }
+        public static List<YC_WEBSERVICE_DTO> GetRequest()
+        {
+            provider.connect();
+            string sqlCommand = "sp_SelectRequest";
+            List<SqlParameter> list = new List<SqlParameter>();
+            try
+            {
+                List<YC_WEBSERVICE_DTO> ycs = new List<YC_WEBSERVICE_DTO>();
+                DataTable table = provider.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        YC_WEBSERVICE_DTO yc = new YC_WEBSERVICE_DTO();
+                        yc.Ma =int.Parse( row["MA"].ToString());
+                        yc.LinkWebSite = row["LINK"].ToString();
+                        yc.LinkWS = row["LINKWS"].ToString();
+                        yc.Email = row["EMAIL"].ToString();
+                        yc.Tendn = row["TENDN"].ToString();
+                        yc.TinhTrangYeuCau =int.Parse( row["TINHTRANGYC"].ToString());
+                        ycs.Add(yc);
+                    }
+                }
+                return ycs;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
+        public static void updateRequest(int ma, int tinhtrang)
+        {
+            provider.connect();
+            string sqlCommand = "sp_UpdateStatusRequest";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@ma", ma));
+            list.Add(new SqlParameter("@tinhtrang", tinhtrang));
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
+
     }
+    
 }
