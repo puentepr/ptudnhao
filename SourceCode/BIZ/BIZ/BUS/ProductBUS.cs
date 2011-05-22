@@ -79,5 +79,34 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+
+        #region Lấy danh sách sản phẩm theo tình trạng
+        public static List<SAN_PHAM_DTO> LayDanhSachSanPhamTheoTinhTrang(string tinhtrang)
+        {
+            try
+            {
+                return ProductDAO.LayDanhSachSanPhamTheoTinhTrang(tinhtrang);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Lấy thông tin sản phẩm theo mã sản phẩm
+        public static SAN_PHAM_DTO LayThongTinSanPhamTheoMaSP(string masp)
+        {
+            try
+            {
+                return ProductDAO.LayThongTinSanPhamTheoMaSP(masp);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
