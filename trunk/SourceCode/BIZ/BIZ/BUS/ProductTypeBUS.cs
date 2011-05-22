@@ -35,5 +35,19 @@ namespace BIZ.BUS
                 throw new Exception(ex.Message);
             }
         }
+
+        #region Lấy thông tin loại sản phẩm theo mã loại sp
+        public static LOAISP_DTO LayLoaiSanPhamTheoMaLoaiSP(int malsp)
+        {
+            try
+            {
+                return ProductTypeDAO.LayLoaiSanPhamTheoMaLoaiSP(malsp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }

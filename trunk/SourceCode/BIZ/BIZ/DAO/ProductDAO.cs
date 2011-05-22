@@ -245,5 +245,103 @@ namespace BIZ.DAO
                 ds.Add(sp);
             }
         }
+
+        #region Lấy danh sách sản phẩm theo tình trạng
+        public static List<SAN_PHAM_DTO> LayDanhSachSanPhamTheoTinhTrang(string tinhtrang)
+        {
+            helper.connect();
+            List<SAN_PHAM_DTO> ds = new List<SAN_PHAM_DTO>();
+
+            string sqlCommand = "sp_LayDanhSachSanPhamTheoTrangThai";
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            list.Add(new SqlParameter("@TINHTRANGSP", tinhtrang));
+            try
+            {
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                foreach (DataRow dr in table.Rows)
+                {
+                    SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
+                    proDTO.MaSanPham = dr["MASP"].ToString();
+                    proDTO.MaLoaiSanPham = int.Parse(dr["MALSP"].ToString());
+                    proDTO.TenSanPham = dr["TENSP"].ToString();
+                    proDTO.MoTaSanPham = dr["MOTA"].ToString();
+                    proDTO.HinhAnh = dr["HINHANH"].ToString();
+                    proDTO.ChatLuong = dr["CHATLUONG"].ToString();
+                    proDTO.Gia = float.Parse(dr["GIA"].ToString());
+                    proDTO.SoLuong = int.Parse(dr["SOLUONG"].ToString());
+                    proDTO.DonViTinh = dr["DVTINH"].ToString();
+                    proDTO.SoLuongConLai = int.Parse(dr["SLCONLAI"].ToString());
+                    proDTO.NgayDangSanPham = DateTime.Parse(dr["NGAYDSP"].ToString());
+                    proDTO.NgaySuaDoi = DateTime.Parse(dr["NGAYSD"].ToString());
+                    proDTO.TinhTrangSanPham = dr["TINHTRANGSP"].ToString();
+                    //proDTO.NgayXoa = DateTime.Parse(dr["NGAYXOA"].ToString());
+                    ds.Add(proDTO);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+            return ds;
+        }
+        #endregion
+
+        #region Lấy thông tin sản phẩm theo mã sản phẩm
+        public static SAN_PHAM_DTO LayThongTinSanPhamTheoMaSP(string masp)
+        {
+            helper.connect();
+
+            string sqlCommand = "sp_GetProductInfor";
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            list.Add(new SqlParameter("@masp", masp));
+
+            SqlParameter soluong = new SqlParameter("@soluong", SqlDbType.Int);
+            soluong.Direction = ParameterDirection.Output;
+
+            list.Add(soluong);
+            try
+            {
+                SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    DataRow row = table.Rows[0];
+                    //gán
+                    sp.MaSanPham = row["MASP"].ToString();
+                    sp.MaLoaiSanPham = int.Parse(row["MALSP"].ToString());
+                    sp.TenSanPham = row["TENSP"].ToString();
+                    sp.MoTaSanPham = row["MOTA"].ToString();
+                    sp.HinhAnh = "../../Content/images/products/" + row["HINHANH"].ToString();
+                    sp.ChatLuong = row["CHATLUONG"].ToString();
+                    sp.Gia = float.Parse(row["GIA"].ToString());
+                    //? SoLuong
+                    sp.SoLuong = float.Parse(row["SOLUONG"].ToString());
+                    sp.DonViTinh = row["DVTINH"].ToString();
+                    sp.SoLuongConLai = float.Parse(row["SLCONLAI"].ToString());
+                    sp.NgayDangSanPham = DateTime.Parse(row["NGAYDSP"].ToString());
+                    sp.NgaySuaDoi = DateTime.Parse(row["NGAYSD"].ToString());
+                    sp.TinhTrangSanPham = row["TINHTRANGSP"].ToString();
+                    //? NgayXoa
+                    //sp.NgayXoa = DateTime.Parse(row["NGAYXOA"].ToString());
+                    sp.SoNguoiMua = (int)soluong.Value;
+                }
+                return sp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        #endregion
     }
 }
