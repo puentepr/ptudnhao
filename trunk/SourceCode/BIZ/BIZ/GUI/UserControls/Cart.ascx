@@ -35,7 +35,7 @@
             <label>Tổng tiền :</label>
             <asp:Label ID="lbsumMoney" runat="server"></asp:Label><br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/GUI/Consumers/ViewDetailCart.aspx">Xem giỏ hàng</asp:HyperLink> | 
-            <asp:LinkButton ID="lbtPayment" runat="server">Thanh toán</asp:LinkButton>
+            <asp:LinkButton ID="lbtPayment" runat="server" onclick="lbtPayment_Click">Thanh toán</asp:LinkButton>
         </div>
     </div>
     <div class="bottom-box">

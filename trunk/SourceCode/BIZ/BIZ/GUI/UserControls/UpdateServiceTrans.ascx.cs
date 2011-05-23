@@ -14,7 +14,7 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             int isLogIn;
+            int isLogIn;
             int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
             if (isLogIn == 1)
             {

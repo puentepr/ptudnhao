@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using BIZ.DTO;
+using BIZ.BUS;
 
 namespace BIZ.GUI.UserControls
 {
@@ -89,6 +90,35 @@ namespace BIZ.GUI.UserControls
                 LoadCart();
                 
             }
+        }
+
+        protected void lbtPayment_Click(object sender, EventArgs e)
+        {
+            int isLogIn;
+            int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
+            if (isLogIn == 1)
+            {
+                string typeUser = Session["LoaiUser"].ToString();
+                if (typeUser == "Consumer")
+                {
+                    string code=MD5.encryptPassword(DateTime.Now.ToString());
+                    Session["code"]=code;
+                    string username=Session["User"].ToString();
+                    USERS_DTO user=UserBUS.LayThongTinUserTheoUserName(username);
+                    string body="<b>Hi "+username+"</b><br/>Doanh nghiệp bạn vừa yêu cầu đặt mua hàng, chúng tôi gởi bạn mã xác nhận để bạn tiếp tục quy trình mua <b style='color:red'>"+code+"</b>. Hãy copy nó và điền vào trang xác nhận của chúng tôi";
+                    Email.sendMail(user.EMail,body,"Xác nhận mua hàng");
+                    Response.Redirect("../Consumers/ValidateCode.aspx");
+                }
+                else
+               
+                    showMessage("Chỉ có tài khoản dành cho khách hàng mới thực hiện được chức năng này");
+            }
+            else
+                showMessage("Bạn cần đăng nhập mới thực hiện được chức năng này");
+        }
+        public void showMessage(string content)
+        {
+            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "<script language='javascript'>alert('" + content + "');</script>");
         }
     }
 }
