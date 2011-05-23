@@ -380,5 +380,37 @@ namespace BIZ.DAO
             }
         }
         #endregion
+
+        #region Xóa sản phẩm
+        public static int XoaSanPham(string maSP, string trangThai, DateTime ngayXoa )
+        {
+            helper.connect();
+            string sqlCommand = "sp_DeleteSanPham";
+            List<SqlParameter> list = new List<SqlParameter>();
+            
+            //gán
+            list.Add(new SqlParameter("@MASP",maSP));
+            list.Add(new SqlParameter("@NGAYXOA",ngayXoa));
+            list.Add(new SqlParameter("@TINHTRANGSP",trangThai));
+
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+
+            try
+            {
+                helper.executeNonQueryProcedure(sqlCommand, list);
+                return (int)result.Value;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        #endregion
     }
 }

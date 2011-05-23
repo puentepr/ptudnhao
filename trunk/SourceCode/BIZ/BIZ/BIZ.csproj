@@ -155,6 +155,13 @@
     <Compile Include="GUI\Admin\XemDanhSachTaiKhoan.aspx.designer.cs">
       <DependentUpon>XemDanhSachTaiKhoan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\XemDanhSachWebserviceBank.aspx.cs">
+      <DependentUpon>XemDanhSachWebserviceBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\XemDanhSachWebserviceBank.aspx.designer.cs">
+      <DependentUpon>XemDanhSachWebserviceBank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\Active.aspx.cs">
       <DependentUpon>Active.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -568,6 +575,13 @@
     <Compile Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx.designer.cs">
       <DependentUpon>XemDanhSachTaiKhoan.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\XemDanhSachWebserviceBank.ascx.cs">
+      <DependentUpon>XemDanhSachWebserviceBank.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemDanhSachWebserviceBank.ascx.designer.cs">
+      <DependentUpon>XemDanhSachWebserviceBank.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\XemThongTinTaiKhoan.ascx.cs">
       <DependentUpon>XemThongTinTaiKhoan.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -657,6 +671,7 @@
     <Content Include="GUI\Admin\UpdateCoupon.aspx" />
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
     <Content Include="GUI\Admin\XemDanhSachTaiKhoan.aspx" />
+    <Content Include="GUI\Admin\XemDanhSachWebserviceBank.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\AdvanceSearch.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
@@ -716,6 +731,7 @@
     <Content Include="GUI\UserControls\WebUserControl1.ascx" />
     <Content Include="GUI\UserControls\XemCapNhatSanPham.ascx" />
     <Content Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx" />
+    <Content Include="GUI\UserControls\XemDanhSachWebserviceBank.ascx" />
     <Content Include="GUI\UserControls\XemThongTinTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
   </ItemGroup>

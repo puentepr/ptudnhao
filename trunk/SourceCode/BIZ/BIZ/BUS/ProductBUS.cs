@@ -123,5 +123,20 @@ namespace BIZ.BUS
             }
         }
         #endregion
+
+        #region Xóa sản phẩm
+        public static int XoaSanPham(string maSP, string trangThai, DateTime ngayXoa)
+        {
+            try
+            {
+                return ProductDAO.XoaSanPham(maSP, trangThai, ngayXoa);
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+        #endregion
+
     }
 }
