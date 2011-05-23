@@ -343,5 +343,42 @@ namespace BIZ.DAO
             }
         }
         #endregion
+
+        #region Cập nhật thông tin Sản Phẩm
+        public static int CapNhatSanPham(SAN_PHAM_DTO sp)
+        {
+            helper.connect();
+            string sqlCommand = "sp_UpdateSanPham";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            list.Add(new SqlParameter("@MASP", sp.MaSanPham));
+            list.Add(new SqlParameter("@MOTA", sp.MoTaSanPham));
+            list.Add(new SqlParameter("@CHATLUONG", sp.ChatLuong));
+            list.Add(new SqlParameter("@GIA", sp.Gia));
+            list.Add(new SqlParameter("@SOLUONG", sp.SoLuong));
+            list.Add(new SqlParameter("@SLCONLAI", sp.SoLuongConLai));
+            list.Add(new SqlParameter("@DVTINH", sp.DonViTinh));
+            list.Add(new SqlParameter("@TINHTRANGSP", sp.TinhTrangSanPham));
+
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+
+            try
+            {
+                helper.executeNonQueryProcedure(sqlCommand, list);
+                return (int)result.Value;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        #endregion
     }
 }

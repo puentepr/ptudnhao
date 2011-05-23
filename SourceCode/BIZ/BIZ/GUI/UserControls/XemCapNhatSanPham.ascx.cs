@@ -13,6 +13,7 @@ using System.Xml.Linq;
 
 using BIZ.BUS;
 using BIZ.DTO;
+using System.Drawing;
 
 namespace BIZ.GUI.UserControls
 {
@@ -59,10 +60,74 @@ namespace BIZ.GUI.UserControls
                     }
                     
                     //chưa xử lý ngày xóa
-                    lbSoNguoiMua.Text = sp.SoNguoiMua.ToString();                    
+
+                    txtSoNguoiMua.Text = sp.SoNguoiMua.ToString();                    
 
                 }
             }
+        }
+
+        protected void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
+            //gán
+            sp.TenSanPham = lbTenSP.Text;
+            int soNguoiMua = int.Parse(txtSoNguoiMua.Text);
+            
+            sp.SoNguoiMua = soNguoiMua;
+            sp.Gia = float.Parse(txtGiaBan.Text);
+            sp.DonViTinh = txtDonVi.Text;
+            sp.ChatLuong = txtChatLuong.Text;
+            
+            sp.MaSanPham= lbMaSP.Text;
+            sp.MoTaSanPham=txtareMota.Value;
+            
+            //chưa xử lý hình ảnh
+            //sp.HinhAnh;                       
+            
+            //begin xử lý số lượng còn lại
+            float soLuongMoi = float.Parse(txtSoLuong.Text);
+            float slConLai = float.Parse(lbSoLuongConLai.Text);                       
+            sp.SoLuong = soLuongMoi;
+            sp.SoLuongConLai = soLuongMoi - soNguoiMua;
+            //end xử lý số lượng còn lại
+           
+            //ngày sửa đổi : lấy ngày hiện tại
+            sp.NgaySuaDoi= DateTime.Today;
+
+            sp.TinhTrangSanPham = radiobtnTinhTrang.SelectedValue.ToString();
+            
+            try
+            {
+                //gọi hàm cập nhật sản phẩm
+                int result = ProductBUS.CapNhatSanPham(sp);
+                if (result == 1)
+                {
+                    //show thông báo
+                    lbResult.ForeColor = Color.Green;
+                    lbResult.Text = "Đã cập nhật thành công";
+                    //quay trở về trang danh sách sản phẩm
+                    Response.Redirect("ListProduct.aspx");
+                }
+                else
+                {
+                    
+                    lbResult.ForeColor = Color.Red;
+                    lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
+                }
+            }
+            catch (Exception ex)
+            {                
+                lbResult.ForeColor = Color.Red;
+                lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
+                throw ex;
+                throw ex;
+            }
+        }
+
+        protected void btnXoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
