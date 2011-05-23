@@ -35,6 +35,19 @@ namespace BIZ.BUS
                 throw ex;
             }
         }
+
+        public static List<SAN_PHAM_DTO> FastSearchingByKeyWord(string keyWord)
+        {
+            try
+            {
+                return ProductDAO.FastSearchingByKeyWord(keyWord);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static SAN_PHAM_DTO GetProductInfor(string masp)
         {
             try
