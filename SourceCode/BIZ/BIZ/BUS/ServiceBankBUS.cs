@@ -37,7 +37,23 @@ namespace BIZ.BUS
             }
         }
         #endregion
+        public static List<SERVICE_BANK_DTO> LayDanhSachServiceBankAndEdit(int trangthai)
+        {
+            try
+            {
+                List<SERVICE_BANK_DTO>banks= ServiceBankDAO.LayDanhSachServiceBankTheoTrangThai(trangthai);
+                foreach (SERVICE_BANK_DTO bank in banks)
+                {
+                    bank.MaBank += "+" + bank.Stk;
+                }
+                return banks;
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
         #region Lấy danh sách ServiceBank đang sử dung
         public static List<SERVICE_BANK_DTO> LayDanhSachServiceBank(int trangthai)
         {

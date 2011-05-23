@@ -106,6 +106,7 @@ namespace BIZ.DAO
                     bank.AnhBank = "../../Content/images/banks/" + dr["ANHBANK"].ToString();
                     bank.TinhTrangWS = int.Parse(dr["TINHTRANGWS"].ToString());
                     bank.Website = dr["WEBSITE"].ToString();
+                    bank.Stk = dr["STK"].ToString();
                     ds.Add(bank);
                 }
             }

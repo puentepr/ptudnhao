@@ -63,6 +63,13 @@ namespace BIZ.DTO
             get { return _website; }
             set { _website = value; }
         }
+        private string _stk;
+
+        public string Stk
+        {
+            get { return _stk; }
+            set { _stk = value; }
+        }
         public SERVICE_BANK_DTO()
         {
             this._maBank = "";

@@ -32,5 +32,25 @@ namespace BIZ.Properties {
                 return ((string)(this["BIZ_MuaChung_MuaChungWebService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://msb.somee.com/WS/KhachHangWS.asmx")]
+        public string BIZ_NganHang_KhachHangWS {
+            get {
+                return ((string)(this["BIZ_NganHang_KhachHangWS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://fedexgroup4a.somee.com/FedexWebService.asmx")]
+        public string BIZ_VanChuyen_FedexWebService1 {
+            get {
+                return ((string)(this["BIZ_VanChuyen_FedexWebService1"]));
+            }
+        }
     }
 }
