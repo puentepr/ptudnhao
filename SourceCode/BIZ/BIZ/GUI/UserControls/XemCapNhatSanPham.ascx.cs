@@ -102,16 +102,12 @@ namespace BIZ.GUI.UserControls
                 //gọi hàm cập nhật sản phẩm
                 int result = ProductBUS.CapNhatSanPham(sp);
                 if (result == 1)
-                {
-                    //show thông báo
-                    lbResult.ForeColor = Color.Green;
-                    lbResult.Text = "Đã cập nhật thành công";
-                    //quay trở về trang danh sách sản phẩm
+                {                 
+                    //cập nhật thành công thì quay trở về trang danh sách sản phẩm
                     Response.Redirect("ListProduct.aspx");
                 }
                 else
-                {
-                    
+                {                    
                     lbResult.ForeColor = Color.Red;
                     lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
                 }
@@ -120,8 +116,7 @@ namespace BIZ.GUI.UserControls
             {                
                 lbResult.ForeColor = Color.Red;
                 lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
-                throw ex;
-                throw ex;
+                throw ex;                
             }
         }
 

@@ -23,7 +23,8 @@
                     Số người mua :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtSoNguoiMua" runat="server" Width="120px"></asp:TextBox>                   
+                    <asp:TextBox ID="txtSoNguoiMua" runat="server" Width="120px" 
+                        BackColor="#F0F0F0" ForeColor="#3333FF" ReadOnly="True"></asp:TextBox>                   
                 </td>
             </tr>
             <tr>
@@ -57,7 +58,7 @@
                    Số lượng còn lại : 
                 </td>
                 <td>
-                    <asp:Label ID="lbSoLuongConLai" runat ="server"></asp:Label>
+                    <asp:Label ID="lbSoLuongConLai" runat ="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>
                         
@@ -71,7 +72,7 @@
                     Mã sản phẩm :
                 </td>
                 <td>
-                    <asp:Label ID="lbMaSP" runat="server"></asp:Label>
+                    <asp:Label ID="lbMaSP" runat="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -79,7 +80,7 @@
                     Loại sản phẩm : 
                 </td>
                 <td>
-                    <asp:Label ID="lbMaLSP" runat ="server"></asp:Label>
+                    <asp:Label ID="lbMaLSP" runat ="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -125,7 +126,7 @@
                    Ngày đăng sản phẩm : 
                 </td>
                 <td>
-                    <asp:Label ID="lbNgayDangSP" runat ="server"></asp:Label>
+                    <asp:Label ID="lbNgayDangSP" runat ="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -133,7 +134,7 @@
                    Ngày sửa đổi : 
                 </td>
                 <td>
-                    <asp:Label ID="lbNgaySuaDoi" runat="server"></asp:Label>
+                    <asp:Label ID="lbNgaySuaDoi" runat="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>           
             <tr>

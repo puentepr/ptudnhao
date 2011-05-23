@@ -44,5 +44,27 @@ namespace BIZ.GUI.UserControls
             string masp = ((LinkButton)sender).CommandArgument;
             Response.Redirect("../Manager/ViewDetailProduct.aspx?masp=" + masp);
         }
+
+        protected void gvXemDSSanPham_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            try
+            {
+                if (e.Row.RowType == DataControlRowType.DataRow)
+                {
+                    e.Row.Attributes.Add("style", "background-color: #FFFFFF; color: black;");
+                    e.Row.Attributes.Add("onmouseover", "style.backgroundColor='#EFF3FB'");
+                    e.Row.Attributes.Add("onmouseout", "style.backgroundColor='#FFFFFF'");
+                }
+            }
+            catch { }
+
+        }
+
+        protected void gvXemDSSanPham_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvXemDSSanPham.PageIndex = e.NewPageIndex;
+            dropTinhtrang_SelectedIndexChanged(null, null);
+
+        }
     }
 }
