@@ -267,12 +267,26 @@
     <Compile Include="GUI\Manager\ListCoupon.aspx.designer.cs">
       <DependentUpon>ListCoupon.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Manager\ListProduct.aspx.cs">
+      <DependentUpon>ListProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\ListProduct.aspx.designer.cs">
+      <DependentUpon>ListProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Manager\ViewDetailCoupon.aspx.cs">
       <DependentUpon>ViewDetailCoupon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\Manager\ViewDetailCoupon.aspx.designer.cs">
       <DependentUpon>ViewDetailCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Manager\ViewDetailProduct.aspx.cs">
+      <DependentUpon>ViewDetailProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Manager\ViewDetailProduct.aspx.designer.cs">
+      <DependentUpon>ViewDetailProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Manager\XetDuyetYeuCauWS.aspx.cs">
       <DependentUpon>XetDuyetYeuCauWS.aspx</DependentUpon>
@@ -414,6 +428,13 @@
     <Compile Include="GUI\UserControls\ListCoupon.ascx.designer.cs">
       <DependentUpon>ListCoupon.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\ListProduct.ascx.cs">
+      <DependentUpon>ListProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ListProduct.ascx.designer.cs">
+      <DependentUpon>ListProduct.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -533,6 +554,13 @@
     <Compile Include="GUI\UserControls\WebUserControl1.ascx.designer.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\XemCapNhatSanPham.ascx.cs">
+      <DependentUpon>XemCapNhatSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\XemCapNhatSanPham.ascx.designer.cs">
+      <DependentUpon>XemCapNhatSanPham.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx.cs">
       <DependentUpon>XemDanhSachTaiKhoan.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -645,7 +673,9 @@
     <Content Include="GUI\Manager\CapNhatTinhTrangWebService.aspx" />
     <Content Include="GUI\Manager\CreateCoupon.aspx" />
     <Content Include="GUI\Manager\ListCoupon.aspx" />
+    <Content Include="GUI\Manager\ListProduct.aspx" />
     <Content Include="GUI\Manager\ViewDetailCoupon.aspx" />
+    <Content Include="GUI\Manager\ViewDetailProduct.aspx" />
     <Content Include="GUI\Manager\XetDuyetYeuCauWS.aspx" />
     <Content Include="GUI\Shared\Default.aspx" />
     <Content Include="GUI\Shared\MasterPage.Master" />
@@ -666,6 +696,7 @@
     <Content Include="GUI\UserControls\FastSearch.ascx" />
     <Content Include="GUI\UserControls\Footer.ascx" />
     <Content Include="GUI\UserControls\ListCoupon.ascx" />
+    <Content Include="GUI\UserControls\ListProduct.ascx" />
     <Content Include="GUI\UserControls\Login.ascx" />
     <Content Include="GUI\UserControls\Logo.ascx" />
     <Content Include="GUI\UserControls\Menu.ascx" />
@@ -683,6 +714,7 @@
     <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\WebUserControl1.ascx" />
+    <Content Include="GUI\UserControls\XemCapNhatSanPham.ascx" />
     <Content Include="GUI\UserControls\XemDanhSachTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\XemThongTinTaiKhoan.ascx" />
     <Content Include="GUI\UserControls\YeuCauSuDungWebService.ascx" />
@@ -774,9 +806,6 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
