@@ -45,8 +45,8 @@ namespace BIZ.GUI.UserControls
                     txtSoLuong.Text = sp.SoLuong.ToString();
                     txtDonVi.Text = sp.DonViTinh;
                     lbSoLuongConLai.Text = sp.SoLuongConLai.ToString();
-                    lbNgayDangSP.Text = sp.NgayDangSanPham.ToString();
-                    lbNgaySuaDoi.Text = sp.NgaySuaDoi.ToString();
+                    lbNgayDangSP.Text = sp.NgayDangSanPham.ToString("dd/MM/yyyy");
+                    lbNgaySuaDoi.Text = sp.NgaySuaDoi.ToString("dd/MM/yyyy");
                     
                     //xử lý tình trạng
                     radiobtnTinhTrang.SelectedValue = sp.TinhTrangSanPham;
@@ -121,8 +121,35 @@ namespace BIZ.GUI.UserControls
         }
 
         protected void btnXoa_Click(object sender, EventArgs e)
-        {
+        {            
+            string maSP = lbMaSP.Text;
+            //-1 : xóa
+            string tinhTrang = "-1";
+            DateTime ngayXoa = DateTime.Today;
 
+            try
+            {
+                //gọi hàm xóa sản phẩm
+                int result = ProductBUS.XoaSanPham(maSP,tinhTrang,ngayXoa);
+                if (result == 1)
+                {
+                    //Xóa thành công thì quay trở về trang danh sách sản phẩm
+                    Response.Redirect("ListProduct.aspx");  
+                }
+                else
+                {
+                    //show thông báo                 
+                    lbResult.ForeColor = Color.Red;
+                    lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
+                }
+            }
+            catch (Exception ex)
+            {
+                //show thông báo                
+                lbResult.ForeColor = Color.Red;
+                lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
+                throw ex;
+            }
         }
     }
 }
