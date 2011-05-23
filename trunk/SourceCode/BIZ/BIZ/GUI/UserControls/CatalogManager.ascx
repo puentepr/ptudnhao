@@ -56,6 +56,11 @@
                     <img src="../../App_Themes/Blue/dotlist.gif" />Thêm sản phẩm
                     </a>
             </li>
+            <li>
+                <a href ="../Manager/ListProduct.aspx">
+                <img src="../../App_Themes/Blue/dotlist.gif" />Xem, cập nhật sản phẩm
+                </a>
+            </li>
            
         </ul>
     </div>

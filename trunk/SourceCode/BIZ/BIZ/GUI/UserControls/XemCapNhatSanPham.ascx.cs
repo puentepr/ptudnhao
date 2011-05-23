@@ -21,56 +21,76 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            int isLogIn;
+            int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
+            if (isLogIn == 1)
             {
-                //lấy mã sản phẩm
-                string masp= Request.QueryString["masp"];
-                if (masp!="")
+                string typeUser = Session["LoaiUser"].ToString();
+                if (typeUser == "Manager")
                 {
-                    SAN_PHAM_DTO sp = ProductBUS.LayThongTinSanPhamTheoMaSP(masp);
-                    lbMaSP.Text= sp.MaSanPham;
-                    //xử lý mã loại sp
-                    //lbMaLSP.Text=sp.MaLoaiSanPham.ToString();
-                    LOAISP_DTO lsp = ProductTypeBUS.LayLoaiSanPhamTheoMaLoaiSP(sp.MaLoaiSanPham);
-                    lbMaLSP.Text = lsp.TenLoaiSanPham;
-
-                    lbTenSP.Text = sp.TenSanPham;
-                    txtareMota.Value = sp.MoTaSanPham;
-                    
-                    //xử lý hình ảnh
-                    ImageSP.ImageUrl = sp.HinhAnh;
-
-                    txtChatLuong.Text = sp.ChatLuong;
-                    txtGiaBan.Text = sp.Gia.ToString();
-                    txtSoLuong.Text = sp.SoLuong.ToString();
-                    txtDonVi.Text = sp.DonViTinh;
-                    lbSoLuongConLai.Text = sp.SoLuongConLai.ToString();
-                    lbNgayDangSP.Text = sp.NgayDangSanPham.ToString("dd/MM/yyyy");
-                    lbNgaySuaDoi.Text = sp.NgaySuaDoi.ToString("dd/MM/yyyy");
-                    
-                    //xử lý tình trạng
-                    radiobtnTinhTrang.SelectedValue = sp.TinhTrangSanPham;
-                    if (radiobtnTinhTrang.SelectedValue == "0")
+                    #region hiển thị thông tin sản phẩm
+                    if (!IsPostBack)
                     {
-                        radiobtnTinhTrang.Items[0].Enabled = true;
-                    }
-                    else
-                    {
-                        radiobtnTinhTrang.Items[1].Enabled = true;
-                    }
-                    
-                    //chưa xử lý ngày xóa
+                        //lấy mã sản phẩm
+                        string masp = Request.QueryString["masp"];
+                        if (masp != "")
+                        {
+                            SAN_PHAM_DTO sp = ProductBUS.LayThongTinSanPhamTheoMaSP(masp);
 
-                    txtSoNguoiMua.Text = sp.SoNguoiMua.ToString();                    
+                           
+                            lbMaSP.Text = sp.MaSanPham;
+                            //xử lý mã loại sp
+                            //lbMaLSP.Text=sp.MaLoaiSanPham.ToString();
+                            LOAISP_DTO lsp = ProductTypeBUS.LayLoaiSanPhamTheoMaLoaiSP(sp.MaLoaiSanPham);
+                            lbMaLSP.Text = lsp.TenLoaiSanPham;
 
+                            lbTenSP.Text = sp.TenSanPham;
+                            txtareMota.Value = sp.MoTaSanPham;
+
+                            //xử lý hình ảnh
+                            ImageSP.ImageUrl = sp.HinhAnh;
+
+                            txtChatLuong.Text = sp.ChatLuong;
+                            txtGiaBan.Text = sp.Gia.ToString();
+                            txtSoLuong.Text = sp.SoLuong.ToString();
+                            txtDonVi.Text = sp.DonViTinh;
+                            lbSoLuongConLai.Text = sp.SoLuongConLai.ToString();
+                            lbNgayDangSP.Text = sp.NgayDangSanPham.ToString("dd/MM/yyyy");
+                            lbNgaySuaDoi.Text = sp.NgaySuaDoi.ToString("dd/MM/yyyy");
+
+                            //xử lý tình trạng
+                            radiobtnTinhTrang.SelectedValue = sp.TinhTrangSanPham;
+                            if (radiobtnTinhTrang.SelectedValue == "0")
+                            {
+                                radiobtnTinhTrang.Items[0].Enabled = true;
+                            }
+                            else
+                            {
+                                radiobtnTinhTrang.Items[1].Enabled = true;
+                            }
+
+                            //không hiển thị ngày xóa
+
+                            txtSoNguoiMua.Text = sp.SoNguoiMua.ToString();                         
+
+                        }
+                    }
+                    #endregion
                 }
+                else
+                    Response.Redirect("../Shared/Default.aspx");
             }
+            else
+                Response.Redirect("../Shared/Default.aspx");
+            
         }
 
         protected void btnCapNhat_Click(object sender, EventArgs e)
         {
             SAN_PHAM_DTO sp = new SAN_PHAM_DTO();
-            //gán
+
+            #region lấy thông thay đổi
+            
             sp.TenSanPham = lbTenSP.Text;
             int soNguoiMua = int.Parse(txtSoNguoiMua.Text);
             
@@ -96,7 +116,7 @@ namespace BIZ.GUI.UserControls
             sp.NgaySuaDoi= DateTime.Today;
 
             sp.TinhTrangSanPham = radiobtnTinhTrang.SelectedValue.ToString();
-            
+            #endregion
             try
             {
                 //gọi hàm cập nhật sản phẩm
@@ -137,15 +157,13 @@ namespace BIZ.GUI.UserControls
                     Response.Redirect("ListProduct.aspx");  
                 }
                 else
-                {
-                    //show thông báo                 
+                {                    
                     lbResult.ForeColor = Color.Red;
                     lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
                 }
             }
             catch (Exception ex)
-            {
-                //show thông báo                
+            {                
                 lbResult.ForeColor = Color.Red;
                 lbResult.Text = "Đã có lỗi , xin vui lòng thử lại sau";
                 throw ex;
