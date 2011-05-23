@@ -108,5 +108,20 @@ namespace BIZ.BUS
             }
         }
         #endregion
+
+        #region Cập nhật thông tin Sản Phẩm
+        public static int CapNhatSanPham(SAN_PHAM_DTO sp)
+        {
+            try
+            {
+                return ProductDAO.CapNhatSanPham(sp);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+        #endregion
     }
 }

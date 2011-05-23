@@ -10,6 +10,11 @@
         <table style ="border-style:none; border-width:thin; width:100%">
             <tr>
                 <td colspan ="2" style="text-align:center; width:100%">
+                    <asp:Label ID="lbResult" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan ="2" style="text-align:center; width:100%">
                     <asp:Label ID="lbTenSP" runat ="server" ForeColor="#3333FF"></asp:Label>
                 </td>
             </tr>
@@ -18,7 +23,7 @@
                     Số người mua :
                 </td>
                 <td>
-                    <asp:Label ID="lbSoNguoiMua" runat="server" Text=""></asp:Label>
+                    <asp:TextBox ID="txtSoNguoiMua" runat="server" Width="120px"></asp:TextBox>                   
                 </td>
             </tr>
             <tr>
@@ -26,15 +31,17 @@
                    Giá bán : 
                 </td>
                 <td>
-                    <asp:TextBox ID="txtGiaBan" runat="server" Width="135px"></asp:TextBox>
+                    <asp:TextBox ID="txtGiaBan" runat="server" Width="120px"></asp:TextBox>                   
+                    <asp:Label ID="Label1" runat="server" Text="VNĐ" Font-Size="8pt"></asp:Label>                   
                 </td>
+                
             </tr>
             <tr>
                 <td style="width:50%; text-align: right;">
                    Đơn vị tính : 
                 </td>
                 <td>
-                    <asp:TextBox ID="txtDonVi" runat="server" Width="135px"></asp:TextBox>
+                    <asp:TextBox ID="txtDonVi" runat="server" Width="120px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -42,7 +49,7 @@
                    Chất lượng : 
                 </td>
                 <td>
-                    <asp:TextBox ID="txtChatLuong" runat="server" Width="135px"></asp:TextBox>
+                    <asp:TextBox ID="txtChatLuong" runat="server" Width="120px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -83,6 +90,17 @@
                     <asp:TextBox ID="txtSoLuong" runat="server" Width="250px"></asp:TextBox>
                 </td>
             </tr>
+            
+            <tr>
+                <td style="width:35%; text-align: right;">
+                    &nbsp;</td>
+                <td>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" 
+                        ControlToCompare="txtSoNguoiMua" ControlToValidate="txtSoLuong" 
+                        ErrorMessage="Số lượng phải lớn hơn số người mua" Operator="GreaterThan"></asp:CompareValidator>
+                </td>
+            </tr>
+            
             <tr>
                 <td style="width:35%; text-align: right;">
                    Tình trạng : 
@@ -122,8 +140,9 @@
                 <td style="width:35%; text-align: right;">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="btnCapNhat" runat="server" Text="Cập nhật" />
-                    <asp:Button ID="btnXoa" runat="server" Text="Xóa" />
+                    <asp:Button ID="btnCapNhat" runat="server" Text="Cập nhật" 
+                        onclick="btnCapNhat_Click" />
+                    <asp:Button ID="btnXoa" runat="server" Text="Xóa" onclick="btnXoa_Click" />
                 </td>
             </tr>
         </table>

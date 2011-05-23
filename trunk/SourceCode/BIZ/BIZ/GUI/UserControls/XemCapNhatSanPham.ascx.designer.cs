@@ -23,6 +23,15 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.Image ImageSP;
         
         /// <summary>
+        /// lbResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbResult;
+        
+        /// <summary>
         /// lbTenSP control.
         /// </summary>
         /// <remarks>
@@ -32,13 +41,13 @@ namespace BIZ.GUI.UserControls {
         protected global::System.Web.UI.WebControls.Label lbTenSP;
         
         /// <summary>
-        /// lbSoNguoiMua control.
+        /// txtSoNguoiMua control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSoNguoiMua;
+        protected global::System.Web.UI.WebControls.TextBox txtSoNguoiMua;
         
         /// <summary>
         /// txtGiaBan control.
@@ -48,6 +57,15 @@ namespace BIZ.GUI.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGiaBan;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// txtDonVi control.
@@ -102,6 +120,15 @@ namespace BIZ.GUI.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// radiobtnTinhTrang control.
