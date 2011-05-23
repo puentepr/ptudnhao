@@ -13,20 +13,23 @@
     
     <asp:GridView ID="gvXemDSSanPham" runat="server" AllowPaging="True" 
         AutoGenerateColumns="False" 
-        CellPadding="4" ForeColor="#333333" GridLines="None">
+        CellPadding="4" ForeColor="#333333" GridLines="None" 
+        onrowcreated="gvXemDSSanPham_RowCreated" 
+        onpageindexchanging="gvXemDSSanPham_PageIndexChanging">
         <PagerSettings Mode="NextPrevious" NextPageText="Next" 
             PreviousPageText="Previous" />
         <RowStyle BackColor="#EFF3FB" />
         <Columns>
             <asp:BoundField DataField="MaSanPham" HeaderText="Mã sản phẩm" />
             <asp:BoundField DataField="TenSanPham" HeaderText="Tên sản phẩm" />
+            <asp:BoundField DataField="Gia" HeaderText="Giá bán" />
             <asp:BoundField DataField="SoLuong" HeaderText="Số lượng" />
             <asp:BoundField DataField="SoLuongConLai" HeaderText="Số lượng còn lại" />
             <asp:TemplateField HeaderText="Xem chi tiết">
                 <ItemTemplate>
                     <asp:HyperLink ID="hyperlinkXemChiTiet" runat="server" 
-                        NavigateUrl='<%# "~/GUI/Manager/ViewDetailProduct.aspx?masp=" + Eval("MaSanPham")%>' 
-                        Target="_blank">Xem chi 
+                        NavigateUrl='<%# "~/GUI/Manager/ViewDetailProduct.aspx?masp=" + Eval("MaSanPham") %>' 
+                        Target="_parent">Xem chi 
                     tiết</asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
