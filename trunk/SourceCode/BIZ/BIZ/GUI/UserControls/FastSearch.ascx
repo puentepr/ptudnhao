@@ -2,5 +2,6 @@
 <div class="search">
     <label>Từ khóa</label>
     <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
-    <asp:Button ID="btnSearch" runat="server" Text="Tìm" />
+    <asp:Button ID="btnSearch" runat="server" Text="Tìm" 
+        onclick="btnSearch_Click" />
 </div>

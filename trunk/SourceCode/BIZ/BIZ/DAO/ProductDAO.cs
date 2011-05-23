@@ -45,6 +45,47 @@ namespace BIZ.DAO
             }
         }
 
+        public static List<SAN_PHAM_DTO> FastSearchingByKeyWord(string keyWord)
+        {
+            helper.connect();
+            string sqlCommand = "sp_TimKiemCoBan";
+            try
+            {
+                List<SqlParameter> ds = new List<SqlParameter>();
+                ds.Add(new SqlParameter("@keyWord", keyWord));
+                DataTable dt = new DataTable();
+                dt = helper.executeQueryDataTableProcedure(sqlCommand, ds);
+                List<SAN_PHAM_DTO> dsproDTO = new List<SAN_PHAM_DTO>();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
+                    //COUPON_DTO couDTO = new COUPON_DTO();
+                    //couDTO.MaCoupon = dr["MACP"].ToString();
+                    proDTO.MaSanPham = dr["MASP"].ToString();
+                    proDTO.TenSanPham = dr["TENSP"].ToString();
+                    proDTO.MoTaSanPham = dr["MOTA"].ToString();
+                    proDTO.ChatLuong = dr["CHATLUONG"].ToString();
+                    float gia = 0;
+                    float.TryParse(dr["GIA"].ToString(), out gia);
+                    proDTO.Gia = gia;
+                    proDTO.HinhAnh = "../../Content/images/products/" + dr["HINHANH"].ToString();
+                    float soLuongConLai = 0;
+                    float.TryParse(dr["SLCONLAI"].ToString(), out soLuongConLai);
+                    proDTO.SoLuongConLai = soLuongConLai;
+                    dsproDTO.Add(proDTO);
+                }
+                return dsproDTO;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+
         public static List<SAN_PHAM_DTO> SelectingAllProducts()
         {
             helper.connect();
