@@ -11,6 +11,9 @@
 
 <%@ Register src="../UserControls/XemThongTinTaiKhoan.ascx" tagname="XemThongTinTaiKhoan" tagprefix="uc2" %>
 
+<%@ Register src="../UserControls/DanhSachDonHang.ascx" tagname="DanhSachDonHang" tagprefix="uc3" %>
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc4" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Quản lý đơn hàng của khách
 </asp:Content>
@@ -19,7 +22,10 @@ Quản lý đơn hàng của khách
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 <div class="first-secondary">
         
+        
+        
         <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
+        <uc4:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         
         <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
@@ -28,9 +34,11 @@ Quản lý đơn hàng của khách
     </div>
     <div class="primary">
 
-        Hi, bạn đang ở trang dành cho khách hàng
+       
 
-        <a href="../Consumers/XemThongTinTaiKhoan.aspx" >Xem thông tin tài khoản</a></li>
+        <uc3:DanhSachDonHang ID="DanhSachDonHang1" runat="server" />
+
+       
 
     </div>
     <div class="second-secondary">

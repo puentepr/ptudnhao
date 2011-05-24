@@ -42,5 +42,17 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<DON_HANG_DTO> GetAllOrderKH(string username)
+        {
+            try
+            {
+                return DonHangDAO.GetAllOrderKH(username);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+        }
     }
 }

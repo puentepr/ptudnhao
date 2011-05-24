@@ -10,6 +10,8 @@
 
 <%@ Register src="../UserControls/ViewDetailCart.ascx" tagname="ViewDetailCart" tagprefix="uc9" %>
 
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc10" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Xem giỏ hàng
 </asp:Content>
@@ -19,13 +21,15 @@ Xem giỏ hàng
     <div class="first-secondary">
         <!-- begin catalog-box -->
          
+        
+         
          <uc1:Catalogs ID="Catalogs1" runat="server" />
+          <uc10:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         <!-- end catalog-box -->
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         <!-- begin advleft-box -->
         
-        <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
-        <!-- end advleft-box -->
+       
         
     </div>
     <!-- end first-secondary -->
@@ -47,5 +51,7 @@ Xem giỏ hàng
         
         <uc3:Cart ID="Cart1" runat="server" />
         <uc8:Payment ID="Payment1" runat="server" />
+         <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
+        <!-- end advleft-box -->
     </div>
 </asp:Content>

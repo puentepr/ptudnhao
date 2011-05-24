@@ -87,6 +87,44 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
+        public static List<DON_HANG_DTO> GetAllOrderKH(string username)
+        {
+            provider.connect();
+            string sqlCommand = "sp_SelectOrderKH";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@username", username));
+            try
+            {
+                List<DON_HANG_DTO>orders=new List<DON_HANG_DTO>();
+                DataTable table = provider.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    foreach(DataRow row in table.Rows)
+                    {
+                        DON_HANG_DTO dh=new DON_HANG_DTO();
+                        dh.MaDonHang=int.Parse(row["MADH"].ToString());
+                        dh.NgayDat=DateTime.Parse( row["NGAYDAT"].ToString());
+                        dh.TongTien=float.Parse(row["TONGTIEN"].ToString());
+                        dh.TinhTrangDonHang=row["TINHTRANGDH"].ToString();
+                        dh.DiaChiNhan=row["DIACHINHAN"].ToString();
+                        dh.DonViTienTe=row["DVTIENTE"].ToString();
+                        dh.LinkVC=row["URL"].ToString();
+                        dh.MaPackage=int.Parse(row["MAPK"].ToString());
+                        orders.Add(dh);
+                    }
+                  
+                }
+                return orders;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
          
     }
 }

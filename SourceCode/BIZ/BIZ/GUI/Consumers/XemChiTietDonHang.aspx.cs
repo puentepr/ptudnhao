@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace BIZ.GUI.Consumers
 {
-    public partial class Payment : BasePage
+    public partial class XemChiTietDonHang : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-        protected override void OnLoadComplete(EventArgs e)
-        {
-            base.OnLoadComplete(e);
-            Cart1.LoadCart();
         }
     }
 }

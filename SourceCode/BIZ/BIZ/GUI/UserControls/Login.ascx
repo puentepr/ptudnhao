@@ -22,7 +22,7 @@
             </li>
             <li><label id="lblPassWord" class="title-box" runat="server">PassWord:</label></li>
             <li style="padding-bottom:2px;">
-                <asp:TextBox ID="txtPassWord" TextMode="Password" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassWord" TextMode="Password"  runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="txtUserName"
                     ID="RequiredFieldValidator2" ValidationGroup="login" runat="server" 
                     ErrorMessage="pass invalid" Display="Dynamic"></asp:RequiredFieldValidator>

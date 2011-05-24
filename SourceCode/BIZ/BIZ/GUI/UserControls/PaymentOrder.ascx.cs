@@ -20,7 +20,7 @@ namespace BIZ.GUI.UserControls
             if (isLogIn == 1)
             {
                 string typeUser = Session["LoaiUser"].ToString();
-                if (/*typeUser == "Consumer" && */Request.QueryString["payment"]!=null)
+                if (typeUser == "Consumer" && Request.QueryString["payment"]!=null)
                 {
                     if (!IsPostBack)
                     {
@@ -139,6 +139,20 @@ namespace BIZ.GUI.UserControls
                             try
                             {
                                 DonHangBUS.InsertPackage(pac, madh);
+                                foreach (GioHang cart in carts)
+                                {
+                                    //CHI_TIET_DON_HANG_DTO ct = new CHI_TIET_DON_HANG_DTO();
+                                   
+                                    try
+                                    {
+                                        ProductBUS.UpdateSLProduct(cart.MaSanPham,cart.SoLuong);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        continue;
+                                    }
+                                }
+                                Session["Cart"] = null;
                                 lbresult.ForeColor = Color.Green;
                                 lbresult.Text = "Quá trình mua đã thành công";
                             }

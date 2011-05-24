@@ -92,7 +92,17 @@ namespace BIZ.BUS
                 throw e;
             }
         }
-
+        public static void UpdateSLProduct(string masp, float soluong)
+        {
+            try
+            {
+                ProductDAO.UpdateSLProduct(masp, soluong);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         #region Lấy danh sách sản phẩm theo tình trạng
         public static List<SAN_PHAM_DTO> LayDanhSachSanPhamTheoTinhTrang(string tinhtrang)
         {

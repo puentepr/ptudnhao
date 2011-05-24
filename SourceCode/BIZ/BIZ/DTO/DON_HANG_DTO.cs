@@ -104,6 +104,29 @@ namespace BIZ.DTO
             this._donViTienTe = "";
             this._maXacNhan = "";
             this._ngayHetHan = DateTime.MaxValue;
+            _title = "Xem chi tiết";
+            _titleVC = "Xem vận chuyển";
+        }
+        private string _linkVC;
+
+        public string LinkVC
+        {
+            get { return _linkVC; }
+            set { _linkVC = value; }
+        }
+        private string _title;
+
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+        private string _titleVC;
+
+        public string TitleVC
+        {
+            get { return _titleVC; }
+            set { _titleVC = value; }
         }
         public DON_HANG_DTO(int maDH, int maPK, string user, DateTime ngayDat, DateTime ngayGiao, float tongTien, string tinhTrangDH, string diaChiNhan, string donViTT, string maXN, DateTime ngayHH)
         {

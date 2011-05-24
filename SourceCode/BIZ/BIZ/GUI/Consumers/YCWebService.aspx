@@ -15,6 +15,8 @@
 
 <%@ Register src="../UserControls/Login.ascx" tagname="Login" tagprefix="uc4" %>
 
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc5" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Đăng ký sử dụng webservice
 </asp:Content>
@@ -28,6 +30,8 @@
         <uc2:CatalogManager ID="CatalogManager1" runat="server" />
         
         <uc3:CatalogAdmin ID="CatalogAdmin1" runat="server" />
+        
+        <uc5:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         
         <ucNPro:NewProduce ID="NewProduce1" runat ="server" />
         
