@@ -20,14 +20,17 @@ namespace BIZ.GUI.UserControls
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            string keyWord = txtSearch.Text.Trim();
-            try
+            if (txtSearch.Text != "")
             {
-                Response.Redirect("~/GUI/Consumers/FastSearchResult.aspx?@keyWord=" + keyWord);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                string keyWord = txtSearch.Text.Trim();
+                try
+                {
+                    Response.Redirect("~/GUI/Consumers/FastSearchResult.aspx?@keyWord=" + keyWord);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
     }

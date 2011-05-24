@@ -11,24 +11,24 @@
 namespace BIZ.GUI.UserControls {
     
     
-    public partial class FastSearchResult {
+    public partial class DanhSachDonHang {
         
         /// <summary>
-        /// resultSearch control.
+        /// divNewProduce control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultSearch;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divNewProduce;
         
         /// <summary>
-        /// dlResult control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlResult;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

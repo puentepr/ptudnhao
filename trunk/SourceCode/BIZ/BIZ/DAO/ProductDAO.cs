@@ -286,6 +286,27 @@ namespace BIZ.DAO
                 ds.Add(sp);
             }
         }
+        public static void UpdateSLProduct(string masp, float soluong)
+        {
+            helper.connect();
+            string sqlCommand="sp_UpdateSLProduct";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@masp", masp));
+            list.Add(new SqlParameter("@soluong", soluong));
+            try
+            {
+                helper.executeNonQueryProcedure(sqlCommand, list);
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
 
         #region Lấy danh sách sản phẩm theo tình trạng
         public static List<SAN_PHAM_DTO> LayDanhSachSanPhamTheoTinhTrang(string tinhtrang)

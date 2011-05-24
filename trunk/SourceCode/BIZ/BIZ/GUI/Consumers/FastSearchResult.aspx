@@ -12,6 +12,9 @@
 <%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc11" %>
 
 
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc12" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Tìm Kiếm Cơ Bản
 </asp:Content>
@@ -25,6 +28,8 @@ Tìm Kiếm Cơ Bản
         <uc11:CatalogAdmin ID="CatalogAdmin1" runat="server" />
         
         <uc10:CatalogManager ID="CatalogManager1" runat="server" />
+        
+         <uc12:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         
@@ -62,10 +67,7 @@ Tìm Kiếm Cơ Bản
                             
                             <asp:Label ID="lbTen" CssClass="lbname" runat="server" 
                                  Text='<%# Eval("TenSanPham") %>'></asp:Label>
-                            <br />
-                            <label class="lbname">Mô Tả: </label>
-                            <asp:Label ID="lbMoTa" CssClass="lable" runat="server" 
-                                Text='<%# Eval("MoTaSanPham") %>'></asp:Label>
+                           
                             <br />
                             <label class="lbname">Số lượng Còn: </label>
                             <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuongConLai") %>'></asp:Label> 
@@ -76,12 +78,14 @@ Tìm Kiếm Cơ Bản
                             <asp:Label ID="lbGia" CssClass="label" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
                              <label>VND / </label><asp:Label ID="lbDvTinh" CssClass="label" runat="server" 
                                  Text='<%# Eval("DonViTinh") %>'></asp:Label>
-                            <br />
-                            <label class="lbname">Chất Lượng: </label>
-                            <asp:Label ID="lbChatLuong" CssClass="lable" runat="server" 
-                                Text='<%# Eval("ChatLuong") %>'></asp:Label>
-                            <br />
-
+                            
+                            
+                             <br />
+                             <!--
+                            <label class="lbname">Mô Tả: </label>
+                            <asp:Label ID="lbMoTa" CssClass="lable" runat="server" 
+                                Text='<%# Eval("MoTaSanPham") %>'></asp:Label>
+                                <br /> -->
                           <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                             <img src='../../Content/images/xemchitiet_but.gif' />
                           </asp:HyperLink>

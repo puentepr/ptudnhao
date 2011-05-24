@@ -29,10 +29,7 @@
                         </asp:HyperLink>
                         <asp:Label ID="lbTen" CssClass="lbname" runat="server" 
                              Text='<%# Eval("TenSanPham") %>'></asp:Label>
-                        <br />
-                        <label class="lbname">Mô Tả: </label>
-                        <asp:Label ID="lbMoTa" CssClass="lable" runat="server" 
-                            Text='<%# Eval("MoTaSanPham") %>'></asp:Label>
+                        
                         <br />
                         <label class="lbname">Số lượng Còn: </label>
                         <asp:Label ID="lbSoLuong" runat="server" Text='<%# Eval("SoLuongConLai") %>'></asp:Label> 
@@ -47,6 +44,10 @@
                         <label class="lbname">Chất Lượng: </label>
                         <asp:Label ID="lbChatLuong" CssClass="lable" runat="server" 
                             Text='<%# Eval("ChatLuong") %>'></asp:Label>
+                            <br />
+                        <label class="lbname">Mô Tả: </label>
+                        <asp:Label ID="lbMoTa" CssClass="lable" runat="server" 
+                            Text='<%# Eval("MoTaSanPham") %>'></asp:Label>
                         <br />
                       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                         <img src='../../Content/images/xemchitiet_but.gif' />

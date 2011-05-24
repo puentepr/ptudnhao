@@ -241,6 +241,13 @@
     <Compile Include="GUI\Consumers\ViewProduct.aspx.designer.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\XemChiTietDonHang.aspx.cs">
+      <DependentUpon>XemChiTietDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\XemChiTietDonHang.aspx.designer.cs">
+      <DependentUpon>XemChiTietDonHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\XemThongTinTaiKhoan.aspx.cs">
       <DependentUpon>XemThongTinTaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -402,6 +409,13 @@
     <Compile Include="GUI\UserControls\CatalogAdmin.ascx.designer.cs">
       <DependentUpon>CatalogAdmin.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\CatalogConsumer.ascx.cs">
+      <DependentUpon>CatalogConsumer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\CatalogConsumer.ascx.designer.cs">
+      <DependentUpon>CatalogConsumer.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\CatalogManager.ascx.cs">
       <DependentUpon>CatalogManager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -429,6 +443,13 @@
     </Compile>
     <Compile Include="GUI\UserControls\CreateCoupon.ascx.designer.cs">
       <DependentUpon>CreateCoupon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControls\DanhSachDonHang.ascx.cs">
+      <DependentUpon>DanhSachDonHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\DanhSachDonHang.ascx.designer.cs">
+      <DependentUpon>DanhSachDonHang.ascx</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControls\FastSearch.ascx.cs">
       <DependentUpon>FastSearch.ascx</DependentUpon>
@@ -713,6 +734,7 @@
     <Content Include="GUI\Consumers\ValidateCode.aspx" />
     <Content Include="GUI\Consumers\ViewDetailCart.aspx" />
     <Content Include="GUI\Consumers\ViewProduct.aspx" />
+    <Content Include="GUI\Consumers\XemChiTietDonHang.aspx" />
     <Content Include="GUI\Consumers\XemThongTinTaiKhoan.aspx" />
     <Content Include="GUI\Consumers\YCWebService.aspx" />
     <Content Include="GUI\Manager\AcceptCoupons.aspx" />
@@ -736,10 +758,12 @@
     <Content Include="GUI\UserControls\CapNhatYCWebservice.ascx" />
     <Content Include="GUI\UserControls\Cart.ascx" />
     <Content Include="GUI\UserControls\CatalogAdmin.ascx" />
+    <Content Include="GUI\UserControls\CatalogConsumer.ascx" />
     <Content Include="GUI\UserControls\CatalogManager.ascx" />
     <Content Include="GUI\UserControls\Catalogs.ascx" />
     <Content Include="GUI\UserControls\ConsumerRegister.ascx" />
     <Content Include="GUI\UserControls\CreateCoupon.ascx" />
+    <Content Include="GUI\UserControls\DanhSachDonHang.ascx" />
     <Content Include="GUI\UserControls\FastSearch.ascx" />
     <Content Include="GUI\UserControls\FastSearchResult.ascx" />
     <Content Include="GUI\UserControls\Footer.ascx" />

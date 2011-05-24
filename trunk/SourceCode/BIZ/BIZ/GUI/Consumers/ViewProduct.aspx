@@ -10,6 +10,11 @@
 
 <%@ Register src="../UserControls/ViewProduct.ascx" tagname="ViewProduct" tagprefix="uc9" %>
 
+<%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc10" %>
+
+<%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc11" %>
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc12" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Xem chi tiết sản phẩm
 </asp:Content>
@@ -19,13 +24,16 @@ Xem chi tiết sản phẩm
 <div class="first-secondary">
         <!-- begin catalog-box -->
          
+         
+         
          <uc1:Catalogs ID="Catalogs1" runat="server" />
+         <uc10:CatalogAdmin ID="CatalogAdmin1" runat="server" />
         <!-- end catalog-box -->
+        <uc11:CatalogManager ID="CatalogManager1" runat="server" />
+        <uc12:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         <!-- begin advleft-box -->
-        
-        <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
-        <!-- end advleft-box -->
+       
         
     </div>
     <!-- end first-secondary -->
@@ -45,5 +53,8 @@ Xem chi tiết sản phẩm
         
         <uc3:Cart ID="Cart1" runat="server" />
         <uc8:Payment ID="Payment1" runat="server" />
+         
+        <uc5:AdvertisementLeft ID="AdvertisementLeft1" runat="server" />
+        <!-- end advleft-box -->
     </div>
 </asp:Content>

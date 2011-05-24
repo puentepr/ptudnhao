@@ -9,6 +9,7 @@
 <%@ Register src="../UserControls/Payment.ascx" tagname="Payment" tagprefix="uc8" %>
 <%@ Register src="../UserControls/CatalogManager.ascx" tagname="CatalogManager" tagprefix="uc9" %>
 <%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc10" %>
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc11" %>
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
 Trang chủ
 </asp:Content>
@@ -24,6 +25,13 @@ Trang chủ
         <!-- end catalog-box -->
         <uc9:CatalogManager ID="CatalogManager1" runat="server" />
         <uc10:CatalogAdmin ID="CatalogAdmin1" runat="server" />
+        
+        
+        
+        <uc11:CatalogConsumer ID="CatalogConsumer1" runat="server" />
+        
+        
+        
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         <!-- begin advleft-box -->
         

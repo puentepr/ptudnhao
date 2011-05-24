@@ -11,24 +11,15 @@
 namespace BIZ.GUI.UserControls {
     
     
-    public partial class FastSearchResult {
+    public partial class CatalogConsumer {
         
         /// <summary>
-        /// resultSearch control.
+        /// consumer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl resultSearch;
-        
-        /// <summary>
-        /// dlResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlResult;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl consumer;
     }
 }

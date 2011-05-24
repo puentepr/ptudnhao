@@ -14,6 +14,8 @@
 
 <%@ Register src="../UserControls/ValidateOrder.ascx" tagname="ValidateOrder" tagprefix="uc9" %>
 
+<%@ Register src="../UserControls/CatalogConsumer.ascx" tagname="CatalogConsumer" tagprefix="uc12" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 Xác nhận mua hàng
 </asp:Content>
@@ -28,6 +30,7 @@ Xác nhận mua hàng
         <!-- end catalog-box -->
         <uc11:CatalogAdmin ID="CatalogAdmin1" runat="server" />
         <uc10:CatalogManager ID="CatalogManager1" runat="server" />
+        <uc12:CatalogConsumer ID="CatalogConsumer1" runat="server" />
         <uc4:NewProduce ID="NewProduce1" runat="server" />
         <!-- begin advleft-box -->
         
