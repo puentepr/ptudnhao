@@ -20,13 +20,6 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!Page.IsPostBack)
-            //{
-            //    dropVaiTro.DataSource = UserBUS.LayDanhSachLoaiUser();
-            //    dropVaiTro.DataBind();
-            //    dropVaiTro_SelectedIndexChanged(null,null);                
-            //}
-
             int isLogIn;
             int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
             if (isLogIn == 1)
@@ -50,6 +43,20 @@ namespace BIZ.GUI.UserControls
 
         protected void gvDSTaiKhoan_RowCreated(object sender, GridViewRowEventArgs e)
         {
+            #region Làm nổi bật (Hightlight) dòng trong GridView
+            try
+            {
+                if (e.Row.RowType == DataControlRowType.DataRow)
+                {
+                    e.Row.Attributes.Add("style", "background-color: #FFFFFF; color: black;");
+                    e.Row.Attributes.Add("onmouseover", "style.backgroundColor='#B8DBFF'");
+                    e.Row.Attributes.Add("onmouseout", "style.backgroundColor='#FFFFFF'");
+                }
+            }
+            catch { }
+            #endregion
+           
+            #region xử lý hiển thị trạng thái
             //e.Row.RowIndex != -1 : không chỉnh bất kỳ dòng nào
            
             //if (e.Row.DataItem != null)
@@ -94,6 +101,8 @@ namespace BIZ.GUI.UserControls
             //    #endregion             
                 
             //}
+            #endregion
+
         }
         protected void ShowHidePanel(object sender, EventArgs e)
         {

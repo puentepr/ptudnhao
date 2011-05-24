@@ -52,6 +52,8 @@ namespace BIZ.GUI.UserControls
             gvXemDSSanPham.SelectedIndex = -1;
 
         }
+        //không cần cái này 
+        //chỉ cần chỉnh thuộc tính DataKeyName trong gridview
         protected void LinkButton1_Click1(object sender, EventArgs e)
         {
             string masp = ((LinkButton)sender).CommandArgument;

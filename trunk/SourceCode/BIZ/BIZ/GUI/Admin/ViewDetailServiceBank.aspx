@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/GUI/Shared/MasterPage.Master" AutoEventWireup="true" CodeBehind="XemDanhSachWebserviceBank.aspx.cs" Inherits="BIZ.GUI.Admin.XemDanhSachWebserviceBank" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/GUI/Shared/MasterPage.Master" AutoEventWireup="true" CodeBehind="ViewDetailServiceBank.aspx.cs" Inherits="BIZ.GUI.Admin.ViewDetailServiceBank" Title="Untitled Page" %>
 
 <%@ Register src="../UserControls/AddProduct.ascx" TagName="AddProduct" TagPrefix="ucAddPro" %>
 <%@ Register Src="../UserControls/Cart.ascx" TagName="Cart" TagPrefix="ucCart" %>
@@ -12,9 +12,13 @@
 <%@ Register src="../UserControls/AddServiceTrans.ascx" tagname="AddServiceTrans" tagprefix="uc3" %>
 
 <%@ Register src="../UserControls/CatalogAdmin.ascx" tagname="CatalogAdmin" tagprefix="uc2" %>
-<%@ Register src="../UserControls/XemDanhSachWebserviceBank.ascx" tagname="XemDanhSachWebserviceBank" tagprefix="uc4" %>
+
+
+<%@ Register src="../UserControls/ViewDetailServiceBank.ascx" tagname="ViewDetailServiceBank" tagprefix="uc4" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-Xem danh sách Webservice Bank</asp:Content>
+Xem chi tiết Service Bank</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="include" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
@@ -32,12 +36,16 @@ Xem danh sách Webservice Bank</asp:Content>
     </div>
     
     <div class="primary">                   
-        <uc4:XemDanhSachWebserviceBank ID="XemDanhSachWebserviceBank1" runat="server" />
+    
+        <uc4:ViewDetailServiceBank ID="ViewDetailServiceBank1" runat="server" />
+    
     </div>
+    
     <%--menu phải--%>
     <div class="second-secondary">        
         <uc1:login ID="Login1" runat="server" />        
         <uccart:cart ID="Cart1" runat="server" />        
-        <ucpay:payment ID="Payment1" runat="server" />                     
+        <ucpay:payment ID="Payment1" runat="server" />                      
     </div>
+
 </asp:Content>
