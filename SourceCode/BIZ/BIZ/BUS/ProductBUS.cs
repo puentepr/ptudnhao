@@ -103,6 +103,28 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static List<SAN_PHAM_DTO> GetProductsFollowType(int type)
+        {
+            try
+            {
+                return ProductDAO.GetProductsFollowType(type);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<SAN_PHAM_DTO> GetProductsSameType(int type,string masp)
+        {
+            try
+            {
+                return ProductDAO.GetProductsSameType(type, masp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         #region Lấy danh sách sản phẩm theo tình trạng
         public static List<SAN_PHAM_DTO> LayDanhSachSanPhamTheoTinhTrang(string tinhtrang)
         {

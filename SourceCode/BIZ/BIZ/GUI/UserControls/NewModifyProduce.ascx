@@ -13,7 +13,8 @@
     </div>
     
     <!-- Đổ dữ liệu vào đây , dùng innerHTML cho thẻ div này thì phải -->
-    <div class="middle-content-box" id="divNewProduce" runat="server">
+    <div class="middle-content-box" align="center" id="divNewProduce" runat="server">
+        
          <asp:DataList ID="DataList1" runat="server" 
             RepeatDirection="Horizontal" RepeatColumns="3" 
             >
@@ -24,7 +25,7 @@
                         
                          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                             <asp:Image CssClass="imgproduct" ID="Image1" runat="server" ImageUrl='<%#Eval("HinhAnh") %>' />
-                            <img alt="new" src='../../Content/images/new.gif' />
+                           
                             <br />
                         </asp:HyperLink>
                         <asp:Label ID="lbTen" CssClass="lbname" runat="server" 
