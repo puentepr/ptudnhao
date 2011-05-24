@@ -5,7 +5,7 @@
         </div>
         <div align="center" class="center">
             <img src="#"  />
-            <label >DANH SÁCH Đ
+            <label >DANH SÁCH ĐƠN HÀNG</label>
         </div>
         <div class="right">
         </div>

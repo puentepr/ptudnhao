@@ -54,5 +54,17 @@ namespace BIZ.BUS
             }
 
         }
+
+        public static List<CHI_TIET_DON_HANG_DTO> ViewOrderDetailsByOrderCode(int maDonHang)
+        {
+            try
+            {
+                return DonHangDAO.ViewOrderDetailsByOrderCode(maDonHang);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

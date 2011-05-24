@@ -612,6 +612,13 @@
     <Compile Include="GUI\UserControls\ViewDetailServiceBank.ascx.designer.cs">
       <DependentUpon>ViewDetailServiceBank.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\ViewOrderDetails.ascx.cs">
+      <DependentUpon>ViewOrderDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewOrderDetails.ascx.designer.cs">
+      <DependentUpon>ViewOrderDetails.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\ViewProduct.ascx.cs">
       <DependentUpon>ViewProduct.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -801,6 +808,7 @@
     <Content Include="GUI\UserControls\ViewDetailCart.ascx" />
     <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
     <Content Include="GUI\UserControls\ViewDetailServiceBank.ascx" />
+    <Content Include="GUI\UserControls\ViewOrderDetails.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\WebUserControl1.ascx" />
     <Content Include="GUI\UserControls\XemCapNhatSanPham.ascx" />
