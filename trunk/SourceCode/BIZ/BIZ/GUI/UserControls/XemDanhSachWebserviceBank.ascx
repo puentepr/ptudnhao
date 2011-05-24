@@ -41,7 +41,7 @@
                          <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("AnhBank") %>' /> 
                      </ItemTemplate>
                  </asp:TemplateField>
-                <%-- <asp:BoundField DataField="mabank" HeaderText="Mã " />--%>
+                 <asp:BoundField DataField="mabank" HeaderText="Mã " />
                 <asp:BoundField DataField="TenBank" HeaderText="Tên" />
                  <asp:HyperLinkField DataNavigateUrlFields="Website" DataTextField="Website" 
                      HeaderText="Website" Text="Website" />
