@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using BIZ.BUS;
 using BIZ.DTO;
 
+
 namespace BIZ.GUI.UserControls
 {
     public partial class AddServiceBank : System.Web.UI.UserControl
@@ -41,13 +42,14 @@ namespace BIZ.GUI.UserControls
         protected void btnThem_Click(object sender, EventArgs e)
         {
             SERVICE_BANK_DTO bank = new SERVICE_BANK_DTO();
-            //gán
+
+            #region Lấy thông tin Web Service Bank
             bank.MaBank=txtMaBank.Text;
             bank.TenBank=txtTenBank.Text;
             bank.UserName=txtUsername.Text;
             bank.PassWord=txtPassWord.Text;
             bank.LinkWebService=txtLinksv.Text;
-            bank.AnhBank = fileuploadLinkHinhAnh.FileName;
+            bank.AnhBank = fileuploadLinkHinhAnh.FileName;                    
 
             if (dropTinhtrang.Text.CompareTo("Đang sử dụng") == 0)
             {
@@ -59,10 +61,13 @@ namespace BIZ.GUI.UserControls
             }
             
             bank.Website=txtWebsiteBank.Text;
+            bank.Stk = txtSTK.Text;
+            #endregion
+
             try
             {
-                ServiceBankBUS.InsertServiceBank(bank);
-                fileuploadLinkHinhAnh.SaveAs(Server.MapPath("../../Content/images/banks/" + bank.AnhBank));
+                ServiceBankBUS.InsertServiceBank(bank);               
+                fileuploadLinkHinhAnh.SaveAs(Server.MapPath("../../Content/images/banks/" + bank.AnhBank));           
                 lbResultInfo.Text="Thêm thành công!";
             }
             catch (Exception ex)
@@ -73,12 +78,7 @@ namespace BIZ.GUI.UserControls
 
         protected void bttHuyBo_Click(object sender, EventArgs e)
         {
-            txtMaBank.Text = "";
-            txtTenBank.Text = "";
-            txtUsername.Text = "";
-            txtPassWord.Text = "";
-            txtLinksv.Text = "";
-            txtWebsiteBank.Text = "";
+            
         }
     }
 }

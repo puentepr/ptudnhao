@@ -27,6 +27,8 @@ namespace BIZ.DAO
             list.Add(new SqlParameter("@ANHBANK", bank.AnhBank));
             list.Add(new SqlParameter("@TINHTRANGWS", bank.TinhTrangWS));
             list.Add(new SqlParameter("@WEBSITE", bank.Website));
+            list.Add(new SqlParameter("@stk", bank.Stk));
+
             SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
             result.Direction = ParameterDirection.ReturnValue;
             list.Add(result);
