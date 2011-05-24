@@ -84,7 +84,13 @@ namespace BIZ.DTO
             get { return _ngayHetHan; }
             set { _ngayHetHan = value; }
         }
+        List<CHI_TIET_DON_HANG_DTO> chiTiet;
 
+        public List<CHI_TIET_DON_HANG_DTO> ChiTiet
+        {
+            get { return chiTiet; }
+            set { chiTiet = value; }
+        }
         public DON_HANG_DTO()
         {
             this._maDonHang = 0;

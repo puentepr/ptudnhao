@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="BUS\Class1.cs" />
     <Compile Include="BUS\CouponBUS.cs" />
+    <Compile Include="BUS\DonHangBUS.cs" />
     <Compile Include="BUS\Email.cs" />
     <Compile Include="BUS\GeneralPurchasing.cs" />
     <Compile Include="BUS\MD5.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="BUS\YCWebServiceBUS.cs" />
     <Compile Include="DAO\ConsumerDAO.cs" />
     <Compile Include="DAO\CouponDAO.cs" />
+    <Compile Include="DAO\DonHangDAO.cs" />
     <Compile Include="DAO\GeneralPurchasingDAO.cs" />
     <Compile Include="DAO\MyDataProvider.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
@@ -183,7 +185,6 @@
     <Compile Include="GUI\Consumers\CheckAccount.aspx.designer.cs">
       <DependentUpon>CheckAccount.aspx</DependentUpon>
     </Compile>
-<<<<<<< .mine
     <Compile Include="GUI\Consumers\FastSearchResult.aspx.cs">
       <DependentUpon>FastSearchResult.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,7 +192,6 @@
     <Compile Include="GUI\Consumers\FastSearchResult.aspx.designer.cs">
       <DependentUpon>FastSearchResult.aspx</DependentUpon>
     </Compile>
-=======
     <Compile Include="GUI\Consumers\Payment.aspx.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,7 +199,6 @@
     <Compile Include="GUI\Consumers\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
->>>>>>> .r117
     <Compile Include="GUI\Consumers\QuanLyDonHang.aspx.cs">
       <DependentUpon>QuanLyDonHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -692,11 +691,8 @@
     <Content Include="GUI\Consumers\Active.aspx" />
     <Content Include="GUI\Consumers\AdvanceSearch.aspx" />
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
-<<<<<<< .mine
     <Content Include="GUI\Consumers\FastSearchResult.aspx" />
-=======
     <Content Include="GUI\Consumers\Payment.aspx" />
->>>>>>> .r117
     <Content Include="GUI\Consumers\QuanLyDonHang.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Consumers\ValidateCode.aspx" />
@@ -844,6 +840,9 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

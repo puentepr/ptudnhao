@@ -68,6 +68,7 @@ namespace BIZ.DAO
                     bank.LinkWebService = dr["LINKWS"].ToString();
                     bank.AnhBank = dr["ANHBANK"].ToString();
                     bank.TinhTrangWS = int.Parse(dr["TINHTRANGWS"].ToString());
+                    bank.Stk = dr["STK"].ToString();
                     bank.Website = dr["WEBSITE"].ToString();
                 }
                 return bank;

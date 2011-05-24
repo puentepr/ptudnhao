@@ -102,6 +102,7 @@ namespace BIZ.DAO
                 sv.TinhTrang = int.Parse(row["TINHTRANG"].ToString());
                 sv.Title = "Cập nhật";
                 sv.Website = row["WEBSITE"].ToString();
+                sv.BizAddress = row["BIZADDRESS"].ToString();
                 services.Add(sv);
             }
         }

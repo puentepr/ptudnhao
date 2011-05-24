@@ -35,7 +35,7 @@ namespace BIZ.GUI.UserControls
             {
                 if (Session["Cart"] != null && ((List<GioHang>)Session["Cart"]).Count > 0)
                 {
-                    Response.Redirect("../Consumers/Payment.aspx");
+                    Response.Redirect("../Consumers/Payment.aspx?payment=yes");
                 }
                 else
                 {
