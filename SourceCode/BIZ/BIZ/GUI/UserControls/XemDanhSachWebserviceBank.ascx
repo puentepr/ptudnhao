@@ -27,9 +27,10 @@
         <asp:GridView ID="gvDSBank" runat="server" AutoGenerateColumns="False" 
             CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="MaBank" 
                  onpageindexchanging="gvDSBank_PageIndexChanging" 
-                 onrowcreated="gvDSBank_RowCreated">                     
-            <PagerSettings Mode="NextPrevious" NextPageText="Next" 
-            PreviousPageText="Previous" />
+                 onrowcreated="gvDSBank_RowCreated"
+                 AllowPaging="True">                     
+            <%--<PagerSettings Mode="NextPrevious" NextPageText="Next" 
+            PreviousPageText="Previous" />--%>
            <RowStyle BackColor="#EFF3FB" />
             <Columns>
                  <asp:TemplateField HeaderText="Logo">
@@ -58,7 +59,12 @@
             <EditRowStyle BackColor="#2461BF" />
             <AlternatingRowStyle BackColor="White" />
         </asp:GridView>
-   
+        
+        <i>Bạn đang xem trang 
+        <%=gvDSBank.PageIndex + 1%>
+        của
+        <%=gvDSBank.PageCount%>
+        </i>
     </p>
         
     </div>       
