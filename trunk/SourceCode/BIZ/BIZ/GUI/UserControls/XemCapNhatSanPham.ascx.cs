@@ -124,7 +124,13 @@ namespace BIZ.GUI.UserControls
                 if (result == 1)
                 {                 
                     //cập nhật thành công thì quay trở về trang danh sách sản phẩm
-                    Response.Redirect("ListProduct.aspx");
+                    //Response.Redirect("ListProduct.aspx");
+                    string strScript = "<script>";
+                    strScript += "alert('Bạn đã cập nhật thành công!');";
+                    strScript += "window.location='ListProduct.aspx';";
+                    strScript += "</script>";
+                    Page.RegisterClientScriptBlock("strScript", strScript);
+
                 }
                 else
                 {                    
@@ -154,7 +160,12 @@ namespace BIZ.GUI.UserControls
                 if (result == 1)
                 {
                     //Xóa thành công thì quay trở về trang danh sách sản phẩm
-                    Response.Redirect("ListProduct.aspx");  
+                    //Response.Redirect("ListProduct.aspx");  
+                    string strScript = "<script>";
+                    strScript += "alert('Bạn đã xóa thành công!');";
+                    strScript += "window.location='ListProduct.aspx';";
+                    strScript += "</script>";
+                    Page.RegisterClientScriptBlock("strScript", strScript);
                 }
                 else
                 {                    
