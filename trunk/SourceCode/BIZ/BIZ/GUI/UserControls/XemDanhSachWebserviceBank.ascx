@@ -28,6 +28,7 @@
             CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="MaBank" 
                  onpageindexchanging="gvDSBank_PageIndexChanging" 
                  onrowcreated="gvDSBank_RowCreated"
+                 AllowSorting="True"
                  AllowPaging="True">                     
             <%--<PagerSettings Mode="NextPrevious" NextPageText="Next" 
             PreviousPageText="Previous" />--%>
@@ -40,7 +41,7 @@
                          <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("AnhBank") %>' /> 
                      </ItemTemplate>
                  </asp:TemplateField>
-                 <asp:BoundField DataField="mabank" HeaderText="Mã " />
+                <%-- <asp:BoundField DataField="mabank" HeaderText="Mã " />--%>
                 <asp:BoundField DataField="TenBank" HeaderText="Tên" />
                  <asp:HyperLinkField DataNavigateUrlFields="Website" DataTextField="Website" 
                      HeaderText="Website" Text="Website" />
