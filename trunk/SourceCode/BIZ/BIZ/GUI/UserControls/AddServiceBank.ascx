@@ -12,7 +12,7 @@
 <div align="center" class="createObject">
     <h3 class="style2">
         THÊM WEB SERVICE NGÂN HÀNG</h3>
-    <table style="width: 467px; height: 337px;">
+    <table style="width: 467px; height: 381px;">
         <tr>
             <td colspan="2" style="text-align: center">
                 <asp:Label ID="lbResultInfo" runat="server"></asp:Label>              
@@ -132,6 +132,17 @@
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
                     ErrorMessage="Sai định dạng website !" ControlToValidate="txtWebsiteBank" 
                     ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?"></asp:RegularExpressionValidator>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: right">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
+                    ControlToValidate="txtSTK" ErrorMessage="*"></asp:RequiredFieldValidator>
+                <asp:Label ID="Label1" runat="server" style="text-align: left" Text="Sổ tài khoản :"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtSTK" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         
