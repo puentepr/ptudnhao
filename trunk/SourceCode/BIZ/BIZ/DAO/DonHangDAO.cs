@@ -125,6 +125,40 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
+
+        public static List<CHI_TIET_DON_HANG_DTO> ViewOrderDetailsByOrderCode(int maDonHang)
+        {
+            provider.connect();
+            string sqlCommand = "sp_XemThongTinChiTietDonHang";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add( new SqlParameter("@maDonHang", maDonHang));
+            try
+            {
+                DataTable dt = provider.executeQueryDataTableProcedure(sqlCommand, ds);
+                List<CHI_TIET_DON_HANG_DTO> dsOrderDetails = new List<CHI_TIET_DON_HANG_DTO>();
+                if(dt.Rows.Count>0)
+                {
+                    foreach(DataRow dr in dt.Rows)
+                    {
+                        CHI_TIET_DON_HANG_DTO ordDetailDTO = new CHI_TIET_DON_HANG_DTO();
+                        ordDetailDTO.maSanPham = dr["MASP"].ToString();
+                        ordDetailDTO.donViTinh = dr["DVTINH"].ToString();
+                        ordDetailDTO.soLuong = float.Parse(dr["SOLUONG"].ToString());
+                        ordDetailDTO.donGia = float.Parse(dr["DONGIA"].ToString());
+                        dsOrderDetails.Add(ordDetailDTO);
+                    }
+                }
+                return dsOrderDetails;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
          
     }
 }
