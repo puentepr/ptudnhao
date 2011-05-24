@@ -15,7 +15,7 @@
     </style>
 <%--show danh sách user--%>
 <asp:Panel ID="panelDSUser" runat="server">
-     <div style="color: #3333FF" >
+     <div style="color: #3333FF" align="center"  >
      <b>XEM DANH SÁCH TÀI KHOẢN</b>
     </div>
     <p>

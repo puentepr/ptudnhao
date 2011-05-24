@@ -150,6 +150,13 @@
     <Compile Include="GUI\Admin\UpdateServiceTrans.aspx.designer.cs">
       <DependentUpon>UpdateServiceTrans.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\ViewDetailServiceBank.aspx.cs">
+      <DependentUpon>ViewDetailServiceBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ViewDetailServiceBank.aspx.designer.cs">
+      <DependentUpon>ViewDetailServiceBank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\XemDanhSachTaiKhoan.aspx.cs">
       <DependentUpon>XemDanhSachTaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -563,6 +570,13 @@
     <Compile Include="GUI\UserControls\ViewDetailCoupon.ascx.designer.cs">
       <DependentUpon>ViewDetailCoupon.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailServiceBank.ascx.cs">
+      <DependentUpon>ViewDetailServiceBank.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\ViewDetailServiceBank.ascx.designer.cs">
+      <DependentUpon>ViewDetailServiceBank.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\ViewProduct.ascx.cs">
       <DependentUpon>ViewProduct.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -686,6 +700,7 @@
     <Content Include="GUI\Admin\ServiceTransfer.aspx" />
     <Content Include="GUI\Admin\UpdateCoupon.aspx" />
     <Content Include="GUI\Admin\UpdateServiceTrans.aspx" />
+    <Content Include="GUI\Admin\ViewDetailServiceBank.aspx" />
     <Content Include="GUI\Admin\XemDanhSachTaiKhoan.aspx" />
     <Content Include="GUI\Admin\XemDanhSachWebserviceBank.aspx" />
     <Content Include="GUI\Consumers\Active.aspx" />
@@ -745,6 +760,7 @@
     <Content Include="GUI\UserControls\ViewAndEditServiceTrans.ascx" />
     <Content Include="GUI\UserControls\ViewDetailCart.ascx" />
     <Content Include="GUI\UserControls\ViewDetailCoupon.ascx" />
+    <Content Include="GUI\UserControls\ViewDetailServiceBank.ascx" />
     <Content Include="GUI\UserControls\ViewProduct.ascx" />
     <Content Include="GUI\UserControls\WebUserControl1.ascx" />
     <Content Include="GUI\UserControls\XemCapNhatSanPham.ascx" />

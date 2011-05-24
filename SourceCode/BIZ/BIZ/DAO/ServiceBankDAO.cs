@@ -138,7 +138,7 @@ namespace BIZ.DAO
             list.Add(new SqlParameter("@linkws", bank.LinkWebService));
             list.Add(new SqlParameter("@tinhtrangws", bank.TinhTrangWS));
             list.Add(new SqlParameter("@website", bank.Website));
-
+            list.Add(new SqlParameter("@stk", bank.Stk));
             SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
             result.Direction = ParameterDirection.ReturnValue;
             list.Add(result);
