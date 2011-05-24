@@ -1,11 +1,11 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TenNewProduce.ascx.cs" Inherits="BIZ.GUI.UserControls.TenNewProduce" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Products.ascx.cs" Inherits="BIZ.GUI.UserControls.Products" %>
 <div class="middle-box">
-    <div class="middle-top-box">
+    <div align="center" class="middle-top-box">
         <div class="left">
         </div>
         <div class="center">
-            <img src="../../Content/images/new_red.gif"  />
-            <label >SẢN PHẨM MỚI ĐĂNG</label>
+           
+            <label id="lb" runat="server" ></label>
         </div>
         <div class="right">
         </div>
@@ -13,10 +13,10 @@
     </div>
     
     <!-- Đổ dữ liệu vào đây , dùng innerHTML cho thẻ div này thì phải -->
-    <div class="middle-content-box" align="center" id="divNewProduce" runat="server">
-      
-        <asp:DataList ID="DataList1" runat="server" 
-            RepeatDirection="Horizontal" RepeatColumns="3" 
+    <div align="center" class="middle-content-box" id="divNewProduce" runat="server">
+        <h4 id="idh4" style="color:inherit" runat="server"></h4>
+         <asp:DataList ID="DataList1" runat="server" 
+            RepeatDirection="Horizontal" RepeatColumns="3"  
             >
           <ItemTemplate>
             <table class="tbproduct">
@@ -25,7 +25,7 @@
                         
                          <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                             <asp:Image CssClass="imgproduct" ID="Image1" runat="server" ImageUrl='<%#Eval("HinhAnh") %>' />
-                            <img alt="new" src='../../Content/images/new.gif' />
+                           
                             <br />
                         </asp:HyperLink>
                         <asp:Label ID="lbTen" CssClass="lbname" runat="server" 
@@ -51,20 +51,16 @@
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 
-
                                         CssClass="button"  
                              CommandArgument='<%# Eval("MaSanPham") %>' onclick="Button1_Click" 
                              CommandName='<%#Eval("Index") %>' style="height: 26px; width: 164px"/>   <br />
-
-                                        
-                        <asp:Label ID="lbResult" runat="server" Visible="false" ForeColor="Red"></asp:Label>                                                      
+                                        <asp:Label ID="lbResult" runat="server" Visible="false" ForeColor="Red"></asp:Label>                                                      
                     </td>
                 </tr>
               </table>
           </ItemTemplate>
     </asp:DataList>
     </div>
-    
     <div class="middle-bottom-box">
         
     </div>

@@ -206,6 +206,13 @@
     <Compile Include="GUI\Consumers\Payment.aspx.designer.cs">
       <DependentUpon>Payment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Consumers\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Consumers\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Consumers\QuanLyDonHang.aspx.cs">
       <DependentUpon>QuanLyDonHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -535,6 +542,13 @@
     <Compile Include="GUI\UserControls\PaymentOrder.ascx.designer.cs">
       <DependentUpon>PaymentOrder.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControls\Products.ascx.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControls\Products.ascx.designer.cs">
+      <DependentUpon>Products.ascx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControls\TenNewProduce.ascx.cs">
       <DependentUpon>TenNewProduce.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -729,6 +743,7 @@
     <Content Include="GUI\Consumers\CheckAccount.aspx" />
     <Content Include="GUI\Consumers\FastSearchResult.aspx" />
     <Content Include="GUI\Consumers\Payment.aspx" />
+    <Content Include="GUI\Consumers\Products.aspx" />
     <Content Include="GUI\Consumers\QuanLyDonHang.aspx" />
     <Content Include="GUI\Consumers\Register.aspx" />
     <Content Include="GUI\Consumers\ValidateCode.aspx" />
@@ -776,6 +791,7 @@
     <Content Include="GUI\UserControls\NewProduce.ascx" />
     <Content Include="GUI\UserControls\Payment.ascx" />
     <Content Include="GUI\UserControls\PaymentOrder.ascx" />
+    <Content Include="GUI\UserControls\Products.ascx" />
     <Content Include="GUI\UserControls\TenNewProduce.ascx" />
     <Content Include="GUI\UserControls\Textrun.ascx" />
     <Content Include="GUI\UserControls\Themes.ascx" />
@@ -880,6 +896,9 @@
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

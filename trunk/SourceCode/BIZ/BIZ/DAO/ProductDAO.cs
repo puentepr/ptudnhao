@@ -257,6 +257,58 @@ namespace BIZ.DAO
                 helper.disconnect();
             }
         }
+        public static List<SAN_PHAM_DTO> GetProductsFollowType(int type)
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectProducts1";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@loai", type));
+            try
+            {
+                List<SAN_PHAM_DTO> listsp = new List<SAN_PHAM_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransforListSanPham(table, listsp);
+                }
+                return listsp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+         public static List<SAN_PHAM_DTO> GetProductsSameType(int type,string masp)
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectProducts2";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@loai", type));
+             list.Add(new SqlParameter("@masp",masp));
+            try
+            {
+                List<SAN_PHAM_DTO> listsp = new List<SAN_PHAM_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    TransforListSanPham(table, listsp);
+                }
+                return listsp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        
         private static void TransforListSanPham(DataTable table,List<SAN_PHAM_DTO>ds)
         {
             int n=table.Rows.Count;
