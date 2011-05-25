@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="../Manager/XetDuyetYeuCauWS.aspx">
                     <img src="../../App_Themes/Blue/dotlist.gif" />Cập nhật yêu cầu
                 </a>
             </li>
@@ -47,7 +47,7 @@
         </a>
         <ul>
             <li>
-                <a href="#">
+                <a href="../Manager/ListProduct.aspx">
                     <img src="../../App_Themes/Blue/dotlist.gif" />Danh sách sản phẩm,xóa,cập nhật
                 </a>
             </li>

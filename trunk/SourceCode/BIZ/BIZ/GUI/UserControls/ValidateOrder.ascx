@@ -4,7 +4,7 @@
         <div class="left">
         </div>
         <div class="center">
-            <img src="../../Content/images/new_red.gif"  />
+            <img src="#"  />
             <label >XÁC NHẬN MUA HÀNG</label>
         </div>
         <div class="right">

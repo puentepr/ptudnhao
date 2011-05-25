@@ -13,11 +13,7 @@
     <h3 class="style2">
         THÊM WEB SERVICE NGÂN HÀNG</h3>
     <table style="width: 467px; height: 381px;">
-        <tr>
-            <td colspan="2" style="text-align: center">
-                <asp:Label ID="lbResultInfo" runat="server"></asp:Label>              
-            </td>
-        </tr>
+        
         <tr>
             <td style="text-align: right" class="style1">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
@@ -156,6 +152,11 @@
             <td>
                 <asp:Button ID="bttHuyBo" runat="server" Text="Hủy Bỏ" 
                     onclick="bttHuyBo_Click" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <asp:Label ID="lbResultInfo" runat="server"></asp:Label>              
             </td>
         </tr>
     </table>
