@@ -33,5 +33,21 @@ namespace BIZ.GUI.UserControls
                 }
             }
         }
+
+        protected void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                string keyWord = txtSearch.Text.Trim();
+                try
+                {
+                    Response.Redirect("~/GUI/Consumers/FastSearchResult.aspx?@keyWord=" + keyWord);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }
