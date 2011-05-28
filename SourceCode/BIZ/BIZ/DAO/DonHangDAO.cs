@@ -159,6 +159,26 @@ namespace BIZ.DAO
                 provider.disconnect();
             }
         }
-         
+        public static DataTable GetOrderInformationByCode(int maDonHang)
+        {
+            provider.connect();
+            string sqlcommand = "sp_LayThongTinDonHangBangMaDH";
+            List<SqlParameter> ds = new List<SqlParameter>();
+            ds.Add(new SqlParameter("@maDonHang", maDonHang));
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = provider.executeQueryDataTableProcedure(sqlcommand, ds);
+                return dt;   
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+        }
     }
 }

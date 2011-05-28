@@ -14,18 +14,57 @@
         </div>
     </div>
     
-    <div class="middle-content-box" id="odInfo" runat="server">
+    <div class="middle-content-box" id="oddInfo" runat="server">
+              
+              <asp:Repeater runat="server" ID="rpDH">
+                <ItemTemplate>
+                    <table align="center" class="middle-content-box" style="color:Blue;">
+                        <tr>
+                            <th>Đơn Hàng: </th>
+                            <td><%#Eval("MaDH") %></td>
+                        </tr>
+                        <tr>
+                            <th>Ngày Đặt: </th>
+                            <td><%#Eval("NgayDat") %></td>
+                        </tr>
+                        <tr>
+                            <th>Tổng Tiền: </th>
+                            <td><%#Eval("TongTien") %> <%#Eval("DVTienTe") %></td>
+                        </tr>
+                        <tr>
+                            <th>Tình Trạng: </th>
+                            <td><%#Eval("TinhTrangDH") %></td>
+                        </tr>
+                        <tr>
+                            <th>Link Vận Chuyển: </th>
+                            <td><a href='<%#Eval("URL") %>'><%#Eval("URL") %></a></td>
+                        </tr>
+                        <tr>
+                            <th>Khách Hàng: </th>
+                            <td><%#Eval("TenNDaiDien") %></td>
+                        </tr>
+                        <tr>
+                            <th>WebSite Doanh Nghiệp: </th>
+                            <td><a href='<%#Eval("Website") %>'><%#Eval("Website")%></a></td>
+                        </tr>
+                    </table>
+                </ItemTemplate>
+              </asp:Repeater>
+                                   
             <asp:GridView ID="gvOrderDetail" runat="server" AutoGenerateColumns="False" 
-            BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" 
-            CellPadding="4" ForeColor="Blue" GridLines="Vertical">
+            BackColor="White" BorderColor="Azure" BorderStyle="None" BorderWidth="1px" 
+            CellPadding="4" ForeColor="Blue" GridLines="Horizontal" HorizontalAlign="Center">
             <RowStyle BackColor="#F7F7DE" />
             <Columns>
-                <asp:TemplateField HeaderText = "Xem Thông Tin Sản Phẩm">
+                
+                <asp:TemplateField HeaderText = "Thông Tin Sản Phẩm">
                     <ItemTemplate>
-                        <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
+                            <%#Eval("MaSanPham") %>
+                             (Xem Chi Tiết)
+                        </asp:HyperLink>
                     </ItemTemplate>
-                </asp:TemplateField>
-                <asp:BoundField DataField="maSanPham" HeaderText="Mã Sản Phẩm" />
+                    </asp:TemplateField>
                 <asp:BoundField DataField="soLuong" HeaderText="Số Lượng" />
                 <asp:BoundField DataField="donViTinh" HeaderText="Đơn Vị Tính" />  
                 <asp:BoundField DataField="donGia" HeaderText="Đơn Giá" />

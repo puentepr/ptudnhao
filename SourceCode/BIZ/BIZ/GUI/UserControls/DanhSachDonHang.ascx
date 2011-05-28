@@ -27,8 +27,7 @@
                 <asp:BoundField HeaderText="Tình trạng" DataField="TinhTrangDonHang" />
                 <asp:TemplateField HeaderText="Xem vận chuyển">
                     <ItemTemplate>
-                        
-                        <a href='<%#Eval("LinkVC") %>' runat="server" id="link"  target="_blank"><%# Eval("TitleVC") %></a>
+                        <a href='<%#Eval("LinkVC")%>' runat="server" id="link" target="_blank"><%# Eval("TitleVC") %></a>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Xem chi tiết">
