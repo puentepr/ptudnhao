@@ -26,6 +26,9 @@ namespace BIZ.GUI.UserControls
                         int maDonHang = int.Parse(Request.QueryString["madh"]);
                         List<CHI_TIET_DON_HANG_DTO> OrderDetail = new List<CHI_TIET_DON_HANG_DTO>();
                         OrderDetail = DonHangBUS.ViewOrderDetailsByOrderCode(maDonHang);
+                        
+                        rpDH.DataSource = DonHangBUS.GetOrderInformationByCode(maDonHang);
+                        rpDH.DataBind();
 
                         gvOrderDetail.DataSource = OrderDetail;
                         gvOrderDetail.DataBind();

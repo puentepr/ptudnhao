@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+using System.ComponentModel;
 using BIZ.DAO;
 using BIZ.DTO;
 
@@ -60,6 +63,18 @@ namespace BIZ.BUS
             try
             {
                 return DonHangDAO.ViewOrderDetailsByOrderCode(maDonHang);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static DataTable GetOrderInformationByCode(int maDonHang)
+        {
+            try
+            {
+                return DonHangDAO.GetOrderInformationByCode(maDonHang);
             }
             catch (Exception ex)
             {
