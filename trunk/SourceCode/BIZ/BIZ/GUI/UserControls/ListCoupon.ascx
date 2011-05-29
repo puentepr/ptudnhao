@@ -5,7 +5,8 @@
         AutoGenerateColumns="False" 
         onpageindexchanging="GridView1_PageIndexChanging" BackColor="White" 
         BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" 
-        ForeColor="Black" GridLines="Vertical">
+        ForeColor="Black" GridLines="Vertical" DataKeyNames="MaCoupon" 
+        onrowdeleting="GridView1_RowDeleting">
         <PagerSettings NextPageText="Next" 
             PreviousPageText="Previous" />
         <RowStyle BackColor="#F7F7DE" />
@@ -22,6 +23,13 @@
                     <asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("Title") %>' NavigateUrl='<%# "~/GUI/Manager/ViewDetailCoupon.aspx?macp="+Eval("MaCoupon")%>' Target="_blank"></asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
+            <asp:TemplateField HeaderText="Cập nhật">
+                <ItemTemplate>
+                    <asp:HyperLink ID="HyperLink2"  NavigateUrl='<%# "~/GUI/Manager/UpdateCoupon.aspx?macp="+Eval("MaCoupon")%>' Target="_blank" runat="server">Cập nhật</asp:HyperLink>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:CommandField ButtonType="Image" 
+                DeleteImageUrl="~/Content/images/Delete.png" ShowDeleteButton="True" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" />
         <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />

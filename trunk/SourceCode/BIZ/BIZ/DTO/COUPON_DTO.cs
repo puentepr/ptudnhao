@@ -21,6 +21,13 @@ namespace BIZ.DTO
             get { return _maSanPham; }
             set { _maSanPham = value; }
         }
+        private string _tenSanPham;
+
+        public string TenSanPham
+        {
+            get { return _tenSanPham; }
+            set { _tenSanPham = value; }
+        }
         private float _giaSauGiam;
 
         public float GiaSauGiam

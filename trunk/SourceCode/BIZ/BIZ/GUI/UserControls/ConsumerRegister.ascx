@@ -169,7 +169,7 @@
         </tr>
          <tr>
             <td colspan="2">
-                <asp:Button ID="btnRegister" Text="Đăng ký" runat="server"  
+                <asp:Button ID="btnRegister" CssClass="button" Text="Đăng ký" runat="server"  
                 onclick="btnRegister_Click" ValidationGroup="register" />
             </td>
              

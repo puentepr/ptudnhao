@@ -217,6 +217,91 @@ namespace BIZ.DAO
             }
            // return new Coupon();
         }
+        public static void DeleteCoupon(string macp)
+        {
+            helper.connect();
+            string sqlCommand = "sp_DeleteCoupon";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@macp", macp));
+
+            List<Coupon> cpArray = new List<Coupon>();
+            try
+            {
+                helper.executeNonQueryProcedure(sqlCommand, list);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        public static void UpdateCoupon(COUPON_DTO cp)
+        {
+            helper.connect();
+            string sqlCommand = "sp_UpdateCoupon1";
+            List<SqlParameter>list=new List<SqlParameter>();
+            list.Add(new SqlParameter("@macp",cp.MaCoupon));
+            list.Add(new SqlParameter("@start",cp.ThoiGianBD));
+            list.Add(new SqlParameter("@end",cp.ThoiGianKT));
+            list.Add(new SqlParameter("@slspmin",cp.SoLuongSanPhamMin));
+            list.Add(new SqlParameter("@giasgiam",cp.GiaSauGiam));
+            list.Add(new SqlParameter("@dksd",cp.DieuKienSuDung));
+            list.Add(new SqlParameter("@giagoc",cp.GiaGoc));
+            list.Add(new SqlParameter("@slcpmin",cp.SoLuongCouponMin));
+            try
+            {
+                helper.executeNonQueryProcedure(sqlCommand, list);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
+        public static COUPON_DTO GetCouponInfor1(string macp)
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectCouponInfor1";
+           // string sqlCommand1 = "sp_CountOrderCoupon";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@macp",macp));
+
+            try
+            {
+                COUPON_DTO cp = new COUPON_DTO();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    DataRow row = table.Rows[0];
+                    cp.MaCoupon=row["MACP"].ToString();
+                    cp.MaSanPham = row["MASP"].ToString();
+                    cp.GiaSauGiam=float.Parse(row["GIASGIAM"].ToString());
+                    cp.GiaGoc=float.Parse(row["GIAGOC"].ToString());
+                    cp.DieuKienSuDung=row["DIEUKIENSD"].ToString();;
+                    cp.DonViTienTe=row["DVTIENTE"].ToString();;
+                    cp.SoLuongCouponMin=int.Parse(row["SLCPMINGIAMGIA"].ToString());
+                    cp.SoLuongSanPhamMin=int.Parse(row["SLSPMIN"].ToString());
+                    cp.ThoiGianBD=DateTime.Parse(row["THOIGIANBD"].ToString());
+                    cp.ThoiGianKT=DateTime.Parse(row["THOIGIANKT"].ToString());
+                    cp.TenSanPham= row["TENSP"].ToString();
+                }
+                return cp;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
         private static void TransformToCouponList(string sqlCommand1, DataTable table, List<Coupon> cpArray)
         {
             int n = table.Rows.Count;
@@ -253,7 +338,7 @@ namespace BIZ.DAO
                 cp.TenMatHang = row["TENSP"].ToString();
                 cp.TenNhaCungCap = "BeatifulhouseGroup";
                 cp.ThongTinMoTa = row["MOTA"].ToString();
-                cp.ThongTinMoTa += " .Mỗi coupon gồm " + slspmin.ToString() + " " + row["DVTINH"].ToString() + " sản phẩm";
+                cp.DieuKienSuDung = row["DIEUKIENSD"].ToString() + " .Mỗi coupon gồm " + slspmin.ToString() + " " + row["DVTINH"].ToString();
                 cp.Title = "Xem chi tiết";
                 if (row["TINHTRANGCP"].ToString() == "1" && cp.NgayKetThuc>=DateTime.Today)
                 {
@@ -286,5 +371,6 @@ namespace BIZ.DAO
                 helper.disconnect();
             }
         }
+        
     }
 }

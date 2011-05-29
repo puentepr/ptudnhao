@@ -32,6 +32,11 @@ namespace BIZ.GUI.UserControls
                         ddlNhomLSP.DataSource = ProductTypeGroupBUS.SelectingAllProductTypeGroup();
                         ddlNhomLSP.DataBind();
 
+                        if (ddlNhomLSP.SelectedValue.Length != 0)
+                        {
+                            ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductTypeByGroup(int.Parse(ddlNhomLSP.SelectedValue));
+                            ddlLoaiSP.DataBind();
+                        }
                         /*ddlLoaiSP.DataSource = ProductTypeBUS.SelectingAllProductType();
                         ddlLoaiSP.DataBind();*/
                     }
@@ -54,7 +59,7 @@ namespace BIZ.GUI.UserControls
             proDTO.SoLuong = float.Parse(txtSoLuong.Text);
             proDTO.SoLuongConLai = float.Parse(txtSoLuong.Text);
             proDTO.TenSanPham = txtTenSP.Text;
-            proDTO.TinhTrangSanPham = txtTinhTrang.Text;
+            proDTO.TinhTrangSanPham = "1";
             proDTO.Gia = float.Parse(txtGiaGoc.Text);
             proDTO.DonViTinh = txtDVTinh.Text;
             proDTO.ChatLuong = txtChatLuong.Text;
@@ -64,6 +69,7 @@ namespace BIZ.GUI.UserControls
             {
                 ProductBUS.AddProduct(proDTO);
                 fuLinkHinhAnh.SaveAs(Server.MapPath("../../Content/images/products/"+proDTO.HinhAnh));
+                lbresult.Text = "Đã thêm thành công";
             }
             catch (Exception ex)
             {
@@ -80,7 +86,6 @@ namespace BIZ.GUI.UserControls
             txtRreaMoTa.Value = "";
             txtSoLuong.Text = "";
             txtTenSP.Text = "";
-            txtTinhTrang.Text = "";
         }
 
         protected void ddlNhomLSP_SelectedIndexChanged(object sender, EventArgs e)

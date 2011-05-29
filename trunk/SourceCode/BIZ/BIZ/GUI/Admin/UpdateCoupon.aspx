@@ -14,12 +14,14 @@
 
 <%@ Register src="../UserControls/WebUserControl1.ascx" tagname="WebUserControl1" tagprefix="uc4" %>
 
+<%@ Register src="../UserControls/DateTimePicker.ascx" tagname="DateTimePicker" tagprefix="uc5" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="include" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-<div class="first-secondary">
+    <div class="first-secondary">
 
         <ucctlogs:catalogs ID="Catalogs1" runat="server" />
         
@@ -33,9 +35,10 @@
     <div class="primary">
        
         <uc4:WebUserControl1 ID="WebUserControl11" runat="server" />
-       
     </div>
     <div class="second-secondary">
+        
+        
         
         <uc1:login ID="Login1" runat="server" />
         

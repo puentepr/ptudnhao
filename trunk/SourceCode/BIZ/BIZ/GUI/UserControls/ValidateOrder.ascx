@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <asp:Button ID="Button1" ValidationGroup="code" runat="server" Text="Xác nhận" onclick="Button1_Click" /><br />
+                    <asp:Button ID="Button1" CssClass="button" ValidationGroup="code" runat="server" Text="Xác nhận" onclick="Button1_Click" /><br />
                     <asp:Label ID="Label1" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                 </td>
             </tr>

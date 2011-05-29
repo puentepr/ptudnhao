@@ -16,19 +16,19 @@
         <div class="sub">
             <ul class="submenu">
                 <li>
-                    <a href="#">Vật liệu xây thô                   
+                    <a href="../Consumers/Products.aspx?ml=1">Vật liệu xây thô                   
                     </a>
                 </li>
                 <li>
-                    <a href="#">Vật liệu hoàn thiện                  
+                    <a href="../Consumers/Products.aspx?ml=2">Vật liệu hoàn thiện                  
                     </a>
                 </li>
                 <li>
-                    <a href="#">Hệ thống ống và phụ kiện                  
+                    <a href="../Consumers/Products.aspx?ml=3">Hệ thống ống và phụ kiện                  
                     </a>
                 </li>
                 <li>
-                    <a href="#">Vật liệu đặt biệt                 
+                    <a href="../Consumers/Products.aspx?ml=4">Vật liệu đặt biệt                 
                     </a>
                 </li>
             </ul>
@@ -44,15 +44,15 @@
         <div class="sub">
             <ul class="submenu">
                 <li>
-                    <a href="#">Đồ nội thất trong nhà                  
+                    <a href="../Consumers/Products.aspx?ml=5">Đồ nội thất trong nhà                  
                     </a>
                 </li>
                 <li>
-                    <a href="#">Phòng tắm và thiết bị vệ sinh                 
+                    <a href="../Consumers/Products.aspx?ml=6">Phòng tắm và thiết bị vệ sinh                 
                     </a>
                 </li>
                 <li>
-                    <a href="#">Hệ thống bếp và thiết bị bếp                   
+                    <a href="../Consumers/Products.aspx?ml=7">Hệ thống bếp và thiết bị bếp                   
                     </a>
                 </li>
             </ul>

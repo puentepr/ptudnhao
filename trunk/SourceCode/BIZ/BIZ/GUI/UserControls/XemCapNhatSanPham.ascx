@@ -141,9 +141,9 @@
                 <td style="width:35%; text-align: right;">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="btnCapNhat" runat="server" Text="Cập nhật" 
+                    <asp:Button ID="btnCapNhat" CssClass="button" runat="server" Text="Cập nhật" 
                         onclick="btnCapNhat_Click" />
-                    <asp:Button ID="btnXoa" runat="server" Text="Xóa" onclick="btnXoa_Click" />
+                    <asp:Button ID="btnXoa" CssClass="button" runat="server" Text="Xóa" onclick="btnXoa_Click" />
                 </td>
             </tr>
         </table>

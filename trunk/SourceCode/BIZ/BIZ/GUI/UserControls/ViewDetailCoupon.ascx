@@ -79,6 +79,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td colspan="2">
+                        <label>Điều kiện sử dụng : </label>
+                        <asp:Literal ID="Literal2" runat="server" Text='<%# Eval("DieuKienSuDung") %>'></asp:Literal>
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="2" align="center">
                         <h3 id="listh3" runat="server">Danh sách các đơn hàng đã đặt mua</h3>
                         <asp:GridView ID="grDetail" runat="server" AutoGenerateColumns="False" 

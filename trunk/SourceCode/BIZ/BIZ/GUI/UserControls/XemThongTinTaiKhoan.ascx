@@ -109,12 +109,12 @@
         <td class="style9">
             </td>
         <td class="style5">
-            <asp:Button ID="btCapNhat" runat="server" Text="Cập nhật" 
+            <asp:Button ID="btCapNhat" CssClass="button" runat="server" Text="Cập nhật" 
                 onclick="btCapNhat_Click" />
             <br />
         </td>
         <td>
-            <asp:Button ID="btHuyBo" runat="server" Text="Hủy bỏ" onclick="btHuyBo_Click" />
+            <asp:Button ID="btHuyBo" CssClass="button" runat="server" Text="Hủy bỏ" onclick="btHuyBo_Click" />
         </td>
     </tr>
     <tr>

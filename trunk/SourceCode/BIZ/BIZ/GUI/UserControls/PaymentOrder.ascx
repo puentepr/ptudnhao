@@ -74,7 +74,7 @@
             <tr>
                 <td colspan="2" align="center">
                     <br />
-                    <asp:Button ID="btnPayment" Text="Thanh toán" runat="server" 
+                    <asp:Button ID="btnPayment" CssClass="button" Text="Thanh toán" runat="server" 
                         ValidationGroup="pay" onclick="btnPayment_Click" />
                         <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1" >
                             <ProgressTemplate>

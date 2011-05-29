@@ -147,10 +147,10 @@
     <table>        
         <tr align="center">
             <td>
-                <asp:Button ID="btnThem" runat="server" Text="Thêm" onclick="btnThem_Click" />
+                <asp:Button ID="btnThem" CssClass="button" runat="server" Text="Thêm" onclick="btnThem_Click" />
             </td>
             <td>
-                <asp:Button ID="bttHuyBo" runat="server" Text="Hủy Bỏ" 
+                <asp:Button ID="bttHuyBo" CssClass="button" runat="server" Text="Hủy Bỏ" 
                     onclick="bttHuyBo_Click" />
             </td>
         </tr>

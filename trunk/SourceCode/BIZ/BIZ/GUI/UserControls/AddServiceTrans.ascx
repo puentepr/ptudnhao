@@ -88,7 +88,7 @@
             </tr>
             
         </table>
-        <asp:Button ID="Button1" ValidationGroup="servicetrans" runat="server" 
+        <asp:Button ID="Button1" CssClass="button" ValidationGroup="servicetrans" runat="server" 
             Text="Thêm" onclick="Button1_Click" /><br />
             <asp:Label ID="lbResult" runat="server"></asp:Label>
     </div>
