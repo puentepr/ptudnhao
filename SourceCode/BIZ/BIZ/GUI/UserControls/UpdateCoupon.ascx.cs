@@ -4,14 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
-using BIZ.DTO;
 using BIZ.BUS;
+using BIZ.DTO;
 
 namespace BIZ.GUI.UserControls
 {
-    public partial class CreateCoupon : System.Web.UI.UserControl
+    public partial class UpdateCoupon : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,12 +18,28 @@ namespace BIZ.GUI.UserControls
             if (isLogIn == 1)
             {
                 string typeUser = Session["LoaiUser"].ToString();
-                if (typeUser == "Manager")
-                { 
+                if (typeUser == "Manager" && Request.QueryString["macp"] != "")
+                {
                     if (!IsPostBack)
                     {
-                        ddlTenSP.DataSource = ProductBUS.SelectingAllProduct();
-                        ddlTenSP.DataBind();
+                        string macp = Request.QueryString["macp"];
+                        COUPON_DTO cp = CouponBUS.GetCouponInfor1(macp);
+                        txtGiaGoc.Text = cp.GiaGoc.ToString();
+                        txtGiaSauKhiGiam.Text = cp.GiaSauGiam.ToString();
+                        txtMaCP.Text = cp.MaCoupon;
+                        txtRreaDKSU.Value = cp.DieuKienSuDung;
+                        txtSLCPMinGiamGia.Text = cp.SoLuongCouponMin.ToString();
+                        txtSLSPmin.Text = cp.SoLuongSanPhamMin.ToString();
+                        DateTimePicker1.setDate(cp.ThoiGianBD.ToShortDateString());
+                         DateTimePicker2.setDate(cp.ThoiGianKT.ToShortDateString());
+                        TextBox1.Text = cp.TenSanPham;
+                        /*
+                        List<Coupon> list = CouponBUS.GetCouponInfor(macp);
+                        txtGiaGoc.Text = list[0].GiaHangKhiChuaGiam.ToString();
+                        txtGiaSauKhiGiam.Text = list[0].GiaHangSauKhiGiam.ToString();
+                        txtMaCP.Text = list[0].MaCoupon;
+                        txtRreaDKSU.Value = list[0].DieuKienSuDung;
+                        txtSLCPMinGiamGia.Text=list[0].s*/
                     }
                 }
                 else
@@ -33,16 +47,6 @@ namespace BIZ.GUI.UserControls
             }
             else
                 Response.Redirect("../Shared/Default.aspx");
-        }
-
-        protected void BindingProductIntoDropDownList()
-        {
-            //Du Tinh Lam Nhung Chua Lam Duoc, Thoi De No Do Di
-            //DataSet ds = new DataSet();
-            //string sqlCommand = "";
-            //SqlDataSource sourcce = new SqlDataSource();
-            //ddlTenSP.DataSource = sourcce;
-
         }
 
         protected void bttDangSP_Click(object sender, EventArgs e)
@@ -66,37 +70,25 @@ namespace BIZ.GUI.UserControls
             }
             COUPON_DTO couDTO = new COUPON_DTO();
             couDTO.MaCoupon = txtMaCP.Text;
-            couDTO.MaSanPham = ddlTenSP.SelectedValue.ToString();
+           // couDTO.MaSanPham = ddlTenSP.SelectedValue.ToString();
             couDTO.GiaSauGiam = float.Parse(txtGiaSauKhiGiam.Text);
             couDTO.ThoiGianBD = batdau;
             couDTO.ThoiGianKT = ketthuc;
             couDTO.SoLuongSanPhamMin = int.Parse(txtSLSPmin.Text);
-            couDTO.TinhTrangCoupon = "1";
+           // couDTO.TinhTrangCoupon = "1";
             couDTO.DieuKienSuDung = txtRreaDKSU.Value.ToString();
             couDTO.GiaGoc = float.Parse(txtGiaGoc.Text);
-            couDTO.DonViTienTe = ddlDVTienTe.Text;
+           // couDTO.DonViTienTe = ddlDVTienTe.Text;
             couDTO.SoLuongCouponMin = int.Parse(txtSLCPMinGiamGia.Text);
             try
             {
-                CouponBUS.CreateCoupon(couDTO);
-                lbResultInfo.Text = "Đã tạo thành công";
+                CouponBUS.UpdateCoupon(couDTO); ;
+                lbResultInfo.Text = "Đã cập nhật thành công";
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        protected void bttHuyBo_Click(object sender, EventArgs e)
-        {
-            txtMaCP.Text = "";
-            txtGiaGoc.Text = "";
-            txtGiaSauKhiGiam.Text = "";
-            txtRreaDKSU.InnerText = "";
-            txtSLCPMinGiamGia.Text = "";
-            txtSLSPmin.Text = "";
-            DateTimePicker1.setDate("");
-            DateTimePicker2.setDate("");
         }
     }
 }

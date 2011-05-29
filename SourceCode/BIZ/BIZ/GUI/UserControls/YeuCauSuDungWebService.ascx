@@ -53,7 +53,7 @@
         </tr>
         <tr>
             <td style="text-align: center">
-                <asp:Button ID="Button1" runat="server" Text="Quay về trang chủ" style="text-align: center" onclick="Button1_Click"   Visible="False" />
+                <asp:Button ID="Button1" CssClass="button" runat="server" Text="Quay về trang chủ" style="text-align: center" onclick="Button1_Click"   Visible="False" />
                        
                 <asp:Panel ID="Panel1" runat="server">
                     <table cellpadding="0" cellspacing="0" class="style1" align="center">
@@ -220,7 +220,7 @@
                         
                         <tr>
                             <td class="style12" colspan="3">
-                                <asp:Button ID="btYeuCau" runat="server" onclick="btYeuCau_Click" 
+                                <asp:Button ID="btYeuCau" CssClass="button" runat="server" onclick="btYeuCau_Click" 
                     Text="Yêu cầu" style="text-align: center" />
                             </td>
                         </tr>

@@ -50,7 +50,7 @@
             </tr>
             
         </table>
-        <asp:Button ID="Button1" ValidationGroup="servicetrans" runat="server" 
+        <asp:Button ID="Button1" CssClass="button" ValidationGroup="servicetrans" runat="server" 
             Text="Cập nhật" onclick="Button1_Click" /><br />
             <asp:Label ID="lbResult" runat="server"></asp:Label>
         <asp:HiddenField ID="hdfId" runat="server" />
@@ -74,7 +74,7 @@
                 </td>
             </tr>
     </table>
-     <asp:Button ID="Button2" ValidationGroup="accoutntrans" runat="server" 
+     <asp:Button ID="Button2" CssClass="button" ValidationGroup="accoutntrans" runat="server" 
             Text="Cập nhật" onclick="Button2_Click"  /><br />
             <asp:Label ID="Label1" runat="server"></asp:Label>
     </div>

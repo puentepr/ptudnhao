@@ -116,6 +116,39 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static void DeleteCoupon(string macp)
+        {
+            try
+            {
+                CouponDAO.DeleteCoupon(macp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static void UpdateCoupon(COUPON_DTO cp)
+        {
+            try
+            {
+                CouponDAO.UpdateCoupon(cp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static COUPON_DTO GetCouponInfor1(string macp)
+        {
+            try
+            {
+                return CouponDAO.GetCouponInfor1(macp);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public static void UpdateDate(string ma, DateTime date)
         {
             try

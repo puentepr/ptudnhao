@@ -100,11 +100,13 @@ namespace BIZ.DAO
                     SAN_PHAM_DTO proDTO = new SAN_PHAM_DTO();
                     proDTO.MaSanPham = dr["MASP"].ToString();
                     /*proDTO.MaLoaiSanPham = int.Parse(dr["MALSP"].ToString());*/
-                    proDTO.TenSanPham = dr["TENSP"].ToString();
+                    
+                    proDTO.Gia = float.Parse(dr["GIA"].ToString());
+                    proDTO.TenSanPham = dr["TENSP"].ToString() + " -(Giá :" + proDTO.Gia.ToString() + " VND/sp)";
                     /*proDTO.MoTaSanPham = dr["MOTA"].ToString();
                     proDTO.HinhAnh = dr["HINHANH"].ToString();
                     proDTO.ChatLuong = dr["CHATLUONG"].ToString();
-                    proDTO.Gia = float.Parse(dr["GIA"].ToString());
+                    
                     proDTO.SoLuong = int.Parse(dr["SOLUONG"].ToString());
                     proDTO.DonViTinh = dr["DVTINH"].ToString();
                     proDTO.SoLuongConLai = int.Parse(dr["SLCONLAI"].ToString());

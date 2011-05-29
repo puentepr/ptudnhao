@@ -1,9 +1,10 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CreateCoupon.ascx.cs" Inherits="BIZ.GUI.UserControls.CreateCoupon" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UpdateCoupon.ascx.cs" Inherits="BIZ.GUI.UserControls.UpdateCoupon" %>
 <%@ Register src="DateTimePicker.ascx" tagname="DateTimePicker" tagprefix="uc1" %>
 <asp:ScriptManager ID="ScriptManager1" runat="server">
 </asp:ScriptManager>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
 <ContentTemplate>
+
 
 <div class="createObject" align="center">
     <h3>THÔNG TIN COUPON</h3>
@@ -12,16 +13,14 @@
         <tr>
             <th><lable>Mã Coupon: </lable></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtMaCP" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox" ID="txtMaCP" runat="server" ReadOnly="True"></asp:TextBox>
                 <asp:Label ID="lbCodeCouponReportInfo" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
             <th><label>Sản Phẩm: </label></th>
             <td>
-                <asp:DropDownList CssClass="txtBox" ID="ddlTenSP" runat="server" 
-                    DataTextField ="TenSanPham" DataValueField = "MaSanPham" >
-                </asp:DropDownList>
+                <asp:TextBox ID="TextBox1" runat="server" ReadOnly="True"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -70,35 +69,28 @@
                 <textarea class="createObject" id="txtRreaDKSU" runat="server" cols="34" rows="5"></textarea>
             </td>
         </tr>
-        <tr>
-            <th><label>Đơn Vị Tiền Tệ: </label></th>
-            <td>
-                <asp:DropDownList CssClass="txtBox" ID="ddlDVTienTe" runat="server">
-                    <asp:ListItem>VND</asp:ListItem>
-                    <asp:ListItem>USD</asp:ListItem>
-                    <asp:ListItem>EUR</asp:ListItem>
-                    <asp:ListItem>GBP</asp:ListItem>
-                    <asp:ListItem>JPY</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-        </tr>
+        
        
     </table>
+    
     <table>
         <tr align ="center">
             <asp:Label ID="lbResultInfo" runat="server"></asp:Label>
         </tr> 
         <tr align="center">
             <td>
-                <asp:Button ID="bttDangSP" CssClass="button" runat="server" Text="Tạo Coupon" 
+            
+                <asp:Button ID="bttDangSP" CssClass="button" runat="server" Text="Cập nhật" 
                     onclick="bttDangSP_Click" />
+                    
             </td>
             <td>
-                <asp:Button ID="bttHuyBo" CssClass="button" runat="server" Text="Hủy Bỏ" 
-                    onclick="bttHuyBo_Click" />
+                    <br />
+                    
             </td>
         </tr>
     </table>
+
 </div>
 </ContentTemplate>
 </asp:UpdatePanel>

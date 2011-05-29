@@ -11,177 +11,132 @@
 namespace BIZ.GUI.UserControls {
     
     
-    public partial class XemCapNhatSanPham {
+    public partial class UpdateCoupon {
         
         /// <summary>
-        /// ImageSP control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImageSP;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// lbResult control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbResult;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// lbTenSP control.
+        /// txtMaCP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTenSP;
+        protected global::System.Web.UI.WebControls.TextBox txtMaCP;
         
         /// <summary>
-        /// txtSoNguoiMua control.
+        /// lbCodeCouponReportInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoNguoiMua;
+        protected global::System.Web.UI.WebControls.Label lbCodeCouponReportInfo;
         
         /// <summary>
-        /// txtGiaBan control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaBan;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// Label1 control.
+        /// txtGiaGoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaGoc;
         
         /// <summary>
-        /// txtDonVi control.
+        /// txtGiaSauKhiGiam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDonVi;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaSauKhiGiam;
         
         /// <summary>
-        /// txtChatLuong control.
+        /// DateTimePicker1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChatLuong;
+        protected global::BIZ.GUI.UserControls.DateTimePicker DateTimePicker1;
         
         /// <summary>
-        /// lbSoLuongConLai control.
+        /// DateTimePicker2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSoLuongConLai;
+        protected global::BIZ.GUI.UserControls.DateTimePicker DateTimePicker2;
         
         /// <summary>
-        /// lbMaSP control.
+        /// txtSLSPmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMaSP;
+        protected global::System.Web.UI.WebControls.TextBox txtSLSPmin;
         
         /// <summary>
-        /// lbMaLSP control.
+        /// txtSLCPMinGiamGia control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMaLSP;
+        protected global::System.Web.UI.WebControls.TextBox txtSLCPMinGiamGia;
         
         /// <summary>
-        /// txtSoLuong control.
+        /// txtRreaDKSU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtRreaDKSU;
         
         /// <summary>
-        /// CompareValidator1 control.
+        /// lbResultInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        protected global::System.Web.UI.WebControls.Label lbResultInfo;
         
         /// <summary>
-        /// radiobtnTinhTrang control.
+        /// bttDangSP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList radiobtnTinhTrang;
-        
-        /// <summary>
-        /// txtareMota control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtareMota;
-        
-        /// <summary>
-        /// lbNgayDangSP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNgayDangSP;
-        
-        /// <summary>
-        /// lbNgaySuaDoi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbNgaySuaDoi;
-        
-        /// <summary>
-        /// btnCapNhat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCapNhat;
-        
-        /// <summary>
-        /// btnXoa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXoa;
+        protected global::System.Web.UI.WebControls.Button bttDangSP;
     }
 }

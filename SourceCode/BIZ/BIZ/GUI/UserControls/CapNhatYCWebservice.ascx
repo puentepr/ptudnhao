@@ -26,7 +26,7 @@
         <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
     </asp:GridView>
-    <asp:Button ID="Button1" runat="server" Text="Đồng ý" onclick="Button1_Click" />
+    <asp:Button ID="Button1" CssClass="button" runat="server" Text="Đồng ý" onclick="Button1_Click" />
     <br />
     <hr />
     <h3 id="h3update" runat="server">Danh sách các hệ thống Mua chung đang kết nối</h3>

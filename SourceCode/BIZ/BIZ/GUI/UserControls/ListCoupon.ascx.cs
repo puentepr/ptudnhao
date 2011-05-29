@@ -37,5 +37,18 @@ namespace BIZ.GUI.UserControls
             string mcp = ((LinkButton)sender).CommandArgument;
             Response.Redirect("../Manager/ViewDetailCoupon.aspx?macp=" + mcp);
         }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string macp = GridView1.DataKeys[e.RowIndex].Value.ToString();
+            try
+            {
+                CouponBUS.DeleteCoupon(macp);
+                GridCouponDataBind();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
     }
 }

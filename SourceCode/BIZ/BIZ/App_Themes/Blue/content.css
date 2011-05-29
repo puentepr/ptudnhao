@@ -301,7 +301,14 @@ li label.title-box
 
 .button
 {
-	background-color:#3CB371;
+	background: #2bc5fb;
+	-moz-border-radius: 3px;
+	/*border-radius: 3px;*/
+	border: none;
+	padding: 3px;
+	color: #f1f1f1;
+	font-weight: bold;
+	cursor: pointer;
 
 }
 .content-box label

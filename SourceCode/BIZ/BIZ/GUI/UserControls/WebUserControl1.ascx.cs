@@ -13,7 +13,7 @@ namespace BIZ.GUI.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int isLogIn;
+           /* int isLogIn;
             int.TryParse(Session["IsLogin"].ToString(), out isLogIn);
             if (isLogIn == 1)
             {
@@ -29,7 +29,7 @@ namespace BIZ.GUI.UserControls
                     Response.Redirect("../Shared/Default.aspx");
             }
             else
-                Response.Redirect("../Shared/Default.aspx");
+                Response.Redirect("../Shared/Default.aspx");*/
         }
 
         protected void Button1_Click(object sender, EventArgs e)

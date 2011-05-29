@@ -60,7 +60,7 @@
         <asp:ListItem Value="1">Giá gốc</asp:ListItem>
         <asp:ListItem Value="2">Giá giảm</asp:ListItem>
     </asp:DropDownList>
-    <asp:Button ID="btnSale" runat="server" Text="Đồng ý bán" Visible="false" 
+    <asp:Button ID="btnSale" CssClass="button" runat="server" Text="Đồng ý bán" Visible="false" 
         onclick="btnSale_Click" /><br />
         <asp:Label ID="lbresult" runat="server" Visible="false"></asp:Label>
 </div>
