@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="crystaldecisions.web, Version=9.1.3300.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\crystaldecisions.web.dll\crystaldecisions.web.dll</HintPath>
+    </Reference>
     <Reference Include="MSCaptcha, Version=1.0.2832.11804, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BasePage.cs">
@@ -94,6 +102,32 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPTheoDonHang.aspx.cs">
+      <DependentUpon>DoanhThuLoaiSPTheoDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPTheoDonHang.aspx.designer.cs">
+      <DependentUpon>DoanhThuLoaiSPTheoDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPTheoDonHangCoupon.aspx.cs">
+      <DependentUpon>DoanhThuLoaiSPTheoDonHangCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPTheoDonHangCoupon.aspx.designer.cs">
+      <DependentUpon>DoanhThuLoaiSPTheoDonHangCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPTheoDonHangcr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoanhThuLoaiSPTheoDonHangcr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoanhThuLoaiSPThroDonHangCouponcr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoanhThuLoaiSPThroDonHangCouponcr.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DTO\AcceptCouponDTO.cs" />
     <Compile Include="DTO\BTS_BIZ_DTO.cs" />
@@ -695,6 +729,32 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SoLuongGiaoDichDonHang.aspx.cs">
+      <DependentUpon>SoLuongGiaoDichDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoLuongGiaoDichDonHang.aspx.designer.cs">
+      <DependentUpon>SoLuongGiaoDichDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SoLuongGiaoDichDonHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoLuongGiaoDichDonHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SoLuongGiaoDichDonHangCoupon.aspx.cs">
+      <DependentUpon>SoLuongGiaoDichDonHangCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoLuongGiaoDichDonHangCoupon.aspx.designer.cs">
+      <DependentUpon>SoLuongGiaoDichDonHangCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SoLuongGiaoDichDonHangCoupon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoLuongGiaoDichDonHangCoupon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Web References\MuaChung\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -712,6 +772,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1288165338_alarm.png" />
     <Content Include="App_Themes\Blue\bestsellers.png" />
     <Content Include="App_Themes\Blue\bottom.jpg" />
     <Content Include="App_Themes\Blue\box_bottom.png" />
@@ -760,6 +821,7 @@
     <Content Include="Content\images\products\giay-dan-tuong2.jpeg" />
     <Content Include="Content\images\tu-van-thiet-ke-nha.gif" />
     <Content Include="Content\images\xemchitiet_but.gif" />
+    <Content Include="DoanhThuLoaiSPTheoDonHang.aspx" />
     <Content Include="Global.asax" />
     <Content Include="GUI\Admin\AddWebserviceBank.aspx" />
     <Content Include="GUI\Admin\ServiceTransfer.aspx" />
@@ -869,6 +931,10 @@
     <None Include="Web References\VanChuyen\TransportCompany.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <Content Include="DoanhThuLoaiSPTheoDonHangCoupon.aspx" />
+    <Content Include="SoLuongGiaoDichDonHang.aspx" />
+    <Content Include="SoLuongGiaoDichDonHangCoupon.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://fedexgroup4a.somee.com/FedexWebService.asmx%3fWSDL">
@@ -904,6 +970,27 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>BIZ_MuaChung_MuaChungWebService</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DoanhThuLoaiSPTheoDonHangcr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DoanhThuLoaiSPTheoDonHangcr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThuLoaiSPThroDonHangCouponcr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DoanhThuLoaiSPThroDonHangCouponcr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoLuongGiaoDichDonHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SoLuongGiaoDichDonHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoLuongGiaoDichDonHangCoupon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SoLuongGiaoDichDonHangCoupon.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

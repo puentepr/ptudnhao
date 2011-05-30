@@ -59,3 +59,11 @@ D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BIZ\BIZ\bin\BIZ.pdb
 D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BIZ\BIZ\obj\Debug\ResolveAssemblyReference.cache
 D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BIZ\BIZ\obj\Debug\BIZ.dll
 D:\Phong Worked Project\CD-TMDT Project\DNBIZ_v3\SourceCode\BIZ\BIZ\obj\Debug\BIZ.pdb
+C:\Users\AnhNgoc\Desktop\BIZ_1\trunk\SourceCode\BIZ\BIZ\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AnhNgoc\Desktop\BIZ_1\trunk\SourceCode\BIZ\BIZ\obj\Debug\BIZ.dll
+C:\Users\AnhNgoc\Desktop\BIZ_1\trunk\SourceCode\BIZ\BIZ\obj\Debug\BIZ.pdb
+C:\Users\AnhNgoc\Desktop\BIZ_Tichhop\trunk\SourceCode\BIZ\BIZ\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\AnhNgoc\Desktop\BIZ_Tichhop\trunk\SourceCode\BIZ\BIZ\obj\Debug\BIZ.dll
+C:\Users\AnhNgoc\Desktop\BIZ_Tichhop\trunk\SourceCode\BIZ\BIZ\obj\Debug\BIZ.pdb
+C:\Users\AnhNgoc\Desktop\BIZ_Tichhop\trunk\SourceCode\BIZ\BIZ\bin\BIZ.dll
+C:\Users\AnhNgoc\Desktop\BIZ_Tichhop\trunk\SourceCode\BIZ\BIZ\bin\BIZ.pdb
