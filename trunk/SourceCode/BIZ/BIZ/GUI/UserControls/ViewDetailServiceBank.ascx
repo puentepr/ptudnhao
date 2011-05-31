@@ -55,7 +55,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtTenBank" runat="server" Width="260px" BackColor="White"></asp:TextBox>
+                    <asp:TextBox ID="txtTenBank" CssClass="textbox" runat="server" Width="260px" BackColor="White"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtwebsite" runat="server" Width="260px" BackColor="White"></asp:TextBox>
+                    <asp:TextBox ID="txtwebsite" CssClass="textbox" runat="server" Width="260px" BackColor="White"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -102,7 +102,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtpass" runat="server" Width="260px" BackColor="White"></asp:TextBox>
+                    <asp:TextBox ID="txtpass" CssClass="textbox" runat="server" Width="260px" BackColor="White"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -151,7 +151,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:TextBox ID="txtSTK" runat="server" Width="260px" BackColor="White"></asp:TextBox>
+                    <asp:TextBox ID="txtSTK" CssClass="textbox" runat="server" Width="260px" BackColor="White"></asp:TextBox>
                 </td>
             </tr>   
             <tr>

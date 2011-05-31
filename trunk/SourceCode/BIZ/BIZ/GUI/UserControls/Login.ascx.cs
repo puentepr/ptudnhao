@@ -79,6 +79,15 @@ namespace BIZ.GUI.UserControls
                             break;
                         case 3:
                             Session["LoaiUser"] = "Consumer";
+                            int result = UserBUS.LaMuaChung(username);
+                            if (result >= 1)
+                            {
+                                Session["mc"] = 1;
+                            }
+                            else
+                            {
+                                Session["mc"] = null;
+                            }
                             Response.Redirect("../Consumers/QuanLyDonHang.aspx");
                             break;
                     }
@@ -135,6 +144,15 @@ namespace BIZ.GUI.UserControls
                             break;
                         case 3:
                             Session["LoaiUser"] = "Consumer";
+                            int result = UserBUS.LaMuaChung(username);
+                            if (result >= 1)
+                            {
+                                Session["mc"] = 1;
+                            }
+                            else
+                            {
+                                Session["mc"] = null;
+                            }
                             Response.Redirect("../Consumers/QuanLyDonHang.aspx");
                             break;
                     }

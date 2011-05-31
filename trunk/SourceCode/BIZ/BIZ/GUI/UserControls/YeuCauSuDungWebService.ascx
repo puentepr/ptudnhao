@@ -64,7 +64,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtUsername" runat="server" Width="200px" 
+                                <asp:TextBox ID="txtUsername" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ControlToValidate="txtUsername" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -77,7 +77,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtPass" TextMode="Password" runat="server" Width="200px" 
+                                <asp:TextBox ID="txtPass" CssClass="textbox" TextMode="Password" runat="server" Width="200px" 
                                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                     ControlToValidate="txtPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -90,7 +90,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtEmail"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtEmail" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                     ControlToValidate="txtPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -108,7 +108,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtTenHeThongMuaChung" runat="server" Width="200px" 
+                                <asp:TextBox ID="txtTenHeThongMuaChung" CssClass="textbox" runat="server" Width="200px" 
                                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
                     ControlToValidate="txtTenHeThongMuaChung" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -122,7 +122,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtLink"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtLink" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
                     ControlToValidate="txtLink" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -140,7 +140,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtLinkWS"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtLinkWS" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                     ControlToValidate="txtLinkWS" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -162,7 +162,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtMCUsernme"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtMCUsernme" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ControlToValidate="txtMCUsernme" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -178,7 +178,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtMCPass"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtMCPass" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                     ControlToValidate="txtMCPass" ErrorMessage="(*)"></asp:RequiredFieldValidator>
@@ -208,7 +208,7 @@
                             <td class="style7">
                                 :</td>
                             <td class="style9">
-                                <asp:TextBox ID="txtCaptcha"  runat="server" Width="200px" 
+                                <asp:TextBox ID="txtCaptcha" CssClass="textbox" runat="server" Width="200px" 
                     style="text-align: left"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                     ControlToValidate="txtCaptcha" ErrorMessage="(*)"></asp:RequiredFieldValidator>

@@ -29,6 +29,7 @@ namespace BIZ.GUI.UserControls
                     GridView grDetail = (GridView)FormView1.FindControl("grDetail");
                     grDetail.DataSource = CouponBUS.GetOrderExCoupons(macp, ref numberOrder, ref numberWS);
                     grDetail.DataBind();
+                   
                 }
             }
         }

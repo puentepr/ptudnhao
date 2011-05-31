@@ -21,7 +21,7 @@
                 <lable>Mã ngân hàng :</lable>
             </td>
             <td>
-                <asp:TextBox ID="txtMaBank" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtMaBank" CssClass="textbox" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -31,7 +31,7 @@
                 <label>Tên ngân hàng :</label>
             </td>
              <td>
-                <asp:TextBox ID="txtTenBank" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtTenBank" CssClass="textbox" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -41,7 +41,7 @@
                 <label>UserName :</label>
             </td>
             <td>
-                <asp:TextBox ID="txtUsername" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtUsername" CssClass="textbox" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
                 <label>PassWord :</label>
             </td>
             <td>
-                <asp:TextBox ID="txtPassWord" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtPassWord" CssClass="textbox" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -119,7 +119,7 @@
                 <label>Website :</label>
             </td>
             <td>
-                <asp:TextBox ID="txtWebsiteBank" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtWebsiteBank" CssClass="textbox" runat="server" Width="280px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -138,7 +138,7 @@
                 <asp:Label ID="Label1" runat="server" style="text-align: left" Text="Sổ tài khoản :"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtSTK" runat="server" Width="280px"></asp:TextBox>
+                <asp:TextBox ID="txtSTK" runat="server" CssClass="textbox" Width="280px"></asp:TextBox>
             </td>
         </tr>
         

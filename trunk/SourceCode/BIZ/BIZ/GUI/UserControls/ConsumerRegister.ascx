@@ -66,7 +66,7 @@
         <tr>
             <td><label>Mật khẩu :</label></td>
             <td>
-                <asp:TextBox ID="txtPass" TextMode="Password" runat="server">
+                <asp:TextBox ID="txtPass" CssClass="textbox" TextMode="Password" runat="server">
                 </asp:TextBox><br />
                 <asp:CustomValidator ID="CustomValidator1" runat="server" 
                     ErrorMessage="Password tối thiểu 5 ký tự" ControlToValidate="txtPass" 
@@ -76,7 +76,7 @@
          <tr>
             <td><label>Nhập lại mật khẩu :</label></td>
             <td>
-                <asp:TextBox ID="txtRePass" TextMode="Password" runat="server">
+                <asp:TextBox ID="txtRePass" CssClass="textbox" TextMode="Password" runat="server">
                 </asp:TextBox><br />
                 <asp:CompareValidator ID="CompareValidator1" runat="server" 
                     ErrorMessage="Password không khớp" ControlToCompare="txtPass" 
@@ -90,7 +90,7 @@
          <tr>
             <td><label>Tên doanh nghiệp :</label></td>
             <td>
-                <asp:TextBox ID="txtBusinessName"  runat="server">
+                <asp:TextBox ID="txtBusinessName" CssClass="textbox"  runat="server">
                 </asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                     ErrorMessage="(*)" ControlToValidate="txtBusinessName" 
@@ -100,7 +100,7 @@
          <tr>
             <td><label>Địa chỉ :</label></td>
             <td>
-                <asp:TextBox ID="txtAddress"  runat="server">
+                <asp:TextBox ID="txtAddress" CssClass="textbox" runat="server">
                 </asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ErrorMessage="(*)" ControlToValidate="txtAddress" 
@@ -110,14 +110,14 @@
          <tr>
             <td><label>Điện thoại :</label></td>
             <td>
-                <asp:TextBox ID="txtPhone"  runat="server">
+                <asp:TextBox ID="txtPhone" CssClass="textbox" runat="server">
                 </asp:TextBox>
             </td>
         </tr>
         <tr>
             <td><label>Email :</label></td>
             <td>
-                <asp:TextBox ID="txtEmail"  runat="server">
+                <asp:TextBox ID="txtEmail" CssClass="textbox" runat="server">
                 </asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                     ErrorMessage="(*)" ControlToValidate="txtEmail" 
@@ -131,7 +131,7 @@
          <tr>
             <td><label>Địa chỉ website :</label></td>
             <td>
-                <asp:TextBox  ID="txtWebAdress"  runat="server">
+                <asp:TextBox  ID="txtWebAdress" CssClass="textbox" runat="server">
                 </asp:TextBox><br />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                     ErrorMessage="Link website khôn đúng" ControlToValidate="txtWebAdress" 
@@ -143,7 +143,7 @@
          <tr>
             <td><label>Tên người đại diện :</label></td>
             <td>
-                <asp:TextBox ID="txtPersonName" runat="server">
+                <asp:TextBox ID="txtPersonName" CssClass="textbox" runat="server">
                 </asp:TextBox>
             </td>
         </tr>
@@ -157,7 +157,7 @@
          <tr>
             <td><label>Nhập mã an toàn:</label></td>
             <td>
-                <asp:TextBox ID="txtCaptcha" runat="server" 
+                <asp:TextBox ID="txtCaptcha" CssClass="textbox" runat="server" 
                     ToolTip="Không có khoảng trắng giữa các kí tự" 
                     ontextchanged="txtCaptcha_TextChanged">
                 </asp:TextBox>

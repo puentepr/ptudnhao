@@ -16,6 +16,26 @@
         {
             width: 282px;
         }
+        .calender
+        {
+        	position:absolute;
+        }
+        .titlec
+        {
+        	position:relative;
+        }
+        .button
+        {
+	        background: #2bc5fb;
+	        -moz-border-radius: 3px;
+	        /*border-radius: 3px;*/
+	        border: none;
+	        padding: 3px;
+	        color: #f1f1f1;
+	        font-weight: bold;
+	        cursor: pointer;
+
+        }
     </style>
 </head>
 <body>
@@ -26,7 +46,7 @@
             <tr>
                 <td class="style2">
                     Từ ngày:
-                    <asp:TextBox ID="txtTuNgay" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtTuNgay" CssClass="textbox" runat="server"></asp:TextBox>
                     <asp:ImageButton ID="ImageButton1" runat="server" 
                         ImageUrl="~/1288165338_alarm.png" onclick="ImageButton1_Click" />
                     <asp:Calendar ID="Calendar1" runat="server" 
@@ -49,7 +69,7 @@
                 <td class="style2">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="btThongKe" runat="server" onclick="btThongKe_Click" 
+                    <asp:Button ID="btThongKe" CssClass="button" runat="server" onclick="btThongKe_Click" 
                         Text="Thống kê" />
                 </td>
             </tr>

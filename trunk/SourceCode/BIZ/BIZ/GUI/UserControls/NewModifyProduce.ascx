@@ -41,13 +41,16 @@
                          <label>VND / </label><asp:Label ID="lbDvTinh" CssClass="label" runat="server" 
                              Text='<%# Eval("DonViTinh") %>'></asp:Label>
                         <br />
-                    
+                         <label class="lbname">Ngày thay đổi:</label>
+                        <asp:Label ID="Label3" CssClass="label" runat="server" Text='<%# Eval("NgaySua") %>'></asp:Label>
+                         
+                        <br />
                       <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#"~/GUI/Consumers/ViewProduct.aspx?masp="+ Eval("MaSanPham") %>'>
                         <img src='../../Content/images/xemchitiet_but.gif' />
                         </asp:HyperLink>
                     <br />
                     <label>Mua : </label>
-                    <asp:TextBox ID="TextBox1" runat="server" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 

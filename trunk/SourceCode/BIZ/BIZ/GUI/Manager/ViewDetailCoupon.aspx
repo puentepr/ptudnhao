@@ -23,10 +23,10 @@ Xem chi tiết Coupon
          
          
          
-         <uc1:Catalogs ID="Catalogs1" runat="server" />
+         
         <!-- end catalog-box -->
         <uc9:CatalogManager ID="CatalogManager1" runat="server" />
-        
+        <uc1:Catalogs ID="Catalogs1" runat="server" />
     </div>
     <!-- end first-secondary -->
     

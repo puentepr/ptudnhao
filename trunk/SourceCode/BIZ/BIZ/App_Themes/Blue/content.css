@@ -321,3 +321,26 @@ li label.title-box
 	width:150px;
 	height:150px;
 }
+
+h3
+{
+	color:#0962a7;
+	background-color:Transparent;
+}
+h4
+{
+	color:#0962a7;
+	background-color:Transparent;
+}
+
+.textbox
+{
+	border-width:1px;
+}
+.textbox:hover
+{
+	border-style:solid;
+	border-color:#f9adf3;
+	border-width:1px;
+	
+}

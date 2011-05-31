@@ -20,6 +20,17 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+        public static int LaMuaChung(string username)
+        {
+            try
+            {
+                return UserDAO.ValidateUserName(username);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public static int InsertConsumer(USERS_DTO user, KHACH_HANG_DTO consumer)
         {
             try

@@ -13,26 +13,26 @@
         <tr>
             <th><lable>Mã Coupon: </lable></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtMaCP" runat="server" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtMaCP" runat="server" ReadOnly="True"></asp:TextBox>
                 <asp:Label ID="lbCodeCouponReportInfo" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>
             <th><label>Sản Phẩm: </label></th>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server"  ReadOnly="True"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <th><label>Giá Gốc: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtGiaGoc" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtGiaGoc" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <th><label>Giá Sau Khi Giảm: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtGiaSauKhiGiam" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtGiaSauKhiGiam" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -54,13 +54,13 @@
         <tr>
             <th><label>Số Lượng Sản Phẩm "Min" Thỏa Coupon: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtSLSPmin" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtSLSPmin" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <th><label>Số Lượng Coupon Cần Thiết: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtSLCPMinGiamGia" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtSLCPMinGiamGia" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>

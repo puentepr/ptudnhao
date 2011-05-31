@@ -371,6 +371,44 @@ namespace BIZ.DAO
                 helper.disconnect();
             }
         }
+        public static List<DonHangCP_DTO> GetDHCoupon(string username)
+        {
+            helper.connect();
+            string sqlCommand = "sp_SelectOrderCouponByUsername";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@username", username));
+            try
+            {
+                List<DonHangCP_DTO> dhs = new List<DonHangCP_DTO>();
+                DataTable table = helper.executeQueryDataTableProcedure(sqlCommand, list);
+                if (table != null && table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        DonHangCP_DTO dh = new DonHangCP_DTO();
+                        dh.Madh=int.Parse(row["MADHCP"].ToString());
+                        dh.MaSP=row["MASP"].ToString();
+                        dh.NgayDat=DateTime.Parse(row["NGAYDAT"].ToString());
+                        dh.SoLuong=int.Parse(row["SOLUONGCP"].ToString());
+                        dh.TenSP=row["TENSP"].ToString();
+                        dh.TinhTrang=row["TINHTRANGDH"].ToString();
+                        dh.Title="Xem chi tiết";
+                        dh.TongTien=float.Parse(row["TONGTIEN"].ToString());
+                        dh.DvTien=row["DVTIENTE"].ToString();
+                        dhs.Add(dh);
+                    }
+                }
+                return dhs;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                helper.disconnect();
+            }
+        }
         
     }
 }

@@ -96,7 +96,7 @@
                 Text="Tên doanh nghiệp :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtTenDN" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtTenDN" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
     <tr>
@@ -104,7 +104,7 @@
             <asp:Label ID="Label2" runat="server" Text="Địa chỉ :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtDiaChi" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtDiaChi" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@
             <asp:Label ID="Label3" runat="server" Text="Số điện thoại :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtSDT" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtSDT" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
     <tr>
@@ -120,7 +120,7 @@
             <asp:Label ID="Label4" runat="server" Text="Tên đại diện :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtTenDaiDien" runat="server" Width="260px" 
+            <asp:TextBox ID="txtTenDaiDien" CssClass="textbox" runat="server" Width="260px" 
                 BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
@@ -129,7 +129,7 @@
             <asp:Label ID="Label5" runat="server" Text="Website :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtWebsite" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtWebsite" runat="server" CssClass="textbox" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
      <tr>
@@ -137,7 +137,7 @@
             <asp:Label ID="Label7" runat="server" Text="Trạng thái :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtTrangThai" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtTrangThai" runat="server" CssClass="textbox" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
        
@@ -167,7 +167,7 @@
             <asp:Label ID="Label9" runat="server" Text="Họ tên :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtHoTenQT" runat="server" Width="260px" 
+            <asp:TextBox ID="txtHoTenQT" CssClass="textbox" runat="server" Width="260px" 
                 BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
@@ -176,7 +176,7 @@
             <asp:Label ID="Label10" runat="server" Text="Địa chỉ :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtDiaChiQT" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtDiaChiQT" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
     <tr>
@@ -184,7 +184,7 @@
             <asp:Label ID="Label11" runat="server" Text="Số điện thoại :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtSDTQT" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtSDTQT" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
    
@@ -194,7 +194,7 @@
             <asp:Label ID="Label12" runat="server" Text="Trạng thái :"></asp:Label>
         </td>
         <td>
-            <asp:TextBox ID="txtTrangThaiQT" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
+            <asp:TextBox ID="txtTrangThaiQT" CssClass="textbox" runat="server" Width="260px" BackColor="#F0F0F0"></asp:TextBox>
             </td>
     </tr>
 

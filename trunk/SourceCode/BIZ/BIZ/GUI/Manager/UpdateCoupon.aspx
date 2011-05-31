@@ -19,9 +19,9 @@ Cập nhật coupon
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="first-secondary">
         
-        <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
-        <uc1:CatalogManager ID="CatalogManager1" runat="server" />
         
+        <uc1:CatalogManager ID="CatalogManager1" runat="server" />
+        <ucCtlogs:Catalogs ID="Catalogs1" runat="server" />
         
     </div>
     <div class="primary">

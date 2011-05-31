@@ -14,7 +14,7 @@
     
     <!-- Đổ dữ liệu vào đây , dùng innerHTML cho thẻ div này thì phải -->
     <div align="center" class="middle-content-box" id="divNewProduce" runat="server">
-        <h4 id="idh4" style="color:inherit" runat="server"></h4>
+        <h4 id="idh4"  runat="server"></h4>
          <asp:DataList ID="DataList1" runat="server" 
             RepeatDirection="Horizontal" RepeatColumns="3"  
             >
@@ -47,7 +47,7 @@
                         </asp:HyperLink>
                     <br />
                     <label>Mua : </label>
-                    <asp:TextBox ID="TextBox1" runat="server" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 
