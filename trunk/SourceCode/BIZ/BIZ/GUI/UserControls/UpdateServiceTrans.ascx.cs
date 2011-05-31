@@ -23,7 +23,7 @@ namespace BIZ.GUI.UserControls
                 {
                     if (!IsPostBack)
                     {
-                        string query = Request.QueryString["madv"];
+                       string query = Request.QueryString["madv"];
                         if (query != null)
                         {
                             int madv;
@@ -55,15 +55,13 @@ namespace BIZ.GUI.UserControls
         else
             Response.Redirect("../Shared/Default.aspx");
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        
+       protected void Button1_Click(object sender, EventArgs e)
         {
             SERVICE_TRANS_DTO service = new SERVICE_TRANS_DTO();
-            service.TenCongTy = txtUserName.Text;
+            service.TenCongTy = txtName.Text;
             service.LinkWebService = txtLink.Text;
             service.MaDV = int.Parse(hdfId.Value);
-           // service.PassWord = txtPass.Text;
-           // service.UserName = txtUserName.Text;
             service.TinhTrang = int.Parse(DropDownList1.SelectedValue);
             service.Website = txtWebsite.Text;
             try
@@ -90,7 +88,7 @@ namespace BIZ.GUI.UserControls
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            string username = txtName.Text;
+            string username = txtUserName.Text;
             string password = txtPass.Text;
             int madv;
             if (int.TryParse(hdfId.Value, out madv))
@@ -109,6 +107,8 @@ namespace BIZ.GUI.UserControls
                 }
             }
         }
+
+       
 
       
     }
