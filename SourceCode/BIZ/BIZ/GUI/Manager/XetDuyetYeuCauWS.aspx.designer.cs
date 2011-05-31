@@ -14,15 +14,6 @@ namespace BIZ.GUI.Manager {
     public partial class XetDuyetYeuCauWS {
         
         /// <summary>
-        /// Catalogs1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
-        
-        /// <summary>
         /// CatalogManager1 control.
         /// </summary>
         /// <remarks>
@@ -30,6 +21,15 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.CatalogManager CatalogManager1;
+        
+        /// <summary>
+        /// Catalogs1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
         
         /// <summary>
         /// CapNhatYCWebservice1 control.
@@ -48,32 +48,5 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.Login Login1;
-        
-        /// <summary>
-        /// NewProduce1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BIZ.GUI.UserControls.NewProduce NewProduce1;
-        
-        /// <summary>
-        /// AdvertisementLeft1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BIZ.GUI.UserControls.Advertisement AdvertisementLeft1;
-        
-        /// <summary>
-        /// Payment1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BIZ.GUI.UserControls.Payment Payment1;
     }
 }

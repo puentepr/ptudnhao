@@ -14,15 +14,6 @@ namespace BIZ.GUI.Manager {
     public partial class ViewDetailCoupon {
         
         /// <summary>
-        /// Catalogs1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
-        
-        /// <summary>
         /// CatalogManager1 control.
         /// </summary>
         /// <remarks>
@@ -30,6 +21,15 @@ namespace BIZ.GUI.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BIZ.GUI.UserControls.CatalogManager CatalogManager1;
+        
+        /// <summary>
+        /// Catalogs1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BIZ.GUI.UserControls.catalogs Catalogs1;
         
         /// <summary>
         /// ViewDetailCoupon1 control.

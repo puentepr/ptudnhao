@@ -63,6 +63,33 @@
             </li>
            
         </ul>
+        
+        <a class="parent" href="#">
+            <img src="../../App_Themes/Blue/bestsellers.png" />Thống kê
+        </a>
+        <ul>
+            <li>
+                <a href="../../SoLuongGiaoDichDonHang.aspx" target="_blank">
+                    <img src="../../App_Themes/Blue/dotlist.gif" />Lượng giao dịch trực tiếp trên website
+                </a>
+            </li>
+            <li>
+                <a href="../../SoLuongGiaoDichDonHangCoupon.aspx" target="_blank">
+                    <img src="../../App_Themes/Blue/dotlist.gif" />Lượng giao dịch từ mua chung
+                    </a>
+            </li>
+            <li>
+                <a href ="../../DoanhThuLoaiSPTheoDonHang.aspx" target="_blank">
+                <img src="../../App_Themes/Blue/dotlist.gif" />Doanh thu loại sản phẩm mua trực tiếp trên website
+                </a>
+            </li>
+            <li>
+                <a href ="../../DoanhThuLoaiSPTheoDonHangCoupon.aspx" target="_blank">
+                <img src="../../App_Themes/Blue/dotlist.gif" />Doanh thu loại sản phẩm mua qua mua chung
+                </a>
+            </li>
+           
+        </ul>
     </div>
     <div class="bottom-box">
     </div>

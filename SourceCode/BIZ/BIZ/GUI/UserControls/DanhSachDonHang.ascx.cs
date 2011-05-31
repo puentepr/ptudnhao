@@ -24,6 +24,17 @@ namespace BIZ.GUI.UserControls
                     {
                         GridView1.DataSource = DonHangBUS.GetAllOrderKH(Session["User"].ToString());
                         GridView1.DataBind();
+
+                        if (Session["mc"] != null)
+                        {
+                            muachung.Visible = true;
+                            string username = Session["User"].ToString();
+                            GridView2.DataSource = CouponBUS.GetDHCoupon(username);
+                            GridView2.DataBind();
+                            if (GridView2.Rows.Count <= 0)
+                                muachung.Visible = false;
+
+                        }
                     }
                 }
                 else

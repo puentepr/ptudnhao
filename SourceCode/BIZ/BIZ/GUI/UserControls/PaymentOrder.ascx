@@ -57,7 +57,7 @@
                     <label>Địa chỉ nhận hàng :</label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtAddress" runat="server" BorderColor="Aqua" BorderStyle="Solid" BorderWidth="1px" Width="200px"></asp:TextBox><br />
+                    <asp:TextBox ID="txtAddress" CssClass="textbox" runat="server" BorderColor="Aqua" BorderStyle="Solid" BorderWidth="1px" Width="200px"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtAddress" ValidationGroup="pay" runat="server" ErrorMessage="Chưa nhập địa chỉ nhận hàng" Display="Dynamic"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -67,7 +67,7 @@
                     <label>Nhập số tài khoản của bạn :</label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtId" runat="server" BorderColor="Aqua" BorderStyle="Solid" BorderWidth="1px" Width="200px"></asp:TextBox><br />
+                    <asp:TextBox ID="txtId" CssClass="textbox" runat="server" BorderColor="Aqua" BorderStyle="Solid" BorderWidth="1px" Width="200px"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtId" ValidationGroup="pay" runat="server" ErrorMessage="Chưa nhập địa chỉ nhận hàng" Display="Dynamic"></asp:RequiredFieldValidator>
                 </td>
             </tr>

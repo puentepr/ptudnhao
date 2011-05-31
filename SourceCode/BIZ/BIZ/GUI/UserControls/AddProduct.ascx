@@ -33,7 +33,7 @@
         <tr>
             <th><label>Tên Sản Phẩm: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtTenSP" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtTenSP" runat="server"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator2" ValidationGroup="product" ControlToValidate="txtTenSP" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             </td>
@@ -58,7 +58,7 @@
         <tr>
             <th><label>Chất Lượng: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtChatLuong" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtChatLuong" runat="server"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator4" ValidationGroup="product" ControlToValidate="txtChatLuong" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             </td>
@@ -66,7 +66,7 @@
         <tr>
             <th><label>Giá Gốc: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtGiaGoc" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtGiaGoc" runat="server"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator5" ValidationGroup="product" ControlToValidate="txtGiaGoc" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             </td>
@@ -74,7 +74,7 @@
         <tr>
             <th><label>Số Lượng: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtSoLuong" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtSoLuong" runat="server"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator Display="Dynamic" ID="RequiredFieldValidator6" ValidationGroup="product" ControlToValidate="txtSoLuong" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             </td>
@@ -82,7 +82,7 @@
         <tr>
             <th><label>Đơn Vị Tính: </label></th>
             <td>
-                <asp:TextBox CssClass="txtBox" ID="txtDVTinh" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="txtBox textbox" ID="txtDVTinh" runat="server"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" Display="Dynamic" ValidationGroup="product" ControlToValidate="txtDVTinh" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             </td>

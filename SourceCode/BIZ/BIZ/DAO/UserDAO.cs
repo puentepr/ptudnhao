@@ -67,6 +67,30 @@ namespace BIZ.DAO
             }
            // return -1;
         }
+        public static int LaMuaChung(string username)
+        {
+            provider.connect();
+            string sqlCommand = "sp_LaMuaChung";
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@username", username));
+            SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
+            result.Direction = ParameterDirection.ReturnValue;
+            list.Add(result);
+            try
+            {
+                provider.executeNonQueryProcedure(sqlCommand, list);
+                return (int)result.Value;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+            }
+            finally
+            {
+                provider.disconnect();
+            }
+            // return -1;
+        }
         public static int UpdateStatusUser(string username, int status)
         {
             provider.connect();

@@ -16,7 +16,7 @@
             <tr>
                 <td class="column1">Link webservice :</td>
                 <td class="column2">
-                    <asp:TextBox CssClass="column2" ID="txtLink" runat="server" ></asp:TextBox>
+                    <asp:TextBox CssClass="column2 textbox" ID="txtLink" runat="server" ></asp:TextBox>
                      <asp:RequiredFieldValidator ValidationGroup="servicetrans" ControlToValidate="txtLink" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                      <br />
                     <asp:RegularExpressionValidator ValidationGroup="servicetrans"  ControlToValidate="txtLink"
@@ -28,7 +28,7 @@
             <tr>
                 <td class="column1">Website :</td>
                 <td class="column2">
-                    <asp:TextBox CssClass="column2" ID="txtWebsite" runat="server" ></asp:TextBox>
+                    <asp:TextBox CssClass="column2 textbox" ID="txtWebsite" runat="server" ></asp:TextBox>
                      <asp:RequiredFieldValidator ValidationGroup="servicetrans" ControlToValidate="txtLink" ID="RequiredFieldValidator5" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                      <br />
                     <asp:RegularExpressionValidator ValidationGroup="servicetrans"  ControlToValidate="txtWebsite"
@@ -61,14 +61,14 @@
         <tr>
                 <td  class="column1">Tài khoản đăng nhập :</td>
                 <td class="column2">
-                    <asp:TextBox CssClass="column2" ID="txtUserName" runat="server"></asp:TextBox>
+                    <asp:TextBox CssClass="column2 textbox" ID="txtUserName" runat="server"></asp:TextBox>
                      <asp:RequiredFieldValidator ValidationGroup="accoutntrans" ControlToValidate="txtUserName" ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="column1">Mật khẩu đăng nhập :</td>
                 <td class="column2">
-                    <asp:TextBox CssClass="column2" ID="txtPass" TextMode="Password" runat="server" 
+                    <asp:TextBox CssClass="column2 textbox" ID="txtPass" TextMode="Password" runat="server" 
                        ></asp:TextBox>
                      <asp:RequiredFieldValidator ValidationGroup="accoutntrans" ControlToValidate="txtPass" ID="RequiredFieldValidator4" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>

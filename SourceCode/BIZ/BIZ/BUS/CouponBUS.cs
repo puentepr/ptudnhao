@@ -160,5 +160,16 @@ namespace BIZ.BUS
                 throw e;
             }
         }
+         public static List<DonHangCP_DTO> GetDHCoupon(string username)
+        {
+            try
+            {
+                return CouponDAO.GetDHCoupon(username);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

@@ -47,7 +47,7 @@
                         </asp:HyperLink>
                     <br />
                     <label>Mua : </label>
-                    <asp:TextBox ID="TextBox1" runat="server" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox" BackColor="#F0F8FF" BorderColor="ActiveBorder" Width="50px"></asp:TextBox>   
                     <asp:Label ID="Label2" runat="server" Text='<%# Eval("DonViTinh") %>' ></asp:Label>  
                     <br />
                        <asp:Button ID="Button1" runat="server" Text="Thêm vào giỏ hàng" 

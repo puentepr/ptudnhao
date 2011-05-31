@@ -42,6 +42,39 @@
             <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="White" />
         </asp:GridView>
+        <div id="muachung" runat="server" visible="false" align="center">
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <h3>Danh sách đơn hàng mua qua hệ thống mua chung</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" 
+                            BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" 
+                            CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                            <RowStyle BackColor="#F7F7DE" />
+                            <Columns>
+                                <asp:BoundField DataField="Madh" HeaderText="Mã đơn hàng" />
+                                <asp:BoundField DataField="TenSP" HeaderText="Sản phẩm" />
+                                <asp:BoundField DataField="NgayDat" DataFormatString="{0:dd/MM/yyyy}" 
+                                    HeaderText="Ngày đặt" />
+                                <asp:BoundField DataField="SoLuong" HeaderText="Số lượng CP" />
+                                <asp:BoundField DataField="TongTien" HeaderText="Tổng tiền" />
+                                <asp:BoundField DataField="TinhTrang" HeaderText="Tình trạng" />
+                            </Columns>
+                            <FooterStyle BackColor="#CCCC99" />
+                            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                            <AlternatingRowStyle BackColor="White" />
+                        </asp:GridView>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="middle-bottom-box">
         

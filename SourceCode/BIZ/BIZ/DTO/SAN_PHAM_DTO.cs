@@ -120,6 +120,13 @@ namespace BIZ.DTO
             get { return _soNguoiMua; }
             set { _soNguoiMua = value; }
         }
+        string _ngaySua;
+
+        public string NgaySua
+        {
+            get { return _ngaySua; }
+            set { _ngaySua = value; }
+        }
         public SAN_PHAM_DTO()
         {
             this._maSanPham = "";

@@ -132,6 +132,7 @@
     <Compile Include="DTO\AcceptCouponDTO.cs" />
     <Compile Include="DTO\BTS_BIZ_DTO.cs" />
     <Compile Include="DTO\CHI_TIET_DON_HANG_DTO.cs" />
+    <Compile Include="DTO\DonHangCP_DTO.cs" />
     <Compile Include="DTO\ContactInfo.cs" />
     <Compile Include="DTO\Coupon.cs" />
     <Compile Include="DTO\CouponNhieuDTO.cs" />

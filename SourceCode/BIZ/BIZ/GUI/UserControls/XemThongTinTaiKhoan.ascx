@@ -56,7 +56,7 @@
                 Text="Tên doanh nghiệp :"></asp:Label>
         </td>
         <td colspan="2">
-            <asp:TextBox ID="txtTenDN" runat="server" Width="260px"></asp:TextBox>
+            <asp:TextBox ID="txtTenDN" CssClass="textbox" runat="server" Width="260px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                 ControlToValidate="txtTenDN" ErrorMessage="(*)"></asp:RequiredFieldValidator>
         </td>
@@ -66,7 +66,7 @@
             <asp:Label ID="Label2" runat="server" Text="Địa chỉ :"></asp:Label>
         </td>
         <td colspan="2" class="style8">
-            <asp:TextBox ID="txtDiaChi" runat="server" Width="260px"></asp:TextBox>
+            <asp:TextBox ID="txtDiaChi" CssClass="textbox" runat="server" Width="260px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                 ControlToValidate="txtDiaChi" ErrorMessage="(*)"></asp:RequiredFieldValidator>
         </td>
@@ -76,7 +76,7 @@
             <asp:Label ID="Label3" runat="server" Text="Số điện thoại :"></asp:Label>
         </td>
         <td colspan="2">
-            <asp:TextBox ID="txtSDT" runat="server" Width="260px"></asp:TextBox>
+            <asp:TextBox ID="txtSDT" CssClass="textbox" runat="server" Width="260px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                 ControlToValidate="txtSDT" ErrorMessage="(*)"></asp:RequiredFieldValidator>
         </td>
@@ -86,7 +86,7 @@
             <asp:Label ID="Label4" runat="server" Text="Tên đại diện :"></asp:Label>
         </td>
         <td colspan="2">
-            <asp:TextBox ID="txtTenDaiDien" runat="server" Width="260px"></asp:TextBox>
+            <asp:TextBox ID="txtTenDaiDien" CssClass="textbox" runat="server" Width="260px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                 ControlToValidate="txtTenDaiDien" ErrorMessage="*"></asp:RequiredFieldValidator>
         </td>
@@ -96,7 +96,7 @@
             <asp:Label ID="Label5" runat="server" Text="Website :"></asp:Label>
         </td>
         <td colspan="2">
-            <asp:TextBox ID="txtWebsite" runat="server" Width="260px" 
+            <asp:TextBox ID="txtWebsite" CssClass="textbox" runat="server" Width="260px" 
                 ontextchanged="txtWebsite_TextChanged"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                 ControlToValidate="txtWebsite" ErrorMessage="(*)"></asp:RequiredFieldValidator>

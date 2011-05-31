@@ -21,9 +21,10 @@ Xem chi tiết sản phẩm</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="first-secondary">
         <!-- begin catalog-box -->                        
-         <uc1:Catalogs ID="Catalogs1" runat="server" />
+        
         <!-- end catalog-box -->
-        <uc9:CatalogManager ID="CatalogManager1" runat="server" />        
+        <uc9:CatalogManager ID="CatalogManager1" runat="server" />   
+         <uc1:Catalogs ID="Catalogs1" runat="server" />     
     </div>
     <!-- end first-secondary -->
     

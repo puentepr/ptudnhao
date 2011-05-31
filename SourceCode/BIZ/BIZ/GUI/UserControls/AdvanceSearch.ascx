@@ -27,7 +27,7 @@
                         <label>Tên sản phẩm</label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtSP" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtSP" CssClass="textbox" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +46,7 @@
                         <label>Chất lượng</label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtCL" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCL" CssClass="textbox" runat="server"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -54,8 +54,8 @@
                         <label>Giá khoảng từ :</label>
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox> VNĐ  
-                        Đến <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox> VNĐ
+                        <asp:TextBox ID="TextBox2" CssClass="textbox" runat="server"></asp:TextBox> VNĐ  
+                        Đến <asp:TextBox ID="TextBox3" CssClass="textbox" runat="server"></asp:TextBox> VNĐ
                     </td>
                 </tr>
                 <tr>

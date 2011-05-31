@@ -16,10 +16,10 @@ Quản lý yêu cầu sử dụng webservice
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <div class="first-secondary">
-        <ucctlogs:catalogs ID="Catalogs1" runat="server" />
+        
         <uc2:catalogmanager ID="CatalogManager1" runat="server" />
        
-        
+        <ucctlogs:catalogs ID="Catalogs1" runat="server" />
     </div>
     <div class="primary">
         
@@ -30,10 +30,7 @@ Quản lý yêu cầu sử dụng webservice
         
         <uc1:login ID="Login1" runat="server" />
         
-         <ucnpro:newproduce ID="NewProduce1" runat ="server" />
-        
-        <ucadsleft:advertisementleft ID="AdvertisementLeft1" runat="server" />
-        <ucpay:payment ID="Payment1" runat="server" />
+       
         
     </div>
 </asp:Content>

@@ -332,6 +332,7 @@ namespace BIZ.DAO
                 sp.MoTaSanPham = row["MOTA"].ToString();
                 sp.NgayDangSanPham = DateTime.Parse(row["NGAYDSP"].ToString());
                 sp.NgaySuaDoi = DateTime.Parse(row["NGAYSD"].ToString());
+                sp.NgaySua = sp.NgaySuaDoi.ToShortDateString();
                 float slcl = 0;
                 float.TryParse(row["SLCONLAI"].ToString(), out slcl);
                 sp.SoLuongConLai = slcl;
@@ -476,6 +477,7 @@ namespace BIZ.DAO
             list.Add(new SqlParameter("@SLCONLAI", sp.SoLuongConLai));
             list.Add(new SqlParameter("@DVTINH", sp.DonViTinh));
             list.Add(new SqlParameter("@TINHTRANGSP", sp.TinhTrangSanPham));
+            list.Add(new SqlParameter("@NGAYSD", sp.NgaySuaDoi));
 
             SqlParameter result = new SqlParameter("@result", SqlDbType.Int);
             result.Direction = ParameterDirection.ReturnValue;

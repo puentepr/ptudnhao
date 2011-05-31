@@ -15,14 +15,14 @@
             
             <li><label id="lbUserName" class="title-box" runat="server">UserName:</label></li>     
             <li style="padding-bottom:2px;">
-                <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="textbox" ID="txtUserName" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="txtUserName"
                     ID="RequiredFieldValidator1" ValidationGroup="login" runat="server" 
                     ErrorMessage="username invalid" Display="Dynamic"></asp:RequiredFieldValidator>
             </li>
             <li><label id="lblPassWord" class="title-box" runat="server">PassWord:</label></li>
             <li style="padding-bottom:2px;">
-                <asp:TextBox ID="txtPassWord" TextMode="Password"  runat="server" 
+                <asp:TextBox ID="txtPassWord" CssClass="textbox" TextMode="Password"  runat="server" 
                     ontextchanged="txtPassWord_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ControlToValidate="txtUserName"
                     ID="RequiredFieldValidator2" ValidationGroup="login" runat="server" 
