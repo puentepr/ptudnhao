@@ -932,6 +932,7 @@
     <None Include="Web References\VanChuyen\TransportCompany.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <Content Include="Content\images\loading5.gif" />
     <Content Include="DoanhThuLoaiSPTheoDonHangCoupon.aspx" />
     <Content Include="SoLuongGiaoDichDonHang.aspx" />
     <Content Include="SoLuongGiaoDichDonHangCoupon.aspx" />
