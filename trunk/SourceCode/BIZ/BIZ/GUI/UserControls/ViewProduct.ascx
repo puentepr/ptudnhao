@@ -11,8 +11,8 @@
             <table>
                 <tbody>
                 <tr>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("HinhAnh") %>' />
+                    <td align="center">
+                        <asp:Image ID="Image1"  runat="server" Width="160px" Height="160px" ImageUrl='<%# Eval("HinhAnh") %>' />
                     </td>
                     <td>
                         <table>
