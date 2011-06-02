@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PaymentOrder.ascx.cs" Inherits="BIZ.GUI.UserControls.PaymentOrder" %>
+<%@ Register src="DateTimePicker.ascx" tagname="DateTimePicker" tagprefix="uc1" %>
 <asp:ScriptManager ID="ScriptManager1" runat="server">
 </asp:ScriptManager>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -59,6 +60,16 @@
                 <td>
                     <asp:TextBox ID="txtAddress" CssClass="textbox" runat="server" BorderColor="Aqua" BorderStyle="Solid" BorderWidth="1px" Width="200px"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtAddress" ValidationGroup="pay" runat="server" ErrorMessage="Chưa nhập địa chỉ nhận hàng" Display="Dynamic"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    
+                    <label>Ngày giao :</label>
+                    
+                </td>
+                <td>
+                    <uc1:DateTimePicker ID="DateTimePicker1" runat="server" />
                 </td>
             </tr>
             <tr>
